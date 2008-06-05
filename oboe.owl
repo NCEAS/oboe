@@ -13,8 +13,8 @@
 ]>
 
 
-<rdf:RDF xmlns="http://code.ecoinformatics.org/code/semtools/dev/oboe#"
-     xml:base="http://code.ecoinformatics.org/code/semtools/dev/oboe"
+<rdf:RDF xmlns="http://code.ecoinformatics.org/code/semtools/dev/oboe/oboe.owl#"
+     xml:base="http://code.ecoinformatics.org/code/semtools/dev/oboe/oboe.owl"
      xmlns:owl11="http://www.w3.org/2006/12/owl11#"
      xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -55,9 +55,9 @@
 
     <!-- http://code.ecoinformatics.org/code/semtools/dev/oboe#hasContextObservation -->
 
-    <owl:ObjectProperty rdf:about="#hasContextObservation">
+    <owl:ObjectProperty rdf:about="&oboe;hasContextObservation">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="#Context"/>
+        <rdfs:domain rdf:resource="&oboe;Context"/>
         <rdfs:range rdf:resource="&version;Observation"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >This property connects a context object to an observation, where the entity of the observation is serving as context for some other observed entity.</rdfs:comment>
@@ -67,10 +67,10 @@
 
     <!-- http://code.ecoinformatics.org/code/semtools/dev/oboe#hasContextRelationship -->
 
-    <owl:ObjectProperty rdf:about="#hasContextRelationship">
+    <owl:ObjectProperty rdf:about="&oboe;hasContextRelationship">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="#Context"/>
-        <rdfs:range rdf:resource="#Relationship"/>
+        <rdfs:domain rdf:resource="&oboe;Context"/>
+        <rdfs:range rdf:resource="&oboe;Relationship"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >This property relates a context object to its associated relationship object.</rdfs:comment>
     </owl:ObjectProperty>
@@ -79,11 +79,11 @@
 
     <!-- http://code.ecoinformatics.org/code/semtools/dev/oboe#hasEntityRelationship -->
 
-    <owl:ObjectProperty rdf:about="#hasEntityRelationship">
+    <owl:ObjectProperty rdf:about="&oboe;hasEntityRelationship">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:range rdf:resource="#Relationship"/>
+        <rdfs:range rdf:resource="&oboe;Relationship"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >This property connects an entity to a relationship object, where the entity plays the role of the source of the relationship. </rdfs:comment>
+            >This property connects an entity to a relationship object, where the entity plays the role of the source of the relationship.</rdfs:comment>
         <rdfs:domain rdf:resource="&version;Entity"/>
     </owl:ObjectProperty>
     
@@ -91,11 +91,11 @@
 
     <!-- http://code.ecoinformatics.org/code/semtools/dev/oboe#hasObservationContext -->
 
-    <owl:ObjectProperty rdf:about="#hasObservationContext">
+    <owl:ObjectProperty rdf:about="&oboe;hasObservationContext">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >This property connects an observation to a context object, where the entity of the observation is being contextualized.</rdfs:comment>
-        <rdfs:range rdf:resource="#Context"/>
+        <rdfs:range rdf:resource="&oboe;Context"/>
         <rdfs:domain rdf:resource="&version;Observation"/>
     </owl:ObjectProperty>
     
@@ -103,12 +103,12 @@
 
     <!-- http://code.ecoinformatics.org/code/semtools/dev/oboe#hasRelationshipEntity -->
 
-    <owl:ObjectProperty rdf:about="#hasRelationshipEntity">
+    <owl:ObjectProperty rdf:about="&oboe;hasRelationshipEntity">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >This property connects a relationship object to an entity,  where the entity plays the role of the target of the relationship. </rdfs:comment>
-        <rdfs:domain rdf:resource="#Relationship"/>
+        <rdfs:domain rdf:resource="&oboe;Relationship"/>
         <rdfs:range rdf:resource="&version;Entity"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This property connects a relationship object to an entity,  where the entity plays the role of the target of the relationship.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -435,16 +435,16 @@
 
     <!-- http://code.ecoinformatics.org/code/semtools/dev/oboe#Context -->
 
-    <owl:Class rdf:about="#Context">
+    <owl:Class rdf:about="&oboe;Context">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasContextRelationship"/>
-                <owl:someValuesFrom rdf:resource="#Relationship"/>
+                <owl:onProperty rdf:resource="&oboe;hasContextRelationship"/>
+                <owl:someValuesFrom rdf:resource="&oboe;Relationship"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasContextObservation"/>
+                <owl:onProperty rdf:resource="&oboe;hasContextObservation"/>
                 <owl:someValuesFrom rdf:resource="&version;Observation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -452,22 +452,22 @@
         <owl:disjointWith rdf:resource="&version;CharacteristicValue"/>
         <owl:disjointWith rdf:resource="&version;Measurement"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >A context represents an asserted relationship between two observed entities at the time of observation. The relationship is directional in that one of the observed entities serves the role as context for the other. </rdfs:comment>
+            >A context represents an asserted relationship between two observed entities at the time of observation. The relationship is directional in that one of the observed entities serves the role as context for the other.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://code.ecoinformatics.org/code/semtools/dev/oboe#Relationship -->
 
-    <owl:Class rdf:about="#Relationship">
+    <owl:Class rdf:about="&oboe;Relationship">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasRelationshipEntity"/>
+                <owl:onProperty rdf:resource="&oboe;hasRelationshipEntity"/>
                 <owl:someValuesFrom rdf:resource="&version;Entity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <owl:disjointWith rdf:resource="#Context"/>
+        <owl:disjointWith rdf:resource="&oboe;Context"/>
         <owl:disjointWith rdf:resource="&version;Entity"/>
         <owl:disjointWith rdf:resource="&version;UnitConversion"/>
         <owl:disjointWith rdf:resource="&version;Observation"/>
@@ -535,7 +535,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:disjointWith rdf:resource="&version;UnitConversion"/>
-        <owl:disjointWith rdf:resource="#Context"/>
+        <owl:disjointWith rdf:resource="&oboe;Context"/>
         <owl:disjointWith rdf:resource="&version;Measurement"/>
         <owl:disjointWith rdf:resource="&version;CharacteristicValue"/>
         <owl:disjointWith rdf:resource="&version;MeasurementStandard"/>
@@ -628,8 +628,8 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&version;BaseDimension"/>
-                    <rdf:Description rdf:about="&version;SimpleDerivedDimension"/>
                     <rdf:Description rdf:about="&version;ComplexDerivedDimension"/>
+                    <rdf:Description rdf:about="&version;SimpleDerivedDimension"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -653,7 +653,7 @@
         <owl:disjointWith rdf:resource="&version;Characteristic"/>
         <owl:disjointWith rdf:resource="&version;CharacteristicValue"/>
         <owl:disjointWith rdf:resource="&version;MeasurementStandard"/>
-        <owl:disjointWith rdf:resource="#Context"/>
+        <owl:disjointWith rdf:resource="&oboe;Context"/>
         <owl:disjointWith rdf:resource="&version;UnitConversion"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >An entity denotes a concrete or conceptual object that has been observed (e.g., a tree, a community, an ecological process).  We adopt the distinction between objects and properties of M. Bunge (1979). Namely, objects (entities) possess properties (characteristics), there are no objects without properties, and properties are attached to objects.  Entities constitute the foci of observations, i.e., every observation is of some entity.</rdfs:comment>
@@ -768,7 +768,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <owl:disjointWith rdf:resource="#Context"/>
+        <owl:disjointWith rdf:resource="&oboe;Context"/>
         <owl:disjointWith rdf:resource="&version;Measurement"/>
         <owl:disjointWith rdf:resource="&version;CharacteristicValue"/>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -810,7 +810,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <owl:disjointWith rdf:resource="&version;Entity"/>
-        <owl:disjointWith rdf:resource="#Context"/>
+        <owl:disjointWith rdf:resource="&oboe;Context"/>
         <owl:disjointWith rdf:resource="&version;Characteristic"/>
         <owl:disjointWith rdf:resource="&version;MeasurementStandard"/>
         <owl:disjointWith rdf:resource="&version;Measurement"/>
@@ -827,7 +827,7 @@
     <owl:Class rdf:about="&version;OrderedValue">
         <rdfs:subClassOf rdf:resource="&version;CharacteristicValue"/>
         <rdfs:comment
-            >An ordered value is a characteristic value that is related to other characteristic values through a precedence (order) relation. Order is specified using the &apos;hasHigherRank&apos; property. </rdfs:comment>
+            >An ordered value is a characteristic value that is related to other characteristic values through a precedence (order) relation. Order is specified using the &apos;hasHigherRank&apos; property.</rdfs:comment>
     </owl:Class>
     
 
@@ -1003,7 +1003,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <owl:disjointWith rdf:resource="#Context"/>
+        <owl:disjointWith rdf:resource="&oboe;Context"/>
         <owl:disjointWith rdf:resource="&version;MeasurementStandard"/>
         <owl:disjointWith rdf:resource="&version;Measurement"/>
         <owl:disjointWith rdf:resource="&version;CharacteristicValue"/>
@@ -1031,10 +1031,10 @@
 
     <rdf:Description>
         <rdf:type rdf:resource="&rdf;List"/>
-        <rdf:first rdf:resource="#hasObservationContext"/>
+        <rdf:first rdf:resource="&oboe;hasObservationContext"/>
         <rdfs:subPropertyOf rdf:resource="&version;hasContext"/>
         <rdf:rest rdf:parseType="Collection">
-            <rdf:Description rdf:about="#hasContextObservation"/>
+            <rdf:Description rdf:about="&oboe;hasContextObservation"/>
         </rdf:rest>
     </rdf:Description>
 </rdf:RDF>
