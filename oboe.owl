@@ -343,9 +343,9 @@
 
     <owl:DatatypeProperty rdf:about="#hasMultiplier">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:range rdf:resource="&xsd;double"/>
         <rdfs:comment
             >This property gives the multiplier value of a unit conoboe. For example, to convert from celsius to fahrenheit we multiply by the multiplier 9/5 and add 32.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
         <rdfs:domain rdf:resource="#UnitConversion"/>
     </owl:DatatypeProperty>
     
@@ -355,9 +355,9 @@
 
     <owl:DatatypeProperty rdf:about="#hasOffset">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
         <rdfs:comment
             >This property gives the offset value of a unit conoboe. For example, to convert from celsius to fahrenheit we multiply by 9/5 and add the offset 32.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;double"/>
         <rdfs:domain rdf:resource="#UnitConversion"/>
     </owl:DatatypeProperty>
     
@@ -390,8 +390,8 @@
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >This property gives the precision of a measurement value.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
         <rdfs:domain rdf:resource="#Measurement"/>
-        <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
@@ -690,6 +690,12 @@
     <owl:Class rdf:about="#Measurement">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPrecision"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="#ofCharacteristic"/>
                 <owl:someValuesFrom rdf:resource="#Characteristic"/>
             </owl:Restriction>
@@ -704,12 +710,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#usesStandard"/>
                 <owl:someValuesFrom rdf:resource="#MeasurementStandard"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPrecision"/>
-                <owl:someValuesFrom rdf:resource="&xsd;anySimpleType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#MeasurementStandard"/>
@@ -971,13 +971,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasMultiplier"/>
-                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasOffset"/>
-                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#Measurement"/>
