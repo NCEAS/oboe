@@ -6,16 +6,16 @@
  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  <!ENTITY unit "http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#">
- <!ENTITY oboe "http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#">]>
+ <!ENTITY oboe "http://linus.nceas.ucsb.edu/sms/metacat/ont.3.1#">]>
 
-<rdf:RDF xmlns="&unit;"
+<rdf:RDF xmlns="http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl"
      xml:base="http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl"
      xmlns:base="http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl"
      xmlns:owl="&owl;"
      xmlns:rdfs="&rdfs;"
      xmlns:rdf="&rdf;">
  <owl:Ontology rdf:about="">
- <owl:imports rdf:resource="http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl"/>
+ <owl:imports rdf:resource="http://linus.nceas.ucsb.edu/sms/metacat/ont.3.1"/>
  </owl:Ontology>
  <owl:Class rdf:about="#MassPerMass">
  <rdfs:subClassOf rdf:resource="&oboe;ComplexDerivedDimension"/>
