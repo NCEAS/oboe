@@ -1187,6 +1187,7 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe;SimpleDerivedUnit"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
                                 <owl:allValuesFrom rdf:resource="#Kilogram"/>
@@ -1195,7 +1196,6 @@
                                 <owl:onProperty rdf:resource="&oboe;hasPower"/>
                                 <owl:hasValue rdf:datatype="&xsd;int">-3</owl:hasValue>
                             </owl:Restriction>
-                            <rdf:Description rdf:about="&oboe;SimpleDerivedUnit"/>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -2033,6 +2033,56 @@
     
 
 
+    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#FootGoldCoast -->
+
+    <owl:Class rdf:about="#FootGoldCoast">
+        <rdfs:label>Foot Gold Coast</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="#Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="&oboe;BaseUnit"/>
+        <rdfs:comment>12 inches</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#FootGoldCoastToMeter -->
+
+    <owl:Class rdf:about="#FootGoldCoastToMeter">
+        <rdfs:label
+            >Foot Gold Coast to Meter Conversion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#FootGoldCoast"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.3047997</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#FootToMeter -->
 
     <owl:Class rdf:about="#FootToMeter">
@@ -2067,78 +2117,39 @@
     
 
 
-    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Foot_Gold_Coast -->
+    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#FootUS -->
 
-    <owl:Class rdf:about="#Foot_Gold_Coast">
-        <rdfs:label>Foot Gold Coast</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;BaseUnit"/>
+    <owl:Class rdf:about="#FootUS">
+        <rdfs:label>Foot US</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
                 <owl:allValuesFrom rdf:resource="#Length"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="&oboe;BaseUnit"/>
         <rdfs:comment>12 inches</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Foot_Gold_CoastToMeter -->
+    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#FootUSToMeter -->
 
-    <owl:Class rdf:about="#Foot_Gold_CoastToMeter">
+    <owl:Class rdf:about="#FootUSToMeter">
         <rdfs:label
-            >Foot Gold Coast to Meter Conversion</rdfs:label>
+            >Foot US to Meter Conversion</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.3047997</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#FootUS"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;decimal">0.0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Foot_Gold_Coast"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Foot_US -->
-
-    <owl:Class rdf:about="#Foot_US">
-        <rdfs:label>Foot US</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;BaseUnit"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="#Length"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>12 inches</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Foot_USToMeter -->
-
-    <owl:Class rdf:about="#Foot_USToMeter">
-        <rdfs:label
-            >Foot US to Meter Conversion</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
@@ -2147,22 +2158,11 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Foot_US"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
     </owl:Class>
     
 
@@ -3426,17 +3426,17 @@
     
 
 
-    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Link_Clarke -->
+    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#LinkClarke -->
 
-    <owl:Class rdf:about="#Link_Clarke">
+    <owl:Class rdf:about="#LinkClarke">
         <rdfs:label>Link Clarke</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;BaseUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
                 <owl:allValuesFrom rdf:resource="#Length"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="&oboe;BaseUnit"/>
         <rdfs:comment
             >This is an ESRI unit and the multiplier comes from ESRI.  It
     may not be accurate.</rdfs:comment>
@@ -3444,21 +3444,15 @@
     
 
 
-    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Link_ClarkeToMeter -->
+    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#LinkClarkeToMeter -->
 
-    <owl:Class rdf:about="#Link_ClarkeToMeter">
+    <owl:Class rdf:about="#LinkClarkeToMeter">
         <rdfs:label
             >Link Clarke to Meter Conversion</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
+                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#LinkClarke"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
@@ -3470,8 +3464,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Link_Clarke"/>
+                <owl:onProperty rdf:resource="&oboe;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5746,6 +5746,7 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe;SimpleDerivedUnit"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
                                 <owl:allValuesFrom rdf:resource="#Second"/>
@@ -5754,7 +5755,6 @@
                                 <owl:onProperty rdf:resource="&oboe;hasPower"/>
                                 <owl:hasValue rdf:datatype="&xsd;int">-3</owl:hasValue>
                             </owl:Restriction>
-                            <rdf:Description rdf:about="&oboe;SimpleDerivedUnit"/>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -5822,6 +5822,7 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe;SimpleDerivedUnit"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
                                 <owl:allValuesFrom rdf:resource="#Second"/>
@@ -5830,7 +5831,6 @@
                                 <owl:onProperty rdf:resource="&oboe;hasPower"/>
                                 <owl:hasValue rdf:datatype="&xsd;int">-3</owl:hasValue>
                             </owl:Restriction>
-                            <rdf:Description rdf:about="&oboe;SimpleDerivedUnit"/>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -7031,6 +7031,7 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe;SimpleDerivedUnit"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
                                 <owl:allValuesFrom rdf:resource="#Second"/>
@@ -7039,7 +7040,6 @@
                                 <owl:onProperty rdf:resource="&oboe;hasPower"/>
                                 <owl:hasValue rdf:datatype="&xsd;int">-3</owl:hasValue>
                             </owl:Restriction>
-                            <rdf:Description rdf:about="&oboe;SimpleDerivedUnit"/>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -7407,6 +7407,7 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe;SimpleDerivedUnit"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
                                 <owl:allValuesFrom rdf:resource="#Second"/>
@@ -7415,7 +7416,6 @@
                                 <owl:onProperty rdf:resource="&oboe;hasPower"/>
                                 <owl:hasValue rdf:datatype="&xsd;int">-3</owl:hasValue>
                             </owl:Restriction>
-                            <rdf:Description rdf:about="&oboe;SimpleDerivedUnit"/>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -7552,6 +7552,112 @@
     
 
 
+    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#YardIndian -->
+
+    <owl:Class rdf:about="#YardIndian">
+        <rdfs:label>Yard Indian</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="#Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="&oboe;BaseUnit"/>
+        <rdfs:comment
+            >This is an ESRI unit and the multiplier comes from ESRI.  It
+    may not be accurate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#YardIndianToMeter -->
+
+    <owl:Class rdf:about="#YardIndianToMeter">
+        <rdfs:label
+            >Yard Indian to Meter Conversion</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal"
+                    >0.914398530744440774</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#YardIndian"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#YardSears -->
+
+    <owl:Class rdf:about="#YardSears">
+        <rdfs:label>Yard Sears</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="#Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="&oboe;BaseUnit"/>
+        <rdfs:comment
+            >This is an ESRI unit and the multiplier comes from ESRI.  It
+    may not be accurate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#YardSearsToMeter -->
+
+    <owl:Class rdf:about="#YardSearsToMeter">
+        <rdfs:label
+            >Yard Sears to Meter Conversion</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#YardSears"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal"
+                    >0.91439841461602867</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
+    </owl:Class>
+    
+
+
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#YardToMeter -->
 
     <owl:Class rdf:about="#YardToMeter">
@@ -7580,112 +7686,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Meter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Yard_Indian -->
-
-    <owl:Class rdf:about="#Yard_Indian">
-        <rdfs:label>Yard Indian</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="#Length"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="&oboe;BaseUnit"/>
-        <rdfs:comment
-            >This is an ESRI unit and the multiplier comes from ESRI.  It
-    may not be accurate.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Yard_IndianToMeter -->
-
-    <owl:Class rdf:about="#Yard_IndianToMeter">
-        <rdfs:label
-            >Yard Indian to Meter Conversion</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal"
-                    >0.914398530744440774</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Yard_Indian"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Yard_Sears -->
-
-    <owl:Class rdf:about="#Yard_Sears">
-        <rdfs:label>Yard Sears</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="#Length"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="&oboe;BaseUnit"/>
-        <rdfs:comment
-            >This is an ESRI unit and the multiplier comes from ESRI.  It
-    may not be accurate.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Yard_SearsToMeter -->
-
-    <owl:Class rdf:about="#Yard_SearsToMeter">
-        <rdfs:label
-            >Yard Sears to Meter Conversion</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal"
-                    >0.91439841461602867</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Yard_Sears"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
