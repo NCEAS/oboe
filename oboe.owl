@@ -22,6 +22,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#">
     <owl:Ontology rdf:about="">
+        <rdfs:label>OBOE</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string"
             >&apos;$Id: Observation.owl,v 1.29 2008/01/30 04:36:12 bowers Exp $&apos;</owl:versionInfo>
     </owl:Ontology>
@@ -48,6 +49,18 @@
             >This property relates a characteristic to the entity it is a characteristic of. A characteristic is of exactly one entity.</rdfs:comment>
         <rdfs:range rdf:resource="#Entity"/>
         <rdfs:domain rdf:resource="#Characteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#characteristicValueOf -->
+
+    <owl:ObjectProperty rdf:about="#characteristicValueOf">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="#CharacteristicValue"/>
+        <rdfs:comment
+            >This property gives the characteristic that a characteristic value is of. A characteristic value can be the value of many characteristics.</rdfs:comment>
+        <rdfs:range rdf:resource="#Characteristic"/>
     </owl:ObjectProperty>
     
 
@@ -103,6 +116,7 @@
 
     <owl:ObjectProperty rdf:about="#hasCharacteristicValue">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <owl:inverseOf rdf:resource="#characteristicValueOf"/>
         <rdfs:comment
             >This property gives the value of an entity&apos;s characteristic. Characteristics have exactly one value.</rdfs:comment>
         <rdfs:range rdf:resource="#CharacteristicValue"/>
@@ -422,6 +436,7 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#BaseDimension -->
 
     <owl:Class rdf:about="#BaseDimension">
+        <rdfs:label>Base Dimension</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Dimension"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -438,6 +453,7 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#BaseUnit -->
 
     <owl:Class rdf:about="#BaseUnit">
+        <rdfs:label>Base Unit</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasPower"/>
@@ -462,6 +478,7 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#Characteristic -->
 
     <owl:Class rdf:about="#Characteristic">
+        <rdfs:label>Characteristic</rdfs:label>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#characteristicOf"/>
@@ -491,6 +508,8 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#CharacteristicValue -->
 
     <owl:Class rdf:about="#CharacteristicValue">
+        <rdfs:label
+            >Characteristic Value</rdfs:label>
         <owl:disjointWith rdf:resource="#Measurement"/>
         <owl:disjointWith rdf:resource="#Relationship"/>
         <owl:disjointWith rdf:resource="#UnitConversion"/>
@@ -507,6 +526,8 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#ComplexDerivedDimension -->
 
     <owl:Class rdf:about="#ComplexDerivedDimension">
+        <rdfs:label
+            >Complex Derived Dimension</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Dimension"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -531,6 +552,8 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#ComplexDerivedUnit -->
 
     <owl:Class rdf:about="#ComplexDerivedUnit">
+        <rdfs:label
+            >Complex Derived Unit</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Unit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -562,6 +585,7 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#Context -->
 
     <owl:Class rdf:about="#Context">
+        <rdfs:label>Context</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasContextRelationship"/>
@@ -583,7 +607,9 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#DateTime -->
 
     <owl:Class rdf:about="#DateTime">
-        <rdfs:subClassOf rdf:resource="#IntervalRatioStandard"/>
+        <rdfs:label
+            >Date-Time Measurement Standard</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#IntervalRatio"/>
         <owl:disjointWith rdf:resource="#NumericIndex"/>
         <owl:disjointWith rdf:resource="#Unit"/>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -595,6 +621,7 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#Dimension -->
 
     <owl:Class rdf:about="#Dimension">
+        <rdfs:label>Dimension</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -614,6 +641,7 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#Entity -->
 
     <owl:Class rdf:about="#Entity">
+        <rdfs:label>Entity</rdfs:label>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasCharacteristic"/>
@@ -633,6 +661,8 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#EntityClassification -->
 
     <owl:Class rdf:about="#EntityClassification">
+        <rdfs:label
+            >Entity Classification</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Characteristic"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A classification characteristic is a directly measurable or recorded property (e.g., height, color, weight) of an entity.</rdfs:comment>
@@ -643,6 +673,8 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#EntityClassificationQualifier -->
 
     <owl:Class rdf:about="#EntityClassificationQualifier">
+        <rdfs:label
+            >Entity Classification Qualifier</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Characteristic"/>
         <owl:disjointWith rdf:resource="#EntityName"/>
         <owl:disjointWith rdf:resource="#EntityType"/>
@@ -655,6 +687,7 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#EntityName -->
 
     <owl:Class rdf:about="#EntityName">
+        <rdfs:label>Entity Name</rdfs:label>
         <rdfs:subClassOf rdf:resource="#EntityClassification"/>
         <owl:disjointWith rdf:resource="#Dimension"/>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -666,6 +699,7 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#EntityType -->
 
     <owl:Class rdf:about="#EntityType">
+        <rdfs:label>Entity Type</rdfs:label>
         <rdfs:subClassOf rdf:resource="#EntityClassification"/>
         <owl:disjointWith rdf:resource="#Dimension"/>
         <owl:disjointWith rdf:resource="#EntityName"/>
@@ -675,10 +709,12 @@
     
 
 
-    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#IntervalRatioStandard -->
+    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#IntervalRatio -->
 
-    <owl:Class rdf:about="#IntervalRatioStandard">
-        <rdfs:subClassOf rdf:resource="#OrdinalStandard"/>
+    <owl:Class rdf:about="#IntervalRatio">
+        <rdfs:label
+            >Interval-Ratio Measurement Standard</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Ordinal"/>
         <rdfs:comment
             >An interval-ratio standard is an ordinal standard that further supports interval and ratio measurements. In an interval standard, equal differences between measurement values represent equivalent intervals in which differences between arbitrary pairs of measurements can be meaningfully compared. In a ratio standard, values additionally have meaningful ratios between arbitrary pairs.</rdfs:comment>
     </owl:Class>
@@ -688,6 +724,7 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#Measurement -->
 
     <owl:Class rdf:about="#Measurement">
+        <rdfs:label>Measurement</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasPrecision"/>
@@ -724,6 +761,8 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#MeasurementStandard -->
 
     <owl:Class rdf:about="#MeasurementStandard">
+        <rdfs:label
+            >Measurement Standard</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasStandardValue"/>
@@ -745,9 +784,11 @@
     
 
 
-    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#NominalStandard -->
+    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#Nominal -->
 
-    <owl:Class rdf:about="#NominalStandard">
+    <owl:Class rdf:about="#Nominal">
+        <rdfs:label
+            >Nominal Measurement Standard</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MeasurementStandard"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A nominal standard is a measurement standard in which names are assigned to entities as labels.</rdfs:comment>
@@ -758,7 +799,9 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#NumericIndex -->
 
     <owl:Class rdf:about="#NumericIndex">
-        <rdfs:subClassOf rdf:resource="#IntervalRatioStandard"/>
+        <rdfs:label
+            >Numeric-Index Measurement Standard</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#IntervalRatio"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A numeric index is typically defined by a mathematical equation, e.g., Shannon diversity, pH, and Richter scale are each numeric indices. Numeric indices typically go with characteristic qualifiers, e.g., the ratio of average height from two populations.</rdfs:comment>
     </owl:Class>
@@ -768,6 +811,7 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#Observation -->
 
     <owl:Class rdf:about="#Observation">
+        <rdfs:label>Observation</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ofEntity"/>
@@ -788,6 +832,8 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#OrderedValue -->
 
     <owl:Class rdf:about="#OrderedValue">
+        <rdfs:label
+            >Ordered Characteristic Value</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CharacteristicValue"/>
         <rdfs:comment
             >An ordered value is a characteristic value that is related to other characteristic values through a precedence (order) relation. Order is specified using the &apos;hasHigherRank&apos; property.</rdfs:comment>
@@ -795,10 +841,12 @@
     
 
 
-    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#OrdinalStandard -->
+    <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#Ordinal -->
 
-    <owl:Class rdf:about="#OrdinalStandard">
-        <rdfs:subClassOf rdf:resource="#NominalStandard"/>
+    <owl:Class rdf:about="#Ordinal">
+        <rdfs:label
+            >Ordinal Measurement Standard</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Nominal"/>
         <rdfs:comment
             >An ordinal standard is a nominal standard in which values represent a rank order (1st, 2nd, 3rd, etc.) of the entities measured.</rdfs:comment>
     </owl:Class>
@@ -808,6 +856,7 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#Relationship -->
 
     <owl:Class rdf:about="#Relationship">
+        <rdfs:label>Relationship</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasRelationshipEntity"/>
@@ -824,6 +873,8 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#SimpleDerivedDimension -->
 
     <owl:Class rdf:about="#SimpleDerivedDimension">
+        <rdfs:label
+            >Simple Derived Dimension</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasBaseDimension"/>
@@ -866,6 +917,8 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#SimpleDerivedUnit -->
 
     <owl:Class rdf:about="#SimpleDerivedUnit">
+        <rdfs:label
+            >Simple Derived Unit</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Unit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -914,6 +967,8 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#StandardValue -->
 
     <owl:Class rdf:about="#StandardValue">
+        <rdfs:label
+            >Standard Characteristic Value</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasCode"/>
@@ -930,6 +985,7 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#Unit -->
 
     <owl:Class rdf:about="#Unit">
+        <rdfs:label>Unit</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -939,7 +995,7 @@
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="#IntervalRatioStandard"/>
+        <rdfs:subClassOf rdf:resource="#IntervalRatio"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#forCharacteristic"/>
@@ -956,6 +1012,7 @@
     <!-- http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#UnitConversion -->
 
     <owl:Class rdf:about="#UnitConversion">
+        <rdfs:label>Unit Conversion</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasSourceUnit"/>
