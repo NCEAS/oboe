@@ -14,14 +14,14 @@
 ]>
 
 
-<rdf:RDF xmlns="&base;#"
-     xml:base="http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl"
-     xmlns:base="http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl"
+<rdf:RDF xmlns="&oboe-unit;"
+     xml:base="&base;"
+     xmlns:base="&base;"
      xmlns:owl11="http://www.w3.org/2006/12/owl11#"
      xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:oboe="http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#"
-     xmlns:oboe-unit="&base;#"
+     xmlns:oboe="&oboe;"
+     xmlns:oboe-unit="&oboe-unit;"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#">
