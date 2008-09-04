@@ -26,7 +26,7 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#">
     <owl:Ontology rdf:about="">
         <rdfs:label>OBOE Unit</rdfs:label>
-        <owl:imports rdf:resource="&oboebase"/>
+        <owl:imports rdf:resource="&oboebase;"/>
         <rdfs:comment
             >The OBOE measurement unit extension</rdfs:comment>
     </owl:Ontology>
