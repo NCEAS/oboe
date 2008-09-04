@@ -9,12 +9,12 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboe "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#" >
-    <!ENTITY base "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl" >
+    <!ENTITY oboe-base "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl" >
 ]>
 
 
 <rdf:RDF xmlns="&oboe;"
-     xml:base="&base;"
+     xml:base="&oboe-base;"
      xmlns:owl11="http://www.w3.org/2006/12/owl11#"
      xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"

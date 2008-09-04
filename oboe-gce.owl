@@ -8,14 +8,17 @@
     <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY oboe "http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#" >
-    <!ENTITY oboe-gce "http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#" >
-    <!ENTITY oboe-unit "http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#" >
+    <!ENTITY oboe "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#" >
+    <!ENTITY oboe-base "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl" >
+    <!ENTITY oboe-unit "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#" >
+    <!ENTITY oboe-unit-base "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl" >
+    <!ENTITY oboe-gce "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#" >
+    <!ENTITY oboe-gce-base "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl" >
 ]>
 
 
 <rdf:RDF xmlns="&oboe-gce;"
-     xml:base="http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl"
+     xml:base="&oboe-gce-base;"
      xmlns:owl11="http://www.w3.org/2006/12/owl11#"
      xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -28,8 +31,8 @@
     <owl:Ontology rdf:about="">
         <rdfs:label
             >OBOE GCE Domain Extension</rdfs:label>
-        <owl:imports rdf:resource="http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl"/>
-        <owl:imports rdf:resource="http://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl"/>
+        <owl:imports rdf:resource="&oboe-base;"/>
+        <owl:imports rdf:resource="&oboe-unit-base;"/>
     </owl:Ontology>
     
 

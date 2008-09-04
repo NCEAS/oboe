@@ -7,15 +7,15 @@
     <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY oboe      "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#" >
-    <!ENTITY oboebase  "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl" >
+    <!ENTITY oboe "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#" >
+    <!ENTITY oboe-base "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl" >
     <!ENTITY oboe-unit "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#" >
-    <!ENTITY base      "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl" >
+    <!ENTITY oboe-unit-base "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl" >
 ]>
 
 
 <rdf:RDF xmlns="&oboe-unit;"
-     xml:base="&base;"
+     xml:base="&oboe-unit-base;"
      xmlns:owl11="http://www.w3.org/2006/12/owl11#"
      xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -26,7 +26,7 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#">
     <owl:Ontology rdf:about="">
         <rdfs:label>OBOE Unit</rdfs:label>
-        <owl:imports rdf:resource="&oboebase;"/>
+        <owl:imports rdf:resource="&oboe-base;"/>
         <rdfs:comment
             >The OBOE measurement unit extension</rdfs:comment>
     </owl:Ontology>
