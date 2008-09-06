@@ -139,6 +139,36 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#AboveGroundPrimaryProductivity -->
+
+    <owl:Class rdf:about="#AboveGroundPrimaryProductivity">
+        <rdfs:label
+            >Above Ground Primary Production</rdfs:label>
+        <rdfs:label
+            >Above Ground Primary Productivity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PrimaryProductivity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#AbovegroundWater -->
+
+    <owl:Class rdf:about="#AbovegroundWater">
+        <rdfs:label
+            >Aboveground Water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AquaticPhysicalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Acrididae -->
+
+    <owl:Class rdf:about="#Acrididae">
+        <rdfs:subClassOf rdf:resource="#Grasshopper"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#AdditionalJuncusZoneInHighMarsh -->
 
     <owl:Class rdf:about="#AdditionalJuncusZoneInHighMarsh">
@@ -223,12 +253,86 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#AmethystGemClam -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Animal -->
 
-    <owl:Class rdf:about="#AmethystGemClam">
+    <owl:Class rdf:about="#Animal">
+        <rdfs:label>Animal</rdfs:label>
+        <rdfs:label>Animalia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Anthropod -->
+
+    <owl:Class rdf:about="#Anthropod">
+        <rdfs:label>Anthropod</rdfs:label>
+        <rdfs:label>Anthropoda</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#AquaticBiome -->
+
+    <owl:Class rdf:about="#AquaticBiome">
+        <rdfs:label>Aquatic Biome</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Biome"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#AquaticPhysicalFeature -->
+
+    <owl:Class rdf:about="#AquaticPhysicalFeature">
         <rdfs:label
-            >Amethyst Gem Clam</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Mollusc"/>
+            >Aquatic Physical Feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PhysicalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#AquaticPhysicalProcess -->
+
+    <owl:Class rdf:about="#AquaticPhysicalProcess">
+        <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#ArcticTundra -->
+
+    <owl:Class rdf:about="#ArcticTundra">
+        <rdfs:label>Arctic Tundra</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TerrestrialBiome"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Asteraceae -->
+
+    <owl:Class rdf:about="#Asteraceae">
+        <rdfs:label>Asteraceae</rdfs:label>
+        <rdfs:label>Sunflower</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Magnoliophyta"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Bark -->
+
+    <owl:Class rdf:about="#Bark">
+        <rdfs:label>Bark</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ExternalPlantStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Bataceae -->
+
+    <owl:Class rdf:about="#Bataceae">
+        <rdfs:label>Bataceae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Magnoliophyta"/>
     </owl:Class>
     
 
@@ -236,8 +340,11 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#BatisMaritima -->
 
     <owl:Class rdf:about="#BatisMaritima">
+        <rdfs:label>TSN 192295</rdfs:label>
+        <rdfs:label>Saltwort</rdfs:label>
         <rdfs:label>Batis maritima</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Turtleweed"/>
+        <rdfs:label>Turtleweed</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Bataceae"/>
     </owl:Class>
     
 
@@ -274,11 +381,24 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#BigCordgrass -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#BelowGroundPrimaryProductivity -->
 
-    <owl:Class rdf:about="#BigCordgrass">
-        <rdfs:label>Big Cordgrass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
+    <owl:Class rdf:about="#BelowGroundPrimaryProductivity">
+        <rdfs:label
+            >Below Ground Primary Production</rdfs:label>
+        <rdfs:label
+            >Below Ground Primary Productivity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PrimaryProductivity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#BelowgroundWater -->
+
+    <owl:Class rdf:about="#BelowgroundWater">
+        <rdfs:label
+            >BelowgroundWater</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AquaticPhysicalFeature"/>
     </owl:Class>
     
 
@@ -292,11 +412,41 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#BiomassEntity -->
+
+    <owl:Class rdf:about="#BiomassEntity">
+        <rdfs:label>Biomass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#EcologicalMassAggregateUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Biome -->
+
+    <owl:Class rdf:about="#Biome">
+        <rdfs:subClassOf rdf:resource="#EcologicalOrganismalIndividualAggregateUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Bivalve -->
+
+    <owl:Class rdf:about="#Bivalve">
+        <rdfs:label>Bivalve</rdfs:label>
+        <rdfs:label>Bivalvia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Mollusc"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#BorJunCommunity -->
 
     <owl:Class rdf:about="#BorJunCommunity">
         <rdfs:label
             >BorJun Community</rdfs:label>
+        <rdfs:label
+            >Borrichia frutescens and Juncus roemerianus Community</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#EcologicalCommunity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasEntityRelationship"/>
@@ -313,7 +463,6 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Community"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasEntityRelationship"/>
@@ -369,9 +518,13 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#BorrichiaFrutescens -->
 
     <owl:Class rdf:about="#BorrichiaFrutescens">
+        <rdfs:label>Bushy Seaoxeye</rdfs:label>
+        <rdfs:label>TSN 35781</rdfs:label>
+        <rdfs:label
+            >Bushy Seaside Tansy</rdfs:label>
         <rdfs:label
             >Borrichia frutescens</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#BushySeasideTansy"/>
+        <rdfs:subClassOf rdf:resource="#Asteraceae"/>
     </owl:Class>
     
 
@@ -409,31 +562,12 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Bulrush -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Burrow -->
 
-    <owl:Class rdf:about="#Bulrush">
-        <rdfs:label>Bulrush</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#BushySeasideTansy -->
-
-    <owl:Class rdf:about="#BushySeasideTansy">
-        <rdfs:label
-            >Bushy Seaside Tansy</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#CarolinaMarshclam -->
-
-    <owl:Class rdf:about="#CarolinaMarshclam">
-        <rdfs:label
-            >Carolina Marsh Clam</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Mollusc"/>
+    <owl:Class rdf:about="#Burrow">
+        <rdfs:label>Hole</rdfs:label>
+        <rdfs:label>Burrow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OrganismalDwelling"/>
     </owl:Class>
     
 
@@ -479,15 +613,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Cattail -->
-
-    <owl:Class rdf:about="#Cattail">
-        <rdfs:label>Cattail</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#CentralSubplot -->
 
     <owl:Class rdf:about="#CentralSubplot">
@@ -497,11 +622,21 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Community -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Chenopodiaceae -->
 
-    <owl:Class rdf:about="#Community">
-        <rdfs:label>Community</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    <owl:Class rdf:about="#Chenopodiaceae">
+        <rdfs:label>Chenopodiaceae</rdfs:label>
+        <rdfs:label>Goosefoot</rdfs:label>
+        <rdfs:label>Chenopodes</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Magnoliophyta"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#CollectionOf -->
+
+    <owl:Class rdf:about="#CollectionOf">
+        <rdfs:subClassOf rdf:resource="&oboe;Relationship"/>
     </owl:Class>
     
 
@@ -547,11 +682,39 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#CompoundPlantNutrient -->
+
+    <owl:Class rdf:about="#CompoundPlantNutrient">
+        <rdfs:label
+            >Compound Plant Nutrient</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PlantNutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#CoralReef -->
+
+    <owl:Class rdf:about="#CoralReef">
+        <rdfs:label>Coral Reef</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OceanicBiome"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Corbiculidae -->
+
+    <owl:Class rdf:about="#Corbiculidae">
+        <rdfs:label>Corbiculidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Bivalve"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Crab -->
 
     <owl:Class rdf:about="#Crab">
         <rdfs:label>Crab</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Organism"/>
+        <rdfs:subClassOf rdf:resource="#Animal"/>
     </owl:Class>
     
 
@@ -560,7 +723,7 @@
 
     <owl:Class rdf:about="#CrabHole">
         <rdfs:label>Crab Hole</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Hole"/>
+        <rdfs:subClassOf rdf:resource="#Burrow"/>
     </owl:Class>
     
 
@@ -586,7 +749,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="#Population"/>
+        <rdfs:subClassOf rdf:resource="#EcologicalPopulation"/>
     </owl:Class>
     
 
@@ -628,6 +791,16 @@
                 <owl:hasValue rdf:datatype="&xsd;string">CreekBankZone</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Cyperaceae -->
+
+    <owl:Class rdf:about="#Cyperaceae">
+        <rdfs:label>Cyperaceae</rdfs:label>
+        <rdfs:label>Sedge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Liliopsida"/>
     </owl:Class>
     
 
@@ -708,12 +881,42 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#DeciduousForest -->
+
+    <owl:Class rdf:about="#DeciduousForest">
+        <rdfs:label
+            >Deciduous Forest</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Forest"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Den -->
+
+    <owl:Class rdf:about="#Den">
+        <rdfs:label>Den</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OrganismalDwelling"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Desert -->
+
+    <owl:Class rdf:about="#Desert">
+        <rdfs:label>Desert</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TerrestrialBiome"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#DetraciaFloridana -->
 
     <owl:Class rdf:about="#DetraciaFloridana">
         <rdfs:label
             >Detracia floridana</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#FloridaMelampus"/>
+        <rdfs:label
+            >Florida Melampus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Bivalve"/>
     </owl:Class>
     
 
@@ -796,9 +999,11 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#DistichlisSpicata -->
 
     <owl:Class rdf:about="#DistichlisSpicata">
+        <rdfs:label>TSN 40662</rdfs:label>
         <rdfs:label
             >Distichlis spicata</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SaltGrass"/>
+        <rdfs:label>Saltgrass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Poaceae"/>
     </owl:Class>
     
 
@@ -836,6 +1041,15 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#DryBiomassEntity -->
+
+    <owl:Class rdf:about="#DryBiomassEntity">
+        <rdfs:label>Dry Biomass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#BiomassEntity"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#DryWeight -->
 
     <owl:Class rdf:about="#DryWeight">
@@ -845,22 +1059,104 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#EasternLubberGrasshopper -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#DwarfShrubland -->
 
-    <owl:Class rdf:about="#EasternLubberGrasshopper">
-        <rdfs:label
-            >Eastern Lubber Grasshopper</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Grasshopper"/>
+    <owl:Class rdf:about="#DwarfShrubland">
+        <rdfs:label>Dwarf Shrubland</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
     </owl:Class>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#EasternMelampus -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#EcologicalAggregateUnit -->
 
-    <owl:Class rdf:about="#EasternMelampus">
+    <owl:Class rdf:about="#EcologicalAggregateUnit">
         <rdfs:label
-            >Eastern Melampus</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Mollusc"/>
+            >Ecological Aggregate Unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#EcologicalCommunity -->
+
+    <owl:Class rdf:about="#EcologicalCommunity">
+        <rdfs:label
+            >Ecological Community</rdfs:label>
+        <rdfs:label>Community</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#EcologicalOrganismalIndividualAggregateUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#EcologicalHabitat -->
+
+    <owl:Class rdf:about="#EcologicalHabitat">
+        <rdfs:label
+            >Ecological Habitat</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#EcologicalMassAggregateUnit -->
+
+    <owl:Class rdf:about="#EcologicalMassAggregateUnit">
+        <rdfs:label
+            >Ecological Mass Aggregate Unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#EcologicalOrganismalIndividualAggregateUnit -->
+
+    <owl:Class rdf:about="#EcologicalOrganismalIndividualAggregateUnit">
+        <rdfs:label
+            >Ecological Organismal-Individual Aggregate Unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#EcologicalAggregateUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#EcologicalPopulation -->
+
+    <owl:Class rdf:about="#EcologicalPopulation">
+        <rdfs:label
+            >Ecological Population</rdfs:label>
+        <rdfs:label>Population</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#EcologicalOrganismalIndividualAggregateUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Ecosystem -->
+
+    <owl:Class rdf:about="#Ecosystem">
+        <rdfs:label
+            >Ecological System</rdfs:label>
+        <rdfs:label>Ecosystem</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#EcologicalOrganismalIndividualAggregateUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#ElementalPlantNutrient -->
+
+    <owl:Class rdf:about="#ElementalPlantNutrient">
+        <rdfs:label
+            >Elemental Plant Nutrient</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PlantNutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Estuary -->
+
+    <owl:Class rdf:about="#Estuary">
+        <rdfs:label>Estuary</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OceanicBiome"/>
+        <rdfs:subClassOf rdf:resource="#EcologicalHabitat"/>
     </owl:Class>
     
 
@@ -906,12 +1202,69 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#EvergreenForest -->
+
+    <owl:Class rdf:about="#EvergreenForest">
+        <rdfs:label
+            >Evergreen Forest</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Forest"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Exoskeleton -->
+
+    <owl:Class rdf:about="#Exoskeleton">
+        <rdfs:label>Exoskeleton</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ExternalAnimalStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#ExperimentalFeature -->
+
+    <owl:Class rdf:about="#ExperimentalFeature">
+        <rdfs:label
+            >Experimental Feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#ExperimentalTreatment -->
 
     <owl:Class rdf:about="#ExperimentalTreatment">
         <rdfs:label
             >Experimental Treatment</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+        <rdfs:subClassOf rdf:resource="#ExperimentalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#ExternalAnimalStructure -->
+
+    <owl:Class rdf:about="#ExternalAnimalStructure">
+        <rdfs:label
+            >External Animal Structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ExternalOrganismalStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#ExternalOrganismalStructure -->
+
+    <owl:Class rdf:about="#ExternalOrganismalStructure">
+        <rdfs:label
+            >External Organismal Structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OrganismalStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#ExternalPlantStructure -->
+
+    <owl:Class rdf:about="#ExternalPlantStructure">
+        <rdfs:subClassOf rdf:resource="#ExternalOrganismalStructure"/>
     </owl:Class>
     
 
@@ -926,12 +1279,11 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#FloridaMelampus -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Flower -->
 
-    <owl:Class rdf:about="#FloridaMelampus">
-        <rdfs:label
-            >Florida Melampus</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Mollusc"/>
+    <owl:Class rdf:about="#Flower">
+        <rdfs:label>Flower</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ExternalPlantStructure"/>
     </owl:Class>
     
 
@@ -1035,6 +1387,17 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Forest -->
+
+    <owl:Class rdf:about="#Forest">
+        <rdfs:label>Forest</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OceanicBiome"/>
+        <rdfs:subClassOf rdf:resource="#EcologicalHabitat"/>
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#FourMileIsland -->
 
     <owl:Class rdf:about="#FourMileIsland">
@@ -1077,6 +1440,16 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#FreshwaterMarsh -->
+
+    <owl:Class rdf:about="#FreshwaterMarsh">
+        <rdfs:label
+            >Freshwater Marsh</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Marsh"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#GCESiteNames -->
 
     <owl:Class rdf:about="#GCESiteNames">
@@ -1110,8 +1483,9 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#GemmaGemma -->
 
     <owl:Class rdf:about="#GemmaGemma">
+        <rdfs:label>TSN 81511</rdfs:label>
         <rdfs:label>Gemma gemma</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#AmethystGemClam"/>
+        <rdfs:subClassOf rdf:resource="#Veneridae"/>
     </owl:Class>
     
 
@@ -1188,7 +1562,8 @@
     <owl:Class rdf:about="#GeukensiaDemissa">
         <rdfs:label
             >Geukensia demissa</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#RibbedMussel"/>
+        <rdfs:label>Ribbed Mussel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Bivalve"/>
     </owl:Class>
     
 
@@ -1252,15 +1627,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#GiantCutgrass -->
-
-    <owl:Class rdf:about="#GiantCutgrass">
-        <rdfs:label>Giant Cutgrass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#GramsPerSquareMeter -->
 
     <owl:Class rdf:about="#GramsPerSquareMeter">
@@ -1308,8 +1674,11 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Grasshopper -->
 
     <owl:Class rdf:about="#Grasshopper">
+        <rdfs:label>Cricket</rdfs:label>
+        <rdfs:label>Locust</rdfs:label>
+        <rdfs:label>Orthoptera</rdfs:label>
         <rdfs:label>Grasshopper</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Organism"/>
+        <rdfs:subClassOf rdf:resource="#Insect"/>
     </owl:Class>
     
 
@@ -1319,17 +1688,7 @@
     <owl:Class rdf:about="#GrasshopperPopulation">
         <rdfs:label
             >Grasshopper Population</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Population"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#GreaterMeadowKatydids -->
-
-    <owl:Class rdf:about="#GreaterMeadowKatydids">
-        <rdfs:label
-            >Greater Meadow Katydids</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Grasshopper"/>
+        <rdfs:subClassOf rdf:resource="#EcologicalPopulation"/>
     </owl:Class>
     
 
@@ -1347,6 +1706,15 @@
 
     <owl:Class rdf:about="#Height">
         <rdfs:subClassOf rdf:resource="&oboe-unit;Length"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#HerbaceousVIII -->
+
+    <owl:Class rdf:about="#HerbaceousVIII">
+        <rdfs:label>Herbaceous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
     </owl:Class>
     
 
@@ -1392,11 +1760,11 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Hole -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Hill -->
 
-    <owl:Class rdf:about="#Hole">
-        <rdfs:label>Hole</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    <owl:Class rdf:about="#Hill">
+        <rdfs:label>Hill</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TerrestrialPhysicalFeature"/>
     </owl:Class>
     
 
@@ -1446,8 +1814,9 @@
 
     <owl:Class rdf:about="#Hydrobiidae">
         <rdfs:label
-            >Hydrobiidae spp.</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SmallFreshwaterSnail"/>
+            >Small Freshwater Snail</rdfs:label>
+        <rdfs:label>Hydrobiidae L.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Bivalve"/>
     </owl:Class>
     
 
@@ -1510,12 +1879,46 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Insect -->
+
+    <owl:Class rdf:about="#Insect">
+        <rdfs:label>Insecta</rdfs:label>
+        <rdfs:label>Insect</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Anthropod"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Iron -->
+
+    <owl:Class rdf:about="#Iron">
+        <rdfs:label>Iron</rdfs:label>
+        <rdfs:label>Fe</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ElementalPlantNutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Juncaceae -->
+
+    <owl:Class rdf:about="#Juncaceae">
+        <rdfs:label>Juncaceae</rdfs:label>
+        <rdfs:label>Rush</rdfs:label>
+        <rdfs:label>Jonc</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Liliopsida"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#JuncusRoemerianus -->
 
     <owl:Class rdf:about="#JuncusRoemerianus">
+        <rdfs:label>TSN 39238</rdfs:label>
         <rdfs:label
             >Juncus roemerianus</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#NeedlegrassRush"/>
+        <rdfs:label
+            >Needlegrass Rush</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Juncaceae"/>
     </owl:Class>
     
 
@@ -1553,11 +1956,30 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Lake -->
+
+    <owl:Class rdf:about="#Lake">
+        <rdfs:label>Lake</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AquaticBiome"/>
+        <rdfs:subClassOf rdf:resource="#AquaticPhysicalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#LakeLevel -->
+
+    <owl:Class rdf:about="#LakeLevel">
+        <rdfs:label>Lake Level</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AquaticPhysicalProcess"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Leaf -->
 
     <owl:Class rdf:about="#Leaf">
         <rdfs:label>Leaf</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PlantPart"/>
+        <rdfs:subClassOf rdf:resource="#ExternalPlantStructure"/>
     </owl:Class>
     
 
@@ -1572,18 +1994,27 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#PopulationOf"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;hasRelationshipEntity"/>
                                 <owl:allValuesFrom rdf:resource="#Leaf"/>
                             </owl:Restriction>
+                            <rdf:Description rdf:about="#CollectionOf"/>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="#PlantPart"/>
-        <rdfs:subClassOf rdf:resource="#Population"/>
+        <rdfs:subClassOf rdf:resource="#StatisticalCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Liliopsida -->
+
+    <owl:Class rdf:about="#Liliopsida">
+        <rdfs:label>Liliopsida</rdfs:label>
+        <rdfs:label>Monocotyledon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Plant"/>
     </owl:Class>
     
 
@@ -1592,8 +2023,10 @@
 
     <owl:Class rdf:about="#LittorariaIrrorata">
         <rdfs:label
+            >Marsh Periwinkle</rdfs:label>
+        <rdfs:label
             >Littoraria irrorata</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#MarshPeriwinkle"/>
+        <rdfs:subClassOf rdf:resource="#Bivalve"/>
     </owl:Class>
     
 
@@ -1657,6 +2090,36 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Magnoliophyta -->
+
+    <owl:Class rdf:about="#Magnoliophyta">
+        <rdfs:label>Angiosperm</rdfs:label>
+        <rdfs:label>Magnoliophyta</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Tracheobionta"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#MarinePhysicalProcess -->
+
+    <owl:Class rdf:about="#MarinePhysicalProcess">
+        <rdfs:label
+            >Marine Physical Process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Marsh -->
+
+    <owl:Class rdf:about="#Marsh">
+        <rdfs:subClassOf rdf:resource="#OceanicBiome"/>
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+        <rdfs:subClassOf rdf:resource="#EcologicalHabitat"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#MarshLanding -->
 
     <owl:Class rdf:about="#MarshLanding">
@@ -1698,12 +2161,23 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#MarshPeriwinkle -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#MediterraneanVegetation -->
 
-    <owl:Class rdf:about="#MarshPeriwinkle">
+    <owl:Class rdf:about="#MediterraneanVegetation">
         <rdfs:label
-            >Marsh Periwinkle</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Mollusc"/>
+            >Mediterranean Vegetation</rdfs:label>
+        <rdfs:label>Chapparral</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TerrestrialBiome"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#MediumTallGrassland -->
+
+    <owl:Class rdf:about="#MediumTallGrassland">
+        <rdfs:label
+            >Medium Tall Grassland</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#HerbaceousVIII"/>
     </owl:Class>
     
 
@@ -1712,8 +2186,10 @@
 
     <owl:Class rdf:about="#MelampusBidentatus">
         <rdfs:label
+            >Eastern Melampus</rdfs:label>
+        <rdfs:label
             >Melampus bidentatus</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#EasternMelampus"/>
+        <rdfs:subClassOf rdf:resource="#Bivalve"/>
     </owl:Class>
     
 
@@ -1821,9 +2297,10 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#MermiriaIntertexta -->
 
     <owl:Class rdf:about="#MermiriaIntertexta">
+        <rdfs:label>TSN 658644</rdfs:label>
         <rdfs:label
             >Mermiria intertexta</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ToothpickGrasshopper"/>
+        <rdfs:subClassOf rdf:resource="#Acrididae"/>
     </owl:Class>
     
 
@@ -1887,20 +2364,21 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Mollusc -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#MixedEvergreenDeciduousForest -->
 
-    <owl:Class rdf:about="#Mollusc">
-        <rdfs:label>Mollusc</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Organism"/>
+    <owl:Class rdf:about="#MixedEvergreenDeciduousForest">
+        <rdfs:label
+            >Mixed Evergreen-Deciduous Forest</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Forest"/>
     </owl:Class>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#MolluscPart -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Mollusc -->
 
-    <owl:Class rdf:about="#MolluscPart">
-        <rdfs:label>Mollusc Part</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    <owl:Class rdf:about="#Mollusc">
+        <rdfs:label>Mollusc</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Animal"/>
     </owl:Class>
     
 
@@ -1910,7 +2388,7 @@
     <owl:Class rdf:about="#MolluscPopulation">
         <rdfs:label
             >Mollusc Population</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Population"/>
+        <rdfs:subClassOf rdf:resource="#EcologicalPopulation"/>
     </owl:Class>
     
 
@@ -1919,7 +2397,6 @@
 
     <owl:Class rdf:about="#MolluscShell">
         <rdfs:label>Mollusc Shell</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#MolluscPart"/>
         <rdfs:subClassOf rdf:resource="#Shell"/>
     </owl:Class>
     
@@ -1933,12 +2410,42 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#NeedlegrassRush -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Mountain -->
 
-    <owl:Class rdf:about="#NeedlegrassRush">
-        <rdfs:label
-            >Needlegrass Rush</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
+    <owl:Class rdf:about="#Mountain">
+        <rdfs:label>Mountain</rdfs:label>
+        <rdfs:label>Alpine Tundra</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TerrestrialPhysicalFeature"/>
+        <rdfs:subClassOf rdf:resource="#TerrestrialBiome"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Nest -->
+
+    <owl:Class rdf:about="#Nest">
+        <rdfs:label>Nest</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OrganismalDwelling"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Nitrate -->
+
+    <owl:Class rdf:about="#Nitrate">
+        <rdfs:label>NO3-</rdfs:label>
+        <rdfs:label>Nitrate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#CompoundPlantNutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Nitrogen -->
+
+    <owl:Class rdf:about="#Nitrogen">
+        <rdfs:label>Nitrogen</rdfs:label>
+        <rdfs:label>N</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ElementalPlantNutrient"/>
     </owl:Class>
     
 
@@ -1984,6 +2491,17 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#NorthernConiferousForest -->
+
+    <owl:Class rdf:about="#NorthernConiferousForest">
+        <rdfs:label>Taiga</rdfs:label>
+        <rdfs:label
+            >Northern Coniferous Forest</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TerrestrialBiome"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#NotFloweringValue -->
 
     <owl:Class rdf:about="#NotFloweringValue">
@@ -2000,12 +2518,20 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#ObscureBirdGrasshopper -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Ocean -->
 
-    <owl:Class rdf:about="#ObscureBirdGrasshopper">
-        <rdfs:label
-            >Obscure Bird Grasshopper</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Grasshopper"/>
+    <owl:Class rdf:about="#Ocean">
+        <rdfs:label>Ocean</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OceanicBiome"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#OceanicBiome -->
+
+    <owl:Class rdf:about="#OceanicBiome">
+        <rdfs:label>Oceanic Biome</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Biome"/>
     </owl:Class>
     
 
@@ -2013,8 +2539,9 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Orchelimum -->
 
     <owl:Class rdf:about="#Orchelimum">
-        <rdfs:label>Orchelimum spp.</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#GreaterMeadowKatydids"/>
+        <rdfs:label>TSN 102233</rdfs:label>
+        <rdfs:label>Orchelimum L.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Tettigoniidae"/>
     </owl:Class>
     
 
@@ -2086,12 +2613,42 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#OrganismalDwelling -->
+
+    <owl:Class rdf:about="#OrganismalDwelling">
+        <rdfs:label
+            >Organismal Dwelling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#OrganismalNutrient -->
+
+    <owl:Class rdf:about="#OrganismalNutrient">
+        <rdfs:label
+            >Organismal Nutrient</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#OrganismalStructure -->
+
+    <owl:Class rdf:about="#OrganismalStructure">
+        <rdfs:label
+            >Organismal Structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#OrphulellaPelidna -->
 
     <owl:Class rdf:about="#OrphulellaPelidna">
         <rdfs:label
             >Orphulella pelidna</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SpottedWingedGrasshopper"/>
+        <rdfs:subClassOf rdf:resource="#Acrididae"/>
     </owl:Class>
     
 
@@ -2151,6 +2708,17 @@
                     >OrphulellaPelidna</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#OrpulellaPelidna -->
+
+    <owl:Class rdf:about="#OrpulellaPelidna">
+        <rdfs:label
+            >Orpulella pelidna</rdfs:label>
+        <rdfs:label>TSN 658637</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Acrididae"/>
     </owl:Class>
     
 
@@ -2224,20 +2792,12 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#PanicGrass -->
-
-    <owl:Class rdf:about="#PanicGrass">
-        <rdfs:label>Panic Grass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Panicum -->
 
     <owl:Class rdf:about="#Panicum">
-        <rdfs:label>Panicum spp.</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PanicGrass"/>
+        <rdfs:label>Panic Grass</rdfs:label>
+        <rdfs:label>Panicum L.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Plant"/>
     </owl:Class>
     
 
@@ -2277,9 +2837,10 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#ParoxyaClavuliger -->
 
     <owl:Class rdf:about="#ParoxyaClavuliger">
+        <rdfs:label>TSN 658658</rdfs:label>
         <rdfs:label
             >Paroxya clavuliger</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SaltMarshGrasshopper"/>
+        <rdfs:subClassOf rdf:resource="#Acrididae"/>
     </owl:Class>
     
 
@@ -2478,29 +3039,61 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Plant -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Phosphate -->
 
-    <owl:Class rdf:about="#Plant">
-        <rdfs:label>Plant</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Organism"/>
+    <owl:Class rdf:about="#Phosphate">
+        <rdfs:label>H2PO4-</rdfs:label>
+        <rdfs:label>Phosphate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#CompoundPlantNutrient"/>
     </owl:Class>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#PlantPart -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Phosphorus -->
 
-    <owl:Class rdf:about="#PlantPart">
-        <rdfs:label>Plant Part</rdfs:label>
+    <owl:Class rdf:about="#Phosphorus">
+        <rdfs:label>P</rdfs:label>
+        <rdfs:label>Phosphorus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ElementalPlantNutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#PhysicalFeature -->
+
+    <owl:Class rdf:about="#PhysicalFeature">
+        <rdfs:label
+            >Physical Feature</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
     </owl:Class>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#PlantShoot -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#PhysicalProcess -->
 
-    <owl:Class rdf:about="#PlantShoot">
-        <rdfs:label>Plant Shoot</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PlantPart"/>
+    <owl:Class rdf:about="#PhysicalProcess">
+        <rdfs:label
+            >Physical Process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Plant -->
+
+    <owl:Class rdf:about="#Plant">
+        <rdfs:label>Plant</rdfs:label>
+        <rdfs:label>Plantae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#PlantNutrient -->
+
+    <owl:Class rdf:about="#PlantNutrient">
+        <rdfs:label>Plant Nutrient</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OrganismalNutrient"/>
     </owl:Class>
     
 
@@ -2589,12 +3182,23 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Poaceae -->
+
+    <owl:Class rdf:about="#Poaceae">
+        <rdfs:label>Poaceae</rdfs:label>
+        <rdfs:label>Grass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Liliopsida"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#PolymesodaCaroliniana -->
 
     <owl:Class rdf:about="#PolymesodaCaroliniana">
         <rdfs:label
             >Polymesoda caroliniana</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#CarolinaMarshclam"/>
+        <rdfs:label>TSN 81383</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Corbiculidae"/>
     </owl:Class>
     
 
@@ -2658,11 +3262,11 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Population -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Pond -->
 
-    <owl:Class rdf:about="#Population">
-        <rdfs:label>Population</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    <owl:Class rdf:about="#Pond">
+        <rdfs:label>Pond</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AquaticBiome"/>
     </owl:Class>
     
 
@@ -2708,6 +3312,29 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#PrimaryProductivity -->
+
+    <owl:Class rdf:about="#PrimaryProductivity">
+        <rdfs:label
+            >Primary Production</rdfs:label>
+        <rdfs:label
+            >Primary Productivity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Productivity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Productivity -->
+
+    <owl:Class rdf:about="#Productivity">
+        <rdfs:label>Productivity</rdfs:label>
+        <rdfs:label
+            >Ecological Production</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#EcologicalMassAggregateUnit"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#ReplicateBeltTransect -->
 
     <owl:Class rdf:about="#ReplicateBeltTransect">
@@ -2737,11 +3364,21 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#RibbedMussel -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#River -->
 
-    <owl:Class rdf:about="#RibbedMussel">
-        <rdfs:label>Ribbed Mussel</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Mollusc"/>
+    <owl:Class rdf:about="#River">
+        <rdfs:label>River</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AquaticPhysicalFeature"/>
+        <rdfs:subClassOf rdf:resource="#AquaticBiome"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#RiverFlow -->
+
+    <owl:Class rdf:about="#RiverFlow">
+        <rdfs:label>River Flow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AquaticPhysicalProcess"/>
     </owl:Class>
     
 
@@ -2791,9 +3428,10 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#RomaleaGuttatus -->
 
     <owl:Class rdf:about="#RomaleaGuttatus">
+        <rdfs:label>TSN 650546</rdfs:label>
         <rdfs:label
             >Romalea guttatus</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#EasternLubberGrasshopper"/>
+        <rdfs:subClassOf rdf:resource="#Romaleidae"/>
     </owl:Class>
     
 
@@ -2856,12 +3494,38 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Romaleidae -->
+
+    <owl:Class rdf:about="#Romaleidae">
+        <rdfs:label>Romaleidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Grasshopper"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Root -->
+
+    <owl:Class rdf:about="#Root">
+        <rdfs:label>Root</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ExternalPlantStructure"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SalicorniaVirginica -->
 
     <owl:Class rdf:about="#SalicorniaVirginica">
+        <rdfs:label>TSN 20648</rdfs:label>
         <rdfs:label
             >Salicornia virginica</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#VirginiaGlasswort"/>
+        <rdfs:label>Pickleweed</rdfs:label>
+        <rdfs:label
+            >Salicornia europaea</rdfs:label>
+        <rdfs:label
+            >Virginia glasswort</rdfs:label>
+        <rdfs:label
+            >Salicornia depressa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Chenopodiaceae"/>
     </owl:Class>
     
 
@@ -2899,21 +3563,21 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SaltGrass -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SaltwaterMarsh -->
 
-    <owl:Class rdf:about="#SaltGrass">
-        <rdfs:label>Salt Grass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
+    <owl:Class rdf:about="#SaltwaterMarsh">
+        <rdfs:label>Saltwater Marsh</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Marsh"/>
     </owl:Class>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SaltMarshGrasshopper -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SaltwaterTidalRegularlyFloodedTemperateTallGrassland -->
 
-    <owl:Class rdf:about="#SaltMarshGrasshopper">
+    <owl:Class rdf:about="#SaltwaterTidalRegularlyFloodedTemperateTallGrassland">
         <rdfs:label
-            >Salt Marsh Grasshopper</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Grasshopper"/>
+            >Saltwater-Tidal, Regularly Flooded Temperate Tall Grassland</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TemporateTallGrassland"/>
     </owl:Class>
     
 
@@ -2930,9 +3594,10 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SchistocercaObscura -->
 
     <owl:Class rdf:about="#SchistocercaObscura">
+        <rdfs:label>TSN 658725</rdfs:label>
         <rdfs:label
             >Schistocerca obscura</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ObscureBirdGrasshopper"/>
+        <rdfs:subClassOf rdf:resource="#Acrididae"/>
     </owl:Class>
     
 
@@ -2999,8 +3664,9 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Scirpus -->
 
     <owl:Class rdf:about="#Scirpus">
-        <rdfs:label>Scirpus spp.</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Bulrush"/>
+        <rdfs:label>Bulrush</rdfs:label>
+        <rdfs:label>Scirpus L.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Cyperaceae"/>
     </owl:Class>
     
 
@@ -3037,11 +3703,23 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SecondaryProductivity -->
+
+    <owl:Class rdf:about="#SecondaryProductivity">
+        <rdfs:label
+            >Secondary Productivity</rdfs:label>
+        <rdfs:label
+            >Secondary Production</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Productivity"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Shell -->
 
     <owl:Class rdf:about="#Shell">
         <rdfs:label>Shell</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+        <rdfs:subClassOf rdf:resource="#ExternalAnimalStructure"/>
     </owl:Class>
     
 
@@ -3119,22 +3797,29 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SmallFreshwaterSnail -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Shoot -->
 
-    <owl:Class rdf:about="#SmallFreshwaterSnail">
-        <rdfs:label
-            >Small Freshwater Snail</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Mollusc"/>
+    <owl:Class rdf:about="#Shoot">
+        <rdfs:label>Shoot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ExternalPlantStructure"/>
     </owl:Class>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SmoothCordgrass -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#ShortGrassland -->
 
-    <owl:Class rdf:about="#SmoothCordgrass">
-        <rdfs:label
-            >Smooth Cordgrass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
+    <owl:Class rdf:about="#ShortGrassland">
+        <rdfs:label>Short Grassland</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#HerbaceousVIII"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Shrubland -->
+
+    <owl:Class rdf:about="#Shrubland">
+        <rdfs:label>Shrubland</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
     </owl:Class>
     
 
@@ -3143,8 +3828,9 @@
 
     <owl:Class rdf:about="#SpaBorCommunity">
         <rdfs:label
+            >Spartina alterniflora and Borrichia frutescens Community</rdfs:label>
+        <rdfs:label
             >SpaBor Community</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Community"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasEntityRelationship"/>
@@ -3177,6 +3863,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#EcologicalCommunity"/>
     </owl:Class>
     
 
@@ -3217,8 +3904,9 @@
 
     <owl:Class rdf:about="#SpaDisCommunity">
         <rdfs:label
+            >Spartina alterniflora and Distichlis spicata Community</rdfs:label>
+        <rdfs:label
             >SpaDis Community</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Community"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasEntityRelationship"/>
@@ -3235,6 +3923,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#EcologicalCommunity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasEntityRelationship"/>
@@ -3292,7 +3981,8 @@
     <owl:Class rdf:about="#SpaJunCommunity">
         <rdfs:label
             >SpaJun Community</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Community"/>
+        <rdfs:label
+            >Spartina alterniflora and Juncus roemerianus Community</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasEntityRelationship"/>
@@ -3309,6 +3999,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#EcologicalCommunity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasEntityRelationship"/>
@@ -3366,7 +4057,8 @@
     <owl:Class rdf:about="#SpaSalCommunity">
         <rdfs:label
             >SpaSal Community</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Community"/>
+        <rdfs:label
+            >Spartina alterniflora and Salicornia virginica Community</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasEntityRelationship"/>
@@ -3399,6 +4091,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#EcologicalCommunity"/>
     </owl:Class>
     
 
@@ -3435,12 +4128,58 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SparseDwarfShrubland -->
+
+    <owl:Class rdf:about="#SparseDwarfShrubland">
+        <rdfs:label
+            >Sparse Dwarf Shrubland</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SparseShrubland -->
+
+    <owl:Class rdf:about="#SparseShrubland">
+        <rdfs:label
+            >Sparse Shrubland</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SparseVascularOrNonVascular -->
+
+    <owl:Class rdf:about="#SparseVascularOrNonVascular">
+        <rdfs:label
+            >Sparse Vascular or Non-Vascular</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SparseWoodland -->
+
+    <owl:Class rdf:about="#SparseWoodland">
+        <rdfs:label>Sparse Woodland</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SpartinaAlterniflora -->
 
     <owl:Class rdf:about="#SpartinaAlterniflora">
         <rdfs:label
             >Spartina alterniflora</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SmoothCordgrass"/>
+        <rdfs:label
+            >Saltmarsh Cordgrass</rdfs:label>
+        <rdfs:label
+            >Smooth Cordgrass</rdfs:label>
+        <rdfs:label>TSN 41267</rdfs:label>
+        <rdfs:label
+            >Atlantic Cordgrass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Poaceae"/>
     </owl:Class>
     
 
@@ -3483,7 +4222,9 @@
     <owl:Class rdf:about="#SpartinaCynosuroides">
         <rdfs:label
             >Spartina cynosuroides</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#BigCordgrass"/>
+        <rdfs:label>Big Cordgrass</rdfs:label>
+        <rdfs:label>TSN 41268</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Poaceae"/>
     </owl:Class>
     
 
@@ -3531,16 +4272,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SpottedWingedGrasshopper -->
-
-    <owl:Class rdf:about="#SpottedWingedGrasshopper">
-        <rdfs:label
-            >Spotted Winged Grasshopper</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Grasshopper"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SquareCentimeter -->
 
     <owl:Class rdf:about="#SquareCentimeter">
@@ -3571,11 +4302,58 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#StatisticalCollection -->
+
+    <owl:Class rdf:about="#StatisticalCollection">
+        <rdfs:label
+            >StatisticalCollection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#EcologicalOrganismalIndividualAggregateUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Stem -->
+
+    <owl:Class rdf:about="#Stem">
+        <rdfs:label>Stem</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ExternalPlantStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Stream -->
+
+    <owl:Class rdf:about="#Stream">
+        <rdfs:label>Stream</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AquaticPhysicalFeature"/>
+        <rdfs:subClassOf rdf:resource="#AquaticBiome"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#StreamFlow -->
+
+    <owl:Class rdf:about="#StreamFlow">
+        <rdfs:label>Stream Flow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AquaticPhysicalProcess"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Subplot -->
 
     <owl:Class rdf:about="#Subplot">
         <rdfs:label>Subplot</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#TallGrassland -->
+
+    <owl:Class rdf:about="#TallGrassland">
+        <rdfs:label>Tall Grassland</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#HerbaceousVIII"/>
     </owl:Class>
     
 
@@ -3612,6 +4390,26 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#TemperateForest -->
+
+    <owl:Class rdf:about="#TemperateForest">
+        <rdfs:label
+            >Temperate Forest</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TerrestrialBiome"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#TemperateGrassland -->
+
+    <owl:Class rdf:about="#TemperateGrassland">
+        <rdfs:label
+            >Temperate Grassland</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TerrestrialBiome"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#TemporalPoint -->
 
     <owl:Class rdf:about="#TemporalPoint">
@@ -3620,12 +4418,61 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#ToothpickGrasshopper -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#TemporateTallGrassland -->
 
-    <owl:Class rdf:about="#ToothpickGrasshopper">
+    <owl:Class rdf:about="#TemporateTallGrassland">
         <rdfs:label
-            >Toothpick Grasshopper</rdfs:label>
+            >Temporate Tall Grassland</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TallGrassland"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#TerrestrialBiome -->
+
+    <owl:Class rdf:about="#TerrestrialBiome">
+        <rdfs:label
+            >Terrestrial Biome</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Biome"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#TerrestrialPhysicalFeature -->
+
+    <owl:Class rdf:about="#TerrestrialPhysicalFeature">
+        <rdfs:label
+            >Terrestrial Physical Feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PhysicalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#TerrestrialPhysicalProcess -->
+
+    <owl:Class rdf:about="#TerrestrialPhysicalProcess">
+        <rdfs:label
+            >Terrestrial Physical Process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Tettigoniidae -->
+
+    <owl:Class rdf:about="#Tettigoniidae">
+        <rdfs:label>Tettigoniidae</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Grasshopper"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Tracheobionta -->
+
+    <owl:Class rdf:about="#Tracheobionta">
+        <rdfs:label>Tracheobionta</rdfs:label>
+        <rdfs:label>Vascular Plant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Plant"/>
     </owl:Class>
     
 
@@ -3639,11 +4486,32 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Turtleweed -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#TropicalForest -->
 
-    <owl:Class rdf:about="#Turtleweed">
-        <rdfs:label>Turtleweed</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
+    <owl:Class rdf:about="#TropicalForest">
+        <rdfs:label>Tropical Forest</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TerrestrialBiome"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#TropicalGrassland -->
+
+    <owl:Class rdf:about="#TropicalGrassland">
+        <rdfs:label
+            >Tropical Grassland</rdfs:label>
+        <rdfs:label>Savanna</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TerrestrialBiome"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#TropicalSeasonalForest -->
+
+    <owl:Class rdf:about="#TropicalSeasonalForest">
+        <rdfs:label
+            >Tropical Seasonal Forest</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TerrestrialBiome"/>
     </owl:Class>
     
 
@@ -3651,8 +4519,9 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Typha -->
 
     <owl:Class rdf:about="#Typha">
-        <rdfs:label>Typha spp.</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Cattail"/>
+        <rdfs:label>Cattail</rdfs:label>
+        <rdfs:label>Typha L.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Plant"/>
     </owl:Class>
     
 
@@ -3740,12 +4609,47 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#VirginiaGlasswort -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Valley -->
 
-    <owl:Class rdf:about="#VirginiaGlasswort">
-        <rdfs:label
-            >Virgina Glasswort</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
+    <owl:Class rdf:about="#Valley">
+        <rdfs:label>Valley</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TerrestrialPhysicalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Vegetation -->
+
+    <owl:Class rdf:about="#Vegetation">
+        <rdfs:label>Vegetation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#EcologicalOrganismalIndividualAggregateUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Veneridae -->
+
+    <owl:Class rdf:about="#Veneridae">
+        <rdfs:label>Veneridae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Bivalve"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#WetBiomassEntity -->
+
+    <owl:Class rdf:about="#WetBiomassEntity">
+        <rdfs:label>Wet Biomass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#BiomassEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Wetland -->
+
+    <owl:Class rdf:about="#Wetland">
+        <rdfs:label>Wetland</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AquaticBiome"/>
     </owl:Class>
     
 
@@ -3768,6 +4672,15 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Woodland -->
+
+    <owl:Class rdf:about="#Woodland">
+        <rdfs:label>Woodland</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Year -->
 
     <owl:Class rdf:about="#Year">
@@ -3781,7 +4694,8 @@
     <owl:Class rdf:about="#ZizaniopsisMiliacea">
         <rdfs:label
             >Zizaniopsis miliacea</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#GiantCutgrass"/>
+        <rdfs:label>Giant Cutgrass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Plant"/>
     </owl:Class>
     
 
