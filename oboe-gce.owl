@@ -175,6 +175,7 @@
         <rdfs:label
             >Additional Juncus Zone in High Marsh</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Zone"/>
+        <rdfs:subClassOf rdf:resource="#SaltwaterMarsh"/>
     </owl:Class>
     
 
@@ -758,6 +759,7 @@
 
     <owl:Class rdf:about="#CreekBankZone">
         <rdfs:label>Creek Bank Zone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#FreshwaterMarsh"/>
         <rdfs:subClassOf rdf:resource="#Zone"/>
     </owl:Class>
     
@@ -1724,6 +1726,7 @@
     <owl:Class rdf:about="#HighMarshZone">
         <rdfs:label>High Marsh Zone</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Zone"/>
+        <rdfs:subClassOf rdf:resource="#SaltwaterMarsh"/>
     </owl:Class>
     
 
