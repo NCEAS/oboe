@@ -3612,6 +3612,14 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#TemporalPoint -->
+
+    <owl:Class rdf:about="#TemporalPoint">
+        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#ToothpickGrasshopper -->
 
     <owl:Class rdf:about="#ToothpickGrasshopper">
