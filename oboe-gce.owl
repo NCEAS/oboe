@@ -3541,28 +3541,28 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SquareCentimeters -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#SquareCentimeter -->
 
-    <owl:Class rdf:about="#SquareCentimeters">
+    <owl:Class rdf:about="#SquareCentimeter">
         <rdfs:label
             >Square Centimeters</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
-                <owl:allValuesFrom rdf:resource="&oboe-unit;Centimeter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
                 <owl:allValuesFrom rdf:resource="&oboe-unit;Area"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="&oboe;SimpleDerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasPower"/>
                 <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="&oboe;SimpleDerivedUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
+                <owl:allValuesFrom rdf:resource="&oboe-unit;Centimeter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
