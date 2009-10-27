@@ -8,9 +8,9 @@
     <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY oboe "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#" >
+    <!ENTITY oboe "http://ecoinformatics.org/oboe/oboe.0.9#" >
     <!ENTITY oboe-gce "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#" >
-    <!ENTITY oboe-unit "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#" >
+    <!ENTITY oboe-unit "http://ecoinformatics.org/oboe/oboe-units.0.9#" >
 ]>
 
 
@@ -20,16 +20,16 @@
      xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:oboe-gce="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#"
-     xmlns:oboe="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#"
+     xmlns:oboe="http://ecoinformatics.org/oboe/oboe.0.9#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:oboe-unit="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#"
+     xmlns:oboe-unit="http://ecoinformatics.org/oboe/oboe-units.0.9#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#">
     <owl:Ontology rdf:about="">
         <rdfs:label
             >OBOE GCE Domain Extension</rdfs:label>
-        <owl:imports rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl"/>
-        <owl:imports rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl"/>
+        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe-units.0.9"/>
+        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.0.9"/>
     </owl:Ontology>
     
 
@@ -45,61 +45,61 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#characteristicOf -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#characteristicOf -->
 
     <owl:ObjectProperty rdf:about="&oboe;characteristicOf"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#characteristicValueOf -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#characteristicValueOf -->
 
     <owl:ObjectProperty rdf:about="&oboe;characteristicValueOf"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#forCharacteristic -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#forCharacteristic -->
 
     <owl:ObjectProperty rdf:about="&oboe;forCharacteristic"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#hasBaseUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasBaseUnit -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasBaseUnit"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#hasCharacteristic -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasCharacteristic -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasCharacteristic"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#hasCharacteristicValue -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasCharacteristicValue -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasCharacteristicValue"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#hasEntityRelationship -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasEntityRelationship -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasEntityRelationship"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#hasRelationshipEntity -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasRelationshipEntity -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasRelationshipEntity"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#hasStandardValue -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasStandardValue -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasStandardValue"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#hasUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasUnit -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasUnit"/>
     
@@ -116,13 +116,13 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#hasCode -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasCode -->
 
     <owl:DatatypeProperty rdf:about="&oboe;hasCode"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#hasPower -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasPower -->
 
     <owl:DatatypeProperty rdf:about="&oboe;hasPower"/>
     
@@ -4775,103 +4775,103 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Area -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Area -->
 
     <owl:Class rdf:about="&oboe-unit;Area"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#ArealMassDensity -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#ArealMassDensity -->
 
     <owl:Class rdf:about="&oboe-unit;ArealMassDensity"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Centimeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Centimeter -->
 
     <owl:Class rdf:about="&oboe-unit;Centimeter"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Gram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Gram -->
 
     <owl:Class rdf:about="&oboe-unit;Gram"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Length -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Length -->
 
     <owl:Class rdf:about="&oboe-unit;Length"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Mass -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Mass -->
 
     <owl:Class rdf:about="&oboe-unit;Mass"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-unit.owl#Meter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Meter -->
 
     <owl:Class rdf:about="&oboe-unit;Meter"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#ComplexDerivedUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#ComplexDerivedUnit -->
 
     <owl:Class rdf:about="&oboe;ComplexDerivedUnit"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#DateTime -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#DateTime -->
 
     <owl:Class rdf:about="&oboe;DateTime"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#Entity -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#Entity -->
 
     <owl:Class rdf:about="&oboe;Entity"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#EntityClassification -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#EntityClassification -->
 
     <owl:Class rdf:about="&oboe;EntityClassification"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#EntityName -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#EntityName -->
 
     <owl:Class rdf:about="&oboe;EntityName"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#EntityType -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#EntityType -->
 
     <owl:Class rdf:about="&oboe;EntityType"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#Nominal -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#Nominal -->
 
     <owl:Class rdf:about="&oboe;Nominal"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#Relationship -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#Relationship -->
 
     <owl:Class rdf:about="&oboe;Relationship"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#SimpleDerivedUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#SimpleDerivedUnit -->
 
     <owl:Class rdf:about="&oboe;SimpleDerivedUnit"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.owl#StandardValue -->
+    <!-- http://ecoinformatics.org/oboe/oboe.0.9#StandardValue -->
 
     <owl:Class rdf:about="&oboe;StandardValue"/>
 </rdf:RDF>
