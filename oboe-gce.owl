@@ -10,7 +10,7 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboe "http://ecoinformatics.org/oboe/oboe.0.9#" >
     <!ENTITY oboe-gce "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#" >
-    <!ENTITY oboe-unit "http://ecoinformatics.org/oboe/oboe-units.0.9#" >
+    <!ENTITY oboe-units "http://ecoinformatics.org/oboe/oboe-units.0.9#" >
 ]>
 
 
@@ -22,7 +22,7 @@
      xmlns:oboe-gce="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#"
      xmlns:oboe="http://ecoinformatics.org/oboe/oboe.0.9#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:oboe-unit="http://ecoinformatics.org/oboe/oboe-units.0.9#"
+     xmlns:oboe-units="http://ecoinformatics.org/oboe/oboe-units.0.9#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#">
     <owl:Ontology rdf:about="">
@@ -408,7 +408,7 @@
 
     <owl:Class rdf:about="#Biomass">
         <rdfs:label>Biomass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe-unit;Mass"/>
+        <rdfs:subClassOf rdf:resource="&&oboe-units;;Mass"/>
     </owl:Class>
     
 
@@ -1637,7 +1637,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe-unit;ArealMassDensity"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf rdf:resource="&oboe;ComplexDerivedUnit"/>
@@ -1654,7 +1654,7 @@
                             <rdf:Description rdf:about="&oboe;SimpleDerivedUnit"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
-                                <owl:allValuesFrom rdf:resource="&oboe-unit;Meter"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-units;Meter"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1664,7 +1664,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasUnit"/>
-                <owl:someValuesFrom rdf:resource="&oboe-unit;Gram"/>
+                <owl:someValuesFrom rdf:resource="&oboe-units;Gram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -1707,7 +1707,7 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-gce.owl#Height -->
 
     <owl:Class rdf:about="#Height">
-        <rdfs:subClassOf rdf:resource="&oboe-unit;Length"/>
+        <rdfs:subClassOf rdf:resource="&oboe-units;Length"/>
     </owl:Class>
     
 
@@ -4283,7 +4283,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe-unit;Area"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;Area"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4296,7 +4296,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
-                <owl:allValuesFrom rdf:resource="&oboe-unit;Centimeter"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;Centimeter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -4661,7 +4661,7 @@
 
     <owl:Class rdf:about="#Width">
         <rdfs:label>Width</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe-unit;Length"/>
+        <rdfs:subClassOf rdf:resource="&oboe-units;Length"/>
     </owl:Class>
     
 
@@ -4777,43 +4777,43 @@
 
     <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Area -->
 
-    <owl:Class rdf:about="&oboe-unit;Area"/>
+    <owl:Class rdf:about="&oboe-units;Area"/>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#ArealMassDensity -->
 
-    <owl:Class rdf:about="&oboe-unit;ArealMassDensity"/>
+    <owl:Class rdf:about="&oboe-units;ArealMassDensity"/>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Centimeter -->
 
-    <owl:Class rdf:about="&oboe-unit;Centimeter"/>
+    <owl:Class rdf:about="&oboe-units;Centimeter"/>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Gram -->
 
-    <owl:Class rdf:about="&oboe-unit;Gram"/>
+    <owl:Class rdf:about="&oboe-units;Gram"/>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Length -->
 
-    <owl:Class rdf:about="&oboe-unit;Length"/>
+    <owl:Class rdf:about="&oboe-units;Length"/>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Mass -->
 
-    <owl:Class rdf:about="&oboe-unit;Mass"/>
+    <owl:Class rdf:about="&oboe-units;Mass"/>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Meter -->
 
-    <owl:Class rdf:about="&oboe-unit;Meter"/>
+    <owl:Class rdf:about="&oboe-units;Meter"/>
     
 
 

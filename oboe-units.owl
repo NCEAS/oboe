@@ -9,23 +9,23 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboe "http://ecoinformatics.org/oboe/oboe.0.9#" >
     <!ENTITY oboe-base "http://ecoinformatics.org/oboe/oboe.0.9" >
-    <!ENTITY oboe-unit "http://ecoinformatics.org/oboe/oboe-units.0.9#" >
-    <!ENTITY oboe-unit-base "http://ecoinformatics.org/oboe/oboe-units.0.9" >
+    <!ENTITY oboe-units "http://ecoinformatics.org/oboe/oboe-units.0.9#" >
+    <!ENTITY oboe-units-base "http://ecoinformatics.org/oboe/oboe-units.0.9" >
 ]>
 
 
-<rdf:RDF xmlns="&oboe-unit;"
-     xml:base="&oboe-unit-base;"
+<rdf:RDF xmlns="&oboe-units;"
+     xml:base="&oboe-units-base;"
      xmlns:owl11="http://www.w3.org/2006/12/owl11#"
      xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:oboe="&oboe;"
-     xmlns:oboe-unit="&oboe-unit;"
+     xmlns:oboe-units="&oboe-units;"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#">
     <owl:Ontology rdf:about="">
-        <rdfs:label>OBOE Unit</rdfs:label>
+        <rdfs:label>OBOE Units</rdfs:label>
         <owl:imports rdf:resource="&oboe-base;"/>
         <rdfs:comment
             >The OBOE measurement unit extension</rdfs:comment>
