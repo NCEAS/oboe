@@ -408,7 +408,7 @@
 
     <owl:Class rdf:about="#Biomass">
         <rdfs:label>Biomass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&&oboe-units;;Mass"/>
+        <rdfs:subClassOf rdf:resource="&oboe-units;Mass"/>
     </owl:Class>
     
 
