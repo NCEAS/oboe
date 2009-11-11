@@ -7,10 +7,10 @@
     <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY oboe "http://ecoinformatics.org/oboe/oboe.0.9#" >
-    <!ENTITY oboe-base "http://ecoinformatics.org/oboe/oboe.0.9" >
-    <!ENTITY oboe-units "http://ecoinformatics.org/oboe/oboe-units.0.9#" >
-    <!ENTITY oboe-units-base "http://ecoinformatics.org/oboe/oboe-units.0.9" >
+    <!ENTITY oboe "http://ecoinformatics.org/oboe/oboe.1.0beta#" >
+    <!ENTITY oboe-base "http://ecoinformatics.org/oboe/oboe.1.0beta" >
+    <!ENTITY oboe-units "http://ecoinformatics.org/oboe/oboe-units.1.0beta#" >
+    <!ENTITY oboe-units-base "http://ecoinformatics.org/oboe/oboe-units.1.0beta" >
 ]>
 
 
@@ -44,43 +44,43 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#forCharacteristic -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#forCharacteristic -->
 
     <owl:ObjectProperty rdf:about="&oboe;forCharacteristic"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasBaseDimension -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasBaseDimension -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasBaseDimension"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasBaseUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasBaseUnit -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasBaseUnit"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasDimension -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasDimension -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasDimension"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasSourceUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasSourceUnit -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasSourceUnit"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasTargetUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasTargetUnit -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasTargetUnit"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasUnit -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasUnit"/>
     
@@ -97,19 +97,19 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasMultiplier -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasMultiplier -->
 
     <owl:DatatypeProperty rdf:about="&oboe;hasMultiplier"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasOffset -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasOffset -->
 
     <owl:DatatypeProperty rdf:about="&oboe;hasOffset"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#hasPower -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasPower -->
 
     <owl:DatatypeProperty rdf:about="&oboe;hasPower"/>
     
@@ -126,7 +126,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Acceleration -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Acceleration -->
 
     <owl:Class rdf:about="#Acceleration">
         <rdfs:label>Acceleration</rdfs:label>
@@ -161,7 +161,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Amount -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Amount -->
 
     <owl:Class rdf:about="#Amount">
         <rdfs:label>Amount</rdfs:label>
@@ -170,7 +170,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#AmountOfSubstanceConcentration -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#AmountOfSubstanceConcentration -->
 
     <owl:Class rdf:about="#AmountOfSubstanceConcentration">
         <rdfs:label
@@ -206,7 +206,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#AmountOfSubstanceWeight -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#AmountOfSubstanceWeight -->
 
     <owl:Class rdf:about="#AmountOfSubstanceWeight">
         <rdfs:label
@@ -242,7 +242,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#AmountOfSubstanceWeightFlux -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#AmountOfSubstanceWeightFlux -->
 
     <owl:Class rdf:about="#AmountOfSubstanceWeightFlux">
         <rdfs:label
@@ -298,7 +298,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Ampere -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Ampere -->
 
     <owl:Class rdf:about="#Ampere">
         <rdfs:label>Ampere</rdfs:label>
@@ -315,7 +315,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#AmperePerMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#AmperePerMeter -->
 
     <owl:Class rdf:about="#AmperePerMeter">
         <rdfs:label
@@ -359,7 +359,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#AmperePerSquareMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#AmperePerSquareMeter -->
 
     <owl:Class rdf:about="#AmperePerSquareMeter">
         <rdfs:label
@@ -403,7 +403,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Angle -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Angle -->
 
     <owl:Class rdf:about="#Angle">
         <rdfs:label>Angle</rdfs:label>
@@ -412,7 +412,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Angstrom -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Angstrom -->
 
     <owl:Class rdf:about="#Angstrom">
         <rdfs:label>Angstrom</rdfs:label>
@@ -429,7 +429,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#AngstromToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#AngstromToMeter -->
 
     <owl:Class rdf:about="#AngstromToMeter">
         <rdfs:label
@@ -463,7 +463,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Area -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Area -->
 
     <owl:Class rdf:about="#Area">
         <rdfs:label>Area</rdfs:label>
@@ -484,7 +484,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#ArealDensity -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#ArealDensity -->
 
     <owl:Class rdf:about="#ArealDensity">
         <rdfs:label>Areal Density</rdfs:label>
@@ -519,7 +519,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#ArealMassDensity -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#ArealMassDensity -->
 
     <owl:Class rdf:about="#ArealMassDensity">
         <rdfs:label
@@ -555,7 +555,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#ArealMassDensityRate -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#ArealMassDensityRate -->
 
     <owl:Class rdf:about="#ArealMassDensityRate">
         <rdfs:label
@@ -611,7 +611,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Becquerel -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Becquerel -->
 
     <owl:Class rdf:about="#Becquerel">
         <rdfs:label>Becquerel</rdfs:label>
@@ -639,7 +639,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Candela -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Candela -->
 
     <owl:Class rdf:about="#Candela">
         <rdfs:label>Candela</rdfs:label>
@@ -656,7 +656,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#CandelaPerSquareMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#CandelaPerSquareMeter -->
 
     <owl:Class rdf:about="#CandelaPerSquareMeter">
         <rdfs:label
@@ -700,7 +700,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Capacitance -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Capacitance -->
 
     <owl:Class rdf:about="#Capacitance">
         <rdfs:label>Capacitance</rdfs:label>
@@ -789,7 +789,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#CatalyticActivity -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#CatalyticActivity -->
 
     <owl:Class rdf:about="#CatalyticActivity">
         <rdfs:label
@@ -825,7 +825,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Celsius -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Celsius -->
 
     <owl:Class rdf:about="#Celsius">
         <rdfs:label>Celsius</rdfs:label>
@@ -842,7 +842,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#CelsiusToKelvin -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#CelsiusToKelvin -->
 
     <owl:Class rdf:about="#CelsiusToKelvin">
         <rdfs:label
@@ -876,7 +876,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Centigram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Centigram -->
 
     <owl:Class rdf:about="#Centigram">
         <rdfs:label>Centigram</rdfs:label>
@@ -892,7 +892,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#CentigramToKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#CentigramToKilogram -->
 
     <owl:Class rdf:about="#CentigramToKilogram">
         <rdfs:label
@@ -926,7 +926,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Centimeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Centimeter -->
 
     <owl:Class rdf:about="#Centimeter">
         <rdfs:label>Centimeter</rdfs:label>
@@ -942,7 +942,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#CentimeterToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#CentimeterToMeter -->
 
     <owl:Class rdf:about="#CentimeterToMeter">
         <rdfs:label
@@ -976,7 +976,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Centisecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Centisecond -->
 
     <owl:Class rdf:about="#Centisecond">
         <rdfs:label>Centisecond</rdfs:label>
@@ -993,7 +993,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#CentisecondToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#CentisecondToSecond -->
 
     <owl:Class rdf:about="#CentisecondToSecond">
         <rdfs:label
@@ -1027,7 +1027,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Charge -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Charge -->
 
     <owl:Class rdf:about="#Charge">
         <rdfs:label>Charge</rdfs:label>
@@ -1048,7 +1048,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Conductance -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Conductance -->
 
     <owl:Class rdf:about="#Conductance">
         <rdfs:label>Conductance</rdfs:label>
@@ -1137,7 +1137,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Coulomb -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Coulomb -->
 
     <owl:Class rdf:about="#Coulomb">
         <rdfs:label>Coulomb</rdfs:label>
@@ -1166,7 +1166,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Count -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Count -->
 
     <owl:Class rdf:about="#Count">
         <rdfs:label>Count</rdfs:label>
@@ -1175,7 +1175,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#CubicCentimetersPerCubicCentimeters -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#CubicCentimetersPerCubicCentimeters -->
 
     <owl:Class rdf:about="#CubicCentimetersPerCubicCentimeters">
         <rdfs:label
@@ -1233,7 +1233,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#CubicMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#CubicMeter -->
 
     <owl:Class rdf:about="#CubicMeter">
         <rdfs:label>Cubic Meter</rdfs:label>
@@ -1261,7 +1261,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#CubicMeterPerKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#CubicMeterPerKilogram -->
 
     <owl:Class rdf:about="#CubicMeterPerKilogram">
         <rdfs:label
@@ -1319,7 +1319,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Current -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Current -->
 
     <owl:Class rdf:about="#Current">
         <rdfs:label>Current</rdfs:label>
@@ -1328,7 +1328,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#CurrentDensity -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#CurrentDensity -->
 
     <owl:Class rdf:about="#CurrentDensity">
         <rdfs:label>Current Density</rdfs:label>
@@ -1363,7 +1363,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Decigram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Decigram -->
 
     <owl:Class rdf:about="#Decigram">
         <rdfs:label>Decigram</rdfs:label>
@@ -1379,7 +1379,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#DecigramToKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#DecigramToKilogram -->
 
     <owl:Class rdf:about="#DecigramToKilogram">
         <rdfs:label
@@ -1413,7 +1413,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Decimeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Decimeter -->
 
     <owl:Class rdf:about="#Decimeter">
         <rdfs:label>Decimeter</rdfs:label>
@@ -1429,7 +1429,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#DecimeterToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#DecimeterToMeter -->
 
     <owl:Class rdf:about="#DecimeterToMeter">
         <rdfs:label
@@ -1463,7 +1463,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Decisecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Decisecond -->
 
     <owl:Class rdf:about="#Decisecond">
         <rdfs:label>Decisecond</rdfs:label>
@@ -1480,7 +1480,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#DecisecondToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#DecisecondToSecond -->
 
     <owl:Class rdf:about="#DecisecondToSecond">
         <rdfs:label
@@ -1514,7 +1514,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Degree -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Degree -->
 
     <owl:Class rdf:about="#Degree">
         <rdfs:label>Degree</rdfs:label>
@@ -1531,7 +1531,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#DegreeToRadian -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#DegreeToRadian -->
 
     <owl:Class rdf:about="#DegreeToRadian">
         <rdfs:label
@@ -1565,7 +1565,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Dekagram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Dekagram -->
 
     <owl:Class rdf:about="#Dekagram">
         <rdfs:label>Dekagram</rdfs:label>
@@ -1581,7 +1581,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#DekagramToKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#DekagramToKilogram -->
 
     <owl:Class rdf:about="#DekagramToKilogram">
         <rdfs:label
@@ -1615,7 +1615,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Dekameter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Dekameter -->
 
     <owl:Class rdf:about="#Dekameter">
         <rdfs:label>Dekameter</rdfs:label>
@@ -1631,7 +1631,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#DekameterToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#DekameterToMeter -->
 
     <owl:Class rdf:about="#DekameterToMeter">
         <rdfs:label
@@ -1665,7 +1665,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Dekasecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Dekasecond -->
 
     <owl:Class rdf:about="#Dekasecond">
         <rdfs:label>Dekasecond</rdfs:label>
@@ -1681,7 +1681,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#DekasecondToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#DekasecondToSecond -->
 
     <owl:Class rdf:about="#DekasecondToSecond">
         <rdfs:label
@@ -1715,7 +1715,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#DoseEquivalent -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#DoseEquivalent -->
 
     <owl:Class rdf:about="#DoseEquivalent">
         <rdfs:label>Dose Equivalent</rdfs:label>
@@ -1764,7 +1764,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Energy -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Energy -->
 
     <owl:Class rdf:about="#Energy">
         <rdfs:label>Energy</rdfs:label>
@@ -1819,7 +1819,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Fahrenheit -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Fahrenheit -->
 
     <owl:Class rdf:about="#Fahrenheit">
         <rdfs:label>Fahrenheit</rdfs:label>
@@ -1836,7 +1836,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#FahrenheitToKelvin -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#FahrenheitToKelvin -->
 
     <owl:Class rdf:about="#FahrenheitToKelvin">
         <rdfs:label
@@ -1870,7 +1870,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Farad -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Farad -->
 
     <owl:Class rdf:about="#Farad">
         <rdfs:label>Farad</rdfs:label>
@@ -1966,7 +1966,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Fathom -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Fathom -->
 
     <owl:Class rdf:about="#Fathom">
         <rdfs:label>Fathom</rdfs:label>
@@ -1982,7 +1982,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#FathomToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#FathomToMeter -->
 
     <owl:Class rdf:about="#FathomToMeter">
         <rdfs:label
@@ -2016,7 +2016,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Foot -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Foot -->
 
     <owl:Class rdf:about="#Foot">
         <rdfs:label>Foot</rdfs:label>
@@ -2032,7 +2032,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#FootGoldCoast -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#FootGoldCoast -->
 
     <owl:Class rdf:about="#FootGoldCoast">
         <rdfs:label>Foot Gold Coast</rdfs:label>
@@ -2048,7 +2048,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#FootGoldCoastToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#FootGoldCoastToMeter -->
 
     <owl:Class rdf:about="#FootGoldCoastToMeter">
         <rdfs:label
@@ -2082,7 +2082,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#FootToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#FootToMeter -->
 
     <owl:Class rdf:about="#FootToMeter">
         <rdfs:label
@@ -2116,7 +2116,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#FootUS -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#FootUS -->
 
     <owl:Class rdf:about="#FootUS">
         <rdfs:label>Foot US</rdfs:label>
@@ -2132,7 +2132,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#FootUSToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#FootUSToMeter -->
 
     <owl:Class rdf:about="#FootUSToMeter">
         <rdfs:label
@@ -2166,7 +2166,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Force -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Force -->
 
     <owl:Class rdf:about="#Force">
         <rdfs:label>Force</rdfs:label>
@@ -2207,7 +2207,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Frequency -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Frequency -->
 
     <owl:Class rdf:about="#Frequency">
         <rdfs:label>Frequency</rdfs:label>
@@ -2228,7 +2228,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Grad -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Grad -->
 
     <owl:Class rdf:about="#Grad">
         <rdfs:label>Grad</rdfs:label>
@@ -2244,7 +2244,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#GradToRadian -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#GradToRadian -->
 
     <owl:Class rdf:about="#GradToRadian">
         <rdfs:label
@@ -2278,7 +2278,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Gram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Gram -->
 
     <owl:Class rdf:about="#Gram">
         <rdfs:label>Gram</rdfs:label>
@@ -2294,7 +2294,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#GramToKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#GramToKilogram -->
 
     <owl:Class rdf:about="#GramToKilogram">
         <rdfs:label
@@ -2328,7 +2328,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#GramsPerGram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#GramsPerGram -->
 
     <owl:Class rdf:about="#GramsPerGram">
         <rdfs:label>Grams per Gram</rdfs:label>
@@ -2370,7 +2370,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#GramsPerLiterPerDay -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#GramsPerLiterPerDay -->
 
     <owl:Class rdf:about="#GramsPerLiterPerDay">
         <rdfs:label
@@ -2434,7 +2434,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Gray -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Gray -->
 
     <owl:Class rdf:about="#Gray">
         <rdfs:label>Gray</rdfs:label>
@@ -2490,7 +2490,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Hectogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Hectogram -->
 
     <owl:Class rdf:about="#Hectogram">
         <rdfs:label>Hectogram</rdfs:label>
@@ -2506,7 +2506,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#HectogramToKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#HectogramToKilogram -->
 
     <owl:Class rdf:about="#HectogramToKilogram">
         <rdfs:label
@@ -2540,7 +2540,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Hectometer -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Hectometer -->
 
     <owl:Class rdf:about="#Hectometer">
         <rdfs:label>Hectometer</rdfs:label>
@@ -2556,7 +2556,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#HectometerToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#HectometerToMeter -->
 
     <owl:Class rdf:about="#HectometerToMeter">
         <rdfs:label
@@ -2590,7 +2590,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Hectosecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Hectosecond -->
 
     <owl:Class rdf:about="#Hectosecond">
         <rdfs:label>Hectosecond</rdfs:label>
@@ -2606,7 +2606,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#HectosecondToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#HectosecondToSecond -->
 
     <owl:Class rdf:about="#HectosecondToSecond">
         <rdfs:label
@@ -2640,7 +2640,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Henry -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Henry -->
 
     <owl:Class rdf:about="#Henry">
         <rdfs:label>Henry</rdfs:label>
@@ -2722,7 +2722,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Hertz -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Hertz -->
 
     <owl:Class rdf:about="#Hertz">
         <rdfs:label>Hertz</rdfs:label>
@@ -2750,7 +2750,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Hour -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Hour -->
 
     <owl:Class rdf:about="#Hour">
         <rdfs:label>Hour</rdfs:label>
@@ -2766,7 +2766,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#HourToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#HourToSecond -->
 
     <owl:Class rdf:about="#HourToSecond">
         <rdfs:label
@@ -2800,7 +2800,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Illuminance -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Illuminance -->
 
     <owl:Class rdf:about="#Illuminance">
         <rdfs:label>Illuminance</rdfs:label>
@@ -2835,7 +2835,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Inch -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Inch -->
 
     <owl:Class rdf:about="#Inch">
         <rdfs:label>Inch</rdfs:label>
@@ -2852,7 +2852,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#InchToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#InchToMeter -->
 
     <owl:Class rdf:about="#InchToMeter">
         <rdfs:label
@@ -2886,7 +2886,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Inductance -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Inductance -->
 
     <owl:Class rdf:about="#Inductance">
         <rdfs:label>Inductance</rdfs:label>
@@ -2961,7 +2961,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Joule -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Joule -->
 
     <owl:Class rdf:about="#Joule">
         <rdfs:label>Joule</rdfs:label>
@@ -3023,7 +3023,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Katal -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Katal -->
 
     <owl:Class rdf:about="#Katal">
         <rdfs:label>Katal</rdfs:label>
@@ -3065,7 +3065,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Kelvin -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Kelvin -->
 
     <owl:Class rdf:about="#Kelvin">
         <rdfs:label>Kelvin</rdfs:label>
@@ -3082,7 +3082,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Kilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Kilogram -->
 
     <owl:Class rdf:about="#Kilogram">
         <rdfs:label>Kilogram</rdfs:label>
@@ -3098,7 +3098,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#KilogramPerCubicMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#KilogramPerCubicMeter -->
 
     <owl:Class rdf:about="#KilogramPerCubicMeter">
         <rdfs:label
@@ -3142,7 +3142,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#KilogramsPerMeterSquaredPerSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#KilogramsPerMeterSquaredPerSecond -->
 
     <owl:Class rdf:about="#KilogramsPerMeterSquaredPerSecond">
         <rdfs:label
@@ -3206,7 +3206,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#KilogramsPerSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#KilogramsPerSecond -->
 
     <owl:Class rdf:about="#KilogramsPerSecond">
         <rdfs:label
@@ -3250,7 +3250,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#KilogramsPerSquareMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#KilogramsPerSquareMeter -->
 
     <owl:Class rdf:about="#KilogramsPerSquareMeter">
         <rdfs:label
@@ -3294,7 +3294,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Kilometer -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Kilometer -->
 
     <owl:Class rdf:about="#Kilometer">
         <rdfs:label>Kilometer</rdfs:label>
@@ -3310,7 +3310,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#KilometerToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#KilometerToMeter -->
 
     <owl:Class rdf:about="#KilometerToMeter">
         <rdfs:label
@@ -3344,7 +3344,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Kilosecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Kilosecond -->
 
     <owl:Class rdf:about="#Kilosecond">
         <rdfs:label>Kilosecond</rdfs:label>
@@ -3360,7 +3360,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#KilosecondToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#KilosecondToSecond -->
 
     <owl:Class rdf:about="#KilosecondToSecond">
         <rdfs:label
@@ -3394,7 +3394,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Length -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Length -->
 
     <owl:Class rdf:about="#Length">
         <rdfs:label>Length</rdfs:label>
@@ -3403,7 +3403,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#LengthReciprocal -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#LengthReciprocal -->
 
     <owl:Class rdf:about="#LengthReciprocal">
         <rdfs:label
@@ -3425,7 +3425,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#LinkClarke -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#LinkClarke -->
 
     <owl:Class rdf:about="#LinkClarke">
         <rdfs:label>Link Clarke</rdfs:label>
@@ -3443,7 +3443,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#LinkClarkeToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#LinkClarkeToMeter -->
 
     <owl:Class rdf:about="#LinkClarkeToMeter">
         <rdfs:label
@@ -3477,7 +3477,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#LitersPerSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#LitersPerSecond -->
 
     <owl:Class rdf:about="#LitersPerSecond">
         <rdfs:label
@@ -3535,7 +3535,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#LitersPerSquareMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#LitersPerSquareMeter -->
 
     <owl:Class rdf:about="#LitersPerSquareMeter">
         <rdfs:label
@@ -3593,7 +3593,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Lumen -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Lumen -->
 
     <owl:Class rdf:about="#Lumen">
         <rdfs:label>Lumen</rdfs:label>
@@ -3609,7 +3609,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Luminance -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Luminance -->
 
     <owl:Class rdf:about="#Luminance">
         <rdfs:label>Luminance</rdfs:label>
@@ -3644,7 +3644,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Luminosity -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Luminosity -->
 
     <owl:Class rdf:about="#Luminosity">
         <rdfs:label>Luminosity</rdfs:label>
@@ -3653,7 +3653,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Lux -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Lux -->
 
     <owl:Class rdf:about="#Lux">
         <rdfs:label>Lux</rdfs:label>
@@ -3695,7 +3695,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MagneticFieldStrength -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MagneticFieldStrength -->
 
     <owl:Class rdf:about="#MagneticFieldStrength">
         <rdfs:label
@@ -3731,7 +3731,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MagneticFlux -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MagneticFlux -->
 
     <owl:Class rdf:about="#MagneticFlux">
         <rdfs:label>Magnetic Flux</rdfs:label>
@@ -3806,7 +3806,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MagneticFluxDensity -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MagneticFluxDensity -->
 
     <owl:Class rdf:about="#MagneticFluxDensity">
         <rdfs:label
@@ -3862,7 +3862,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Mass -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Mass -->
 
     <owl:Class rdf:about="#Mass">
         <rdfs:label>Mass</rdfs:label>
@@ -3871,7 +3871,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MassDensity -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MassDensity -->
 
     <owl:Class rdf:about="#MassDensity">
         <rdfs:label>Mass Density</rdfs:label>
@@ -3906,7 +3906,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MassFlux -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MassFlux -->
 
     <owl:Class rdf:about="#MassFlux">
         <rdfs:label>Mass Flux</rdfs:label>
@@ -3941,7 +3941,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MassPerMass -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MassPerMass -->
 
     <owl:Class rdf:about="#MassPerMass">
         <rdfs:label>Mass per Mass</rdfs:label>
@@ -3976,7 +3976,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MassSpecificCount -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MassSpecificCount -->
 
     <owl:Class rdf:about="#MassSpecificCount">
         <rdfs:label
@@ -4012,7 +4012,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MassSpecificLength -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MassSpecificLength -->
 
     <owl:Class rdf:about="#MassSpecificLength">
         <rdfs:label
@@ -4048,7 +4048,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Megagram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Megagram -->
 
     <owl:Class rdf:about="#Megagram">
         <rdfs:label>Megagram</rdfs:label>
@@ -4064,7 +4064,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MegagramToKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MegagramToKilogram -->
 
     <owl:Class rdf:about="#MegagramToKilogram">
         <rdfs:label
@@ -4098,7 +4098,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Megameter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Megameter -->
 
     <owl:Class rdf:about="#Megameter">
         <rdfs:label>Megameter</rdfs:label>
@@ -4114,7 +4114,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MegameterToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MegameterToMeter -->
 
     <owl:Class rdf:about="#MegameterToMeter">
         <rdfs:label
@@ -4148,7 +4148,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Megasecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Megasecond -->
 
     <owl:Class rdf:about="#Megasecond">
         <rdfs:label>Megasecond</rdfs:label>
@@ -4164,7 +4164,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MegasecondToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MegasecondToSecond -->
 
     <owl:Class rdf:about="#MegasecondToSecond">
         <rdfs:label
@@ -4198,7 +4198,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Meter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Meter -->
 
     <owl:Class rdf:about="#Meter">
         <rdfs:label>Meter</rdfs:label>
@@ -4215,7 +4215,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MetersPerGram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MetersPerGram -->
 
     <owl:Class rdf:about="#MetersPerGram">
         <rdfs:label>Meters per Gram</rdfs:label>
@@ -4257,7 +4257,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MetersPerSecondSquared -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MetersPerSecondSquared -->
 
     <owl:Class rdf:about="#MetersPerSecondSquared">
         <rdfs:label
@@ -4301,7 +4301,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MetersSquaredPerSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MetersSquaredPerSecond -->
 
     <owl:Class rdf:about="#MetersSquaredPerSecond">
         <rdfs:label
@@ -4359,7 +4359,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Microgram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Microgram -->
 
     <owl:Class rdf:about="#Microgram">
         <rdfs:label>Microgram</rdfs:label>
@@ -4375,7 +4375,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MicrogramToKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MicrogramToKilogram -->
 
     <owl:Class rdf:about="#MicrogramToKilogram">
         <rdfs:label
@@ -4409,7 +4409,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Micrometer -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Micrometer -->
 
     <owl:Class rdf:about="#Micrometer">
         <rdfs:label>Micrometer</rdfs:label>
@@ -4425,7 +4425,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MicrometerToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MicrometerToMeter -->
 
     <owl:Class rdf:about="#MicrometerToMeter">
         <rdfs:label
@@ -4459,7 +4459,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Micron -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Micron -->
 
     <owl:Class rdf:about="#Micron">
         <rdfs:label>Micron</rdfs:label>
@@ -4475,7 +4475,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MicronToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MicronToMeter -->
 
     <owl:Class rdf:about="#MicronToMeter">
         <rdfs:label
@@ -4509,7 +4509,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Microsecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Microsecond -->
 
     <owl:Class rdf:about="#Microsecond">
         <rdfs:label>Microsecond</rdfs:label>
@@ -4526,7 +4526,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MicrosecondToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MicrosecondToSecond -->
 
     <owl:Class rdf:about="#MicrosecondToSecond">
         <rdfs:label
@@ -4560,7 +4560,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Mile -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Mile -->
 
     <owl:Class rdf:about="#Mile">
         <rdfs:label>Mile</rdfs:label>
@@ -4577,7 +4577,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MileToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MileToMeter -->
 
     <owl:Class rdf:about="#MileToMeter">
         <rdfs:label
@@ -4611,7 +4611,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Milligram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Milligram -->
 
     <owl:Class rdf:about="#Milligram">
         <rdfs:label>Milligram</rdfs:label>
@@ -4627,7 +4627,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MilligramToKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MilligramToKilogram -->
 
     <owl:Class rdf:about="#MilligramToKilogram">
         <rdfs:label
@@ -4661,7 +4661,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Millimeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Millimeter -->
 
     <owl:Class rdf:about="#Millimeter">
         <rdfs:label>Millimeter</rdfs:label>
@@ -4677,7 +4677,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MillimeterToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MillimeterToMeter -->
 
     <owl:Class rdf:about="#MillimeterToMeter">
         <rdfs:label
@@ -4711,7 +4711,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Millisecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Millisecond -->
 
     <owl:Class rdf:about="#Millisecond">
         <rdfs:label>Millisecond</rdfs:label>
@@ -4728,7 +4728,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MillisecondToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MillisecondToSecond -->
 
     <owl:Class rdf:about="#MillisecondToSecond">
         <rdfs:label
@@ -4762,7 +4762,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Minute -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Minute -->
 
     <owl:Class rdf:about="#Minute">
         <rdfs:label>Minute</rdfs:label>
@@ -4778,7 +4778,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MinuteToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MinuteToSecond -->
 
     <owl:Class rdf:about="#MinuteToSecond">
         <rdfs:label
@@ -4812,7 +4812,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Molality -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Molality -->
 
     <owl:Class rdf:about="#Molality">
         <rdfs:label>Molality</rdfs:label>
@@ -4855,7 +4855,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Mole -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Mole -->
 
     <owl:Class rdf:about="#Mole">
         <rdfs:label>Mole</rdfs:label>
@@ -4872,7 +4872,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MolePerCubicMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MolePerCubicMeter -->
 
     <owl:Class rdf:about="#MolePerCubicMeter">
         <rdfs:label
@@ -4916,7 +4916,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MolesPerKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MolesPerKilogram -->
 
     <owl:Class rdf:about="#MolesPerKilogram">
         <rdfs:label
@@ -4960,7 +4960,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#MolesPerKilogramPerSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#MolesPerKilogramPerSecond -->
 
     <owl:Class rdf:about="#MolesPerKilogramPerSecond">
         <rdfs:label
@@ -5024,7 +5024,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Nanogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Nanogram -->
 
     <owl:Class rdf:about="#Nanogram">
         <rdfs:label>Nanogram</rdfs:label>
@@ -5041,7 +5041,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NanogramToKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NanogramToKilogram -->
 
     <owl:Class rdf:about="#NanogramToKilogram">
         <rdfs:label
@@ -5075,7 +5075,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Nanometer -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Nanometer -->
 
     <owl:Class rdf:about="#Nanometer">
         <rdfs:label>Nanometer</rdfs:label>
@@ -5092,7 +5092,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NanometerToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NanometerToMeter -->
 
     <owl:Class rdf:about="#NanometerToMeter">
         <rdfs:label
@@ -5126,7 +5126,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Nanosecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Nanosecond -->
 
     <owl:Class rdf:about="#Nanosecond">
         <rdfs:label>Nanosecond</rdfs:label>
@@ -5143,7 +5143,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NanosecondToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NanosecondToSecond -->
 
     <owl:Class rdf:about="#NanosecondToSecond">
         <rdfs:label
@@ -5177,7 +5177,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NauticalMile -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NauticalMile -->
 
     <owl:Class rdf:about="#NauticalMile">
         <rdfs:label>Nautical Mile</rdfs:label>
@@ -5193,7 +5193,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NauticalMileToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NauticalMileToMeter -->
 
     <owl:Class rdf:about="#NauticalMileToMeter">
         <rdfs:label
@@ -5227,7 +5227,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Newton -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Newton -->
 
     <owl:Class rdf:about="#Newton">
         <rdfs:label>Newton</rdfs:label>
@@ -5275,7 +5275,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NominalDay -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NominalDay -->
 
     <owl:Class rdf:about="#NominalDay">
         <rdfs:label>Nominal Day</rdfs:label>
@@ -5292,7 +5292,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NominalDayToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NominalDayToSecond -->
 
     <owl:Class rdf:about="#NominalDayToSecond">
         <rdfs:label
@@ -5326,7 +5326,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NominalHour -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NominalHour -->
 
     <owl:Class rdf:about="#NominalHour">
         <rdfs:label>Nominal Hour</rdfs:label>
@@ -5343,7 +5343,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NominalHourToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NominalHourToSecond -->
 
     <owl:Class rdf:about="#NominalHourToSecond">
         <rdfs:label
@@ -5377,7 +5377,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NominalLeapYear -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NominalLeapYear -->
 
     <owl:Class rdf:about="#NominalLeapYear">
         <rdfs:label
@@ -5395,7 +5395,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NominalLeapYearToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NominalLeapYearToSecond -->
 
     <owl:Class rdf:about="#NominalLeapYearToSecond">
         <rdfs:label
@@ -5429,7 +5429,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NominalMinute -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NominalMinute -->
 
     <owl:Class rdf:about="#NominalMinute">
         <rdfs:label>Nominal Week</rdfs:label>
@@ -5446,7 +5446,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NominalMinuteToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NominalMinuteToSecond -->
 
     <owl:Class rdf:about="#NominalMinuteToSecond">
         <rdfs:label
@@ -5480,7 +5480,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NominalWeek -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NominalWeek -->
 
     <owl:Class rdf:about="#NominalWeek">
         <rdfs:label>Nominal Week</rdfs:label>
@@ -5497,7 +5497,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NominalWeekToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NominalWeekToSecond -->
 
     <owl:Class rdf:about="#NominalWeekToSecond">
         <rdfs:label
@@ -5531,7 +5531,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NominalYear -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NominalYear -->
 
     <owl:Class rdf:about="#NominalYear">
         <rdfs:label>Nominal Year</rdfs:label>
@@ -5548,7 +5548,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NominalYearToSecond -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NominalYearToSecond -->
 
     <owl:Class rdf:about="#NominalYearToSecond">
         <rdfs:label
@@ -5582,7 +5582,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Number -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Number -->
 
     <owl:Class rdf:about="#Number">
         <rdfs:label>Number</rdfs:label>
@@ -5598,7 +5598,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NumberPerGram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NumberPerGram -->
 
     <owl:Class rdf:about="#NumberPerGram">
         <rdfs:label>Number per Gram</rdfs:label>
@@ -5641,7 +5641,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NumberPerMeterCubed -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NumberPerMeterCubed -->
 
     <owl:Class rdf:about="#NumberPerMeterCubed">
         <rdfs:label
@@ -5685,7 +5685,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#NumberPerMeterSquared -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#NumberPerMeterSquared -->
 
     <owl:Class rdf:about="#NumberPerMeterSquared">
         <rdfs:label
@@ -5729,7 +5729,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Ohm -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Ohm -->
 
     <owl:Class rdf:about="#Ohm">
         <rdfs:label>Ohm</rdfs:label>
@@ -5811,7 +5811,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#OhmMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#OhmMeter -->
 
     <owl:Class rdf:about="#OhmMeter">
         <rdfs:label>Ohm Meter</rdfs:label>
@@ -5893,7 +5893,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Pascal -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Pascal -->
 
     <owl:Class rdf:about="#Pascal">
         <rdfs:label>Pascal</rdfs:label>
@@ -5941,7 +5941,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#PotentialDifference -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#PotentialDifference -->
 
     <owl:Class rdf:about="#PotentialDifference">
         <rdfs:label
@@ -6017,7 +6017,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Pound -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Pound -->
 
     <owl:Class rdf:about="#Pound">
         <rdfs:label>Pound</rdfs:label>
@@ -6034,7 +6034,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#PoundToKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#PoundToKilogram -->
 
     <owl:Class rdf:about="#PoundToKilogram">
         <rdfs:label
@@ -6068,7 +6068,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Power -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Power -->
 
     <owl:Class rdf:about="#Power">
         <rdfs:label>Power</rdfs:label>
@@ -6123,7 +6123,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Pressure -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Pressure -->
 
     <owl:Class rdf:about="#Pressure">
         <rdfs:label>Pressure</rdfs:label>
@@ -6164,7 +6164,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Radian -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Radian -->
 
     <owl:Class rdf:about="#Radian">
         <rdfs:label>Radian</rdfs:label>
@@ -6181,7 +6181,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#RadionucleotideActivity -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#RadionucleotideActivity -->
 
     <owl:Class rdf:about="#RadionucleotideActivity">
         <rdfs:label
@@ -6203,7 +6203,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Resistance -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Resistance -->
 
     <owl:Class rdf:about="#Resistance">
         <rdfs:label>Resistance</rdfs:label>
@@ -6278,7 +6278,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Resistivity -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Resistivity -->
 
     <owl:Class rdf:about="#Resistivity">
         <rdfs:label>Resistivity</rdfs:label>
@@ -6353,7 +6353,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Second -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Second -->
 
     <owl:Class rdf:about="#Second">
         <rdfs:label>Second</rdfs:label>
@@ -6369,7 +6369,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Siemen -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Siemen -->
 
     <owl:Class rdf:about="#Siemen">
         <rdfs:label>Siemen</rdfs:label>
@@ -6465,7 +6465,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Sievert -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Sievert -->
 
     <owl:Class rdf:about="#Sievert">
         <rdfs:label>Sievert</rdfs:label>
@@ -6521,7 +6521,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#SpecificArea -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#SpecificArea -->
 
     <owl:Class rdf:about="#SpecificArea">
         <rdfs:label>Specific Area</rdfs:label>
@@ -6570,7 +6570,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#SpecificEnergy -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#SpecificEnergy -->
 
     <owl:Class rdf:about="#SpecificEnergy">
         <rdfs:label>Specific Energy</rdfs:label>
@@ -6619,7 +6619,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#SpecificVolume -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#SpecificVolume -->
 
     <owl:Class rdf:about="#SpecificVolume">
         <rdfs:label>Specific Volume</rdfs:label>
@@ -6668,7 +6668,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Speed -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Speed -->
 
     <owl:Class rdf:about="#Speed">
         <rdfs:label>Speed</rdfs:label>
@@ -6703,7 +6703,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#SquareMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#SquareMeter -->
 
     <owl:Class rdf:about="#SquareMeter">
         <rdfs:label>Square Meter</rdfs:label>
@@ -6731,7 +6731,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#SquareMeterPerKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#SquareMeterPerKilogram -->
 
     <owl:Class rdf:about="#SquareMeterPerKilogram">
         <rdfs:label
@@ -6789,7 +6789,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Temperature -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Temperature -->
 
     <owl:Class rdf:about="#Temperature">
         <rdfs:label>Temperature</rdfs:label>
@@ -6798,7 +6798,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Tesla -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Tesla -->
 
     <owl:Class rdf:about="#Tesla">
         <rdfs:label>Tesla</rdfs:label>
@@ -6860,7 +6860,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Time -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Time -->
 
     <owl:Class rdf:about="#Time">
         <rdfs:label>Time</rdfs:label>
@@ -6869,7 +6869,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Ton -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Ton -->
 
     <owl:Class rdf:about="#Ton">
         <rdfs:label>Ton</rdfs:label>
@@ -6886,7 +6886,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#TonToKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#TonToKilogram -->
 
     <owl:Class rdf:about="#TonToKilogram">
         <rdfs:label
@@ -6920,7 +6920,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Tonne -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Tonne -->
 
     <owl:Class rdf:about="#Tonne">
         <rdfs:label>Tonne</rdfs:label>
@@ -6937,7 +6937,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#TonneToKilogram -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#TonneToKilogram -->
 
     <owl:Class rdf:about="#TonneToKilogram">
         <rdfs:label
@@ -6971,7 +6971,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Transmissivity -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Transmissivity -->
 
     <owl:Class rdf:about="#Transmissivity">
         <rdfs:label>Transmissivity</rdfs:label>
@@ -7020,7 +7020,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Volt -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Volt -->
 
     <owl:Class rdf:about="#Volt">
         <rdfs:label>Volt</rdfs:label>
@@ -7102,7 +7102,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Volume -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Volume -->
 
     <owl:Class rdf:about="#Volume">
         <rdfs:label>Volume</rdfs:label>
@@ -7123,7 +7123,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#VolumePerVolume -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#VolumePerVolume -->
 
     <owl:Class rdf:about="#VolumePerVolume">
         <rdfs:label
@@ -7173,7 +7173,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#VolumetricArea -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#VolumetricArea -->
 
     <owl:Class rdf:about="#VolumetricArea">
         <rdfs:label>Volumetric Area</rdfs:label>
@@ -7222,7 +7222,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#VolumetricDensity -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#VolumetricDensity -->
 
     <owl:Class rdf:about="#VolumetricDensity">
         <rdfs:label
@@ -7258,7 +7258,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#VolumetricMassDensityRate -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#VolumetricMassDensityRate -->
 
     <owl:Class rdf:about="#VolumetricMassDensityRate">
         <rdfs:label
@@ -7314,7 +7314,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#VolumetricRate -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#VolumetricRate -->
 
     <owl:Class rdf:about="#VolumetricRate">
         <rdfs:label>Volumetric Rate</rdfs:label>
@@ -7363,7 +7363,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Watt -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Watt -->
 
     <owl:Class rdf:about="#Watt">
         <rdfs:label>Watt</rdfs:label>
@@ -7425,7 +7425,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#WaveNumber -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#WaveNumber -->
 
     <owl:Class rdf:about="#WaveNumber">
         <rdfs:label>Wave Number</rdfs:label>
@@ -7453,7 +7453,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Weber -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Weber -->
 
     <owl:Class rdf:about="#Weber">
         <rdfs:label>Weber</rdfs:label>
@@ -7535,7 +7535,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#Yard -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#Yard -->
 
     <owl:Class rdf:about="#Yard">
         <rdfs:label>Yard</rdfs:label>
@@ -7551,7 +7551,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#YardIndian -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#YardIndian -->
 
     <owl:Class rdf:about="#YardIndian">
         <rdfs:label>Yard Indian</rdfs:label>
@@ -7569,7 +7569,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#YardIndianToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#YardIndianToMeter -->
 
     <owl:Class rdf:about="#YardIndianToMeter">
         <rdfs:label
@@ -7604,7 +7604,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#YardSears -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#YardSears -->
 
     <owl:Class rdf:about="#YardSears">
         <rdfs:label>Yard Sears</rdfs:label>
@@ -7622,7 +7622,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#YardSearsToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#YardSearsToMeter -->
 
     <owl:Class rdf:about="#YardSearsToMeter">
         <rdfs:label
@@ -7657,7 +7657,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-units.0.9#YardToMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#YardToMeter -->
 
     <owl:Class rdf:about="#YardToMeter">
         <rdfs:label
@@ -7691,43 +7691,43 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#BaseDimension -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#BaseDimension -->
 
     <owl:Class rdf:about="&oboe;BaseDimension"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#BaseUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#BaseUnit -->
 
     <owl:Class rdf:about="&oboe;BaseUnit"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#ComplexDerivedDimension -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#ComplexDerivedDimension -->
 
     <owl:Class rdf:about="&oboe;ComplexDerivedDimension"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#ComplexDerivedUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#ComplexDerivedUnit -->
 
     <owl:Class rdf:about="&oboe;ComplexDerivedUnit"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#SimpleDerivedDimension -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#SimpleDerivedDimension -->
 
     <owl:Class rdf:about="&oboe;SimpleDerivedDimension"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#SimpleDerivedUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#SimpleDerivedUnit -->
 
     <owl:Class rdf:about="&oboe;SimpleDerivedUnit"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.0.9#UnitConversion -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#UnitConversion -->
 
     <owl:Class rdf:about="&oboe;UnitConversion"/>
 </rdf:RDF>
