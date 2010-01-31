@@ -43,18 +43,6 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#characteristicOf -->
-
-    <owl:ObjectProperty rdf:about="&oboe;characteristicOf"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#characteristicValueOf -->
-
-    <owl:ObjectProperty rdf:about="&oboe;characteristicValueOf"/>
-    
-
-
     <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#forCharacteristic -->
 
     <owl:ObjectProperty rdf:about="&oboe;forCharacteristic"/>
@@ -64,18 +52,6 @@
     <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasBaseUnit -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasBaseUnit"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasEntityRelationship -->
-
-    <owl:ObjectProperty rdf:about="&oboe;hasEntityRelationship"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasRelationshipEntity -->
-
-    <owl:ObjectProperty rdf:about="&oboe;hasRelationshipEntity"/>
     
 
 
@@ -99,12 +75,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasCode -->
-
-    <owl:DatatypeProperty rdf:about="&oboe;hasCode"/>
     
 
 
@@ -185,21 +155,9 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#EntityClassification -->
-
-    <owl:Class rdf:about="&oboe;EntityClassification"/>
-    
-
-
     <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#EntityName -->
 
     <owl:Class rdf:about="&oboe;EntityName"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#EntityType -->
-
-    <owl:Class rdf:about="&oboe;EntityType"/>
     
 
 
@@ -227,124 +185,10 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AboveGroundPrimaryProductivity -->
-
-    <owl:Class rdf:about="#AboveGroundPrimaryProductivity">
-        <rdfs:label
-            >Above Ground Primary Productivity</rdfs:label>
-        <rdfs:label
-            >Above Ground Primary Production</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PrimaryProductivity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AbovegroundWater -->
-
-    <owl:Class rdf:about="#AbovegroundWater">
-        <rdfs:label
-            >Aboveground Water</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Acrididae -->
-
-    <owl:Class rdf:about="#Acrididae">
-        <rdfs:subClassOf rdf:resource="#Grasshopper"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AdditionalJuncusZoneInHighMarsh -->
-
-    <owl:Class rdf:about="#AdditionalJuncusZoneInHighMarsh">
-        <rdfs:label
-            >Additional Juncus Zone in High Marsh</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SaltwaterMarsh"/>
-        <rdfs:subClassOf rdf:resource="#Zone"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AdditionalJuncusZoneInHighMarshValue -->
-
-    <owl:Class rdf:about="#AdditionalJuncusZoneInHighMarshValue">
-        <rdfs:label
-            >Additional Juncus Zone in High Marsh Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ZoneTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#AdditionalJuncusZoneInHighMarsh"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >AdditionaJuncusZoneInHighMarsh</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Alga -->
 
     <owl:Class rdf:about="#Alga">
         <rdfs:subClassOf rdf:resource="#Organism"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AlligatorCreek -->
-
-    <owl:Class rdf:about="#AlligatorCreek">
-        <rdfs:label>Alligator Creek</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AlligatorCreekValue -->
-
-    <owl:Class rdf:about="#AlligatorCreekValue">
-        <rdfs:label
-            >Alligator Creek GCE Site Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#GCESiteValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityName"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#AlligatorCreek"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">GCE8</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -355,24 +199,6 @@
         <rdfs:label>Animal</rdfs:label>
         <rdfs:label>Animalia</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Organism"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Anthropod -->
-
-    <owl:Class rdf:about="#Anthropod">
-        <rdfs:label>Anthropoda</rdfs:label>
-        <rdfs:label>Anthropod</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Animal"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ArcticTundra -->
-
-    <owl:Class rdf:about="#ArcticTundra">
-        <rdfs:label>Arctic Tundra</rdfs:label>
     </owl:Class>
     
 
@@ -393,12 +219,12 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Asteraceae -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ArroyoQuemadoReef -->
 
-    <owl:Class rdf:about="#Asteraceae">
-        <rdfs:label>Sunflower</rdfs:label>
-        <rdfs:label>Asteraceae</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Magnoliophyta"/>
+    <owl:Class rdf:about="#ArroyoQuemadoReef">
+        <rdfs:label
+            >Arroyo Quemado Reef</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Reef"/>
     </owl:Class>
     
 
@@ -411,94 +237,10 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Bark -->
-
-    <owl:Class rdf:about="#Bark">
-        <rdfs:label>Bark</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ExternalPlantStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Bataceae -->
-
-    <owl:Class rdf:about="#Bataceae">
-        <rdfs:label>Bataceae</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Magnoliophyta"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BatisMaritima -->
-
-    <owl:Class rdf:about="#BatisMaritima">
-        <rdfs:label>Turtleweed</rdfs:label>
-        <rdfs:label>Saltwort</rdfs:label>
-        <rdfs:label>Batis maritima</rdfs:label>
-        <rdfs:label>TSN 192295</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Bataceae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BatisMaritimaValue -->
-
-    <owl:Class rdf:about="#BatisMaritimaValue">
-        <rdfs:label
-            >Batis maritima Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#TaxonomicTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#BatisMaritima"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">BatisMaritima</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BeachHabitat -->
 
     <owl:Class rdf:about="#BeachHabitat">
         <rdfs:subClassOf rdf:resource="#EcologicalHabitat"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BelowGroundPrimaryProductivity -->
-
-    <owl:Class rdf:about="#BelowGroundPrimaryProductivity">
-        <rdfs:label
-            >Below Ground Primary Production</rdfs:label>
-        <rdfs:label
-            >Below Ground Primary Productivity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PrimaryProductivity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BelowgroundWater -->
-
-    <owl:Class rdf:about="#BelowgroundWater">
-        <rdfs:label
-            >BelowgroundWater</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
     </owl:Class>
     
 
@@ -522,106 +264,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BiomassEntity -->
-
-    <owl:Class rdf:about="#BiomassEntity">
-        <rdfs:label>Biomass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#EcologicalMassAggregateUnit"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Biome -->
-
-    <owl:Class rdf:about="#Biome">
-        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Bivalve -->
-
-    <owl:Class rdf:about="#Bivalve">
-        <rdfs:label>Bivalve</rdfs:label>
-        <rdfs:label>Bivalvia</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Mollusc"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BorJunValue -->
-
-    <owl:Class rdf:about="#BorJunValue">
-        <rdfs:label
-            >BorJun Community Type Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#CommunityTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">BorJun</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BorrichiaFrutescens -->
-
-    <owl:Class rdf:about="#BorrichiaFrutescens">
-        <rdfs:label
-            >Bushy Seaside Tansy</rdfs:label>
-        <rdfs:label>TSN 35781</rdfs:label>
-        <rdfs:label>Bushy Seaoxeye</rdfs:label>
-        <rdfs:label
-            >Borrichia frutescens</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Asteraceae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BorrichiaFrutescensValue -->
-
-    <owl:Class rdf:about="#BorrichiaFrutescensValue">
-        <rdfs:label
-            >Borrichia frutescens Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#TaxonomicTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >BorrichiaFrutescens</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#BorrichiaFrutescens"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Burrow -->
-
-    <owl:Class rdf:about="#Burrow">
-        <rdfs:label>Burrow</rdfs:label>
-        <rdfs:label>Hole</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#OrganismalDwelling"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#California -->
 
     <owl:Class rdf:about="#California">
@@ -630,50 +272,10 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Carpinteria -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CarpinteriaReef -->
 
-    <owl:Class rdf:about="#Carpinteria">
+    <owl:Class rdf:about="#CarpinteriaReef">
         <rdfs:subClassOf rdf:resource="#Reef"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CarrsIsland -->
-
-    <owl:Class rdf:about="#CarrsIsland">
-        <rdfs:label>Carrs Island</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CarrsIslandValue -->
-
-    <owl:Class rdf:about="#CarrsIslandValue">
-        <rdfs:label
-            >Carrs Island GCE Site Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#GCESiteValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">GCE7</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityName"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#CarrsIsland"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -695,17 +297,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Chenopodiaceae -->
-
-    <owl:Class rdf:about="#Chenopodiaceae">
-        <rdfs:label>Chenopodiaceae</rdfs:label>
-        <rdfs:label>Goosefoot</rdfs:label>
-        <rdfs:label>Chenopodes</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Magnoliophyta"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CollectionOf -->
 
     <owl:Class rdf:about="#CollectionOf">
@@ -719,161 +310,6 @@
     <owl:Class rdf:about="#CommunityOf">
         <rdfs:label>community of</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;Relationship"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CommunityTypeNames -->
-
-    <owl:Class rdf:about="#CommunityTypeNames">
-        <rdfs:label
-            >Community Type Names</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe;EntityType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#CommunityTypeValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CommunityTypeValue -->
-
-    <owl:Class rdf:about="#CommunityTypeValue">
-        <rdfs:label
-            >Community Type Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CompoundPlantNutrient -->
-
-    <owl:Class rdf:about="#CompoundPlantNutrient">
-        <rdfs:label
-            >Compound Plant Nutrient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PlantNutrient"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CoralReef -->
-
-    <owl:Class rdf:about="#CoralReef">
-        <rdfs:label>Coral Reef</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Corbiculidae -->
-
-    <owl:Class rdf:about="#Corbiculidae">
-        <rdfs:label>Corbiculidae</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Bivalve"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Crab -->
-
-    <owl:Class rdf:about="#Crab">
-        <rdfs:label>Crab</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Animal"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CrabHole -->
-
-    <owl:Class rdf:about="#CrabHole">
-        <rdfs:label>Crab Hole</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Burrow"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CrabHolePopulation -->
-
-    <owl:Class rdf:about="#CrabHolePopulation">
-        <rdfs:label
-            >Crab Hole Population</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasEntityRelationship"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#PopulationOf"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;hasRelationshipEntity"/>
-                                <owl:allValuesFrom rdf:resource="#CrabHole"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="#EcologicalPopulation"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CreekBankZone -->
-
-    <owl:Class rdf:about="#CreekBankZone">
-        <rdfs:label>Creek Bank Zone</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#FreshwaterMarsh"/>
-        <rdfs:subClassOf rdf:resource="#Zone"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CreekBankZoneValue -->
-
-    <owl:Class rdf:about="#CreekBankZoneValue">
-        <rdfs:label
-            >Creek Bank Zone Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ZoneTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#CreekBankZone"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">CreekBankZone</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Cyperaceae -->
-
-    <owl:Class rdf:about="#Cyperaceae">
-        <rdfs:label>Sedge</rdfs:label>
-        <rdfs:label>Cyperaceae</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Liliopsida"/>
     </owl:Class>
     
 
@@ -905,198 +341,11 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Day -->
-
-    <owl:Class rdf:about="#Day">
-        <rdfs:subClassOf rdf:resource="&oboe;EntityClassification"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DeanCreek -->
-
-    <owl:Class rdf:about="#DeanCreek">
-        <rdfs:label>Dean Creek</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SapeloIsland"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DeanCreekValue -->
-
-    <owl:Class rdf:about="#DeanCreekValue">
-        <rdfs:label
-            >Dean Creek GCE Site Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#GCESiteValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">GCE6</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityName"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#DeanCreek"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DeciduousForest -->
-
-    <owl:Class rdf:about="#DeciduousForest">
-        <rdfs:label
-            >Deciduous Forest</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Den -->
-
-    <owl:Class rdf:about="#Den">
-        <rdfs:label>Den</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#OrganismalDwelling"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Desert -->
-
-    <owl:Class rdf:about="#Desert">
-        <rdfs:label>Desert</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DetraciaFloridana -->
-
-    <owl:Class rdf:about="#DetraciaFloridana">
-        <rdfs:label
-            >Florida Melampus</rdfs:label>
-        <rdfs:label
-            >Detracia floridana</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Bivalve"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DetraciaFloridanaPopulationValue -->
-
-    <owl:Class rdf:about="#DetraciaFloridanaPopulationValue">
-        <rdfs:label
-            >Detracia floridana Populuation Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PopulationTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >DetraciaFloridana</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DistichlisSpicata -->
-
-    <owl:Class rdf:about="#DistichlisSpicata">
-        <rdfs:label>TSN 40662</rdfs:label>
-        <rdfs:label
-            >Distichlis spicata</rdfs:label>
-        <rdfs:label>Saltgrass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Poaceae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DistichlisSpicataValue -->
-
-    <owl:Class rdf:about="#DistichlisSpicataValue">
-        <rdfs:label
-            >Distichlis spicata Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#TaxonomicTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >DistichlisSpicata</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#DistichlisSpicata"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DryBiomassEntity -->
-
-    <owl:Class rdf:about="#DryBiomassEntity">
-        <rdfs:label>Dry Biomass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#BiomassEntity"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DryWeight -->
 
     <owl:Class rdf:about="#DryWeight">
         <rdfs:label>Dry Weight</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Biomass"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DwarfShrubland -->
-
-    <owl:Class rdf:about="#DwarfShrubland">
-        <rdfs:label>Dwarf Shrubland</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#EcologicalAggregateUnit -->
-
-    <owl:Class rdf:about="#EcologicalAggregateUnit">
-        <rdfs:label
-            >Ecological Aggregate Unit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#EcologicalCommunity -->
-
-    <owl:Class rdf:about="#EcologicalCommunity">
-        <rdfs:label
-            >Ecological Community</rdfs:label>
-        <rdfs:label>Community</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#EcologicalOrganismalIndividualAggregateUnit"/>
     </owl:Class>
     
 
@@ -1111,48 +360,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#EcologicalMassAggregateUnit -->
-
-    <owl:Class rdf:about="#EcologicalMassAggregateUnit">
-        <rdfs:label
-            >Ecological Mass Aggregate Unit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#EcologicalOrganismalIndividualAggregateUnit -->
-
-    <owl:Class rdf:about="#EcologicalOrganismalIndividualAggregateUnit">
-        <rdfs:label
-            >Ecological Organismal-Individual Aggregate Unit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#EcologicalAggregateUnit"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#EcologicalPopulation -->
-
-    <owl:Class rdf:about="#EcologicalPopulation">
-        <rdfs:label
-            >Ecological Population</rdfs:label>
-        <rdfs:label>Population</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#EcologicalOrganismalIndividualAggregateUnit"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ecosystem -->
-
-    <owl:Class rdf:about="#Ecosystem">
-        <rdfs:label
-            >Ecological System</rdfs:label>
-        <rdfs:label>Ecosystem</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#EcologicalOrganismalIndividualAggregateUnit"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#EcosystemProcess -->
 
     <owl:Class rdf:about="#EcosystemProcess">
@@ -1163,379 +370,12 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ElementalPlantNutrient -->
-
-    <owl:Class rdf:about="#ElementalPlantNutrient">
-        <rdfs:label
-            >Elemental Plant Nutrient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PlantNutrient"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Estuary -->
-
-    <owl:Class rdf:about="#Estuary">
-        <rdfs:label>Estuary</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Biome"/>
-        <rdfs:subClassOf rdf:resource="#EcologicalHabitat"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Eulonia -->
-
-    <owl:Class rdf:about="#Eulonia">
-        <rdfs:label>Eulonia</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#EuloniaValue -->
-
-    <owl:Class rdf:about="#EuloniaValue">
-        <rdfs:label
-            >Eulonia GCE Site Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#GCESiteValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityName"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#Eulonia"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">GCE1</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#EvergreenForest -->
-
-    <owl:Class rdf:about="#EvergreenForest">
-        <rdfs:label
-            >Evergreen Forest</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Exoskeleton -->
-
-    <owl:Class rdf:about="#Exoskeleton">
-        <rdfs:label>Exoskeleton</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ExternalAnimalStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ExperimentalFeature -->
-
-    <owl:Class rdf:about="#ExperimentalFeature">
-        <rdfs:label
-            >Experimental Feature</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ExperimentalTreatment -->
-
-    <owl:Class rdf:about="#ExperimentalTreatment">
-        <rdfs:label
-            >Experimental Treatment</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ExperimentalFeature"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ExternalAnimalStructure -->
-
-    <owl:Class rdf:about="#ExternalAnimalStructure">
-        <rdfs:label
-            >External Animal Structure</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ExternalOrganismalStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ExternalOrganismalStructure -->
-
-    <owl:Class rdf:about="#ExternalOrganismalStructure">
-        <rdfs:label
-            >External Organismal Structure</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#OrganismalStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ExternalPlantStructure -->
-
-    <owl:Class rdf:about="#ExternalPlantStructure">
-        <rdfs:subClassOf rdf:resource="#ExternalOrganismalStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FertilizationTreatment -->
-
-    <owl:Class rdf:about="#FertilizationTreatment">
-        <rdfs:label
-            >Fertilization Treatment</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ExperimentalTreatment"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Flower -->
-
-    <owl:Class rdf:about="#Flower">
-        <rdfs:label>Flower</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ExternalPlantStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FloweringStatus -->
-
-    <owl:Class rdf:about="#FloweringStatus">
-        <rdfs:label
-            >Flowering Status</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;EntityClassification"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FloweringStatusCodes -->
-
-    <owl:Class rdf:about="#FloweringStatusCodes">
-        <rdfs:label
-            >Flowering Status Codes</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="#FloweringStatus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#FloweringStatusValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FloweringStatusValue -->
-
-    <owl:Class rdf:about="#FloweringStatusValue">
-        <rdfs:label
-            >Flowering Status Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FloweringValue -->
-
-    <owl:Class rdf:about="#FloweringValue">
-        <rdfs:label
-            >Flowering Flowering-Status Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#FloweringStatusValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Flowering</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FollyRiver -->
-
-    <owl:Class rdf:about="#FollyRiver">
-        <rdfs:label>Folly River</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FollyRiverValue -->
-
-    <owl:Class rdf:about="#FollyRiverValue">
-        <rdfs:label
-            >Folly River GCE Site Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#GCESiteValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityName"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#FollyRiver"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">GCE5</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FourMileIsland -->
-
-    <owl:Class rdf:about="#FourMileIsland">
-        <rdfs:label
-            >Four Mile Island</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FourMileIslandValue -->
-
-    <owl:Class rdf:about="#FourMileIslandValue">
-        <rdfs:label
-            >Four Mile Island GCE Site Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#GCESiteValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityName"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#FourMileIsland"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">GCE2</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FreshwaterMarsh -->
-
-    <owl:Class rdf:about="#FreshwaterMarsh">
-        <rdfs:label
-            >Freshwater Marsh</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GCESiteNames -->
-
-    <owl:Class rdf:about="#GCESiteNames">
-        <rdfs:label>GCE Site Names</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe;EntityName"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#GCESiteValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GCESiteValue -->
-
-    <owl:Class rdf:about="#GCESiteValue">
-        <rdfs:label>GCE-Site Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GemmaGemma -->
-
-    <owl:Class rdf:about="#GemmaGemma">
-        <rdfs:label>TSN 81511</rdfs:label>
-        <rdfs:label>Gemma gemma</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Veneridae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GemmaGemmaPopulationValue -->
-
-    <owl:Class rdf:about="#GemmaGemmaPopulationValue">
-        <rdfs:label
-            >Gemma gemma Population Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PopulationTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">GemmaGemma</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GeukensiaDemissa -->
-
-    <owl:Class rdf:about="#GeukensiaDemissa">
-        <rdfs:label>Ribbed Mussel</rdfs:label>
-        <rdfs:label
-            >Geukensia demissa</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Bivalve"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GeukensiaDemissaPopulationValue -->
-
-    <owl:Class rdf:about="#GeukensiaDemissaPopulationValue">
-        <rdfs:label
-            >Geukensia demissa Population Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PopulationTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >GeukensiaDemissa</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GiantKelp -->
+
+    <owl:Class rdf:about="#GiantKelp">
+        <rdfs:label>GiantKelp</rdfs:label>
+        <owl:equivalentClass rdf:resource="#MacrocystisPyrifera"/>
+        <rdfs:subClassOf rdf:resource="#Kelp"/>
     </owl:Class>
     
 
@@ -1546,12 +386,6 @@
         <rdfs:label
             >Grams per Square Meter</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;ComplexDerivedUnit"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasUnit"/>
@@ -1578,20 +412,14 @@
                 <owl:someValuesFrom rdf:resource="&oboe-units;Gram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment
             >grams per square meter</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Grasshopper -->
-
-    <owl:Class rdf:about="#Grasshopper">
-        <rdfs:label>Cricket</rdfs:label>
-        <rdfs:label>Grasshopper</rdfs:label>
-        <rdfs:label>Locust</rdfs:label>
-        <rdfs:label>Orthoptera</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Insect"/>
     </owl:Class>
     
 
@@ -1613,138 +441,11 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#HerbaceousVIII -->
-
-    <owl:Class rdf:about="#HerbaceousVIII">
-        <rdfs:label>Herbaceous</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#HighMarshZone -->
-
-    <owl:Class rdf:about="#HighMarshZone">
-        <rdfs:label>High Marsh Zone</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SaltwaterMarsh"/>
-        <rdfs:subClassOf rdf:resource="#Zone"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#HighMarshZoneValue -->
-
-    <owl:Class rdf:about="#HighMarshZoneValue">
-        <rdfs:label
-            >High Marsh Zone Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ZoneTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#HighMarshZone"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">HighMarshZone</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Hill -->
-
-    <owl:Class rdf:about="#Hill">
-        <rdfs:label>Hill</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SolidEarthlPhysicalFeature"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#HuntCamp -->
-
-    <owl:Class rdf:about="#HuntCamp">
-        <rdfs:label>Hunt Camp</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SapeloIsland"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#HuntCampValue -->
-
-    <owl:Class rdf:about="#HuntCampValue">
-        <rdfs:label
-            >Hunt Camp GCE Site Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#GCESiteValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityName"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#HuntCamp"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">GCE10</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Hydrobiidae -->
-
-    <owl:Class rdf:about="#Hydrobiidae">
-        <rdfs:label>Hydrobiidae L.</rdfs:label>
-        <rdfs:label
-            >Small Freshwater Snail</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Bivalve"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#HydrobiidaePopulationValue -->
-
-    <owl:Class rdf:about="#HydrobiidaePopulationValue">
-        <rdfs:label
-            >Hydrobiidae spp. Population Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PopulationTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Hydrobiidae</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#HydrospherePhysicalFeature -->
 
     <owl:Class rdf:about="#HydrospherePhysicalFeature">
         <rdfs:label
-            >Aquatic Physical Feature</rdfs:label>
+            >Hydrosphere Physical Feature</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PhysicalFeature"/>
     </owl:Class>
     
@@ -1760,26 +461,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Insect -->
-
-    <owl:Class rdf:about="#Insect">
-        <rdfs:label>Insecta</rdfs:label>
-        <rdfs:label>Insect</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Anthropod"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Iron -->
-
-    <owl:Class rdf:about="#Iron">
-        <rdfs:label>Fe</rdfs:label>
-        <rdfs:label>Iron</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ElementalPlantNutrient"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#IslaVistaReef -->
 
     <owl:Class rdf:about="#IslaVistaReef">
@@ -1788,137 +469,10 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Juncaceae -->
-
-    <owl:Class rdf:about="#Juncaceae">
-        <rdfs:label>Jonc</rdfs:label>
-        <rdfs:label>Rush</rdfs:label>
-        <rdfs:label>Juncaceae</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Liliopsida"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#JuncusRoemerianus -->
-
-    <owl:Class rdf:about="#JuncusRoemerianus">
-        <rdfs:label
-            >Juncus roemerianus</rdfs:label>
-        <rdfs:label
-            >Needlegrass Rush</rdfs:label>
-        <rdfs:label>TSN 39238</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Juncaceae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#JuncusRoemerianusValue -->
-
-    <owl:Class rdf:about="#JuncusRoemerianusValue">
-        <rdfs:label
-            >Juncus roemerianus Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#TaxonomicTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#JuncusRoemerianus"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >JuncusRoemerianus</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Kelp -->
 
     <owl:Class rdf:about="#Kelp">
-        <rdfs:subClassOf rdf:resource="#Phaeophyceae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpForest -->
-
-    <owl:Class rdf:about="#KelpForest">
-        <rdfs:subClassOf rdf:resource="#Biome"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Lake -->
-
-    <owl:Class rdf:about="#Lake">
-        <rdfs:label>Lake</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LakeLevel -->
-
-    <owl:Class rdf:about="#LakeLevel">
-        <rdfs:label>Lake Level</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#HydrospherePhysicalProcess"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Leaf -->
-
-    <owl:Class rdf:about="#Leaf">
-        <rdfs:label>Leaf</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ExternalPlantStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LeafCollection -->
-
-    <owl:Class rdf:about="#LeafCollection">
-        <rdfs:label>Leaf Population</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasEntityRelationship"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#CollectionOf"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;hasRelationshipEntity"/>
-                                <owl:allValuesFrom rdf:resource="#Leaf"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="#StatisticalCollection"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Liliopsida -->
-
-    <owl:Class rdf:about="#Liliopsida">
-        <rdfs:label>Liliopsida</rdfs:label>
-        <rdfs:label>Monocotyledon</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
+        <rdfs:subClassOf rdf:resource="#Alga"/>
     </owl:Class>
     
 
@@ -1926,36 +480,8 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LittoralOcean -->
 
     <owl:Class rdf:about="#LittoralOcean">
+        <rdfs:label>Littoral Ocean</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SantaBarbaraCoastalMainland"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LittorariaIrrorata -->
-
-    <owl:Class rdf:about="#LittorariaIrrorata">
-        <rdfs:label
-            >Littoraria irrorata</rdfs:label>
-        <rdfs:label
-            >Marsh Periwinkle</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Bivalve"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LittorariaIrrorataPopulationValue -->
-
-    <owl:Class rdf:about="#LittorariaIrrorataPopulationValue">
-        <rdfs:label
-            >Littoraria irrorata Population Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PopulationTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >LittoriaIrrorata</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1984,188 +510,10 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Magnoliophyta -->
-
-    <owl:Class rdf:about="#Magnoliophyta">
-        <rdfs:label>Angiosperm</rdfs:label>
-        <rdfs:label>Magnoliophyta</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Tracheobionta"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MarshLanding -->
-
-    <owl:Class rdf:about="#MarshLanding">
-        <rdfs:label>Marsh Landing</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SapeloIsland"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MarshLandingValue -->
-
-    <owl:Class rdf:about="#MarshLandingValue">
-        <rdfs:label
-            >Marsh Landing GCE Site Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#GCESiteValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">ML</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityName"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#MarshLanding"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MediterraneanVegetation -->
-
-    <owl:Class rdf:about="#MediterraneanVegetation">
-        <rdfs:label
-            >Mediterranean Vegetation</rdfs:label>
-        <rdfs:label>Chapparral</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Biome"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MediumTallGrassland -->
-
-    <owl:Class rdf:about="#MediumTallGrassland">
-        <rdfs:label
-            >Medium Tall Grassland</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#HerbaceousVIII"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MelampusBidentatus -->
-
-    <owl:Class rdf:about="#MelampusBidentatus">
-        <rdfs:label
-            >Melampus bidentatus</rdfs:label>
-        <rdfs:label
-            >Eastern Melampus</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Bivalve"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MelampusBidentatusPopulationValue -->
-
-    <owl:Class rdf:about="#MelampusBidentatusPopulationValue">
-        <rdfs:label
-            >Melampus bidentatus Population Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PopulationTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >MelampusBidentatus</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Meridian -->
-
-    <owl:Class rdf:about="#Meridian">
-        <rdfs:label>Meridian</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MeridianValue -->
-
-    <owl:Class rdf:about="#MeridianValue">
-        <rdfs:label
-            >Meridian GCE Site Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#GCESiteValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityName"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#Meridian"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">GCE4</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MermiriaIntertexta -->
-
-    <owl:Class rdf:about="#MermiriaIntertexta">
-        <rdfs:label
-            >Mermiria intertexta</rdfs:label>
-        <rdfs:label>TSN 658644</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Acrididae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MermiriaIntertextaPopulationValue -->
-
-    <owl:Class rdf:about="#MermiriaIntertextaPopulationValue">
-        <rdfs:label
-            >Mermiria intertexta Population Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PopulationTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >MermiriaIntertexta</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MissionCreek -->
 
     <owl:Class rdf:about="#MissionCreek">
         <rdfs:subClassOf rdf:resource="#Watershed"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MixedEvergreenDeciduousForest -->
-
-    <owl:Class rdf:about="#MixedEvergreenDeciduousForest">
-        <rdfs:label
-            >Mixed Evergreen-Deciduous Forest</rdfs:label>
     </owl:Class>
     
 
@@ -2178,38 +526,22 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Mollusc -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NaplesInshoreStation -->
 
-    <owl:Class rdf:about="#Mollusc">
-        <rdfs:label>Mollusc</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Animal"/>
+    <owl:Class rdf:about="#NaplesInshoreStation">
+        <rdfs:label
+            >NaplesInshoreStation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Waypoint"/>
     </owl:Class>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MolluscShell -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NaplesOffshoreStation -->
 
-    <owl:Class rdf:about="#MolluscShell">
-        <rdfs:label>Mollusc Shell</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Shell"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Month -->
-
-    <owl:Class rdf:about="#Month">
-        <rdfs:subClassOf rdf:resource="&oboe;EntityClassification"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Mountain -->
-
-    <owl:Class rdf:about="#Mountain">
-        <rdfs:label>Alpine Tundra</rdfs:label>
-        <rdfs:label>Mountain</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SolidEarthlPhysicalFeature"/>
+    <owl:Class rdf:about="#NaplesOffshoreStation">
+        <rdfs:label
+            >Naples Offshore Station</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Waypoint"/>
     </owl:Class>
     
 
@@ -2222,106 +554,20 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NaplesReefStation -->
+
+    <owl:Class rdf:about="#NaplesReefStation">
+        <rdfs:label
+            >NaplesReefStation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Waypoint"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Nereocystis -->
 
     <owl:Class rdf:about="#Nereocystis">
         <rdfs:subClassOf rdf:resource="#Kelp"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Nest -->
-
-    <owl:Class rdf:about="#Nest">
-        <rdfs:label>Nest</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#OrganismalDwelling"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Nitrate -->
-
-    <owl:Class rdf:about="#Nitrate">
-        <rdfs:label>NO3-</rdfs:label>
-        <rdfs:label>Nitrate</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#CompoundPlantNutrient"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Nitrogen -->
-
-    <owl:Class rdf:about="#Nitrogen">
-        <rdfs:label>Nitrogen</rdfs:label>
-        <rdfs:label>N</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ElementalPlantNutrient"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NorthSapelo -->
-
-    <owl:Class rdf:about="#NorthSapelo">
-        <rdfs:label>North Sapelo</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SapeloIsland"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NorthSapeloValue -->
-
-    <owl:Class rdf:about="#NorthSapeloValue">
-        <rdfs:label
-            >North Sapelo GCE Site Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#GCESiteValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityName"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#NorthSapelo"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">GCE3</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NorthernConiferousForest -->
-
-    <owl:Class rdf:about="#NorthernConiferousForest">
-        <rdfs:label>Taiga</rdfs:label>
-        <rdfs:label
-            >Northern Coniferous Forest</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NotFloweringValue -->
-
-    <owl:Class rdf:about="#NotFloweringValue">
-        <rdfs:label
-            >Not-Flowering Flowering-Status Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#FloweringStatusValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">NotFlowering</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2339,35 +585,7 @@
 
     <owl:Class rdf:about="#Ocean">
         <rdfs:label>Ocean</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Biome"/>
-        <rdfs:comment
-            >compare with SWEET, subclass of Hydrosphere.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Orchelimum -->
-
-    <owl:Class rdf:about="#Orchelimum">
-        <rdfs:label>Orchelimum L.</rdfs:label>
-        <rdfs:label>TSN 102233</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Tettigoniidae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OrchelimumPopulationValue -->
-
-    <owl:Class rdf:about="#OrchelimumPopulationValue">
-        <rdfs:label
-            >Orchelimum spp. Population Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PopulationTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Orchelimum</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
     </owl:Class>
     
 
@@ -2381,171 +599,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OrganismalDwelling -->
-
-    <owl:Class rdf:about="#OrganismalDwelling">
-        <rdfs:label
-            >Organismal Dwelling</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OrganismalNutrient -->
-
-    <owl:Class rdf:about="#OrganismalNutrient">
-        <rdfs:label
-            >Organismal Nutrient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OrganismalStructure -->
-
-    <owl:Class rdf:about="#OrganismalStructure">
-        <rdfs:label
-            >Organismal Structure</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OrphulellaPelidna -->
-
-    <owl:Class rdf:about="#OrphulellaPelidna">
-        <rdfs:label
-            >Orphulella pelidna</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Acrididae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OrphulellaPelidnaPopulationValue -->
-
-    <owl:Class rdf:about="#OrphulellaPelidnaPopulationValue">
-        <rdfs:label
-            >Orphulella pelidna Population Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PopulationTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >OrphulellaPelidna</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OrpulellaPelidna -->
-
-    <owl:Class rdf:about="#OrpulellaPelidna">
-        <rdfs:label>TSN 658637</rdfs:label>
-        <rdfs:label
-            >Orpulella pelidna</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Acrididae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OtherGrasshoppers -->
-
-    <owl:Class rdf:about="#OtherGrasshoppers">
-        <rdfs:label
-            >Other Grasshoppers</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Grasshopper"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OtherGrasshoppersPopulationValue -->
-
-    <owl:Class rdf:about="#OtherGrasshoppersPopulationValue">
-        <rdfs:label
-            >Other Grasshoppers Population Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PopulationTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >OtherGrasshoppers</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Panicum -->
-
-    <owl:Class rdf:about="#Panicum">
-        <rdfs:label>Panic Grass</rdfs:label>
-        <rdfs:label>Panicum L.</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PanicumValue -->
-
-    <owl:Class rdf:about="#PanicumValue">
-        <rdfs:label
-            >Panicum spp. Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#TaxonomicTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#Panicum"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Panicum</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ParoxyaClavuliger -->
-
-    <owl:Class rdf:about="#ParoxyaClavuliger">
-        <rdfs:label
-            >Paroxya clavuliger</rdfs:label>
-        <rdfs:label>TSN 658658</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Acrididae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ParoxyaClavuligerPopulationValue -->
-
-    <owl:Class rdf:about="#ParoxyaClavuligerPopulationValue">
-        <rdfs:label
-            >Paroxya clavuliger Population Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PopulationTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >ParoxyaClavuliger</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PartOf -->
 
     <owl:Class rdf:about="#PartOf">
@@ -2555,156 +608,10 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PelletizedFertilizationNitrogenTreatment -->
-
-    <owl:Class rdf:about="#PelletizedFertilizationNitrogenTreatment">
-        <rdfs:label
-            >Pelletized Fertilization Nitrogen Treatment</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PelletizedFertilizationTreatment"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PelletizedFertilizationNitrogenTreatmentValue -->
-
-    <owl:Class rdf:about="#PelletizedFertilizationNitrogenTreatmentValue">
-        <rdfs:label
-            >Nitrogen Pelletized Fertilization Treatment Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PelletizedFertilizationTreatmentValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#PelletizedFertilizationNitrogenTreatment"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">N</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PelletizedFertilizationTreatment -->
-
-    <owl:Class rdf:about="#PelletizedFertilizationTreatment">
-        <rdfs:label
-            >Pelletized Fertilization Treatment</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#FertilizationTreatment"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PelletizedFertilizationTreatmentControl -->
-
-    <owl:Class rdf:about="#PelletizedFertilizationTreatmentControl">
-        <rdfs:label
-            >Pelletized Fertilization Treatment Control</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PelletizedFertilizationTreatment"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PelletizedFertilizationTreatmentControlValue -->
-
-    <owl:Class rdf:about="#PelletizedFertilizationTreatmentControlValue">
-        <rdfs:label
-            >Control Pelletized Fertilization Treatment Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PelletizedFertilizationTreatmentValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#PelletizedFertilizationTreatmentControl"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">C</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PelletizedFertilizationTreatmentTypeNames -->
-
-    <owl:Class rdf:about="#PelletizedFertilizationTreatmentTypeNames">
-        <rdfs:label
-            >Pelletized Fertilization Treatment Type Names</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#PelletizedFertilizationTreatmentValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe;EntityType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PelletizedFertilizationTreatmentValue -->
-
-    <owl:Class rdf:about="#PelletizedFertilizationTreatmentValue">
-        <rdfs:label
-            >Pelletized Fertilization Treatment Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Phaeophyceae -->
 
     <owl:Class rdf:about="#Phaeophyceae">
         <rdfs:subClassOf rdf:resource="#Alga"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Phosphate -->
-
-    <owl:Class rdf:about="#Phosphate">
-        <rdfs:label>Phosphate</rdfs:label>
-        <rdfs:label>H2PO4-</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#CompoundPlantNutrient"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Phosphorus -->
-
-    <owl:Class rdf:about="#Phosphorus">
-        <rdfs:label>Phosphorus</rdfs:label>
-        <rdfs:label>P</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ElementalPlantNutrient"/>
     </owl:Class>
     
 
@@ -2739,15 +646,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PlantNutrient -->
-
-    <owl:Class rdf:about="#PlantNutrient">
-        <rdfs:label>Plant Nutrient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#OrganismalNutrient"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Plot -->
 
     <owl:Class rdf:about="#Plot">
@@ -2757,164 +655,11 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PlotDisturbance -->
-
-    <owl:Class rdf:about="#PlotDisturbance">
-        <rdfs:label
-            >Plot Disturbance</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;EntityClassification"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PlotDisturbanceCodes -->
-
-    <owl:Class rdf:about="#PlotDisturbanceCodes">
-        <rdfs:label
-            >Plot Disturbance Codes</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="#PlotDisturbance"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#PlotDisturbanceValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PlotDisturbanceValue -->
-
-    <owl:Class rdf:about="#PlotDisturbanceValue">
-        <rdfs:label
-            >Plot Disturbance Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PlotDisturbedValue -->
-
-    <owl:Class rdf:about="#PlotDisturbedValue">
-        <rdfs:label
-            >Plot Disturbed Plot-Disturbance Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PlotDisturbanceValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">PlotDisturbed</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PlotNotDisturbedValue -->
-
-    <owl:Class rdf:about="#PlotNotDisturbedValue">
-        <rdfs:label
-            >Plot Not Disturbed Plot-Disturbance Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PlotDisturbanceValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >PlotNotDisturbed</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Poaceae -->
-
-    <owl:Class rdf:about="#Poaceae">
-        <rdfs:label>Poaceae</rdfs:label>
-        <rdfs:label>Grass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Liliopsida"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PolymesodaCaroliniana -->
-
-    <owl:Class rdf:about="#PolymesodaCaroliniana">
-        <rdfs:label>TSN 81383</rdfs:label>
-        <rdfs:label
-            >Polymesoda caroliniana</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Corbiculidae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PolymesodaCarolinianaPopulationValue -->
-
-    <owl:Class rdf:about="#PolymesodaCarolinianaPopulationValue">
-        <rdfs:label
-            >Polymesoda caroliniana Population Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PopulationTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >PolymesodaCaroliniana</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Pond -->
-
-    <owl:Class rdf:about="#Pond">
-        <rdfs:label>Pond</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PopulationOf -->
 
     <owl:Class rdf:about="#PopulationOf">
         <rdfs:label>population of</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;Relationship"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PopulationTypeNames -->
-
-    <owl:Class rdf:about="#PopulationTypeNames">
-        <rdfs:label
-            >Population Type Names</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe;EntityType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#PopulationTypeValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PopulationTypeValue -->
-
-    <owl:Class rdf:about="#PopulationTypeValue">
-        <rdfs:label
-            >Population Type Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
     </owl:Class>
     
 
@@ -2929,18 +674,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PrimaryProductivity -->
-
-    <owl:Class rdf:about="#PrimaryProductivity">
-        <rdfs:label
-            >Primary Productivity</rdfs:label>
-        <rdfs:label
-            >Primary Production</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Productivity"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Process -->
 
     <owl:Class rdf:about="#Process">
@@ -2950,31 +683,10 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Productivity -->
-
-    <owl:Class rdf:about="#Productivity">
-        <rdfs:label
-            >Ecological Production</rdfs:label>
-        <rdfs:label>Productivity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#EcologicalMassAggregateUnit"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Reef -->
 
     <owl:Class rdf:about="#Reef">
         <rdfs:subClassOf rdf:resource="#LittoralOcean"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ReplicateBeltTransect -->
-
-    <owl:Class rdf:about="#ReplicateBeltTransect">
-        <rdfs:label
-            >Replicate Belt Transect</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ReplicateTransect"/>
     </owl:Class>
     
 
@@ -3007,174 +719,32 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Riparian -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBCSiteNames -->
 
-    <owl:Class rdf:about="#Riparian">
-        <rdfs:subClassOf rdf:resource="#Biome"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#River -->
-
-    <owl:Class rdf:about="#River">
-        <rdfs:label>River</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#RockdedundyIsland -->
-
-    <owl:Class rdf:about="#RockdedundyIsland">
-        <rdfs:label
-            >Rockdedundy Island</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#RockdedundyIslandValue -->
-
-    <owl:Class rdf:about="#RockdedundyIslandValue">
-        <rdfs:label
-            >Rockdedundy Island GCE Site Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#GCESiteValue"/>
+    <owl:Class rdf:about="#SBCSiteNames">
+        <rdfs:label>SBC Site Names</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">GCE9</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe;EntityName"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityName"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#RockdedundyIsland"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
+                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
+                <owl:allValuesFrom rdf:resource="#SBCSiteValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#RomaleaGuttatus -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBCSiteValue -->
 
-    <owl:Class rdf:about="#RomaleaGuttatus">
-        <rdfs:label>TSN 650546</rdfs:label>
-        <rdfs:label
-            >Romalea guttatus</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Romaleidae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#RomaleaGuttatusPopulationValue -->
-
-    <owl:Class rdf:about="#RomaleaGuttatusPopulationValue">
-        <rdfs:label
-            >Romalea guttatus Population Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PopulationTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">RomaleaGuttatus</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Romaleidae -->
-
-    <owl:Class rdf:about="#Romaleidae">
-        <rdfs:label>Romaleidae</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Grasshopper"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Root -->
-
-    <owl:Class rdf:about="#Root">
-        <rdfs:label>Root</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ExternalPlantStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SalicorniaVirginica -->
-
-    <owl:Class rdf:about="#SalicorniaVirginica">
-        <rdfs:label>TSN 20648</rdfs:label>
-        <rdfs:label
-            >Salicornia depressa</rdfs:label>
-        <rdfs:label
-            >Virginia glasswort</rdfs:label>
-        <rdfs:label
-            >Salicornia europaea</rdfs:label>
-        <rdfs:label>Pickleweed</rdfs:label>
-        <rdfs:label
-            >Salicornia virginica</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Chenopodiaceae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SalicorniaVirginicaValue -->
-
-    <owl:Class rdf:about="#SalicorniaVirginicaValue">
-        <rdfs:label
-            >Salicornia virginica Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#TaxonomicTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#SalicorniaVirginica"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >SalicorniaVirginica</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SaltwaterMarsh -->
-
-    <owl:Class rdf:about="#SaltwaterMarsh">
-        <rdfs:label>Saltwater Marsh</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SaltwaterTidalRegularlyFloodedTemperateTallGrassland -->
-
-    <owl:Class rdf:about="#SaltwaterTidalRegularlyFloodedTemperateTallGrassland">
-        <rdfs:label
-            >Saltwater-Tidal, Regularly Flooded Temperate Tall Grassland</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#TemporateTallGrassland"/>
+    <owl:Class rdf:about="#SBCSiteValue">
+        <rdfs:label>SBC Site Value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
     </owl:Class>
     
 
@@ -3185,196 +755,6 @@
         <rdfs:subClassOf rdf:resource="#California"/>
         <rdfs:comment
             >Santa Barbara COastal Mainland: from Pt Conception to Santa Clara RIver. Includes sublittoral areas and watersheds discharging to littoral areas.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SapeloIsland -->
-
-    <owl:Class rdf:about="#SapeloIsland">
-        <rdfs:label>Sapelo Island</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SchistocercaObscura -->
-
-    <owl:Class rdf:about="#SchistocercaObscura">
-        <rdfs:label
-            >Schistocerca obscura</rdfs:label>
-        <rdfs:label>TSN 658725</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Acrididae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SchistocercaObscuraPopulationValue -->
-
-    <owl:Class rdf:about="#SchistocercaObscuraPopulationValue">
-        <rdfs:label
-            >Schistocerca obscura Population Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#PopulationTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >SchistocercaObscura</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Scirpus -->
-
-    <owl:Class rdf:about="#Scirpus">
-        <rdfs:label>Bulrush</rdfs:label>
-        <rdfs:label>Scirpus L.</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Cyperaceae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ScirpusValue -->
-
-    <owl:Class rdf:about="#ScirpusValue">
-        <rdfs:label
-            >Scirpus spp. Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#TaxonomicTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#Scirpus"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Scirpus</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SecondaryProductivity -->
-
-    <owl:Class rdf:about="#SecondaryProductivity">
-        <rdfs:label
-            >Secondary Productivity</rdfs:label>
-        <rdfs:label
-            >Secondary Production</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Productivity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Shell -->
-
-    <owl:Class rdf:about="#Shell">
-        <rdfs:label>Shell</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ExternalAnimalStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ShellCondition -->
-
-    <owl:Class rdf:about="#ShellCondition">
-        <rdfs:label>Shell Condition</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;EntityClassification"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ShellConditionCodes -->
-
-    <owl:Class rdf:about="#ShellConditionCodes">
-        <rdfs:label
-            >Shell Condition Codes</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#ShellConditionValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="#ShellCondition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ShellConditionValue -->
-
-    <owl:Class rdf:about="#ShellConditionValue">
-        <rdfs:label
-            >Shell Condition Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ShellDamagedConditionValue -->
-
-    <owl:Class rdf:about="#ShellDamagedConditionValue">
-        <rdfs:label
-            >Shell Damaged Shell-Condition Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ShellConditionValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">ShellDamaged</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ShellUndamagedConditionValue -->
-
-    <owl:Class rdf:about="#ShellUndamagedConditionValue">
-        <rdfs:label
-            >Shell Undamaged Shell-Condition Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ShellConditionValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">ShellUndamaged</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Shoot -->
-
-    <owl:Class rdf:about="#Shoot">
-        <rdfs:label>Shoot</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ExternalPlantStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ShortGrassland -->
-
-    <owl:Class rdf:about="#ShortGrassland">
-        <rdfs:label>Short Grassland</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#HerbaceousVIII"/>
     </owl:Class>
     
 
@@ -3393,167 +773,8 @@
 
     <owl:Class rdf:about="#SolidEarthlPhysicalFeature">
         <rdfs:label
-            >Terrestrial Physical Feature</rdfs:label>
+            >Solid Earth Physical Feature</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PhysicalFeature"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpaBorValue -->
-
-    <owl:Class rdf:about="#SpaBorValue">
-        <rdfs:label
-            >SpaBor Community Type Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#CommunityTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">SpaBor</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpaDisValue -->
-
-    <owl:Class rdf:about="#SpaDisValue">
-        <rdfs:label
-            >SpaDis Community Type Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#CommunityTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">SpaDis</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpaJunValue -->
-
-    <owl:Class rdf:about="#SpaJunValue">
-        <rdfs:label
-            >SpaJun Community Type Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#CommunityTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">SpaJun</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpaSalValue -->
-
-    <owl:Class rdf:about="#SpaSalValue">
-        <rdfs:label
-            >SpaSal Community Type Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#CommunityTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">SpaSal</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpartinaAlterniflora -->
-
-    <owl:Class rdf:about="#SpartinaAlterniflora">
-        <rdfs:label
-            >Saltmarsh Cordgrass</rdfs:label>
-        <rdfs:label
-            >Spartina alterniflora</rdfs:label>
-        <rdfs:label>TSN 41267</rdfs:label>
-        <rdfs:label
-            >Smooth Cordgrass</rdfs:label>
-        <rdfs:label
-            >Atlantic Cordgrass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Poaceae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpartinaAlternifloraValue -->
-
-    <owl:Class rdf:about="#SpartinaAlternifloraValue">
-        <rdfs:label
-            >Spartina alterniflora Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#TaxonomicTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >SpartinaAlterniflora</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#SpartinaAlterniflora"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpartinaCynosuroides -->
-
-    <owl:Class rdf:about="#SpartinaCynosuroides">
-        <rdfs:label>TSN 41268</rdfs:label>
-        <rdfs:label
-            >Spartina cynosuroides</rdfs:label>
-        <rdfs:label>Big Cordgrass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Poaceae"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpartinaCynosuroidesValue -->
-
-    <owl:Class rdf:about="#SpartinaCynosuroidesValue">
-        <rdfs:label
-            >Spartina cynosuroides Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#TaxonomicTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >SpartinaCynosuroides</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#SpartinaCynosuroides"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3582,14 +803,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;Centimeter"/>
+                <owl:onProperty rdf:resource="&oboe;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;Centimeter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3598,30 +819,10 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StatisticalCollection -->
-
-    <owl:Class rdf:about="#StatisticalCollection">
-        <rdfs:label
-            >StatisticalCollection</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#EcologicalOrganismalIndividualAggregateUnit"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Stem -->
-
-    <owl:Class rdf:about="#Stem">
-        <rdfs:label>Stem</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ExternalPlantStructure"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Stream -->
 
     <owl:Class rdf:about="#Stream">
         <rdfs:label>Stream</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Biome"/>
         <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
     </owl:Class>
     
@@ -3653,47 +854,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TallGrassland -->
-
-    <owl:Class rdf:about="#TallGrassland">
-        <rdfs:label>Tall Grassland</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#HerbaceousVIII"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TaxonomicTypeNames -->
-
-    <owl:Class rdf:about="#TaxonomicTypeNames">
-        <rdfs:label
-            >Taxonomic Type Names</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe;EntityType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#TaxonomicTypeValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TaxonomicTypeValue -->
-
-    <owl:Class rdf:about="#TaxonomicTypeValue">
-        <rdfs:label
-            >Taxonomic Type Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TemperatureReef -->
 
     <owl:Class rdf:about="#TemperatureReef">
@@ -3710,124 +870,11 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TemporateTallGrassland -->
-
-    <owl:Class rdf:about="#TemporateTallGrassland">
-        <rdfs:label
-            >Temporate Tall Grassland</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#TallGrassland"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Tettigoniidae -->
-
-    <owl:Class rdf:about="#Tettigoniidae">
-        <rdfs:label>Tettigoniidae</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Grasshopper"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Tracheobionta -->
-
-    <owl:Class rdf:about="#Tracheobionta">
-        <rdfs:label>Vascular Plant</rdfs:label>
-        <rdfs:label>Tracheobionta</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Transect -->
 
     <owl:Class rdf:about="#Transect">
         <rdfs:label>Transect</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Typha -->
-
-    <owl:Class rdf:about="#Typha">
-        <rdfs:label>Typha L.</rdfs:label>
-        <rdfs:label>Cattail</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TyphaValue -->
-
-    <owl:Class rdf:about="#TyphaValue">
-        <rdfs:label
-            >Typha spp. Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#TaxonomicTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Typha</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#Typha"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#UGAMarineInstitute -->
-
-    <owl:Class rdf:about="#UGAMarineInstitute">
-        <rdfs:label
-            >UGA Marine Institute</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SapeloIsland"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#UGAMarineInstituteValue -->
-
-    <owl:Class rdf:about="#UGAMarineInstituteValue">
-        <rdfs:label
-            >UGA Marine Institute GCE Site Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#GCESiteValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityName"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#UGAMarineInstitute"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">UGAMI</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3841,24 +888,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Valley -->
-
-    <owl:Class rdf:about="#Valley">
-        <rdfs:label>Valley</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SolidEarthlPhysicalFeature"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Veneridae -->
-
-    <owl:Class rdf:about="#Veneridae">
-        <rdfs:label>Veneridae</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Bivalve"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Watershed -->
 
     <owl:Class rdf:about="#Watershed">
@@ -3867,11 +896,11 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WetBiomassEntity -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Waypoint -->
 
-    <owl:Class rdf:about="#WetBiomassEntity">
-        <rdfs:label>Wet Biomass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#BiomassEntity"/>
+    <owl:Class rdf:about="#Waypoint">
+        <rdfs:label>Waypoint</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
     </owl:Class>
     
 
@@ -3890,97 +919,6 @@
     <owl:Class rdf:about="#Within">
         <rdfs:label>within</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;Relationship"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Year -->
-
-    <owl:Class rdf:about="#Year">
-        <rdfs:subClassOf rdf:resource="&oboe;EntityClassification"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ZizaniopsisMiliacea -->
-
-    <owl:Class rdf:about="#ZizaniopsisMiliacea">
-        <rdfs:label
-            >Zizaniopsis miliacea</rdfs:label>
-        <rdfs:label>Giant Cutgrass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Plant"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ZizaniopsisMiliaceaValue -->
-
-    <owl:Class rdf:about="#ZizaniopsisMiliaceaValue">
-        <rdfs:label
-            >Zizaniopsis miliacea Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#TaxonomicTypeValue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string"
-                    >ZizaniopsisMiliacea</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;characteristicValueOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;EntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;characteristicOf"/>
-                                <owl:allValuesFrom rdf:resource="#ZizaniopsisMiliacea"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Zone -->
-
-    <owl:Class rdf:about="#Zone">
-        <rdfs:label>Zone</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ZoneTypeNames -->
-
-    <owl:Class rdf:about="#ZoneTypeNames">
-        <rdfs:label>Zone Type Names</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#ZoneTypeValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe;EntityType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ZoneTypeValue -->
-
-    <owl:Class rdf:about="#ZoneTypeValue">
-        <rdfs:label>Zone Type Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
     </owl:Class>
 </rdf:RDF>
 
