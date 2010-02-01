@@ -55,6 +55,18 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="&oboe;hasCharacteristic"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasCharacteristicValue -->
+
+    <owl:ObjectProperty rdf:about="&oboe;hasCharacteristicValue"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasStandardValue -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasStandardValue"/>
@@ -217,6 +229,12 @@
         <rdfs:label
             >AboveEarthSurfaceWater</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Water"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="#OWLClass_00000091401329344371"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment
             >water found above earth surface. Not interstitial, or within sediments or soil.</rdfs:comment>
     </owl:Class>
@@ -367,6 +385,12 @@
     <owl:Class rdf:about="#Conductivity">
         <rdfs:label>Conductivity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristicValue"/>
+                <owl:someValuesFrom rdf:resource="#ConductivityValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -492,6 +516,18 @@
         <rdfs:subClassOf rdf:resource="&oboe;ComplexDerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasUnit"/>
+                <owl:someValuesFrom rdf:resource="&oboe-units;Gram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasUnit"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -508,18 +544,6 @@
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasUnit"/>
-                <owl:someValuesFrom rdf:resource="&oboe-units;Gram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -691,6 +715,12 @@
         <rdfs:label
             >NitrateNitrateConcentration</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristicValue"/>
+                <owl:someValuesFrom rdf:resource="#NirateNitriteConcentrationValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -713,11 +743,47 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OWLClass_00000091401329344371 -->
+
+    <owl:Class rdf:about="#OWLClass_00000091401329344371">
+        <rdfs:label>Depth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OWLClass_00000092185136714582 -->
+
+    <owl:Class rdf:about="#OWLClass_00000092185136714582">
+        <rdfs:label>Volume</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ocean -->
 
     <owl:Class rdf:about="#Ocean">
         <rdfs:label>Ocean</rdfs:label>
         <rdfs:subClassOf rdf:resource="#AboveEarthSurfaceWater"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="#Salinity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="#NorthVectorFlow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="#EastVectorFlow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment
             >Water found in basins between continents, and assumed to contain accumulated salts.</rdfs:comment>
     </owl:Class>
@@ -971,8 +1037,8 @@
         <rdfs:subClassOf rdf:resource="&oboe;SimpleDerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;Centimeter"/>
+                <owl:onProperty rdf:resource="&oboe;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -983,8 +1049,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;Centimeter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -998,6 +1064,12 @@
     <owl:Class rdf:about="#Stream">
         <rdfs:label>Stream</rdfs:label>
         <rdfs:subClassOf rdf:resource="#AboveEarthSurfaceWater"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="#Discharge"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment
             >water flowing over a continent or land usually in catchments or watersheds. Includes waterways, rivers, creeks; intermittent or continuous.</rdfs:comment>
     </owl:Class>
@@ -1098,6 +1170,30 @@
     <owl:Class rdf:about="#Water">
         <rdfs:label>Water</rdfs:label>
         <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="#Conductivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="#NitrateNitriteConcentration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="#Temperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="#PhosphateConcentration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
