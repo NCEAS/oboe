@@ -67,6 +67,14 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OWLObjectProperty_00000039668021805285 -->
+
+    <owl:ObjectProperty rdf:about="#OWLObjectProperty_00000039668021805285">
+        <rdfs:label></rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -137,6 +145,18 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#Characteristic -->
+
+    <owl:Class rdf:about="&oboe;Characteristic"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#CharacteristicValue -->
+
+    <owl:Class rdf:about="&oboe;CharacteristicValue"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#ComplexDerivedUnit -->
 
     <owl:Class rdf:about="&oboe;ComplexDerivedUnit"/>
@@ -167,6 +187,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#NumericIndex -->
+
+    <owl:Class rdf:about="&oboe;NumericIndex"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#Relationship -->
 
     <owl:Class rdf:about="&oboe;Relationship"/>
@@ -182,6 +208,18 @@
     <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#StandardValue -->
 
     <owl:Class rdf:about="&oboe;StandardValue"/>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AboveEarthSurfaceWater -->
+
+    <owl:Class rdf:about="#AboveEarthSurfaceWater">
+        <rdfs:label
+            >AboveEarthSurfaceWater</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Water"/>
+        <rdfs:comment
+            >water found above earth surface. Not interstitial, or within sediments or soil.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -241,6 +279,16 @@
 
     <owl:Class rdf:about="#BeachHabitat">
         <rdfs:subClassOf rdf:resource="#EcologicalHabitat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BelowEarthSurfaceWater -->
+
+    <owl:Class rdf:about="#BelowEarthSurfaceWater">
+        <rdfs:label
+            >BelowEarthSurfaceWater</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Water"/>
     </owl:Class>
     
 
@@ -314,10 +362,39 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Conductivity -->
+
+    <owl:Class rdf:about="#Conductivity">
+        <rdfs:label>Conductivity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ConductivityValue -->
+
+    <owl:Class rdf:about="#ConductivityValue">
+        <rdfs:label
+            >ConductivityValue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;CharacteristicValue"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DateTimeDD -->
 
     <owl:Class rdf:about="#DateTimeDD">
         <rdfs:label>Date-Time Day</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;DateTime"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DateTimeIsoDate -->
+
+    <owl:Class rdf:about="#DateTimeIsoDate">
+        <rdfs:label
+            >Date-Time ISO Date</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;DateTime"/>
     </owl:Class>
     
@@ -341,11 +418,38 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DensityAnomaly -->
+
+    <owl:Class rdf:about="#DensityAnomaly">
+        <rdfs:label>DensityAnomaly</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;NumericIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Discharge -->
+
+    <owl:Class rdf:about="#Discharge">
+        <rdfs:label>Discharge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DryWeight -->
 
     <owl:Class rdf:about="#DryWeight">
         <rdfs:label>Dry Weight</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Biomass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#EastVectorFlow -->
+
+    <owl:Class rdf:about="#EastVectorFlow">
+        <rdfs:label>EastVectorFlow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
     </owl:Class>
     
 
@@ -408,14 +512,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasUnit"/>
-                <owl:someValuesFrom rdf:resource="&oboe-units;Gram"/>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
+                <owl:onProperty rdf:resource="&oboe;hasUnit"/>
+                <owl:someValuesFrom rdf:resource="&oboe-units;Gram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -510,6 +614,35 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MassRatio -->
+
+    <owl:Class rdf:about="#MassRatio">
+        <rdfs:label>MassRatio</rdfs:label>
+        <owl:equivalentClass rdf:resource="#Percent"/>
+        <rdfs:subClassOf rdf:resource="&oboe;NumericIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MeterPerSecond -->
+
+    <owl:Class rdf:about="#MeterPerSecond">
+        <rdfs:label>MeterPerSecond</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;ComplexDerivedUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MicromolePerLiter -->
+
+    <owl:Class rdf:about="#MicromolePerLiter">
+        <rdfs:label
+            >MicromolePerLiter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;ComplexDerivedUnit"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MissionCreek -->
 
     <owl:Class rdf:about="#MissionCreek">
@@ -526,26 +659,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NaplesInshoreStation -->
-
-    <owl:Class rdf:about="#NaplesInshoreStation">
-        <rdfs:label
-            >NaplesInshoreStation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Waypoint"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NaplesOffshoreStation -->
-
-    <owl:Class rdf:about="#NaplesOffshoreStation">
-        <rdfs:label
-            >Naples Offshore Station</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Waypoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NaplesReef -->
 
     <owl:Class rdf:about="#NaplesReef">
@@ -554,20 +667,39 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NaplesReefStation -->
-
-    <owl:Class rdf:about="#NaplesReefStation">
-        <rdfs:label
-            >NaplesReefStation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Waypoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Nereocystis -->
 
     <owl:Class rdf:about="#Nereocystis">
         <rdfs:subClassOf rdf:resource="#Kelp"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NirateNitriteConcentrationValue -->
+
+    <owl:Class rdf:about="#NirateNitriteConcentrationValue">
+        <rdfs:label
+            >NitrateNitriteConcentrationValue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;CharacteristicValue"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitrateNitriteConcentration -->
+
+    <owl:Class rdf:about="#NitrateNitriteConcentration">
+        <rdfs:label
+            >NitrateNitrateConcentration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NorthVectorFlow -->
+
+    <owl:Class rdf:about="#NorthVectorFlow">
+        <rdfs:label>NorthVectorFlow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
     </owl:Class>
     
 
@@ -585,7 +717,9 @@
 
     <owl:Class rdf:about="#Ocean">
         <rdfs:label>Ocean</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
+        <rdfs:subClassOf rdf:resource="#AboveEarthSurfaceWater"/>
+        <rdfs:comment
+            >Water found in basins between continents, and assumed to contain accumulated salts.</rdfs:comment>
     </owl:Class>
     
 
@@ -608,10 +742,29 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Percent -->
+
+    <owl:Class rdf:about="#Percent">
+        <rdfs:label>Percent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;NumericIndex"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Phaeophyceae -->
 
     <owl:Class rdf:about="#Phaeophyceae">
         <rdfs:subClassOf rdf:resource="#Alga"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PhosphateConcentration -->
+
+    <owl:Class rdf:about="#PhosphateConcentration">
+        <rdfs:label
+            >PhosphateConcentration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
     </owl:Class>
     
 
@@ -719,32 +872,53 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBCSiteNames -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBCSiteNameCatalog -->
 
-    <owl:Class rdf:about="#SBCSiteNames">
-        <rdfs:label>SBC Site Names</rdfs:label>
+    <owl:Class rdf:about="#SBCSiteNameCatalog">
+        <rdfs:label
+            >SBC Site Name Catalog</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
+                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
                 <owl:allValuesFrom rdf:resource="&oboe;EntityName"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#SBCSiteValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBCSiteValue -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBCSiteNameValue -->
 
-    <owl:Class rdf:about="#SBCSiteValue">
-        <rdfs:label>SBC Site Value</rdfs:label>
+    <owl:Class rdf:about="#SBCSiteNameValue">
+        <rdfs:label
+            >SBC Site Name Value</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Salinity -->
+
+    <owl:Class rdf:about="#Salinity">
+        <rdfs:label>Salinity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SalinityStandard -->
+
+    <owl:Class rdf:about="#SalinityStandard">
+        <rdfs:label
+            >SalinityStandard</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;NumericIndex"/>
     </owl:Class>
     
 
@@ -797,6 +971,12 @@
         <rdfs:subClassOf rdf:resource="&oboe;SimpleDerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;Centimeter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
                 <owl:allValuesFrom rdf:resource="&oboe-units;Area"/>
             </owl:Restriction>
@@ -805,12 +985,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasPower"/>
                 <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasBaseUnit"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;Centimeter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -823,7 +997,9 @@
 
     <owl:Class rdf:about="#Stream">
         <rdfs:label>Stream</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
+        <rdfs:subClassOf rdf:resource="#AboveEarthSurfaceWater"/>
+        <rdfs:comment
+            >water flowing over a continent or land usually in catchments or watersheds. Includes waterways, rivers, creeks; intermittent or continuous.</rdfs:comment>
     </owl:Class>
     
 
@@ -854,10 +1030,29 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TemperatureReef -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TIssueNitrogenContent -->
 
-    <owl:Class rdf:about="#TemperatureReef">
+    <owl:Class rdf:about="#TIssueNitrogenContent">
+        <rdfs:label
+            >TissueNitrogenContent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TemperateReef -->
+
+    <owl:Class rdf:about="#TemperateReef">
         <rdfs:subClassOf rdf:resource="#EcologicalHabitat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Temperature -->
+
+    <owl:Class rdf:about="#Temperature">
+        <rdfs:label>Temperature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
     </owl:Class>
     
 
@@ -866,6 +1061,16 @@
 
     <owl:Class rdf:about="#TemporalPoint">
         <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TissueCarbonContent -->
+
+    <owl:Class rdf:about="#TissueCarbonContent">
+        <rdfs:label
+            >TissueCarbonContent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
     </owl:Class>
     
 
@@ -884,6 +1089,15 @@
     <owl:Class rdf:about="#USA">
         <rdfs:label>USA</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Water -->
+
+    <owl:Class rdf:about="#Water">
+        <rdfs:label>Water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
     </owl:Class>
     
 
@@ -919,6 +1133,15 @@
     <owl:Class rdf:about="#Within">
         <rdfs:label>within</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#pH -->
+
+    <owl:Class rdf:about="#pH">
+        <rdfs:label>pH</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;NumericIndex"/>
     </owl:Class>
 </rdf:RDF>
 
