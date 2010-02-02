@@ -252,7 +252,7 @@
     <owl:Class rdf:about="#AboveEarthSurfaceWater">
         <rdfs:label
             >AboveEarthSurfaceWater</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Water"/>
+        <rdfs:subClassOf rdf:resource="#OpenWater"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
@@ -301,6 +301,8 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
 
     <owl:Class rdf:about="#AmmoniumConcentrationProtocol_Autoanalzyer">
         <rdfs:subClassOf rdf:resource="#DissolvedConstituentProtocols"/>
+        <rdfs:comment
+            >automated colorimetric method, probably an adaptation of the Solorzano method.</rdfs:comment>
     </owl:Class>
     
 
@@ -338,7 +340,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AquiferWater -->
 
     <owl:Class rdf:about="#AquiferWater">
-        <rdfs:subClassOf rdf:resource="#BelowEarthSurfaceWater"/>
+        <rdfs:subClassOf rdf:resource="#InterstitialWater"/>
         <rdfs:comment
             >Water in an aquifer</rdfs:comment>
     </owl:Class>
@@ -387,25 +389,14 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BelowEarthSurfaceInterstitialWater -->
-
-    <owl:Class rdf:about="#BelowEarthSurfaceInterstitialWater">
-        <rdfs:subClassOf rdf:resource="#BelowEarthSurfaceWater"/>
-        <rdfs:comment
-            >Water found between particles of soil or rock, not from an aquifer
-synonyms? ground water, porewater?</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BelowEarthSurfaceWater -->
 
     <owl:Class rdf:about="#BelowEarthSurfaceWater">
         <rdfs:label
             >BelowEarthSurfaceWater</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Water"/>
+        <rdfs:subClassOf rdf:resource="#OpenWater"/>
         <rdfs:comment
-            >Water held below the earth surface or in sediments.</rdfs:comment>
+            >A body of water below the earth surface, e.g., in a cave.</rdfs:comment>
     </owl:Class>
     
 
@@ -425,6 +416,15 @@ synonyms? ground water, porewater?</rdfs:comment>
     <owl:Class rdf:about="#Biomass">
         <rdfs:label>Biomass</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe-units;Mass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BodyOfWater -->
+
+    <owl:Class rdf:about="#BodyOfWater">
+        <owl:equivalentClass rdf:resource="#OpenWater"/>
+        <rdfs:subClassOf rdf:resource="#Water"/>
     </owl:Class>
     
 
@@ -495,6 +495,7 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
 
     <owl:Class rdf:about="#ConductivityProtocol_SeabirdCTD">
         <rdfs:subClassOf rdf:resource="#DissolvedConstituentProtocols"/>
+        <rdfs:subClassOf rdf:resource="#SeabirdCTDElectronicsProtocols"/>
     </owl:Class>
     
 
@@ -612,6 +613,14 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ElementalAnalysisProtocols -->
+
+    <owl:Class rdf:about="#ElementalAnalysisProtocols">
+        <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GiantKelp -->
 
     <owl:Class rdf:about="#GiantKelp">
@@ -669,7 +678,9 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GroundWater -->
 
     <owl:Class rdf:about="#GroundWater">
-        <rdfs:subClassOf rdf:resource="#BelowEarthSurfaceWater"/>
+        <rdfs:subClassOf rdf:resource="#Porewater"/>
+        <rdfs:comment
+            >Groundwater seems to be mostly associated with terrestrial systems. So it is subclassed here. Assuming that porewater can be extracted from marine sediments or lakebed, streambed, etc.</rdfs:comment>
     </owl:Class>
     
 
@@ -707,6 +718,19 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
         <rdfs:label
             >Hydrosphere Physical Process</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#InterstitialWater -->
+
+    <owl:Class rdf:about="#InterstitialWater">
+        <rdfs:subClassOf rdf:resource="#Water"/>
+        <rdfs:comment
+            >Interstitial water is found in spaces between soil or sediment particles, or between rocks or gravel.
+
+might have problems. Are aquifers interstitial? or any underground water?
+</rdfs:comment>
     </owl:Class>
     
 
@@ -899,6 +923,34 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OceanCurrentProtocols -->
+
+    <owl:Class rdf:about="#OceanCurrentProtocols">
+        <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OpenWater -->
+
+    <owl:Class rdf:about="#OpenWater">
+        <rdfs:subClassOf rdf:resource="#Water"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="#NorthVectorVelocity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="#EastVectorVelocity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OrganicTissueProtocols -->
 
     <owl:Class rdf:about="#OrganicTissueProtocols">
@@ -1012,7 +1064,7 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Porewater -->
 
     <owl:Class rdf:about="#Porewater">
-        <rdfs:subClassOf rdf:resource="#BelowEarthSurfaceInterstitialWater"/>
+        <rdfs:subClassOf rdf:resource="#InterstitialWater"/>
     </owl:Class>
     
 
@@ -1031,6 +1083,7 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
 
     <owl:Class rdf:about="#PracticalSalinityProtocol_SeabirdCTD">
         <rdfs:subClassOf rdf:resource="#DissolvedConstituentProtocols"/>
+        <rdfs:subClassOf rdf:resource="#SeabirdCTDElectronicsProtocols"/>
     </owl:Class>
     
 
@@ -1157,6 +1210,14 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SeabirdCTDElectronicsProtocols -->
+
+    <owl:Class rdf:about="#SeabirdCTDElectronicsProtocols">
+        <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Seaweed -->
 
     <owl:Class rdf:about="#Seaweed">
@@ -1271,6 +1332,8 @@ Sometimes knows colloquially as silicate</rdfs:comment>
 
     <owl:Class rdf:about="#StreamDischargeProtocol_SBC">
         <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+        <rdfs:comment
+            >calculation of stream discharge has 2 parts: measuring the state height and combining with a model of the rating curve (a model of stream basin cross-section that predicts flow)</rdfs:comment>
     </owl:Class>
     
 
@@ -1295,7 +1358,9 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StreamRatingCurveProtocol_SBC -->
 
     <owl:Class rdf:about="#StreamRatingCurveProtocol_SBC">
-        <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+        <rdfs:subClassOf rdf:resource="#StreamDischargeProtocol_SBC"/>
+        <rdfs:comment
+            >some HECRAS methods here.</rdfs:comment>
     </owl:Class>
     
 
@@ -1309,9 +1374,18 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SubterraneanRiver -->
+
+    <owl:Class rdf:about="#SubterraneanRiver">
+        <rdfs:subClassOf rdf:resource="#BelowEarthSurfaceWater"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SuspendedParticulateCarbonNitrogen_CHNElementalAnalyzer -->
 
     <owl:Class rdf:about="#SuspendedParticulateCarbonNitrogen_CHNElementalAnalyzer">
+        <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
         <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
         <rdfs:comment
             >Particulates suspended  in water are collected on a filter.</rdfs:comment>
@@ -1322,6 +1396,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SuspendedParticulatePhosphorus_AcidDigestion -->
 
     <owl:Class rdf:about="#SuspendedParticulatePhosphorus_AcidDigestion">
+        <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
         <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
     </owl:Class>
     
@@ -1366,6 +1441,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TissueCarbonNitrogen_CHNElementalAnalyzer -->
 
     <owl:Class rdf:about="#TissueCarbonNitrogen_CHNElementalAnalyzer">
+        <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
         <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
     </owl:Class>
     
@@ -1374,6 +1450,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TissuePhosphorus_AcidDigestion -->
 
     <owl:Class rdf:about="#TissuePhosphorus_AcidDigestion">
+        <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
         <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
     </owl:Class>
     
@@ -1400,7 +1477,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#VelocityVectorsProtocol_AcousticDopplerCurrentProfiler_RDI -->
 
     <owl:Class rdf:about="#VelocityVectorsProtocol_AcousticDopplerCurrentProfiler_RDI">
-        <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+        <rdfs:subClassOf rdf:resource="#OceanCurrentProtocols"/>
     </owl:Class>
     
 
@@ -1425,12 +1502,6 @@ Sometimes knows colloquially as silicate</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="#EastVectorVelocity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
                 <owl:someValuesFrom rdf:resource="#Conductivity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1438,12 +1509,6 @@ Sometimes knows colloquially as silicate</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
                 <owl:someValuesFrom rdf:resource="&oboe-units;Volume"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="#NorthVectorVelocity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1467,7 +1532,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WaterTemperature_SeabirdCTD -->
 
     <owl:Class rdf:about="#WaterTemperature_SeabirdCTD">
-        <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+        <rdfs:subClassOf rdf:resource="#SeabirdCTDElectronicsProtocols"/>
     </owl:Class>
     
 
