@@ -488,11 +488,19 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Concentration -->
+
+    <owl:Class rdf:about="#Concentration">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Conductivity -->
 
     <owl:Class rdf:about="#Conductivity">
         <rdfs:label>Conductivity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
         <rdfs:comment
             >The conductivity of water depends on the number of dissolved ions per volume (i.e. salinity) and the mobility of the ions (ie temperature and pressure), and therefore is a directly measureable major input to calculations of salinity.
 FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
@@ -549,6 +557,18 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DensityAnomaly -->
 
     <owl:Class rdf:about="#DensityAnomaly">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+        <rdfs:comment
+            >symbol is 2 greek leters, sigma and theta. Density anomaly is calculated with in situ salinity, potential temperature and pressure=0. 
+
+sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint Panel on Oceanographic Tables and Standards, 1981) </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DensityAnomalyStandard -->
+
+    <owl:Class rdf:about="#DensityAnomalyStandard">
         <rdfs:label>DensityAnomaly</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;NumericIndex"/>
     </owl:Class>
@@ -562,6 +582,16 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&oboe-units;Length"/>
         <rdfs:comment
             >Depth is measured distance from a surface down toward the center of the earth.  It could be considered the opposite of height, although values are usually expressed as positive.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DepthOfSample -->
+
+    <owl:Class rdf:about="#DepthOfSample">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+        <rdfs:comment
+            >The distance below a surface at which a sample was taken</rdfs:comment>
     </owl:Class>
     
 
@@ -637,6 +667,22 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
 
     <owl:Class rdf:about="#ElementalAnalysisProtocols">
         <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ElementalTissueContent -->
+
+    <owl:Class rdf:about="#ElementalTissueContent">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Fluorescence -->
+
+    <owl:Class rdf:about="#Fluorescence">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
     </owl:Class>
     
 
@@ -798,11 +844,81 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Latitude -->
+
+    <owl:Class rdf:about="#Latitude">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LightAbsorptionCoefficient -->
+
+    <owl:Class rdf:about="#LightAbsorptionCoefficient">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+        <rdfs:comment
+            >Absorption of light is a process in which light energy is converted into other forms of energy such as photosynthesis, fluorescence, or heat. Absorbing agents in natural waters are water itself (see absorption by pure water), particulates and dissolved materials such as colored dissolved organic material (CDOM) (see  absorption by particulates and CDOM). Each of these components has a specific absorption spectrum. 
+Absorption is often described spectrally
+
+Total light attenuation (c) is the sum of scattering (b) and absorption (a)
+c = a + b</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LightBeamAttenuationCoefficient -->
+
+    <owl:Class rdf:about="#LightBeamAttenuationCoefficient">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+        <rdfs:comment
+            >Beam attenuation (c) is loss of light of a narrow, well collimated beam of light and is due to both absorption (a) and scattering (b). 
+c = a + b
+When referenced to pure water, the beam attenuation coefficient describes light losses due to absorption by dissolved materials and particulates and due to scattering by particulates. (wetlabs.com)
+
+calculated from beam transmission accordiing to: 
+ c = - ( 1 / (path length[m]) * ln ( light transmission [decimal] )</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LightBeamTransmission -->
+
+    <owl:Class rdf:about="#LightBeamTransmission">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+        <rdfs:comment
+            >percent of light emitted by a source reaching a sensor across a path of known length. In instruments commonly used in natural waters the path length is 0.25 meter.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LightScatteringCoefficient -->
+
+    <owl:Class rdf:about="#LightScatteringCoefficient">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+        <rdfs:comment
+            >Scattering (b) of light is a process in which light energy changes direction without losing energy. Scattering agents in natural waters are water itself (scattering by pure water); and particulates (scattering by particles). 
+
+Total attenuation (c) is the sum of scattering (b) and absorption (a)
+c = a + b
+
+The scattering coefficient is often divided into a forward scattering coefficient and a backscattering coefficient. The backscattering coefficient is important in understanding remote sensing signals.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LittoralOcean -->
 
     <owl:Class rdf:about="#LittoralOcean">
         <rdfs:label>Littoral Ocean</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SantaBarbaraCoastalMainland"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Longitude -->
+
+    <owl:Class rdf:about="#Longitude">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
     </owl:Class>
     
 
@@ -951,13 +1067,13 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="#EastVectorVelocity"/>
+                <owl:someValuesFrom rdf:resource="#NorthVectorVelocity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="#NorthVectorVelocity"/>
+                <owl:someValuesFrom rdf:resource="#EastVectorVelocity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1084,11 +1200,19 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PotentialTemperature -->
+
+    <owl:Class rdf:about="#PotentialTemperature">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PracticalSalinity -->
 
     <owl:Class rdf:about="#PracticalSalinity">
         <rdfs:label>Salinity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
         <rdfs:comment></rdfs:comment>
     </owl:Class>
     
@@ -1137,11 +1261,29 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PrimaryProductivityRate -->
+
+    <owl:Class rdf:about="#PrimaryProductivityRate">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+        <rdfs:comment
+            >the rate at which new biomass is formed by photosynthetic processes. May be expressed by element. In addtion to carbon (as organic carbon from atmospheric carbon dioxide, CO2) it may be expressed in terms of other elements of interest (e.g., limiting) in a particular environment (e.g, N or P).</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Process -->
 
     <owl:Class rdf:about="#Process">
         <rdfs:label>Process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Quantity -->
+
+    <owl:Class rdf:about="#Quantity">
+        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
     </owl:Class>
     
 
@@ -1307,6 +1449,18 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StableIsotopeComposition -->
+
+    <owl:Class rdf:about="#StableIsotopeComposition">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+        <rdfs:comment
+            >compositions of stable isotopes of materials to suggest the origin of specific compounds.
+Usually expressed as a ratio and/or difference from a norm (delta)
+</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Stream -->
 
     <owl:Class rdf:about="#Stream">
@@ -1463,6 +1617,14 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Turbidity -->
+
+    <owl:Class rdf:about="#Turbidity">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#USA -->
 
     <owl:Class rdf:about="#USA">
@@ -1472,10 +1634,34 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Velocity -->
+
+    <owl:Class rdf:about="#Velocity">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#VelocityVectorsProtocol_AcousticDopplerCurrentProfiler_RDI -->
 
     <owl:Class rdf:about="#VelocityVectorsProtocol_AcousticDopplerCurrentProfiler_RDI">
         <rdfs:subClassOf rdf:resource="#WaterCurrentProtocols"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Voltage -->
+
+    <owl:Class rdf:about="#Voltage">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#VolumeScatteringFunction -->
+
+    <owl:Class rdf:about="#VolumeScatteringFunction">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
     </owl:Class>
     
 
@@ -1494,7 +1680,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="#Conductivity"/>
+                <owl:someValuesFrom rdf:resource="#PhosphateConcentration"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1512,7 +1698,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="#PhosphateConcentration"/>
+                <owl:someValuesFrom rdf:resource="#Conductivity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1531,6 +1717,35 @@ Sometimes knows colloquially as silicate</rdfs:comment>
 
     <owl:Class rdf:about="#WaterDepthProtocol">
         <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WaterDepthToBottom -->
+
+    <owl:Class rdf:about="#WaterDepthToBottom">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+        <rdfs:comment
+            >In natural bodies of water, is the distance to the bottom (or solid earth surface) from a point in the water column. Usually the depth to the bottom is assumed to be constant at a given time. The reference point may be the surface of the water body or a point within the water column. 
+This characteristic is often used to nominally describe a place (such as a sampling location) or the depoyment of an instrument within the water column.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WaterPressure -->
+
+    <owl:Class rdf:about="#WaterPressure">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
+        <rdfs:comment
+            >Pressure of water from above</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WaterTemperature -->
+
+    <owl:Class rdf:about="#WaterTemperature">
+        <rdfs:subClassOf rdf:resource="#Quantity"/>
     </owl:Class>
     
 
