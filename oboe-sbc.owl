@@ -122,6 +122,18 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasPrecision -->
+
+    <owl:DatatypeProperty rdf:about="&oboe;hasPrecision"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="&oboe;hasValue"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -344,6 +356,44 @@ c = a + b</rdfs:comment>
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AmmoniumConcentrationMSIAutomated -->
+
+    <owl:Class rdf:about="#AmmoniumConcentrationMSIAutomated">
+        <rdfs:subClassOf rdf:resource="#AmmoniumConcentration"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>   
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>              
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
+                <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_MSIAutomated"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasValue"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
+                <owl:someValuesFrom rdf:resource="#MicromolePerLiter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AmmoniumConcentrationProtocol_BenchtopSolarzano1969 -->
 
     <owl:Class rdf:about="#AmmoniumConcentrationProtocol_BenchtopSolarzano1969">
@@ -365,42 +415,10 @@ c = a + b</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AmmoniumConcentrationSeawaterMSIAutoanalyzer -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AmmoniumConcentrationSolorzano -->
 
-    <owl:Class rdf:about="#AmmoniumConcentrationSeawaterMSIAutoanalyzer">
+    <owl:Class rdf:about="#AmmoniumConcentrationSolorzano">
         <rdfs:subClassOf rdf:resource="#AmmoniumConcentration"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
-                <owl:someValuesFrom rdf:resource="#MicromolePerLiter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
-                <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_MSIAutomated"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AmmoniumConcentrationSeawaterSolorzano -->
-
-    <owl:Class rdf:about="#AmmoniumConcentrationSeawaterSolorzano">
-        <rdfs:subClassOf rdf:resource="#AmmoniumConcentration"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;usesStandard"/>
@@ -411,6 +429,12 @@ c = a + b</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
                 <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_BenchtopSolarzano1969"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -848,6 +872,18 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
         <rdfs:subClassOf rdf:resource="&oboe;ComplexDerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasUnit"/>
+                <owl:someValuesFrom rdf:resource="&oboe-units;Gram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasUnit"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -864,18 +900,6 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasUnit"/>
-                <owl:someValuesFrom rdf:resource="&oboe-units;Gram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -1159,9 +1183,9 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitrateNitriteConcentrationMSIAutoanalyzer -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitrateNitriteConcentrationMSIAutomated -->
 
-    <owl:Class rdf:about="#NitrateNitriteConcentrationMSIAutoanalyzer">
+    <owl:Class rdf:about="#NitrateNitriteConcentrationMSIAutomated">
         <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
     </owl:Class>
     
@@ -1328,6 +1352,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
             >PhosphateConcentration</rdfs:label>
         <rdfs:subClassOf rdf:resource="#DissolvedMaterialConcentration"/>
         <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PhosphateConcentrationMSIAutomated -->
+
+    <owl:Class rdf:about="#PhosphateConcentrationMSIAutomated">
+        <rdfs:subClassOf rdf:resource="#PhosphateConcentration"/>
     </owl:Class>
     
 
@@ -1765,9 +1797,9 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SilicicAcidConcentrationMSIAutoanalyzer -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SilicicAcidConcentrationMSIAutomated -->
 
-    <owl:Class rdf:about="#SilicicAcidConcentrationMSIAutoanalyzer">
+    <owl:Class rdf:about="#SilicicAcidConcentrationMSIAutomated">
         <rdfs:subClassOf rdf:resource="#SilicicAcidConcentration"/>
     </owl:Class>
     
@@ -2098,13 +2130,13 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="#NitrateNitriteConcentration"/>
+                <owl:someValuesFrom rdf:resource="#PhosphateConcentration"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="#PhosphateConcentration"/>
+                <owl:someValuesFrom rdf:resource="#Conductivity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2116,7 +2148,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="#Conductivity"/>
+                <owl:someValuesFrom rdf:resource="#NitrateNitriteConcentration"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
