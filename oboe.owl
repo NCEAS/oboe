@@ -43,7 +43,7 @@
     <owl:ObjectProperty rdf:about="#characteristicOf">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment
-            >This property relates a characteristic to the entity it is a characteristic of. A characteristic is of exactly one entity.</rdfs:comment>
+            >The characteristicOf property relates a characteristic to the entity it is a characteristic of. A characteristic is of exactly one entity.</rdfs:comment>
         <rdfs:domain rdf:resource="#Characteristic"/>
         <rdfs:range rdf:resource="#Entity"/>
         <owl:inverseOf rdf:resource="#hasCharacteristic"/>
@@ -56,7 +56,7 @@
     <owl:ObjectProperty rdf:about="#characteristicValueOf">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:comment
-            >This property gives the characteristic that a characteristic value is of. A characteristic value can be the value of many characteristics.</rdfs:comment>
+            >The characteristicValue property gives the characteristic that a characteristic value is of. A characteristic value can be the value of many characteristics.</rdfs:comment>
         <rdfs:range rdf:resource="#Characteristic"/>
         <rdfs:domain rdf:resource="#CharacteristicValue"/>
     </owl:ObjectProperty>
@@ -67,7 +67,7 @@
 
     <owl:ObjectProperty rdf:about="#forCharacteristic">
         <rdfs:comment
-            >This property relates measurement standards to the characteristics they are standards for.</rdfs:comment>
+            >The forCharacteristic property relates measurement standards to the characteristics they are standards for.</rdfs:comment>
         <rdfs:range rdf:resource="#Characteristic"/>
         <rdfs:domain rdf:resource="#MeasurementStandard"/>
     </owl:ObjectProperty>
@@ -79,7 +79,7 @@
     <owl:ObjectProperty rdf:about="#hasBaseDimension">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment
-            >This property gives the base dimension of a simple derived dimension.</rdfs:comment>
+            >The hasBaseDimension property gives the base dimension of a simple derived dimension.</rdfs:comment>
         <rdfs:range rdf:resource="#BaseDimension"/>
         <rdfs:domain rdf:resource="#SimpleDerivedDimension"/>
     </owl:ObjectProperty>
@@ -91,7 +91,7 @@
     <owl:ObjectProperty rdf:about="#hasBaseUnit">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment
-            >This property gives the base unit of a simple derived unit.</rdfs:comment>
+            >The hasBaseUnit property gives the base unit of a simple derived unit.</rdfs:comment>
         <rdfs:range rdf:resource="#BaseUnit"/>
         <rdfs:domain rdf:resource="#SimpleDerivedUnit"/>
     </owl:ObjectProperty>
@@ -103,7 +103,7 @@
     <owl:ObjectProperty rdf:about="#hasCharacteristic">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:comment
-            >This property relates an entity to one of its characteristics.</rdfs:comment>
+            >The hasCharacteristic property relates an entity to one of its characteristics.</rdfs:comment>
         <rdfs:range rdf:resource="#Characteristic"/>
         <rdfs:domain rdf:resource="#Entity"/>
     </owl:ObjectProperty>
@@ -115,7 +115,7 @@
     <owl:ObjectProperty rdf:about="#hasCharacteristicValue">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment
-            >This property gives the value of an entity&#39;s characteristic. Characteristics have exactly one value.</rdfs:comment>
+            >The hasCharacteristicValue property gives the value of an entity&#39;s characteristic. Characteristics have exactly one value.</rdfs:comment>
         <rdfs:domain rdf:resource="#Characteristic"/>
         <rdfs:range rdf:resource="#CharacteristicValue"/>
         <owl:inverseOf rdf:resource="#characteristicValueOf"/>
@@ -128,7 +128,7 @@
     <owl:ObjectProperty rdf:about="#hasContext">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >This property states that one observation serves as the context for another observation.  Context defines a semantic relationship between two entities that is a fundamental aspect of the observations, but not necessarily of the entities themselves.  For example, most measurements are accomplished in a spatio-temporal framework that might be valuable context. The assertions made by contextual observations are assumed of the contextualized observations. Context is a transitive relationship.</rdfs:comment>
+            >The hasContext property states that one observation serves as the context for another observation.  Context defines a semantic relationship between two entities that is a fundamental aspect of the observations, but not necessarily of the entities themselves.  For example, most measurements are accomplished in a spatio-temporal framework that might be valuable context. The assertions made by contextual observations are assumed of the contextualized observations. Context is a transitive relationship.</rdfs:comment>
         <rdfs:domain rdf:resource="#Observation"/>
         <rdfs:range rdf:resource="#Observation"/>
     </owl:ObjectProperty>
@@ -140,7 +140,7 @@
     <owl:ObjectProperty rdf:about="#hasContextObservation">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >This property connects a context object to an observation, where the entity of the observation is serving as context for some other observed entity.</rdfs:comment>
+            >The hasContextObservation property connects a context object to an observation, where the entity of the observation is serving as context for some other observed entity.</rdfs:comment>
         <rdfs:domain rdf:resource="#Context"/>
         <rdfs:range rdf:resource="#Observation"/>
     </owl:ObjectProperty>
@@ -152,7 +152,7 @@
     <owl:ObjectProperty rdf:about="#hasContextRelationship">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >This property relates a context object to its associated relationship object.</rdfs:comment>
+            >The hasContextRelationship property relates a context object to its associated relationship object.</rdfs:comment>
         <rdfs:domain rdf:resource="#Context"/>
         <rdfs:range rdf:resource="#Relationship"/>
     </owl:ObjectProperty>
@@ -163,7 +163,7 @@
 
     <owl:ObjectProperty rdf:about="#hasDimension">
         <rdfs:comment
-            >This property relates a complex derived dimension to one of its component dimensions.</rdfs:comment>
+            >The hasDimension property relates a complex derived dimension to one of its component dimensions.</rdfs:comment>
         <rdfs:domain rdf:resource="#ComplexDerivedDimension"/>
         <rdfs:range>
             <owl:Class>
@@ -182,7 +182,7 @@
     <owl:ObjectProperty rdf:about="#hasEntityRelationship">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >This property connects an entity to a relationship object, where the entity plays the role of the source of the relationship.</rdfs:comment>
+            >The hasEntityRelationship property connects an entity to a relationship object, where the entity plays the role of the source of the relationship.</rdfs:comment>
         <rdfs:domain rdf:resource="#Entity"/>
         <rdfs:range rdf:resource="#Relationship"/>
     </owl:ObjectProperty>
@@ -194,7 +194,7 @@
     <owl:ObjectProperty rdf:about="#hasHigherRank">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:comment
-            >This property represents an ordering (precedence) relationship between two characteristic values. The higher rank property induces a strict (irreflexive, asymmetric) partial ordering over a given set of characteristic values.</rdfs:comment>
+            >The hasHigherRank property represents an ordering (precedence) relationship between two characteristic values. The higher rank property induces a strict (irreflexive, asymmetric) partial ordering over a given set of characteristic values.</rdfs:comment>
         <rdfs:domain rdf:resource="#OrderedValue"/>
         <rdfs:range rdf:resource="#OrderedValue"/>
     </owl:ObjectProperty>
@@ -206,7 +206,7 @@
     <owl:ObjectProperty rdf:about="#hasMeasurement">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >This property gives the measurements of the observed entity.</rdfs:comment>
+            >The hasMeasurement property gives the measurements of the observed entity.</rdfs:comment>
         <rdfs:range rdf:resource="#Measurement"/>
         <rdfs:domain rdf:resource="#Observation"/>
     </owl:ObjectProperty>
@@ -218,7 +218,7 @@
     <owl:ObjectProperty rdf:about="#hasObservationContext">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >This property connects an observation to a context object, where the entity of the observation is being contextualized.</rdfs:comment>
+            >The hasObservation property connects an observation to a context object, where the entity of the observation is being contextualized.</rdfs:comment>
         <rdfs:range rdf:resource="#Context"/>
         <rdfs:domain rdf:resource="#Observation"/>
     </owl:ObjectProperty>
@@ -230,7 +230,7 @@
     <owl:ObjectProperty rdf:about="#hasRelationshipEntity">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >This property connects a relationship object to an entity,  where the entity plays the role of the target of the relationship.</rdfs:comment>
+            >The hasRelationshipEntity property connects a relationship object to an entity,  where the entity plays the role of the target of the relationship.</rdfs:comment>
         <rdfs:range rdf:resource="#Entity"/>
         <rdfs:domain rdf:resource="#Relationship"/>
     </owl:ObjectProperty>
@@ -242,7 +242,7 @@
     <owl:ObjectProperty rdf:about="#hasSourceUnit">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment
-            >This property gives the source base unit of a unit conoboe. The source unit is the unit being mapped from.</rdfs:comment>
+            >The hasSourceUnit property gives the source base unit of a unit conoboe. The source unit is the unit being mapped from.</rdfs:comment>
         <rdfs:range rdf:resource="#BaseUnit"/>
         <rdfs:domain rdf:resource="#UnitConversion"/>
     </owl:ObjectProperty>
@@ -253,7 +253,7 @@
 
     <owl:ObjectProperty rdf:about="#hasStandardValue">
         <rdfs:comment
-            >This property gives the standard values of a measurement standard.</rdfs:comment>
+            >The hasStandardValue property gives the standard values of a measurement standard.</rdfs:comment>
         <rdfs:domain rdf:resource="#MeasurementStandard"/>
         <rdfs:range rdf:resource="#StandardValue"/>
     </owl:ObjectProperty>
@@ -265,7 +265,7 @@
     <owl:ObjectProperty rdf:about="#hasTargetUnit">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment
-            >This property gives the target base unit of a unit conoboe. The target unit is the unit being mapped to.</rdfs:comment>
+            >The hasTargetUnit property gives the target base unit of a unit conoboe. The target unit is the unit being mapped to.</rdfs:comment>
         <rdfs:range rdf:resource="#BaseUnit"/>
         <rdfs:domain rdf:resource="#UnitConversion"/>
     </owl:ObjectProperty>
@@ -276,7 +276,7 @@
 
     <owl:ObjectProperty rdf:about="#hasUnit">
         <rdfs:comment rdf:datatype="&xsd;string"
-            >This property relates a complex derived unit with one of its component units.</rdfs:comment>
+            >The hasUnit property relates a complex derived unit with one of its component units.</rdfs:comment>
         <rdfs:domain rdf:resource="#ComplexDerivedUnit"/>
         <rdfs:range>
             <owl:Class>
@@ -290,12 +290,25 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#measurementFor -->
+
+    <owl:ObjectProperty rdf:about="#measurementFor">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment
+            >The measurementFor property relates a measurement to its corresponding observation.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Measurement"/>
+        <rdfs:range rdf:resource="#Observation"/>
+        <owl:inverseOf rdf:resource="#hasMeasurement"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#ofCharacteristic -->
 
     <owl:ObjectProperty rdf:about="#ofCharacteristic">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment
-            >This property gives the entity characteristic measured by the measurement.</rdfs:comment>
+            >The ofCharacteristic property gives the entity characteristic measured by the measurement.</rdfs:comment>
         <rdfs:range rdf:resource="#Characteristic"/>
         <rdfs:domain rdf:resource="#Measurement"/>
     </owl:ObjectProperty>
@@ -307,7 +320,7 @@
     <owl:ObjectProperty rdf:about="#ofEntity">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >This property gives the observed entity of an observation.</rdfs:comment>
+            >The ofEntity property gives the observed entity of an observation.</rdfs:comment>
         <rdfs:range rdf:resource="#Entity"/>
         <rdfs:domain rdf:resource="#Observation"/>
     </owl:ObjectProperty>
@@ -319,7 +332,7 @@
     <owl:ObjectProperty rdf:about="#usesProtocol">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment
-            >This property gives the protocol used in a measurement.</rdfs:comment>
+            >The usesProtocol property gives the protocol used in a measurement.</rdfs:comment>
         <rdfs:domain rdf:resource="#Measurement"/>
         <rdfs:range rdf:resource="#Protocol"/>
     </owl:ObjectProperty>
@@ -331,7 +344,7 @@
     <owl:ObjectProperty rdf:about="#usesStandard">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >This property gives the standard (e.g., unit) used in a measurement.</rdfs:comment>
+            >The usesStandard property gives the standard (e.g., unit) used in a measurement.</rdfs:comment>
         <rdfs:domain rdf:resource="#Measurement"/>
         <rdfs:range rdf:resource="#MeasurementStandard"/>
     </owl:ObjectProperty>
@@ -465,14 +478,14 @@
         <rdfs:subClassOf rdf:resource="#Unit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="#BaseDimension"/>
+                <owl:onProperty rdf:resource="#hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
+                <owl:onProperty rdf:resource="#forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="#BaseDimension"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#ComplexDerivedUnit"/>
@@ -489,14 +502,14 @@
         <rdfs:label>Characteristic</rdfs:label>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#characteristicOf"/>
-                <owl:someValuesFrom rdf:resource="#Entity"/>
+                <owl:onProperty rdf:resource="#hasCharacteristicValue"/>
+                <owl:someValuesFrom rdf:resource="#CharacteristicValue"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasCharacteristicValue"/>
-                <owl:someValuesFrom rdf:resource="#CharacteristicValue"/>
+                <owl:onProperty rdf:resource="#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="#Entity"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:disjointWith rdf:resource="#CharacteristicValue"/>
@@ -567,6 +580,12 @@
         <rdfs:subClassOf rdf:resource="#Unit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="#forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="#ComplexDerivedDimension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasUnit"/>
                 <owl:onClass>
                     <owl:Class>
@@ -577,12 +596,6 @@
                     </owl:Class>
                 </owl:onClass>
                 <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="#ComplexDerivedDimension"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#SimpleDerivedUnit"/>
@@ -745,8 +758,14 @@
         <rdfs:label>Measurement</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasValue"/>
-                <owl:someValuesFrom rdf:resource="&xsd;anySimpleType"/>
+                <owl:onProperty rdf:resource="#ofCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="#Characteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPrecision"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -763,14 +782,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#ofCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="#Characteristic"/>
+                <owl:onProperty rdf:resource="#hasValue"/>
+                <owl:someValuesFrom rdf:resource="&xsd;anySimpleType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPrecision"/>
-                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
+                <owl:onProperty rdf:resource="#measurementFor"/>
+                <owl:someValuesFrom rdf:resource="#Observation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#MeasurementStandard"/>
@@ -931,14 +950,10 @@
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasPower"/>
-                        <owl:hasValue rdf:datatype="&xsd;int">0</owl:hasValue>
-                    </owl:Restriction>
-                </owl:complementOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasBaseDimension"/>
+                <owl:someValuesFrom rdf:resource="#BaseDimension"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -947,10 +962,14 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasBaseDimension"/>
-                <owl:someValuesFrom rdf:resource="#BaseDimension"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasPower"/>
+                        <owl:hasValue rdf:datatype="&xsd;int">0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment
             >A simple derived dimension represents a base physical quantity raised to a power (other than 0 or 1). For example, area is a simple derived dimension representing the base dimension length raised to the power 2.</rdfs:comment>
@@ -972,8 +991,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasBaseUnit"/>
-                <owl:someValuesFrom rdf:resource="#BaseUnit"/>
+                <owl:onProperty rdf:resource="#hasPower"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -987,6 +1006,12 @@
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasBaseUnit"/>
+                <owl:someValuesFrom rdf:resource="#BaseUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
@@ -995,12 +1020,6 @@
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPower"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A simple derived unit is a unit that raises a base unit to an integer power (other than 0 or 1).</rdfs:comment>
@@ -1058,6 +1077,12 @@
         <rdfs:label>Unit Conversion</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTargetUnit"/>
+                <owl:someValuesFrom rdf:resource="#BaseUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasMultiplier"/>
                 <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
@@ -1066,12 +1091,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasOffset"/>
                 <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasTargetUnit"/>
-                <owl:someValuesFrom rdf:resource="#BaseUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
