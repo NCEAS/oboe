@@ -79,6 +79,24 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#ofCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="&oboe;ofCharacteristic"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#usesProtocol -->
+
+    <owl:ObjectProperty rdf:about="&oboe;usesProtocol"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#usesStandard -->
+
+    <owl:ObjectProperty rdf:about="&oboe;usesStandard"/>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OWLObjectProperty_00000039668021805285 -->
 
     <owl:ObjectProperty rdf:about="#OWLObjectProperty_00000039668021805285">
@@ -121,6 +139,12 @@
         <rdfs:comment
             >Amount of Substance:The SI base  unit is mole.</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-units.1.0beta#AmountOfSubstanceConcentration -->
+
+    <owl:Class rdf:about="&oboe-units;AmountOfSubstanceConcentration"/>
     
 
 
@@ -320,22 +344,75 @@ c = a + b</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AmmoniumConcentrationProtocol_Autoanalzyer -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AmmoniumConcentrationProtocol_BenchtopSolarzano1969 -->
 
-    <owl:Class rdf:about="#AmmoniumConcentrationProtocol_Autoanalzyer">
-        <rdfs:subClassOf rdf:resource="#DissolvedConstituentProtocols"/>
+    <owl:Class rdf:about="#AmmoniumConcentrationProtocol_BenchtopSolarzano1969">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
+        <rdfs:comment
+            >Solorzano, L., 1969. Determination of ammonia in natural waters by phenol hypochlorite method. Limnol. Oceanogr. 14, 799&#8211; 801.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AmmoniumConcentrationProtocol_MSIAutomated -->
+
+    <owl:Class rdf:about="#AmmoniumConcentrationProtocol_MSIAutomated">
+        <rdfs:subClassOf rdf:resource="#MSI_AnalyticalLabProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
         <rdfs:comment
             >automated colorimetric method, probably an adaptation of the Solorzano method.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AmmoniumConcentrationProtocol_BenchtopSolarzano1969 -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AmmoniumConcentrationSeawaterMSIAutoanalyzer -->
 
-    <owl:Class rdf:about="#AmmoniumConcentrationProtocol_BenchtopSolarzano1969">
-        <rdfs:subClassOf rdf:resource="#DissolvedConstituentProtocols"/>
-        <rdfs:comment
-            >Solorzano, L., 1969. Determination of ammonia in natural waters by phenol hypochlorite method. Limnol. Oceanogr. 14, 799&#8211; 801.</rdfs:comment>
+    <owl:Class rdf:about="#AmmoniumConcentrationSeawaterMSIAutoanalyzer">
+        <rdfs:subClassOf rdf:resource="#AmmoniumConcentration"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
+                <owl:someValuesFrom rdf:resource="#MicromolePerLiter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
+                <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_MSIAutomated"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AmmoniumConcentrationSeawaterSolorzano -->
+
+    <owl:Class rdf:about="#AmmoniumConcentrationSeawaterSolorzano">
+        <rdfs:subClassOf rdf:resource="#AmmoniumConcentration"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
+                <owl:someValuesFrom rdf:resource="#MicromolePerLiter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
+                <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_BenchtopSolarzano1969"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -485,6 +562,14 @@ calculated from beam transmission accordiing to:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BrzezinskiLabProtocols -->
+
+    <owl:Class rdf:about="#BrzezinskiLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#California -->
 
     <owl:Class rdf:about="#California">
@@ -548,7 +633,12 @@ calculated from beam transmission accordiing to:
     <owl:Class rdf:about="#ConcentrationType">
         <rdfs:subClassOf rdf:resource="#SBCMeasurementType"/>
         <rdfs:comment
-            >A concentration is a measurement of how much of a given substance (solute) is mixed with another substance (solvent).  The solute is in the numerator and can be expressed in mole-amounts, mass, ionic charge, or volume. The denomominator may be volume (of total solution) or for sea water, sometimes mass is used to remove effects of temperature and pressure. Conversion between units is straightforward only at standard temperature and pressure.</rdfs:comment>
+            >A concentration is a measurement of how much of a given substance (solute) is mixed with another substance (solvent). Concentrations will have 2 dimensions: 
+SOLUTE [mole-amounts, mass, ionic charge, volume] PER SOLUTION [volume, mass]. 
+
+The denominator (total solution) is most commonly a volume. But for natural water bodies (e.g. ocean), mass may be used to remove the effects of temperature and pressure on volume when these are significant. Accurate conversions between units are not always straightforward, and must take into account temperature and pressure at which the sample was collected.
+
+Concentrations also include  the mixtures of suspended particulates or their components in a volume of water (non-homogeneous solutions). The protocol should make clear how mixtures are defined.</rdfs:comment>
     </owl:Class>
     
 
@@ -568,7 +658,8 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ConductivityProtocol_SeabirdCTD -->
 
     <owl:Class rdf:about="#ConductivityProtocol_SeabirdCTD">
-        <rdfs:subClassOf rdf:resource="#DissolvedConstituentProtocols"/>
+        <rdfs:subClassOf rdf:resource="#PhysicalOceanographyProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
         <rdfs:subClassOf rdf:resource="#SeabirdCTDElectronicsProtocols"/>
     </owl:Class>
     
@@ -618,7 +709,7 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
         <rdfs:comment
             >symbol is 2 greek leters, sigma and theta. Density anomaly is calculated with in situ salinity, potential temperature and pressure=0. 
 
-sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint Panel on Oceanographic Tables and Standards, 1981) </rdfs:comment>
+sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint Panel on Oceanographic Tables and Standards, 1981)</rdfs:comment>
     </owl:Class>
     
 
@@ -643,14 +734,6 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DissolvedConstituentProtocols -->
-
-    <owl:Class rdf:about="#DissolvedConstituentProtocols">
-        <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DissolvedMaterialConcentration -->
 
     <owl:Class rdf:about="#DissolvedMaterialConcentration">
@@ -662,8 +745,8 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DissolvedOrganicCarbonProtocol -->
 
     <owl:Class rdf:about="#DissolvedOrganicCarbonProtocol">
-        <rdfs:subClassOf rdf:resource="#DissolvedConstituentProtocols"/>
         <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
         <rdfs:comment
             >Dissolved organic carbon reported as amount of substance (moles) of Carbon atoms. The term &#39;organic&#39; refers to the fact that the dissolved Carbor was in compounds with other carbon attoms and probably also to other (unreported) elements (e.g, oxygen, hydrogen).</rdfs:comment>
     </owl:Class>
@@ -675,6 +758,14 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     <owl:Class rdf:about="#DryWeight">
         <rdfs:label>Dry Weight</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Biomass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DuganLabProtocols -->
+
+    <owl:Class rdf:about="#DuganLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
     </owl:Class>
     
 
@@ -757,12 +848,6 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
         <rdfs:subClassOf rdf:resource="&oboe;ComplexDerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasUnit"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -779,6 +864,12 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -929,6 +1020,22 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MSI_AnalyticalLabProtocols -->
+
+    <owl:Class rdf:about="#MSI_AnalyticalLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MacIntyreLabProtocols -->
+
+    <owl:Class rdf:about="#MacIntyreLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Macrocystis -->
 
     <owl:Class rdf:about="#Macrocystis">
@@ -969,6 +1076,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="#Z_DepthOfSample"/>
         <rdfs:comment
             >The actual distance below the surface of the water at which the sample was taken.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MelackLabProtocols -->
+
+    <owl:Class rdf:about="#MelackLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
     </owl:Class>
     
 
@@ -1024,6 +1139,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitrateConcentration_insituNAS -->
+
+    <owl:Class rdf:about="#NitrateConcentration_insituNAS">
+        <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitrateNitriteConcentration -->
 
     <owl:Class rdf:about="#NitrateNitriteConcentration">
@@ -1036,10 +1159,19 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitrateNitriteConcentrationProtocol_Autoanalyzer -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitrateNitriteConcentrationMSIAutoanalyzer -->
 
-    <owl:Class rdf:about="#NitrateNitriteConcentrationProtocol_Autoanalyzer">
-        <rdfs:subClassOf rdf:resource="#DissolvedConstituentProtocols"/>
+    <owl:Class rdf:about="#NitrateNitriteConcentrationMSIAutoanalyzer">
+        <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitrateNitriteConcentrationProtocol_MSIAutomated -->
+
+    <owl:Class rdf:about="#NitrateNitriteConcentrationProtocol_MSIAutomated">
+        <rdfs:subClassOf rdf:resource="#MSI_AnalyticalLabProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
         <rdfs:comment
             >The protocol for measuring Nitrate + nitrite concentration using cadmium reduction and colorimetry</rdfs:comment>
     </owl:Class>
@@ -1143,7 +1275,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <owl:Class rdf:about="#ParticulateMaterialConcentration">
         <rdfs:subClassOf rdf:resource="#ConcentrationType"/>
         <rdfs:comment
-            >Particulate material is an operational defintion, see protocols. For particles in water, &quot;particulate&quot; usually refers to material retained on a filter of a certain nominal pore-size which was removed from the water sample, usually under vacuum. </rdfs:comment>
+            >Particulate material is an operational defintion, see protocols. For particles in water, &quot;particulate&quot; usually refers to material retained on a filter of a certain nominal pore-size which was removed from the water sample, usually under vacuum.</rdfs:comment>
     </owl:Class>
     
 
@@ -1200,10 +1332,11 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PhosphateConcentrationProtocol_Autoanalyzer -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PhosphateConcentrationProtocol_MSIAutomated -->
 
-    <owl:Class rdf:about="#PhosphateConcentrationProtocol_Autoanalyzer">
-        <rdfs:subClassOf rdf:resource="#DissolvedConstituentProtocols"/>
+    <owl:Class rdf:about="#PhosphateConcentrationProtocol_MSIAutomated">
+        <rdfs:subClassOf rdf:resource="#MSI_AnalyticalLabProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
     </owl:Class>
     
 
@@ -1230,6 +1363,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#PhysicalOceanographicType">
         <rdfs:subClassOf rdf:resource="#SBCMeasurementType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PhysicalOceanographyProtocols -->
+
+    <owl:Class rdf:about="#PhysicalOceanographyProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByScientificDomain"/>
     </owl:Class>
     
 
@@ -1322,7 +1463,8 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PracticalSalinityProtocol_SeabirdCTD -->
 
     <owl:Class rdf:about="#PracticalSalinityProtocol_SeabirdCTD">
-        <rdfs:subClassOf rdf:resource="#DissolvedConstituentProtocols"/>
+        <rdfs:subClassOf rdf:resource="#PhysicalOceanographyProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
         <rdfs:subClassOf rdf:resource="#SeabirdCTDElectronicsProtocols"/>
     </owl:Class>
     
@@ -1375,7 +1517,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     <owl:Class rdf:about="#PrimaryProductivityCarbon">
         <rdfs:subClassOf rdf:resource="#PrimaryProductivityRate"/>
         <rdfs:comment
-            >the rate at which new biomass Carbon is formed by photosynthetic processes. </rdfs:comment>
+            >the rate at which new biomass Carbon is formed by photosynthetic processes.</rdfs:comment>
     </owl:Class>
     
 
@@ -1415,6 +1557,38 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsByConstituent -->
+
+    <owl:Class rdf:about="#ProtocolsByConstituent">
+        <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsByInstrumentation -->
+
+    <owl:Class rdf:about="#ProtocolsByInstrumentation">
+        <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsByLaboratory -->
+
+    <owl:Class rdf:about="#ProtocolsByLaboratory">
+        <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsByScientificDomain -->
+
+    <owl:Class rdf:about="#ProtocolsByScientificDomain">
+        <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Radiance -->
 
     <owl:Class rdf:about="#Radiance">
@@ -1427,6 +1601,14 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
 
     <owl:Class rdf:about="#RateType">
         <rdfs:subClassOf rdf:resource="#SBCMeasurementType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ReedLabProtocols -->
+
+    <owl:Class rdf:about="#ReedLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
     </owl:Class>
     
 
@@ -1497,14 +1679,14 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
         <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe;EntityName"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe;EntityName"/>
+                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
+                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1546,10 +1728,18 @@ The scattering coefficient is often divided into a forward scattering coefficien
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SchimmelLabProtocols -->
+
+    <owl:Class rdf:about="#SchimmelLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SeabirdCTDElectronicsProtocols -->
 
     <owl:Class rdf:about="#SeabirdCTDElectronicsProtocols">
-        <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByInstrumentation"/>
     </owl:Class>
     
 
@@ -1575,12 +1765,29 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SilicicAcidConcentrationProtocol_Autoanalyzer -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SilicicAcidConcentrationMSIAutoanalyzer -->
 
-    <owl:Class rdf:about="#SilicicAcidConcentrationProtocol_Autoanalyzer">
-        <rdfs:subClassOf rdf:resource="#DissolvedConstituentProtocols"/>
+    <owl:Class rdf:about="#SilicicAcidConcentrationMSIAutoanalyzer">
+        <rdfs:subClassOf rdf:resource="#SilicicAcidConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SilicicAcidConcentrationProtocol_MSIAutomated -->
+
+    <owl:Class rdf:about="#SilicicAcidConcentrationProtocol_MSIAutomated">
+        <rdfs:subClassOf rdf:resource="#MSI_AnalyticalLabProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
         <rdfs:comment
             >Colorimetric method</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SilicicAcidConcentration_REFERENCE_HERE_ -->
+
+    <owl:Class rdf:about="#SilicicAcidConcentration_REFERENCE_HERE_">
+        <rdfs:subClassOf rdf:resource="#SilicicAcidConcentration"/>
     </owl:Class>
     
 
@@ -1621,8 +1828,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#ElementalContentType"/>
         <rdfs:comment
             >compositions of stable isotopes of materials to suggest the origin of specific compounds.
-Usually expressed as a ratio and/or difference from a norm (delta)
-</rdfs:comment>
+Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment>
     </owl:Class>
     
 
@@ -1649,7 +1855,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StreamDischargeProtocol_SBC -->
 
     <owl:Class rdf:about="#StreamDischargeProtocol_SBC">
-        <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByScientificDomain"/>
         <rdfs:comment
             >calculation of stream discharge has 2 parts: measuring the state height and combining with a model of the rating curve (a model of stream basin cross-section that predicts flow)</rdfs:comment>
     </owl:Class>
@@ -1839,6 +2045,8 @@ Usually expressed as a ratio and/or difference from a norm (delta)
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#VelocityVectorsProtocol_AcousticDopplerCurrentProfiler_RDI -->
 
     <owl:Class rdf:about="#VelocityVectorsProtocol_AcousticDopplerCurrentProfiler_RDI">
+        <rdfs:subClassOf rdf:resource="#PhysicalOceanographyProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByInstrumentation"/>
         <rdfs:subClassOf rdf:resource="#WaterCurrentProtocols"/>
     </owl:Class>
     
@@ -1868,11 +2076,25 @@ Usually expressed as a ratio and/or difference from a norm (delta)
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WashburnLabProtocols -->
+
+    <owl:Class rdf:about="#WashburnLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Water -->
 
     <owl:Class rdf:about="#Water">
         <rdfs:label>Water</rdfs:label>
         <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="#PracticalSalinity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
@@ -1894,12 +2116,6 @@ Usually expressed as a ratio and/or difference from a norm (delta)
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="#PracticalSalinity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCharacteristic"/>
                 <owl:someValuesFrom rdf:resource="#Conductivity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1910,7 +2126,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WaterCurrentProtocols -->
 
     <owl:Class rdf:about="#WaterCurrentProtocols">
-        <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByScientificDomain"/>
     </owl:Class>
     
 
@@ -1930,7 +2146,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)
         <rdfs:comment
             >In natural bodies of water, is the distance to the bottom (or solid earth surface) from a point in the water column. The reference point may be the surface of the water body or a point within the water column. 
 Depth to bottom may be used to nominally describe a place (such as a sampling location) or the depoyment of an instrument within the water column.
-Depth to bottom can be calculated from measured sample depth  (e.g., tidal height) and a known constant (e.g., total water depth). </rdfs:comment>
+Depth to bottom can be calculated from measured sample depth  (e.g., tidal height) and a known constant (e.g., total water depth).</rdfs:comment>
     </owl:Class>
     
 
@@ -1958,6 +2174,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WaterTemperature_SeabirdCTD -->
 
     <owl:Class rdf:about="#WaterTemperature_SeabirdCTD">
+        <rdfs:subClassOf rdf:resource="#PhysicalOceanographyProtocols"/>
         <rdfs:subClassOf rdf:resource="#SeabirdCTDElectronicsProtocols"/>
     </owl:Class>
     
@@ -2013,8 +2230,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     <owl:Class rdf:about="#X_Longitude">
         <rdfs:subClassOf rdf:resource="#LocationType"/>
         <rdfs:comment
-            >The measured longitude of the sample
-</rdfs:comment>
+            >The measured longitude of the sample</rdfs:comment>
     </owl:Class>
     
 
@@ -2024,8 +2240,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     <owl:Class rdf:about="#Y_Latitude">
         <rdfs:subClassOf rdf:resource="#LocationType"/>
         <rdfs:comment
-            >The measured latitude of the sample
-</rdfs:comment>
+            >The measured latitude of the sample</rdfs:comment>
     </owl:Class>
     
 
