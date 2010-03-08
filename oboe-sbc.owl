@@ -368,8 +368,8 @@ c = a + b</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#AmmoniumConcentration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
+                <owl:onProperty rdf:resource="&oboe;hasValue"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -380,8 +380,8 @@ c = a + b</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasValue"/>
-                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
+                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -435,20 +435,8 @@ c = a + b</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#AmmoniumConcentration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasValue"/>
-                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
-                <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_SeawaterAutomated"/>
+                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -459,8 +447,20 @@ c = a + b</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
+                <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_SeawaterAutomated"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasValue"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -473,8 +473,8 @@ c = a + b</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#AmmoniumConcentration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
-                <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_BenchtopSolarzano1969"/>
+                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
+                <owl:someValuesFrom rdf:resource="#MicromolePerLiter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -485,8 +485,8 @@ c = a + b</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
-                <owl:someValuesFrom rdf:resource="#MicromolePerLiter"/>
+                <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
+                <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_BenchtopSolarzano1969"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -610,6 +610,14 @@ calculated from beam transmission accordiing to:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BiogenicSilicaConcentrationSeawater -->
+
+    <owl:Class rdf:about="#BiogenicSilicaConcentrationSeawater">
+        <rdfs:subClassOf rdf:resource="#ParticulateMaterialConcentration"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BiologicalProcess -->
 
     <owl:Class rdf:about="#BiologicalProcess">
@@ -645,6 +653,22 @@ calculated from beam transmission accordiing to:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CarbonNitrogenRatio_Mass -->
+
+    <owl:Class rdf:about="#CarbonNitrogenRatio_Mass">
+        <rdfs:subClassOf rdf:resource="#RatioType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CarbonNitrogenRatio_Mole -->
+
+    <owl:Class rdf:about="#CarbonNitrogenRatio_Mole">
+        <rdfs:subClassOf rdf:resource="#RatioType"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CarpinteriaReef -->
 
     <owl:Class rdf:about="#CarpinteriaReef">
@@ -670,9 +694,25 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ChlorophyllConcentration -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ChlorophyllTotalConcentrationFluometricExtraction -->
 
-    <owl:Class rdf:about="#ChlorophyllConcentration">
+    <owl:Class rdf:about="#ChlorophyllTotalConcentrationFluometricExtraction">
+        <rdfs:subClassOf rdf:resource="#PigmentConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Chlorophyll_aConcentrationFluometricExtraction -->
+
+    <owl:Class rdf:about="#Chlorophyll_aConcentrationFluometricExtraction">
+        <rdfs:subClassOf rdf:resource="#PigmentConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Chlorophyll_aPhaeopigmentsConcentrationFluometricExtraction -->
+
+    <owl:Class rdf:about="#Chlorophyll_aPhaeopigmentsConcentrationFluometricExtraction">
         <rdfs:subClassOf rdf:resource="#PigmentConcentration"/>
     </owl:Class>
     
@@ -762,11 +802,35 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DateTimeType -->
+
+    <owl:Class rdf:about="#DateTimeType">
+        <rdfs:subClassOf rdf:resource="#SBCMeasurementType"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DateTimeYYYY -->
 
     <owl:Class rdf:about="#DateTimeYYYY">
         <rdfs:label>Date-Time Year</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;DateTime"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DecimalDay -->
+
+    <owl:Class rdf:about="#DecimalDay">
+        <rdfs:subClassOf rdf:resource="#DateTimeType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DecimalYear -->
+
+    <owl:Class rdf:about="#DecimalYear">
+        <rdfs:subClassOf rdf:resource="#DateTimeType"/>
     </owl:Class>
     
 
@@ -809,19 +873,6 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
         <rdfs:subClassOf rdf:resource="#ConcentrationType"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe-units;AmountOfSubstanceConcentration"/>
-                            <rdf:Description rdf:about="&oboe-units;MassDensity"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;usesStandard"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -839,6 +890,19 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
                                 </owl:allValuesFrom>
                             </owl:Restriction>
                         </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe-units;AmountOfSubstanceConcentration"/>
+                            <rdf:Description rdf:about="&oboe-units;MassDensity"/>
+                        </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
             </owl:Restriction>
@@ -863,6 +927,14 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     <owl:Class rdf:about="#DryWeight">
         <rdfs:label>Dry Weight</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Biomass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DryWetRatio -->
+
+    <owl:Class rdf:about="#DryWetRatio">
+        <rdfs:subClassOf rdf:resource="#RatioType"/>
     </owl:Class>
     
 
@@ -935,6 +1007,38 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FoliarStandingCrop_Carbon -->
+
+    <owl:Class rdf:about="#FoliarStandingCrop_Carbon">
+        <rdfs:subClassOf rdf:resource="#MassType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FoliarStandingCrop_DryWeight -->
+
+    <owl:Class rdf:about="#FoliarStandingCrop_DryWeight">
+        <rdfs:subClassOf rdf:resource="#MassType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FoliarStandingCrop_Nitrogen -->
+
+    <owl:Class rdf:about="#FoliarStandingCrop_Nitrogen">
+        <rdfs:subClassOf rdf:resource="#MassType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FoliarStandingCrop_WetWeight -->
+
+    <owl:Class rdf:about="#FoliarStandingCrop_WetWeight">
+        <rdfs:subClassOf rdf:resource="#MassType"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GiantKelp -->
 
     <owl:Class rdf:about="#GiantKelp">
@@ -953,14 +1057,14 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
         <rdfs:subClassOf rdf:resource="&oboe;ComplexDerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
+                <owl:onProperty rdf:resource="&oboe;hasUnit"/>
+                <owl:someValuesFrom rdf:resource="&oboe-units;Gram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasUnit"/>
-                <owl:someValuesFrom rdf:resource="&oboe-units;Gram"/>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -995,6 +1099,14 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
         <rdfs:subClassOf rdf:resource="#Porewater"/>
         <rdfs:comment
             >Groundwater seems to be mostly associated with terrestrial systems. So it is subclassed here. The assumtion being that porewater (parent) can be extracted from any sediment (marine, lakebed, streambed, earth, etc).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GrowthRate -->
+
+    <owl:Class rdf:about="#GrowthRate">
+        <rdfs:subClassOf rdf:resource="#RateType"/>
     </owl:Class>
     
 
@@ -1082,6 +1194,72 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpGrowthRate_Carbon -->
+
+    <owl:Class rdf:about="#KelpGrowthRate_Carbon">
+        <rdfs:subClassOf rdf:resource="#GrowthRate"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpGrowthRate_DryWeight -->
+
+    <owl:Class rdf:about="#KelpGrowthRate_DryWeight">
+        <rdfs:subClassOf rdf:resource="#GrowthRate"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpGrowthRate_Nitrogen -->
+
+    <owl:Class rdf:about="#KelpGrowthRate_Nitrogen">
+        <rdfs:subClassOf rdf:resource="#GrowthRate"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpGrowthRate_WetWeight -->
+
+    <owl:Class rdf:about="#KelpGrowthRate_WetWeight">
+        <rdfs:subClassOf rdf:resource="#GrowthRate"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpNetPrimaryProductionRate_DryWeight -->
+
+    <owl:Class rdf:about="#KelpNetPrimaryProductionRate_DryWeight">
+        <rdfs:subClassOf rdf:resource="#PrimaryProductivityRate"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpNetPrimaryProductionRate_WetWeight -->
+
+    <owl:Class rdf:about="#KelpNetPrimaryProductionRate_WetWeight">
+        <rdfs:subClassOf rdf:resource="#PrimaryProductivityRate"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpNetPrimaryProductivityRateCarbon -->
+
+    <owl:Class rdf:about="#KelpNetPrimaryProductivityRateCarbon">
+        <rdfs:subClassOf rdf:resource="#PrimaryProductivityRate"/>
+        <rdfs:comment
+            >the rate at which new biomass Carbon is formed by photosynthetic processes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpPrimaryNetProductivityRateNitrogen -->
+
+    <owl:Class rdf:about="#KelpPrimaryNetProductivityRateNitrogen">
+        <rdfs:subClassOf rdf:resource="#PrimaryProductivityRate"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpTissueDryWeightProtocol -->
 
     <owl:Class rdf:about="#KelpTissueDryWeightProtocol">
@@ -1104,6 +1282,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="#AboveEarthSurfaceWater"/>
         <rdfs:comment
             >exposed water in a basin on a continental sfc of the earth</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LithogenicSilicaConcentrationSeawater -->
+
+    <owl:Class rdf:about="#LithogenicSilicaConcentrationSeawater">
+        <rdfs:subClassOf rdf:resource="#ParticulateMaterialConcentration"/>
     </owl:Class>
     
 
@@ -1171,6 +1357,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:label>MassRatio</rdfs:label>
         <owl:equivalentClass rdf:resource="#Percent"/>
         <rdfs:subClassOf rdf:resource="&oboe;NumericIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MassType -->
+
+    <owl:Class rdf:about="#MassType">
+        <rdfs:subClassOf rdf:resource="#SBCMeasurementType"/>
     </owl:Class>
     
 
@@ -1244,9 +1438,9 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitrateConcentration_insituNAS -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitrateConcentrationNAS -->
 
-    <owl:Class rdf:about="#NitrateConcentration_insituNAS">
+    <owl:Class rdf:about="#NitrateConcentrationNAS">
         <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
     </owl:Class>
     
@@ -1264,14 +1458,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitrateNitriteConcentrationMSIAutomated -->
-
-    <owl:Class rdf:about="#NitrateNitriteConcentrationMSIAutomated">
-        <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitrateNitriteConcentrationProtocol_MSIAutomated -->
 
     <owl:Class rdf:about="#NitrateNitriteConcentrationProtocol_MSIAutomated">
@@ -1279,6 +1465,22 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
         <rdfs:comment
             >The protocol for measuring Nitrate + nitrite concentration using cadmium reduction and colorimetry</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitrateNitriteConcentrationSeawaterAutomated -->
+
+    <owl:Class rdf:about="#NitrateNitriteConcentrationSeawaterAutomated">
+        <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitriteConcentrationSeawaterAutomated -->
+
+    <owl:Class rdf:about="#NitriteConcentrationSeawaterAutomated">
+        <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
     </owl:Class>
     
 
@@ -1406,9 +1608,9 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PhaeopigmentConcentration -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PhaeopigmentConcentrationFluorometricExtraction -->
 
-    <owl:Class rdf:about="#PhaeopigmentConcentration">
+    <owl:Class rdf:about="#PhaeopigmentConcentrationFluorometricExtraction">
         <rdfs:subClassOf rdf:resource="#PigmentConcentration"/>
     </owl:Class>
     
@@ -1613,24 +1815,6 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PrimaryProductivityCarbon -->
-
-    <owl:Class rdf:about="#PrimaryProductivityCarbon">
-        <rdfs:subClassOf rdf:resource="#PrimaryProductivityRate"/>
-        <rdfs:comment
-            >the rate at which new biomass Carbon is formed by photosynthetic processes.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PrimaryProductivityNitrogen -->
-
-    <owl:Class rdf:about="#PrimaryProductivityNitrogen">
-        <rdfs:subClassOf rdf:resource="#PrimaryProductivityRate"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PrimaryProductivityRate -->
 
     <owl:Class rdf:about="#PrimaryProductivityRate">
@@ -1701,6 +1885,14 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#RateType -->
 
     <owl:Class rdf:about="#RateType">
+        <rdfs:subClassOf rdf:resource="#SBCMeasurementType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#RatioType -->
+
+    <owl:Class rdf:about="#RatioType">
         <rdfs:subClassOf rdf:resource="#SBCMeasurementType"/>
     </owl:Class>
     
@@ -1780,14 +1972,14 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
         <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe;EntityName"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe;EntityName"/>
+                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
+                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1800,6 +1992,14 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
         <rdfs:label
             >SBC Site Name Value</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SampleWeight -->
+
+    <owl:Class rdf:about="#SampleWeight">
+        <rdfs:subClassOf rdf:resource="#MassType"/>
     </owl:Class>
     
 
@@ -2090,11 +2290,75 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TissueHydrogenContent -->
+
+    <owl:Class rdf:about="#TissueHydrogenContent">
+        <rdfs:subClassOf rdf:resource="#TissueContent"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TissuePhosphorus_AcidDigestion -->
 
     <owl:Class rdf:about="#TissuePhosphorus_AcidDigestion">
         <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
         <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TotalDissolvedNitrogenConcentration -->
+
+    <owl:Class rdf:about="#TotalDissolvedNitrogenConcentration">
+        <rdfs:subClassOf rdf:resource="#DissolvedMaterialConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TotalDissolvedNitrogenConcentrationFreshwater -->
+
+    <owl:Class rdf:about="#TotalDissolvedNitrogenConcentrationFreshwater">
+        <rdfs:subClassOf rdf:resource="#TotalDissolvedNitrogenConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TotalDissolvedNitrogenConcentrationSeawater -->
+
+    <owl:Class rdf:about="#TotalDissolvedNitrogenConcentrationSeawater">
+        <rdfs:subClassOf rdf:resource="#TotalDissolvedNitrogenConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TotalDissolvedPhosphorusConcentration -->
+
+    <owl:Class rdf:about="#TotalDissolvedPhosphorusConcentration">
+        <rdfs:subClassOf rdf:resource="#DissolvedMaterialConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TotalDissolvedPhosphorusConcentrationFreshwater -->
+
+    <owl:Class rdf:about="#TotalDissolvedPhosphorusConcentrationFreshwater">
+        <rdfs:subClassOf rdf:resource="#TotalDissolvedPhosphorusConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TotalDissolvedPhosphorusConcentrationSeawater -->
+
+    <owl:Class rdf:about="#TotalDissolvedPhosphorusConcentrationSeawater">
+        <rdfs:subClassOf rdf:resource="#TotalDissolvedPhosphorusConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TotalSuspendedSolids -->
+
+    <owl:Class rdf:about="#TotalSuspendedSolids">
+        <rdfs:subClassOf rdf:resource="#ParticulateMaterialConcentration"/>
     </owl:Class>
     
 
