@@ -368,12 +368,6 @@ c = a + b</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#AmmoniumConcentration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasValue"/>
-                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
                 <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_FreshwaterAutomated"/>
             </owl:Restriction>
@@ -386,14 +380,20 @@ c = a + b</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
-                <owl:allValuesFrom rdf:resource="#MicromolePerLiter"/>
+                <owl:onProperty rdf:resource="&oboe;hasValue"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
                 <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
+                <owl:allValuesFrom rdf:resource="#MicromolePerLiter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -435,14 +435,14 @@ c = a + b</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#AmmoniumConcentration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
+                <owl:allValuesFrom rdf:resource="#MicromolePerLiter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
-                <owl:allValuesFrom rdf:resource="#MicromolePerLiter"/>
+                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -453,8 +453,8 @@ c = a + b</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
+                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -479,14 +479,14 @@ c = a + b</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
+                <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
+                <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_BenchtopSolarzano1969"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
-                <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_BenchtopSolarzano1969"/>
+                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -618,6 +618,15 @@ calculated from beam transmission accordiing to:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BiogenicSilicaProtocol -->
+
+    <owl:Class rdf:about="#BiogenicSilicaProtocol">
+        <rdfs:subClassOf rdf:resource="#BrzezinskiLabProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BiologicalProcess -->
 
     <owl:Class rdf:about="#BiologicalProcess">
@@ -690,6 +699,15 @@ calculated from beam transmission accordiing to:
 
     <owl:Class rdf:about="#ChannelIslands">
         <rdfs:subClassOf rdf:resource="#California"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ChlorophyllPhaeopigmentConcentrationProtocol_FluorometricExtraction -->
+
+    <owl:Class rdf:about="#ChlorophyllPhaeopigmentConcentrationProtocol_FluorometricExtraction">
+        <rdfs:subClassOf rdf:resource="#BrzezinskiLabProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
     </owl:Class>
     
 
@@ -768,7 +786,6 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
 
     <owl:Class rdf:about="#ConductivityProtocol_SeabirdCTD">
         <rdfs:subClassOf rdf:resource="#PhysicalOceanographyProtocols"/>
-        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
         <rdfs:subClassOf rdf:resource="#SeabirdCTDElectronicsProtocols"/>
     </owl:Class>
     
@@ -847,6 +864,15 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DensityAnomalyProtocol_SeabirdCTD -->
+
+    <owl:Class rdf:about="#DensityAnomalyProtocol_SeabirdCTD">
+        <rdfs:subClassOf rdf:resource="#PhysicalOceanographyProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByInstrumentation"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DensityAnomalyStandard -->
 
     <owl:Class rdf:about="#DensityAnomalyStandard">
@@ -911,13 +937,34 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DissolvedOrganicCarbonProtocol -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DissolvedOrganicCarbonConcentrationProtocol -->
 
-    <owl:Class rdf:about="#DissolvedOrganicCarbonProtocol">
+    <owl:Class rdf:about="#DissolvedOrganicCarbonConcentrationProtocol">
         <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
         <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
         <rdfs:comment
-            >Dissolved organic carbon reported as amount of substance (moles) of Carbon atoms. The term &#39;organic&#39; refers to the fact that the dissolved Carbor was in compounds with other carbon attoms and probably also to other (unreported) elements (e.g, oxygen, hydrogen).</rdfs:comment>
+            >Dissolved organic carbon reported as amount of substance (moles) of Carbon atoms. The term &#39;organic&#39; refers to the fact that the dissolved Carbor was in compounds with other carbon atoms and probably also to other (unreported) elements (e.g, oxygen, hydrogen).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DissolvedOrganicNitrogenConcentrationProtocol -->
+
+    <owl:Class rdf:about="#DissolvedOrganicNitrogenConcentrationProtocol">
+        <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
+        <rdfs:comment
+            >Dissolved organic nitrogen reported as amount of substance (moles) of nitrogen atoms. The term &#39;organic&#39; refers to the fact that the dissolved nitrogen was in compounds with carbon atoms and probably also to other (unreported) elements (e.g, oxygen, hydrogen).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DissolvedOrganicPhosphorusConcentrationProtocol -->
+
+    <owl:Class rdf:about="#DissolvedOrganicPhosphorusConcentrationProtocol">
+        <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
+        <rdfs:comment
+            >Dissolved organic Phosphorus reported as amount of substance (moles) of Phosphorus atoms. The term &#39;organic&#39; refers to the fact that the dissolved Phosphorus was in compounds with carbon atoms and probably also to other (unreported) elements (e.g, oxygen, hydrogen).</rdfs:comment>
     </owl:Class>
     
 
@@ -1057,14 +1104,14 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
         <rdfs:subClassOf rdf:resource="&oboe;ComplexDerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasUnit"/>
-                <owl:someValuesFrom rdf:resource="&oboe-units;Gram"/>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensity"/>
+                <owl:onProperty rdf:resource="&oboe;hasUnit"/>
+                <owl:someValuesFrom rdf:resource="&oboe-units;Gram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1194,6 +1241,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpGrowthRateProtocol -->
+
+    <owl:Class rdf:about="#KelpGrowthRateProtocol">
+        <rdfs:subClassOf rdf:resource="#ReedLabProtocols"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpGrowthRate_Carbon -->
 
     <owl:Class rdf:about="#KelpGrowthRate_Carbon">
@@ -1222,6 +1277,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#KelpGrowthRate_WetWeight">
         <rdfs:subClassOf rdf:resource="#GrowthRate"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpNetPrimaryProductionPprotocol -->
+
+    <owl:Class rdf:about="#KelpNetPrimaryProductionPprotocol">
+        <rdfs:subClassOf rdf:resource="#ReedLabProtocols"/>
     </owl:Class>
     
 
@@ -1260,6 +1323,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpStandingCropProtocol -->
+
+    <owl:Class rdf:about="#KelpStandingCropProtocol">
+        <rdfs:subClassOf rdf:resource="#ReedLabProtocols"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpTissueDryWeightProtocol -->
 
     <owl:Class rdf:about="#KelpTissueDryWeightProtocol">
@@ -1272,6 +1343,15 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#KelpTissueWetWeightProtocol">
         <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LIthogenicSilicaProtocol -->
+
+    <owl:Class rdf:about="#LIthogenicSilicaProtocol">
+        <rdfs:subClassOf rdf:resource="#BrzezinskiLabProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
     </owl:Class>
     
 
@@ -1767,7 +1847,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#PracticalSalinityProtocol_SeabirdCTD">
         <rdfs:subClassOf rdf:resource="#PhysicalOceanographyProtocols"/>
-        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
         <rdfs:subClassOf rdf:resource="#SeabirdCTDElectronicsProtocols"/>
     </owl:Class>
     
@@ -2403,6 +2482,14 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
 
     <owl:Class rdf:about="#VelocityType">
         <rdfs:subClassOf rdf:resource="#SBCMeasurementType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#VelocityVectorProtocol_S4_MANUFACTURER-TBD -->
+
+    <owl:Class rdf:about="#VelocityVectorProtocol_S4_MANUFACTURER-TBD">
+        <rdfs:subClassOf rdf:resource="#PhysicalOceanographyProtocols"/>
     </owl:Class>
     
 
