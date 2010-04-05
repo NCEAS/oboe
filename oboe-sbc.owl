@@ -515,7 +515,7 @@ c = a + b</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment
             >Seawater ammonium concentration is typically measured in a laboratory from a water sample which is representative of the entity.
-The sample may have been preserved prior to analysis. Automated methods typicallyl use continuously flowing reagent streams and reaction manifolds.</rdfs:comment>
+The sample may have been preserved prior to analysis. Automated methods typicallyl use continuously-flowing reagent streams and reaction manifolds.</rdfs:comment>
     </owl:Class>
     
 
@@ -1872,6 +1872,16 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="#OpenWater"/>
         <rdfs:comment
             >exposed water in a basin on a continental sfc of the earth</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LakeWaterSample -->
+
+    <owl:Class rdf:about="#LakeWaterSample">
+        <rdfs:subClassOf rdf:resource="#Lake"/>
+        <rdfs:comment
+            >A lake water sample is representative of the lake or some part of it.</rdfs:comment>
     </owl:Class>
     
 
