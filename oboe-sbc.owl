@@ -250,15 +250,15 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#EntityClassification -->
-
-    <owl:Class rdf:about="&oboe;EntityClassification"/>
-    
-
-
     <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#EntityName -->
 
     <owl:Class rdf:about="&oboe;EntityName"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#EntityType -->
+
+    <owl:Class rdf:about="&oboe;EntityType"/>
     
 
 
@@ -398,6 +398,18 @@ c = a + b</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#AmmoniumConcentration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
+                <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_FreshwaterAutomated"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;measurementFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -414,26 +426,14 @@ c = a + b</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
-                <owl:allValuesFrom rdf:resource="#MicromolePerLiter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
-                <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_FreshwaterAutomated"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
                 <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
+                <owl:allValuesFrom rdf:resource="#MicromolePerLiter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -475,8 +475,14 @@ c = a + b</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#AmmoniumConcentration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
-                <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_SeawaterAutomated"/>
+                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
+                <owl:allValuesFrom rdf:resource="#MicromolePerLiter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -497,20 +503,14 @@ c = a + b</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
-                <owl:allValuesFrom rdf:resource="#MicromolePerLiter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;ofCharacteristic"/>
                 <owl:allValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesProtocol"/>
+                <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_SeawaterAutomated"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -883,7 +883,7 @@ Concentrations also include  the mixtures of suspended particulates or their com
                             <rdf:Description rdf:about="&oboe;SimpleDerivedDimension"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;hasBaseDimension"/>
-                                <owl:allValuesFrom rdf:resource="#Length"/>
+                                <owl:allValuesFrom rdf:resource="#Mass"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;hasPower"/>
@@ -903,11 +903,11 @@ Concentrations also include  the mixtures of suspended particulates or their com
                             <rdf:Description rdf:about="&oboe;SimpleDerivedDimension"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;hasBaseDimension"/>
-                                <owl:allValuesFrom rdf:resource="#Mass"/>
+                                <owl:allValuesFrom rdf:resource="#Time"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;hasPower"/>
-                                <owl:hasValue rdf:datatype="&xsd;int">-1</owl:hasValue>
+                                <owl:hasValue rdf:datatype="&xsd;int">3</owl:hasValue>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -943,11 +943,11 @@ Concentrations also include  the mixtures of suspended particulates or their com
                             <rdf:Description rdf:about="&oboe;SimpleDerivedDimension"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;hasBaseDimension"/>
-                                <owl:allValuesFrom rdf:resource="#Time"/>
+                                <owl:allValuesFrom rdf:resource="#Length"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;hasPower"/>
-                                <owl:hasValue rdf:datatype="&xsd;int">3</owl:hasValue>
+                                <owl:hasValue rdf:datatype="&xsd;int">-1</owl:hasValue>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1109,6 +1109,29 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
         <rdfs:subClassOf rdf:resource="#Concentration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe;Unit"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                                <owl:allValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&oboe-units;AmountOfSubstanceConcentration"/>
+                                            <rdf:Description rdf:about="&oboe-units;MassDensity"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;measurementFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -1140,29 +1163,6 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasValue"/>
                 <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;Unit"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                                <owl:allValuesFrom>
-                                    <owl:Class>
-                                        <owl:unionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="&oboe-units;AmountOfSubstanceConcentration"/>
-                                            <rdf:Description rdf:about="&oboe-units;MassDensity"/>
-                                        </owl:unionOf>
-                                    </owl:Class>
-                                </owl:allValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2062,12 +2062,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;measurementFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -2082,6 +2076,12 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2090,12 +2090,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#NitrateConcentrationSeawaterAutomated">
         <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;measurementFor"/>
@@ -2110,6 +2104,12 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2199,6 +2199,12 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;measurementFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -2211,12 +2217,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2476,6 +2476,12 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="#PhosphateConcentration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;measurementFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -2488,12 +2494,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2515,12 +2515,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="#PhosphateConcentration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;measurementFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -2533,6 +2527,12 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2629,22 +2629,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="#PrimaryProductionRate"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;Unit"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensityRate"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;measurementFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -2653,6 +2637,22 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;ofEntity"/>
                                 <owl:allValuesFrom rdf:resource="#Phytoplankton"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe;Unit"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-units;ArealMassDensityRate"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2669,22 +2669,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="#PrimaryProductionRate"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;measurementFor"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;Observation"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;ofEntity"/>
-                                <owl:allValuesFrom rdf:resource="#Phytoplankton"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;usesStandard"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -2693,6 +2677,22 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
                                 <owl:allValuesFrom rdf:resource="#TimeReciprocal"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;measurementFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe;Observation"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe;ofEntity"/>
+                                <owl:allValuesFrom rdf:resource="#Phytoplankton"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2709,22 +2709,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="#PrimaryProductionRate"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;Unit"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="&oboe-units;VolumetricMassDensityRate"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;measurementFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -2733,6 +2717,22 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe;ofEntity"/>
                                 <owl:allValuesFrom rdf:resource="#Phytoplankton"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe;Unit"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-units;VolumetricMassDensityRate"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2912,29 +2912,6 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
         <rdfs:subClassOf rdf:resource="#ProductionRate"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;Unit"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                                <owl:allValuesFrom>
-                                    <owl:Class>
-                                        <owl:unionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="&oboe-units;ArealMassDensityRate"/>
-                                            <rdf:Description rdf:about="&oboe-units;VolumetricMassDensityRate"/>
-                                        </owl:unionOf>
-                                    </owl:Class>
-                                </owl:allValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;measurementFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -2948,6 +2925,29 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
                                             <rdf:Description rdf:about="#Alga"/>
                                             <rdf:Description rdf:about="#Phytoplankton"/>
                                             <rdf:Description rdf:about="#Plant"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;usesStandard"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe;Unit"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                                <owl:allValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&oboe-units;ArealMassDensityRate"/>
+                                            <rdf:Description rdf:about="&oboe-units;VolumetricMassDensityRate"/>
                                         </owl:unionOf>
                                     </owl:Class>
                                 </owl:allValuesFrom>
@@ -3097,7 +3097,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBCSiteName -->
 
     <owl:Class rdf:about="#SBCSiteName">
-        <rdfs:subClassOf rdf:resource="&oboe;EntityClassification"/>
+        <rdfs:subClassOf rdf:resource="&oboe;EntityName"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasCharacteristicValue"/>
@@ -3116,14 +3116,14 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
         <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe;EntityName"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe;EntityName"/>
+                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
+                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3269,6 +3269,12 @@ Sometimes knows colloquially as silicate</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#SilicicAcidConcentration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;measurementFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -3281,12 +3287,6 @@ Sometimes knows colloquially as silicate</rdfs:comment>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasPrecision"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.01</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3506,6 +3506,30 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
         <rdfs:label
             >TissueNitrogenContent</rdfs:label>
         <rdfs:subClassOf rdf:resource="#TissueContent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TaggedFish -->
+
+    <owl:Class rdf:about="#TaggedFish">
+        <rdfs:subClassOf rdf:resource="&oboe;EntityName"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TaggedKelpFrond -->
+
+    <owl:Class rdf:about="#TaggedKelpFrond">
+        <rdfs:subClassOf rdf:resource="&oboe;EntityName"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TaxonType -->
+
+    <owl:Class rdf:about="#TaxonType">
+        <rdfs:subClassOf rdf:resource="&oboe;EntityType"/>
     </owl:Class>
     
 
