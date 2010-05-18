@@ -1,0 +1,196 @@
+EML 2.0.1 UnitName,ROUND1 Edits  (so unitWG scope?),ROUND 2 edits:,outliers
+acre,acre,acre,
+ampere,ampere,ampere,
+amperePerMeter,amperePerMeter,amperePerMeter,
+amperePerSquareMeter,amperePerMeterSquared,amperePerMeterSquared,
+angstrom,angstrom,angstrom,
+are,are,are,in question
+atmosphere,atmosphere,atmosphere,
+bar,bar,bar,
+becquerel,becquerel,becquerel,
+britishThermalUnit,britishthermalunit,britishthermalunit,in question
+bushel,bushel,bushel,
+bushelsPerAcre,bushelPerAcre,bushelPerAcre,
+calorie,calorie,calorie,
+candela,candela,candela,
+candelaPerSquareMeter,candelaPerMeterSquared,candelaPerMeterSquared,
+celsius,celsius,celsius,in question
+centigram,centigram,centigram,
+centimeter,centimeter,centimeter,
+centimeterPerYear,centimeterPerYear,centimeterPerYear,
+centimetersPerSecond,centimeterPerSecond,centimeterPerSecond,
+centisecond,centisecond,centisecond,
+coulomb,coulomb,coulomb,
+cubicCentimetersPerCubicCentimeters,cubicCentimetersPerCubicCentimeters,centimeterCubedPerCentimeterCubed,
+cubicFeetPerSecond,feetCubedPerSecond,footCubedPerSecond,
+cubicInch,inchCubed,inchCubed,
+cubicMeter,meterCubed,meterCubed,
+cubicMeterPerKilogram,meterCubedPerKilogram,meterCubedPerKilogram,
+cubicMetersPerSecond,cubicMetersPerSecond,meterCubedPerSecond,
+cubicMicrometersPerGram,micrometercubedPerGram,micrometerCubedPerGram,
+decigram,decigram,decigram,
+decimeter,decimeter,decimeter,
+decisecond,decisecond,decisecond,
+degree,degree,degree,
+dekagram,dekagram,dekagram,
+dekameter,dekameter,dekameter,
+dekasecond,dekasecond,dekasecond,
+dimensionless,dimensionless,dimensionless,
+fahrenheit,fahrenheitDegree,fahrenheitDegree,in question
+farad,farad,farad,
+fathom,fathom,fathom,
+feetPerDay,footPerDay,footPerDay,
+feetPerHour,feetPerHour,footPerHour,
+feetPerSecond,feetPerSecond,footPerSecond,
+feetSquaredPerDay,feetSquaredPerDay,footSquaredPerDay,
+foot,foot,foot,
+Foot_Gold_Coast,footGoldCoast,footGoldCoast,in question
+Foot_US,foot,foot,in question
+footPound,footPound,footPound,in question
+gallon,gallon,gallon,
+grad,grad,grad,
+gram,gram,gram,
+gramsPerCentimeterSquaredPerSecond,gramPerCentimeterSquaredPerSecond,gramPerCentimeterSquaredPerSecond,
+gramsPerCubicCentimeter,gramPerCentimeterCubed,gramPerCentimeterCubed,
+gramsPerGram,gramPerGram,gramPerGram,
+gramsPerHectarePerDay,gramPerHectarePerDay,gramPerHectarePerDay,
+gramsPerLiter,gramsPerLiter,gramPerLiter,
+gramsPerLiterPerDay,gramPerLiterPerDay,gramPerLiterPerDay,
+gramsPerMeterSquaredPerYear,gramsPerMeterSquaredPerYear,gramPerMeterSquaredPerYear,
+gramsPerMilliliter,gramPerMilliliter,gramPerMilliliter,
+gramsPerSquareMeter,gramPerMeterSquared,gramPerMeterSquared,
+gramsPerYear,gramPerYear,gramPerYear,
+gray,gray,gray,
+hectare,hectare,hectare,
+hectogram,hectogram,hectogram,
+hectometer,hectometer,hectometer,
+hectosecond,hectosecond,hectosecond,
+henry,henry,henry,
+hertz,hertz,hertz,
+hour,hour,hour,
+inch,inch,inch,
+joule,joule,joule,
+katal,katal,katal,
+kelvin,kelvin,kelvin,in question
+kilogram,kilogram,kilogram,
+kilogramsPerCubicMeter,kilogramPerMeterCubed,kilogramPerMeterCubed,
+kilogramsPerHectare,kilogramPerHectare,kilogramPerHectare,
+kilogramsPerHectarePerYear,kilogramsPerHectarePerYear,kilogramPerHectarePerYear,
+kilogramsPerMeterSquaredPerSecond,kilogramPerMeterSquaredPerSecond,kilogramPerMeterSquaredPerSecond,
+kilogramsPerMeterSquaredPerYear,kilogramsPerMeterSquaredPerYear,kilogramPerMeterSquaredPerYear,
+kilogramsPerSecond,kilogramPerSecond,kilogramPerSecond,
+kilogramsPerSquareMeter,kilogramPerMeterSquared,kilogramPerMeterSquared,
+kilohertz,kilohertz,kilohertz,
+kiloliter,kiloliter,kiloliter,
+kilometer,kilometer,kilometer,
+kilometersPerHour,kilometerPerHour,kilometerPerHour,
+kilopascal,kilopascal,kilopascal,
+kilosecond,kilosecond,kilosecond,
+kilovolt,kilovolt,kilovolt,
+kilowatt,kilowatt,kilowatt,
+knots,knot,knot,
+Link_Clarke,Link_Clarke,Link_Clarke,in question
+liter,liter,liter,
+litersPerHectare,litersPerHectare,literPerHectare,
+litersPerSecond,literPerSecond,literPerSecond,
+litersPerSquareMeter,literPerMeterSquared,literPerMeterSquared,
+lumen,lumen,lumen
+lux,lux,lux
+megagram,megagram,megagram
+megahertz,megahertz,megahertz
+megameter,megameter,megameter
+megapascal,megapascal,megapascal
+megasecond,megasecond,megasecond
+megavolt,megavolt,megavolt
+megawatt,megawatt,megawatt
+meter,meter,meter
+metersPerDay,meterPerDay,meterPerDay
+metersPerGram,metersPerGram,meterPerGram
+metersPerSecond,meterPerSecond,meterPerSecond
+metersPerSecondSquared,meterPerSecondSquared,meterPerSecondSquared
+metersSquaredPerDay,meterSquaredPerDay,meterSquaredPerDay
+metersSquaredPerSecond,meterSquaredPerSecond,meterSquaredPerSecond
+microgram,microgram,microgram
+microgramsPerGram,microgramPerGram,microgramPerGram
+microgramsPerLiter,microgramsPerLiter,microgramPerLiter
+microliter,microliter,microliter
+micrometer,micrometer,micrometer
+micron,micron,micron
+microsecond,microsecond,microsecond
+mile,mile,mile
+milesPerHour,milePerHour,milePerHour
+milesPerMinute,milesPerMinute,milePerMinute
+milesPerSecond,milePerSecond,milePerSecond
+millibar,milligram,millibar
+milligram,milligram,milligram
+milligramsPerCubicMeter,milligramPerMeterCubed,milligramPerMeterCubed
+milligramsPerLiter,milligramsPerLiter,milligramPerLiter
+milliGramsPerMilliLiter,milligramPerMilliliter,milligramPerMilliliter
+milligramsPerSquareMeter,milligramsPerSquareMeter,milligramPerMeterSquared
+millihertz,millihertz,millihertz
+milliliter,milliliter,milliliter
+millimeter,millimeter,millimeter
+millimetersPerSecond,millimeterPerSecond,millimeterPerSecond
+millimolesPerGram,millimolesPerGram,millimolePerGram
+millisecond,millisecond,millisecond
+millivolt,millivolt,millivolt
+milliwatt,milliwatt,milliwatt
+minute,minute,minute
+molality,molality,molality
+molarity,molarity,molarity
+mole,mole,mole
+molePerCubicMeter,molePerCubicMeter,molePerMeterCubed
+molesPerGram,molesPerGram,molePerGram
+molesPerKilogram,molePerKilogram,molePerKilogram
+molesPerKilogramPerSecond,molesPerKilogramPerSecond,molePerKilogramPerSecond,
+nanogram,nanogram,nanogram,
+nanometer,nanometer,nanometer,
+nanomolesPerGramPerSecond,nanomolesPerGramPerSecond,nanomolePerGramPerSecond,
+nanosecond,nanosecond,nanosecond,
+nauticalMile,nauticalMile,nauticalMile,in question
+newton,newton,newton,
+nominalDay,nominalDay,nominalDay,in question
+nominalHour,nominalHour,nominalHour,in question
+nominalLeapYear,nominalLeapYear,nominalLeapYear,in question
+nominalMinute,nominalMinute,nominalMinute,in question
+nominalWeek,nominalWeek,nominalWeek,in question
+nominalYear,nominalYear,nominalYear,in question
+number,number,number,
+numberPerGram,numberPerGram,numberPerGram,
+numberPerKilometerSquared,numberPerKilometerSquared,numberPerKilometerSquared,
+numberPerLiter,numberPerLiter,numberPerLiter,
+numberPerMeterCubed,numberPerMeterCubed,numberPerMeterCubed,
+numberPerMeterSquared,numberPerMeterSquared,numberPerMeterSquared,
+numberPerMilliliter,numberPerMilliliter,numberPerMilliliter,
+ohm,ohm,ohm,
+ohmMeter,ohmMeter,ohmMeter,in question
+pascal,pascal,pascal,
+pint,pint,pint,
+pound,pound,pound,
+poundsPerSquareInch,poundPerInchSquared,poundPerInchSquared,
+quart,quart,quart,
+radian,radian,radian,
+second,second,second,
+siemen,siemens,siemens,
+sievert,sievert,sievert,
+squareCentimeters,squareCentimeters,centimeterSquared,
+squareFoot,footsquared,footSquared,
+squareKilometers,squareKilometers,kilometerSquared,
+squareMeter,squareMeter,meterSquared,
+squareMeterPerKilogram,squareMeterPerKilogram,meterSquaredPerKilogram,
+squareMile,mileSquared,mileSquared,
+squareMillimeters,millimeterSquared,millimeterSquared,
+squareYard,squareYard,yardSquared,
+tesla,tesla,tesla,
+ton,ton,ton,
+tonne,tonne,tonne,
+tonnePerHectare,tonnePerHectare,tonnePerHectare,
+tonnesPerYear,tonnePerYear,tonnePerYear,
+volt,volt,volt,
+watt,watt,watt,
+waveNumber,waveNumber,waveNumber,in question
+weber,weber,weber,
+yard,yard,yard,
+Yard_Indian,Yard_Indian,Yard_Indian,in question
+Yard_Sears,yard,yard,in question
+yardsPerSecond,yardPerSecond,yardPerSecond,
