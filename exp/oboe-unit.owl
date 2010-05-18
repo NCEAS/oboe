@@ -7,19 +7,254 @@
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboe "http://ecoinformatics.org/oboe/oboe.1.0beta#" >
+    <!ENTITY oboe-unit "http://ecoinformatics.org/oboe/oboe-unit.1.1beta#" >
+    <!ENTITY oboe-general "http://ecoinformatics.org/oboe/oboe-general.1.1beta#" >
 ]>
 
 
 <rdf:RDF xmlns="http://ecoinformatics.org/oboe/oboe-unit.1.1beta#"
      xml:base="http://ecoinformatics.org/oboe/oboe-unit.1.1beta"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:oboe-general="http://ecoinformatics.org/oboe/oboe-general.1.1beta#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:oboe="http://ecoinformatics.org/oboe/oboe.1.0beta#"
+     xmlns:oboe-unit="http://ecoinformatics.org/oboe/oboe-unit.1.1beta#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#">
     <owl:Ontology rdf:about="">
-        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe-core.1.1beta"/>
+        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe-general.1.1beta"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-general.1.1beta#hasSourceUnit -->
+
+    <owl:ObjectProperty rdf:about="&oboe-general;hasSourceUnit"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-general.1.1beta#hasTargetUnit -->
+
+    <owl:ObjectProperty rdf:about="&oboe-general;hasTargetUnit"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#forCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="&oboe;forCharacteristic"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-general.1.1beta#hasMultiplier -->
+
+    <owl:DatatypeProperty rdf:about="&oboe-general;hasMultiplier"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-general.1.1beta#hasOffset -->
+
+    <owl:DatatypeProperty rdf:about="&oboe-general;hasOffset"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-general.1.1beta#BaseUnit -->
+
+    <owl:Class rdf:about="&oboe-general;BaseUnit"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-general.1.1beta#UnitConversion -->
+
+    <owl:Class rdf:about="&oboe-general;UnitConversion"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Amount -->
+
+    <owl:Class rdf:about="#Amount">
+        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:comment
+            >The Amount (of substance) characteristic is a base dimension from the International System of Units (SI).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Angle -->
+
+    <owl:Class rdf:about="#Angle">
+        <rdfs:subClassOf rdf:resource="#Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Count -->
+
+    <owl:Class rdf:about="#Count">
+        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:comment
+            >The Count characteristic denotes the number of individuals within some set (or population).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Current -->
+
+    <owl:Class rdf:about="#Current">
+        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:comment
+            >The Current characteristic is a base dimension from the International System of Units (SI).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Dimension -->
+
+    <owl:Class rdf:about="#Dimension"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Foot -->
+
+    <owl:Class rdf:about="#Foot">
+        <rdfs:subClassOf rdf:resource="&oboe-general;BaseUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="#Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#FootToMeter -->
+
+    <owl:Class rdf:about="#FootToMeter">
+        <rdfs:subClassOf rdf:resource="&oboe-general;UnitConversion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-general;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;double">0.3048</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-general;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-general;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Foot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-general;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;double">0.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Length -->
+
+    <owl:Class rdf:about="#Length">
+        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:comment
+            >The Length characteristic is a base dimension from the International System of Units (SI).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Luminosity -->
+
+    <owl:Class rdf:about="#Luminosity">
+        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:comment
+            >The Luminosity characteristic is a base dimension from the International System of Units (SI).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Mass -->
+
+    <owl:Class rdf:about="#Mass">
+        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:comment
+            >The Mass characteristic is a base dimension from the International System of Units (SI).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Meter -->
+
+    <owl:Class rdf:about="#Meter">
+        <rdfs:subClassOf rdf:resource="&oboe-general;BaseUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="#Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Temperature -->
+
+    <owl:Class rdf:about="#Temperature">
+        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:comment
+            >The Temperature characteristic is a base dimension from the International System of Units (SI).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Time -->
+
+    <owl:Class rdf:about="#Time">
+        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:comment
+            >The Time characteristic is a base dimension from the International System of Units (SI).</rdfs:comment>
+    </owl:Class>
 </rdf:RDF>
 
 
