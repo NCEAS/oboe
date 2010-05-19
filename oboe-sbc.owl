@@ -24,8 +24,8 @@
      xmlns:oboe="http://ecoinformatics.org/oboe/oboe.1.0beta#"
      xmlns:oboe-units="http://ecoinformatics.org/oboe/oboe-units.1.0beta#">
     <owl:Ontology rdf:about="">
-        <owl:versionInfo
-            >OBOE SBC Domain Extension</owl:versionInfo>
+        <rdfs:label
+            >OBOE SBC Domain Extension</rdfs:label>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe-units.1.0beta"/>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0beta"/>
     </owl:Ontology>
