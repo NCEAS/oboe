@@ -24,6 +24,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#">
     <owl:Ontology rdf:about="">
+        <rdfs:comment
+            >This OBOE extension ontology holds common unit definitions and corresponding dimensions and conversions.</rdfs:comment>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe-general.1.1beta"/>
     </owl:Ontology>
     
@@ -107,7 +109,7 @@
     <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Amount -->
 
     <owl:Class rdf:about="#Amount">
-        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:subClassOf rdf:resource="#Physical"/>
         <rdfs:comment
             >The Amount (of substance) characteristic is a base dimension from the International System of Units (SI).</rdfs:comment>
     </owl:Class>
@@ -117,7 +119,15 @@
     <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Angle -->
 
     <owl:Class rdf:about="#Angle">
-        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:subClassOf rdf:resource="#Physical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Area -->
+
+    <owl:Class rdf:about="#Area">
+        <rdfs:subClassOf rdf:resource="#Physical"/>
     </owl:Class>
     
 
@@ -125,7 +135,7 @@
     <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Count -->
 
     <owl:Class rdf:about="#Count">
-        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:subClassOf rdf:resource="#Physical"/>
         <rdfs:comment
             >The Count characteristic denotes the number of individuals within some set (or population).</rdfs:comment>
     </owl:Class>
@@ -135,16 +145,10 @@
     <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Current -->
 
     <owl:Class rdf:about="#Current">
-        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:subClassOf rdf:resource="#Physical"/>
         <rdfs:comment
             >The Current characteristic is a base dimension from the International System of Units (SI).</rdfs:comment>
     </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Dimension -->
-
-    <owl:Class rdf:about="#Dimension"/>
     
 
 
@@ -168,12 +172,6 @@
         <rdfs:subClassOf rdf:resource="&oboe-general;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-general;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;double">0.3048</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-general;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
@@ -190,6 +188,20 @@
                 <owl:hasValue rdf:datatype="&xsd;double">0.0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-general;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;double">0.3048</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Frequency -->
+
+    <owl:Class rdf:about="#Frequency">
+        <rdfs:subClassOf rdf:resource="#Physical"/>
     </owl:Class>
     
 
@@ -197,7 +209,7 @@
     <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Length -->
 
     <owl:Class rdf:about="#Length">
-        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:subClassOf rdf:resource="#Physical"/>
         <rdfs:comment
             >The Length characteristic is a base dimension from the International System of Units (SI).</rdfs:comment>
     </owl:Class>
@@ -207,7 +219,7 @@
     <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Luminosity -->
 
     <owl:Class rdf:about="#Luminosity">
-        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:subClassOf rdf:resource="#Physical"/>
         <rdfs:comment
             >The Luminosity characteristic is a base dimension from the International System of Units (SI).</rdfs:comment>
     </owl:Class>
@@ -217,7 +229,7 @@
     <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Mass -->
 
     <owl:Class rdf:about="#Mass">
-        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:subClassOf rdf:resource="#Physical"/>
         <rdfs:comment
             >The Mass characteristic is a base dimension from the International System of Units (SI).</rdfs:comment>
     </owl:Class>
@@ -238,10 +250,24 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Physical -->
+
+    <owl:Class rdf:about="#Physical"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#RadionucleotideActivity -->
+
+    <owl:Class rdf:about="#RadionucleotideActivity">
+        <rdfs:subClassOf rdf:resource="#Physical"/>
+    </owl:Class>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Temperature -->
 
     <owl:Class rdf:about="#Temperature">
-        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:subClassOf rdf:resource="#Physical"/>
         <rdfs:comment
             >The Temperature characteristic is a base dimension from the International System of Units (SI).</rdfs:comment>
     </owl:Class>
@@ -251,9 +277,25 @@
     <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Time -->
 
     <owl:Class rdf:about="#Time">
-        <rdfs:subClassOf rdf:resource="#Dimension"/>
+        <rdfs:subClassOf rdf:resource="#Physical"/>
         <rdfs:comment
             >The Time characteristic is a base dimension from the International System of Units (SI).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Volume -->
+
+    <owl:Class rdf:about="#Volume">
+        <rdfs:subClassOf rdf:resource="#Physical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#WaveNumber -->
+
+    <owl:Class rdf:about="#WaveNumber">
+        <rdfs:subClassOf rdf:resource="#Physical"/>
     </owl:Class>
 </rdf:RDF>
 

@@ -76,6 +76,14 @@
     <!-- http://ecoinformatics.org/oboe/oboe-general.1.1beta#hasUnit -->
 
     <owl:ObjectProperty rdf:about="#hasUnit">
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BaseUnit"/>
+                    <rdf:Description rdf:about="#DerivedUnit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -84,11 +92,19 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-general.1.1beta#isQualifierFor -->
+
+    <owl:ObjectProperty rdf:about="#isQualifierFor">
+        <rdfs:domain rdf:resource="&oboe-unit;Qualifier"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#BaseUnit"/>
-                    <rdf:Description rdf:about="#DerivedUnit"/>
+                    <rdf:Description rdf:about="&oboe-unit;Physical"/>
+                    <rdf:Description rdf:about="&oboe-unit;Qualifier"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -187,19 +203,6 @@
     <owl:Class rdf:about="#DerivedUnit">
         <rdfs:subClassOf rdf:resource="#Unit"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#BaseUnit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasUnit"/>
-                <owl:onClass rdf:resource="#BaseUnit"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
@@ -208,6 +211,12 @@
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPower"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
@@ -221,8 +230,15 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPower"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="#hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#BaseUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasUnit"/>
+                <owl:onClass rdf:resource="#BaseUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -246,14 +262,14 @@
         <rdfs:subClassOf rdf:resource="&oboe;Standard"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#Value"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe-unit;Physical"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe-unit;Dimension"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasStandardValue"/>
+                <owl:allValuesFrom rdf:resource="#Value"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -273,8 +289,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasSourceUnit"/>
-                <owl:someValuesFrom rdf:resource="#BaseUnit"/>
+                <owl:onProperty rdf:resource="#hasMultiplier"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -285,8 +301,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasMultiplier"/>
-                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
+                <owl:onProperty rdf:resource="#hasSourceUnit"/>
+                <owl:someValuesFrom rdf:resource="#BaseUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -305,22 +321,11 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Dimension -->
-
-    <owl:Class rdf:about="&oboe-unit;Dimension">
-        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
-        <owl:disjointWith rdf:resource="&oboe-unit;Name"/>
-        <owl:disjointWith rdf:resource="&oboe-unit;Type"/>
-        <rdfs:comment
-            >A Dimension of an Entity is a measurable (intensive or extensive) physical attribute  (e.g., length, depth, weight, area). The measured value assigned to a Dimension can be a quantity (a numerical value) or a quality (a label).</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Name -->
 
     <owl:Class rdf:about="&oboe-unit;Name">
         <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
+        <owl:disjointWith rdf:resource="&oboe-unit;Physical"/>
         <owl:disjointWith rdf:resource="&oboe-unit;Qualifier"/>
         <owl:disjointWith rdf:resource="&oboe-unit;Type"/>
         <rdfs:comment
@@ -329,10 +334,28 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Physical -->
+
+    <owl:Class rdf:about="&oboe-unit;Physical">
+        <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
+        <owl:disjointWith rdf:resource="&oboe-unit;Qualifier"/>
+        <owl:disjointWith rdf:resource="&oboe-unit;Type"/>
+        <rdfs:comment
+            >A Physical characteristic of an Entity is one that is measurable within the physical world, and subsumes primary and derived physical dimensions (e.g., length, mass, area, density). The measured value assigned to a Physical characteristic may be a quantity (a numerical value) or a quality (a label).</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe-unit.1.1beta#Qualifier -->
 
     <owl:Class rdf:about="&oboe-unit;Qualifier">
         <rdfs:subClassOf rdf:resource="&oboe;Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#isQualifierFor"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&oboe-unit;Type"/>
         <rdfs:comment
             >A Qualifier characteristic is a generic derived (e.g., computed) property of an entity that must be combined with concrete characteristics (through intersection) to be used in a measurement. For example, the qualifier Minimum can be combined with a (dimension) characteristic Length to create a measurable Minimum Length characteristic.</rdfs:comment>
@@ -356,8 +379,8 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&oboe-unit;Dimension"/>
                     <rdf:Description rdf:about="&oboe-unit;Name"/>
+                    <rdf:Description rdf:about="&oboe-unit;Physical"/>
                     <rdf:Description rdf:about="&oboe-unit;Qualifier"/>
                     <rdf:Description rdf:about="&oboe-unit;Type"/>
                 </owl:unionOf>
@@ -376,6 +399,12 @@
     <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#Standard -->
 
     <owl:Class rdf:about="&oboe;Standard"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
 </rdf:RDF>
 
 

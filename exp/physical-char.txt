@@ -1,0 +1,61 @@
+--- This is a list of physical characteristics and their hierarchical
+--- relationships.
+
+Amount (Base)
+Angle (Base)
+Count (Base)
+Current (Base)
+Length (Base)
+Luminosity (Base)
+Mass (Base)
+Temperature (Base)
+Time (Base)
+
+Area
+Frequency
+WaveNumber
+RadionucleotideActivity
+Volume
+
+Acceleration
+AmountOfSubstanceConcentration
+AmountOfSubstanceWeight
+AmountOfSubstanceWeightFlux
+ArealDensity
+ArealMassDensity
+ArealMassDensityRate
+Capacitance
+CatalyticActivity
+Charge
+Conductance
+CurrentDensity
+DoseEquivalent
+Energy
+Force
+Illuminance
+Inductance
+Luminance
+MagneticFieldStrength
+MagneticFlux
+MagneticFluxDensity
+MassDensity
+MassFlux
+MassPerMass
+MassSpecificCount
+MassSpecificLength
+PotentialDifference
+Power
+Pressure
+Resistance
+Resistivity
+SpecificArea
+SpecificEnergy
+SpecificVolume
+Speed
+Transmissivity
+VolumePerVolume
+VolumetricArea
+VolumetricDensity
+VolumetricMassDensityRate
+VolumetricRate
+
