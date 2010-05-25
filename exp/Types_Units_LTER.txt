@@ -1,0 +1,477 @@
+
+UNITTYPE: acceleration
+   DIMENSION: length
+   DIMENSION: time
+     UNIT: meterPerSecondSquared
+      
+UNITTYPE: amount
+   DIMENSION: amount
+     UNIT: mole
+      
+UNITTYPE: amountOfSubstanceConcentration
+   DIMENSION: length
+   DIMENSION: amount
+     UNIT: molePerCubicMeter
+     UNIT: microequivalentsPerLiter
+     UNIT: micromolar
+     UNIT: microMolesPerKilogram
+     UNIT: microMolesPerLiter
+     UNIT: molarity
+     UNIT: molePerMeterCubed
+     UNIT: nanomolesPerLiter
+      
+UNITTYPE: amountOfSubstanceWeight
+   DIMENSION: mass
+   DIMENSION: amount
+     UNIT: molesPerKilogram
+     UNIT: millimolePerGram
+     UNIT: molality
+     UNIT: molePerGram
+     UNIT: molePerKilogram
+      
+UNITTYPE: amountOfSubstanceWeightFlux
+   DIMENSION: mass
+   DIMENSION: time
+   DIMENSION: amount
+     UNIT: molesPerKilogramPerSecond
+     UNIT: molePerKilogramPerSecond
+     UNIT: nanomolePerGramPerSecond
+     UNIT: picoMolesPerLiterPerHour
+      
+UNITTYPE: angle
+   DIMENSION: angle
+     UNIT: radian
+     UNIT: degree
+     UNIT: grad
+      
+UNITTYPE: area
+   DIMENSION: length
+     UNIT: squareMeter
+     UNIT: acre
+     UNIT: are
+     UNIT: centimeterSquared
+     UNIT: footSquared
+     UNIT: hectare
+     UNIT: kilometerSquared
+     UNIT: meterSquared
+     UNIT: mileSquared
+     UNIT: millimeterSquared
+     UNIT: squareMicroMeter
+     UNIT: yardSquared
+      
+UNITTYPE: arealDensity
+   DIMENSION: length
+   DIMENSION: dimensionless
+     UNIT: numberPerMeterSquared
+     UNIT: numberPerKilometerSquared
+     UNIT: numberPerTenMetersSquared
+      
+UNITTYPE: arealMassDensity
+   DIMENSION: length
+   DIMENSION: mass
+     UNIT: kilogramsPerSquareMeter
+     UNIT: gramPerMeterSquared
+     UNIT: kilogramPerHectare
+     UNIT: kilogramPerMeterSquared
+     UNIT: milligramPerMeterSquared
+     UNIT: milligramsCarbonPerSquareMeterPerDay
+     UNIT: poundPerInchSquared
+     UNIT: tonnePerHectare
+      
+UNITTYPE: arealMassDensityRate
+   DIMENSION: length
+   DIMENSION: mass
+   DIMENSION: time
+     UNIT: kilogramsPerMeterSquaredPerSecond
+     UNIT: gramPerCentimeterSquaredPerSecond
+     UNIT: gramPerHectarePerDay
+     UNIT: gramPerMeterSquaredPerYear
+     UNIT: kilogramPerHectarePerYear
+     UNIT: kilogramPerMeterSquaredPerSecond
+     UNIT: kilogramPerMeterSquaredPerYear
+     UNIT: microgramsPerSquareMeterPerDay
+     UNIT: milligramsPerSquareMeterPerDay
+     UNIT: milligramsPerSquareMeterPerYear
+      
+UNITTYPE: capacitance
+   DIMENSION: length
+   DIMENSION: mass
+   DIMENSION: time
+   DIMENSION: current
+     UNIT: farad
+      
+UNITTYPE: catalyticActivity
+   DIMENSION: time
+   DIMENSION: amount
+     UNIT: katal
+      
+UNITTYPE: charge
+   DIMENSION: time
+   DIMENSION: current
+     UNIT: coulomb
+      
+UNITTYPE: conductance
+   DIMENSION: length
+   DIMENSION: mass
+   DIMENSION: time
+   DIMENSION: current
+     UNIT: siemen
+     UNIT: milliohmPerCentimeter
+     UNIT: millisiemensPerCentimeter
+     UNIT: siemens
+     UNIT: siemensPerMeter
+      
+UNITTYPE: current
+   DIMENSION: current
+     UNIT: ampere
+      
+UNITTYPE: currentDensity
+   DIMENSION: length
+   DIMENSION: time
+   DIMENSION: current
+     UNIT: amperePerMeterSquared
+      
+UNITTYPE: dimensionless
+   DIMENSION: dimensionless
+     UNIT: dimensionless
+     UNIT: number
+     UNIT: numberPerNumber
+     UNIT: percent
+     UNIT: practicalSalinityUnits
+      
+UNITTYPE: doseEquivalent
+   DIMENSION: length
+   DIMENSION: time
+     UNIT: sievert
+      
+UNITTYPE: energy
+   DIMENSION: length
+   DIMENSION: mass
+   DIMENSION: time
+     UNIT: joule
+     UNIT: britishThermalUnit
+     UNIT: calorie
+     UNIT: footPound
+      
+UNITTYPE: force
+   DIMENSION: length
+   DIMENSION: mass
+   DIMENSION: time
+     UNIT: newton
+      
+UNITTYPE: frequency
+   DIMENSION: time
+     UNIT: hertz
+     UNIT: kilohertz
+     UNIT: megahertz
+     UNIT: millihertz
+      
+UNITTYPE: illuminance
+   DIMENSION: length
+   DIMENSION: luminosity
+     UNIT: einsteinPerMeterSquaredPerDay
+     UNIT: lux
+     UNIT: microEinsteinPerMeterSquaredPerSecond
+      
+UNITTYPE: inductance
+   DIMENSION: length
+   DIMENSION: mass
+   DIMENSION: current
+     UNIT: henry
+      
+UNITTYPE: length
+   DIMENSION: length
+     UNIT: meter
+     UNIT: angstrom
+     UNIT: centimeter
+     UNIT: decimeter
+     UNIT: dekameter
+     UNIT: fathom
+     UNIT: foot
+     UNIT: footGoldCoast
+     UNIT: hectometer
+     UNIT: inch
+     UNIT: kilometer
+     UNIT: Link_Clarke
+     UNIT: megameter
+     UNIT: micrometer
+     UNIT: micron
+     UNIT: mile
+     UNIT: millimeter
+     UNIT: nanometer
+     UNIT: nauticalMile
+     UNIT: yard
+     UNIT: Yard_Indian
+      
+UNITTYPE: lengthReciprocal
+   DIMENSION: length
+     UNIT: waveNumber
+      
+UNITTYPE: luminance
+   DIMENSION: length
+   DIMENSION: luminosity
+     UNIT: candelaPerMeterSquared
+      
+UNITTYPE: luminosity
+   DIMENSION: luminosity
+     UNIT: candela
+     UNIT: lumen
+      
+UNITTYPE: magneticFieldStrength
+   DIMENSION: length
+   DIMENSION: time
+   DIMENSION: current
+     UNIT: amperePerMeter
+      
+UNITTYPE: magneticFlux
+   DIMENSION: length
+   DIMENSION: mass
+   DIMENSION: time
+   DIMENSION: current
+     UNIT: weber
+      
+UNITTYPE: magneticFluxDensity
+   DIMENSION: mass
+   DIMENSION: time
+   DIMENSION: current
+     UNIT: tesla
+      
+UNITTYPE: mass
+   DIMENSION: mass
+     UNIT: kilogram
+     UNIT: centigram
+     UNIT: decigram
+     UNIT: dekagram
+     UNIT: gram
+     UNIT: hectogram
+     UNIT: megagram
+     UNIT: microgram
+     UNIT: milligram
+     UNIT: nanogram
+     UNIT: pound
+     UNIT: ton
+     UNIT: tonne
+      
+UNITTYPE: massDensity
+   DIMENSION: length
+   DIMENSION: mass
+     UNIT: kilogramPerCubicMeter
+     UNIT: kilogramPerMeterCubed
+     UNIT: gramPerCentimeterCubed
+     UNIT: gramPerLiter
+     UNIT: gramPerMeterCubed
+     UNIT: gramPerMilliliter
+     UNIT: gramsPerThousandMetersCubed
+     UNIT: microgramPerLiter
+     UNIT: milligramPerLiter
+     UNIT: milligramPerMeterCubed
+     UNIT: milligramPerMilliliter
+     UNIT: nanogramsPerLiter
+      
+UNITTYPE: massFlux
+   DIMENSION: mass
+   DIMENSION: time
+     UNIT: kilogramsPerSecond
+     UNIT: gramPerYear
+     UNIT: kilogramPerSecond
+     UNIT: tonnePerYear
+      
+UNITTYPE: massPerMass
+   DIMENSION: mass
+     UNIT: gramsPerGram
+     UNIT: gramPerGram
+     UNIT: microgramPerGram
+      
+UNITTYPE: massSpecificCount
+   DIMENSION: mass
+   DIMENSION: dimensionless
+     UNIT: numberPerGram
+      
+UNITTYPE: massSpecificLength
+   DIMENSION: length
+   DIMENSION: mass
+     UNIT: meterPerGram
+      
+UNITTYPE: potentialDifference
+   DIMENSION: length
+   DIMENSION: mass
+   DIMENSION: time
+   DIMENSION: current
+     UNIT: volt
+     UNIT: kilovolt
+     UNIT: megavolt
+     UNIT: millivolt
+      
+UNITTYPE: power
+   DIMENSION: length
+   DIMENSION: mass
+   DIMENSION: time
+     UNIT: watt
+     UNIT: kilowatt
+     UNIT: megawatt
+     UNIT: milliwatt
+     UNIT: wattsPerSquareMeter
+     UNIT: wattsPerSquareMeterPerNanometer
+      
+UNITTYPE: pressure
+   DIMENSION: length
+   DIMENSION: mass
+   DIMENSION: time
+     UNIT: pascal
+     UNIT: atmosphere
+     UNIT: bar
+     UNIT: decibar
+     UNIT: kilopascal
+     UNIT: megapascal
+     UNIT: microAtmosphere
+     UNIT: millibar
+      
+UNITTYPE: radionucleotideActivity
+   DIMENSION: time
+     UNIT: becquerel
+      
+UNITTYPE: resistance
+   DIMENSION: length
+   DIMENSION: mass
+   DIMENSION: time
+   DIMENSION: current
+     UNIT: ohm
+      
+UNITTYPE: resistivity
+   DIMENSION: length
+   DIMENSION: mass
+   DIMENSION: time
+   DIMENSION: current
+     UNIT: ohmMeter
+      
+UNITTYPE: specificArea
+   DIMENSION: length
+   DIMENSION: mass
+     UNIT: meterSquaredPerKilogram
+      
+UNITTYPE: specificEnergy
+   DIMENSION: length
+   DIMENSION: time
+     UNIT: gray
+      
+UNITTYPE: specificVolume
+   DIMENSION: length
+   DIMENSION: mass
+     UNIT: cubicMeterPerKilogram
+     UNIT: meterCubedPerKilogram
+     UNIT: micrometerCubedPerGram
+      
+UNITTYPE: speed
+   DIMENSION: length
+   DIMENSION: time
+     UNIT: metersPerSecond
+     UNIT: centimeterPerSecond
+     UNIT: centimeterPerYear
+     UNIT: footPerDay
+     UNIT: footPerHour
+     UNIT: footPerSecond
+     UNIT: kilometerPerHour
+     UNIT: knot
+     UNIT: meterPerDay
+     UNIT: meterPerSecond
+     UNIT: metersPerMinute
+     UNIT: milePerHour
+     UNIT: milePerMinute
+     UNIT: milePerSecond
+     UNIT: millimeterPerSecond
+     UNIT: nauticalMilePerHour
+     UNIT: yardPerSecond
+      
+UNITTYPE: temperature
+   DIMENSION: temperature
+     UNIT: kelvin
+     UNIT: celsius
+     UNIT: fahrenheitDegree
+      
+UNITTYPE: time
+   DIMENSION: time
+     UNIT: second
+     UNIT: centisecond
+     UNIT: decisecond
+     UNIT: dekasecond
+     UNIT: hectosecond
+     UNIT: hour
+     UNIT: kilosecond
+     UNIT: megasecond
+     UNIT: microsecond
+     UNIT: millisecond
+     UNIT: minute
+     UNIT: nanosecond
+     UNIT: nominalDay
+     UNIT: nominalHour
+     UNIT: nominalLeapYear
+     UNIT: nominalMinute
+     UNIT: nominalWeek
+     UNIT: nominalYear
+      
+UNITTYPE: transmissivity
+   DIMENSION: length
+   DIMENSION: time
+     UNIT: metersSquaredPerSecond
+     UNIT: footSquaredPerDay
+     UNIT: meterSquaredPerDay
+     UNIT: meterSquaredPerSecond
+      
+UNITTYPE: volume
+   DIMENSION: length
+     UNIT: liter
+     UNIT: meterCubed
+     UNIT: cubicMeter
+     UNIT: bushel
+     UNIT: centimeterCubed
+     UNIT: gallon
+     UNIT: inchCubed
+     UNIT: kiloliter
+     UNIT: microliter
+     UNIT: milliliter
+     UNIT: pint
+     UNIT: quart
+      
+UNITTYPE: volumePerVolume
+   DIMENSION: length
+   DIMENSION: mass
+     UNIT: centimeterCubedPerCentimeterCubed
+     UNIT: milliliterPerCubicMeter
+     UNIT: milliliterPerLiter
+     UNIT: milliliterPerThousandCubicMeters
+      
+UNITTYPE: volumetricArea
+   DIMENSION: length
+     UNIT: litersPerSquareMeter
+     UNIT: literPerMeterSquared
+     UNIT: bushelPerAcre
+     UNIT: literPerHectare
+     UNIT: milliliterPerMeterSquared
+      
+UNITTYPE: volumetricDensity
+   DIMENSION: length
+   DIMENSION: dimensionless
+     UNIT: numberPerMeterCubed
+     UNIT: numberPerLiter
+     UNIT: numberPerMicroliter
+     UNIT: numberPerMilliliter
+     UNIT: numberPerThousandMetersCubed
+      
+UNITTYPE: volumetricMassDensityRate
+   DIMENSION: length
+   DIMENSION: mass
+   DIMENSION: time
+     UNIT: gramPerLiterPerDay
+     UNIT: microgramsPerLiterPerDay
+     UNIT: milligramsPerCubicMeterPerDay
+     UNIT: milligramsPerCubicMeterPerHour
+     UNIT: nanogramsPerLiterPerHour
+      
+UNITTYPE: volumetricRate
+   DIMENSION: length
+   DIMENSION: time
+     UNIT: litersPerSecond
+     UNIT: footCubedPerSecond
+     UNIT: literPerSecond
+     UNIT: meterCubedPerSecond
+      
