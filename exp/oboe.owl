@@ -14,13 +14,13 @@
 
 <rdf:RDF xmlns="http://ecoinformatics.org/oboe/oboe.1.1beta#"
      xml:base="http://ecoinformatics.org/oboe/oboe.1.1beta"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe-core.1.1beta#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:oboe="http://ecoinformatics.org/oboe/oboe.1.1beta#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:oboe="http://ecoinformatics.org/oboe/oboe.1.1beta#">
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
     <owl:Ontology rdf:about="">
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe-core.1.1beta"/>
     </owl:Ontology>
@@ -44,9 +44,15 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasStandardValue -->
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasValue -->
 
-    <owl:ObjectProperty rdf:about="&oboe-core;hasStandardValue"/>
+    <owl:ObjectProperty rdf:about="&oboe-core;hasValue"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#standardFor -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;standardFor"/>
     
 
 
@@ -73,14 +79,6 @@
     <!-- http://ecoinformatics.org/oboe/oboe.1.1beta#hasUnit -->
 
     <owl:ObjectProperty rdf:about="#hasUnit">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#CompositeUnit"/>
-                    <rdf:Description rdf:about="#DerivedUnit"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -89,6 +87,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#CompositeUnit"/>
+                    <rdf:Description rdf:about="#DerivedUnit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -194,6 +200,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Measurement -->
+
+    <owl:Class rdf:about="&oboe-core;Measurement"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Standard -->
 
     <owl:Class rdf:about="&oboe-core;Standard"/>
@@ -214,20 +226,6 @@
 
     <owl:Class rdf:about="#Boolean">
         <rdfs:subClassOf rdf:resource="#Value"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasCode"/>
-                        <owl:hasValue>false</owl:hasValue>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasCode"/>
-                        <owl:hasValue>true</owl:hasValue>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#Decimal"/>
         <owl:disjointWith rdf:resource="#String"/>
         <rdfs:comment
@@ -283,6 +281,18 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#BaseUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPower"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
@@ -293,12 +303,6 @@
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#BaseUnit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
@@ -307,12 +311,6 @@
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPower"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
             >A DerivedUnit raises a base unit to an integer power other than 0 or 1. For example, the unit &#39;meter square&#39; is a unit derived from the &#39;meter&#39; base unit raised to the power 2.</rdfs:comment>
@@ -405,12 +403,6 @@
         <rdfs:subClassOf rdf:resource="&oboe-core;Standard"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#Decimal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasCharacteristic"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -418,6 +410,22 @@
                             <rdf:Description rdf:about="#PhysicalCharacteristic"/>
                             <rdf:Description rdf:about="#QualifiedCharacteristic"/>
                         </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe-core;Measurement"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;hasValue"/>
+                                <owl:allValuesFrom rdf:resource="#Decimal"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
             </owl:Restriction>
@@ -433,8 +441,8 @@
     <owl:Class rdf:about="#UnitConversion">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasTargetUnit"/>
-                <owl:someValuesFrom rdf:resource="#BaseUnit"/>
+                <owl:onProperty rdf:resource="#hasMultiplier"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -451,8 +459,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasMultiplier"/>
-                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
+                <owl:onProperty rdf:resource="#hasTargetUnit"/>
+                <owl:someValuesFrom rdf:resource="#BaseUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -478,5 +486,5 @@
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.1101) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
 
