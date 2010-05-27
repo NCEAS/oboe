@@ -1,0 +1,490 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboe "http://ecoinformatics.org/oboe/oboe.1.1beta#" >
+    <!ENTITY oboe-test "http://ecoinformatics.org/oboe/oboe-test.1.1beta#" >
+    <!ENTITY oboe-core "http://ecoinformatics.org/oboe/oboe-core.1.1beta#" >
+]>
+
+
+<rdf:RDF xmlns="http://ecoinformatics.org/oboe/oboe-test.1.1beta#"
+     xml:base="http://ecoinformatics.org/oboe/oboe-test.1.1beta"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:oboe-test="http://ecoinformatics.org/oboe/oboe-test.1.1beta#"
+     xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe-core.1.1beta#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:oboe="http://ecoinformatics.org/oboe/oboe.1.1beta#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1beta"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasContext -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;hasContext"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasMeasurement -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;hasMeasurement"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasValue -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;hasValue"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#measurementFor -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;measurementFor"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#ofCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;ofCharacteristic"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#ofEntity -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;ofEntity"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#standardFor -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;standardFor"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#usesProtocol -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;usesProtocol"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#usesStandard -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;usesStandard"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasPrecision -->
+
+    <owl:DatatypeProperty rdf:about="&oboe-core;hasPrecision"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1beta#hasCode -->
+
+    <owl:DatatypeProperty rdf:about="&oboe;hasCode"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Entity -->
+
+    <owl:Class rdf:about="&oboe-core;Entity"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Measurement -->
+
+    <owl:Class rdf:about="&oboe-core;Measurement"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Observation -->
+
+    <owl:Class rdf:about="&oboe-core;Observation"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Protocol -->
+
+    <owl:Class rdf:about="&oboe-core;Protocol"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#ClinometerTreeHeightProtocol -->
+
+    <owl:Class rdf:about="#ClinometerTreeHeightProtocol">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#Diameter -->
+
+    <owl:Class rdf:about="#Diameter">
+        <rdfs:subClassOf rdf:resource="#Length"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#Height -->
+
+    <owl:Class rdf:about="#Height">
+        <rdfs:subClassOf rdf:resource="#Length"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#Length -->
+
+    <owl:Class rdf:about="#Length">
+        <rdfs:subClassOf rdf:resource="&oboe;PhysicalCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#Location -->
+
+    <owl:Class rdf:about="#Location">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#Maple -->
+
+    <owl:Class rdf:about="#Maple">
+        <rdfs:subClassOf rdf:resource="#Tree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#Meter -->
+
+    <owl:Class rdf:about="#Meter">
+        <rdfs:subClassOf rdf:resource="&oboe;BaseUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe-core;Measurement"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="#Length"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#Organism -->
+
+    <owl:Class rdf:about="#Organism">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#Pine -->
+
+    <owl:Class rdf:about="#Pine">
+        <rdfs:subClassOf rdf:resource="#Tree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#Plot -->
+
+    <owl:Class rdf:about="#Plot">
+        <rdfs:subClassOf rdf:resource="#Replicate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#Replicate -->
+
+    <owl:Class rdf:about="#Replicate">
+        <rdfs:subClassOf rdf:resource="#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#Site -->
+
+    <owl:Class rdf:about="#Site">
+        <rdfs:subClassOf rdf:resource="#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#Tree -->
+
+    <owl:Class rdf:about="#Tree">
+        <rdfs:subClassOf rdf:resource="#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1beta#BaseUnit -->
+
+    <owl:Class rdf:about="&oboe;BaseUnit"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1beta#Decimal -->
+
+    <owl:Class rdf:about="&oboe;Decimal"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1beta#Name -->
+
+    <owl:Class rdf:about="&oboe;Name"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1beta#PhysicalCharacteristic -->
+
+    <owl:Class rdf:about="&oboe;PhysicalCharacteristic"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1beta#String -->
+
+    <owl:Class rdf:about="&oboe;String"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#ent1 -->
+
+    <Site rdf:about="#ent1"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#ent2 -->
+
+    <Plot rdf:about="#ent2"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#ent3 -->
+
+    <Pine rdf:about="#ent3"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#ent4 -->
+
+    <Maple rdf:about="#ent4"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#meas1 -->
+
+    <oboe-core:Measurement rdf:about="#meas1">
+        <oboe-core:ofCharacteristic rdf:resource="#meas1char"/>
+        <oboe-core:measurementFor rdf:resource="#obs1"/>
+        <oboe-core:hasValue rdf:resource="#v1"/>
+    </oboe-core:Measurement>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#meas1char -->
+
+    <oboe:Name rdf:about="#meas1char"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#meas2 -->
+
+    <oboe-core:Measurement rdf:about="#meas2">
+        <oboe-core:ofCharacteristic rdf:resource="#meas2char"/>
+        <oboe-core:hasValue rdf:resource="#v2"/>
+    </oboe-core:Measurement>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#meas2char -->
+
+    <oboe:Name rdf:about="#meas2char"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#meas3 -->
+
+    <oboe-core:Measurement rdf:about="#meas3">
+        <oboe-core:hasPrecision rdf:datatype="&xsd;decimal">0.1</oboe-core:hasPrecision>
+        <oboe-core:ofCharacteristic rdf:resource="#meas3char"/>
+        <oboe-core:usesProtocol rdf:resource="#meas3protocol"/>
+        <oboe-core:usesStandard rdf:resource="#meterStandard"/>
+        <oboe-core:hasValue rdf:resource="#v3"/>
+    </oboe-core:Measurement>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#meas3char -->
+
+    <Height rdf:about="#meas3char"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#meas3protocol -->
+
+    <ClinometerTreeHeightProtocol rdf:about="#meas3protocol"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#meas4 -->
+
+    <oboe-core:Measurement rdf:about="#meas4">
+        <oboe-core:hasPrecision rdf:datatype="&xsd;decimal">0.1</oboe-core:hasPrecision>
+        <oboe-core:ofCharacteristic rdf:resource="#meas4char"/>
+        <oboe-core:usesStandard rdf:resource="#meterStandard"/>
+        <oboe-core:hasValue rdf:resource="#v4"/>
+    </oboe-core:Measurement>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#meas4char -->
+
+    <Diameter rdf:about="#meas4char"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#meterStandard -->
+
+    <Meter rdf:about="#meterStandard"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#obs1 -->
+
+    <oboe-core:Observation rdf:about="#obs1">
+        <oboe-core:ofEntity rdf:resource="#ent1"/>
+    </oboe-core:Observation>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#obs2 -->
+
+    <oboe-core:Observation rdf:about="#obs2">
+        <oboe-core:ofEntity rdf:resource="#ent2"/>
+        <oboe-core:hasMeasurement rdf:resource="#meas2"/>
+        <oboe-core:hasContext rdf:resource="#obs1"/>
+    </oboe-core:Observation>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#obs3 -->
+
+    <oboe-core:Observation rdf:about="#obs3">
+        <oboe-core:ofEntity rdf:resource="#ent3"/>
+        <oboe-core:hasMeasurement rdf:resource="#meas3"/>
+        <oboe-core:hasContext rdf:resource="#obs2"/>
+    </oboe-core:Observation>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#obs4 -->
+
+    <oboe-core:Observation rdf:about="#obs4">
+        <oboe-core:ofEntity rdf:resource="#ent4"/>
+        <oboe-core:hasMeasurement rdf:resource="#meas4"/>
+        <oboe-core:hasContext rdf:resource="#obs2"/>
+    </oboe-core:Observation>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#v1 -->
+
+    <oboe:String rdf:about="#v1">
+        <oboe:hasCode>A</oboe:hasCode>
+    </oboe:String>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#v2 -->
+
+    <oboe:String rdf:about="#v2">
+        <oboe:hasCode>1</oboe:hasCode>
+    </oboe:String>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#v3 -->
+
+    <oboe:Decimal rdf:about="#v3">
+        <oboe:hasCode>27.4</oboe:hasCode>
+    </oboe:Decimal>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-test.1.1beta#v4 -->
+
+    <oboe:Decimal rdf:about="#v4">
+        <oboe:hasCode>0.8</oboe:hasCode>
+    </oboe:Decimal>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1101) http://owlapi.sourceforge.net -->
+
