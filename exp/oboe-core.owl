@@ -40,26 +40,15 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#characteristicOf -->
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#contextFor -->
 
-    <owl:ObjectProperty rdf:about="#characteristicOf">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="#contextFor">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:comment
-            >The characteristicOf property relates a characteristic to the entity it is a characteristic of. A characteristic is of exactly one entity.</rdfs:comment>
-        <rdfs:domain rdf:resource="#Characteristic"/>
-        <rdfs:range rdf:resource="#Entity"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasCharacteristic -->
-
-    <owl:ObjectProperty rdf:about="#hasCharacteristic">
-        <rdfs:comment
-            >The hasCharacteristic property relates an entity to one of its characteristics.</rdfs:comment>
-        <rdfs:range rdf:resource="#Characteristic"/>
-        <rdfs:domain rdf:resource="#Entity"/>
-        <owl:inverseOf rdf:resource="#characteristicOf"/>
+            >The contextFor property states that one observation serves as the context for another observation.  In the case of contextFor, the domain is the context, and the range is the observation being contextualized. Context defines a semantic relationship between two entities that is a fundamental aspect of the observations, but not necessarily of the entities themselves.  For example, most measurements are accomplished in a spatio-temporal framework that might be valuable context. The assertions made by contextual observations are assumed of the contextualized observations. Context is a transitive relationship.</rdfs:comment>
+        <rdfs:range rdf:resource="#Observation"/>
+        <rdfs:domain rdf:resource="#Observation"/>
+        <owl:inverseOf rdf:resource="#hasContext"/>
     </owl:ObjectProperty>
     
 
@@ -69,7 +58,7 @@
     <owl:ObjectProperty rdf:about="#hasContext">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >The hasContext property states that one observation serves as the context for another observation.  Context defines a semantic relationship between two entities that is a fundamental aspect of the observations, but not necessarily of the entities themselves.  For example, most measurements are accomplished in a spatio-temporal framework that might be valuable context. The assertions made by contextual observations are assumed of the contextualized observations. Context is a transitive relationship.</rdfs:comment>
+            >The hasContext property states that one observation serves as the context for another observation.  In the case of hasContext, the domain is the observation being contextualized, and the range is the context. Context defines a semantic relationship between two entities that is a fundamental aspect of the observations, but not necessarily of the entities themselves.  For example, most measurements are accomplished in a spatio-temporal framework that might be valuable context. The assertions made by contextual observations are assumed of the contextualized observations. Context is a transitive relationship.</rdfs:comment>
         <rdfs:domain rdf:resource="#Observation"/>
         <rdfs:range rdf:resource="#Observation"/>
     </owl:ObjectProperty>
@@ -100,6 +89,18 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#measuredBy -->
+
+    <owl:ObjectProperty rdf:about="#measuredBy">
+        <rdfs:comment
+            >The measuredBy property gives the measurement a characteristic is used in.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Characteristic"/>
+        <rdfs:range rdf:resource="#Measurement"/>
+        <owl:inverseOf rdf:resource="#ofCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#measurementFor -->
 
     <owl:ObjectProperty rdf:about="#measurementFor">
@@ -109,6 +110,18 @@
         <rdfs:domain rdf:resource="#Measurement"/>
         <rdfs:range rdf:resource="#Observation"/>
         <owl:inverseOf rdf:resource="#hasMeasurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#observedBy -->
+
+    <owl:ObjectProperty rdf:about="#observedBy">
+        <rdfs:comment
+            >The observedBy property gives the observation of an observed entity.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Entity"/>
+        <rdfs:range rdf:resource="#Observation"/>
+        <owl:inverseOf rdf:resource="#ofEntity"/>
     </owl:ObjectProperty>
     
 
@@ -133,6 +146,18 @@
             >The ofEntity property gives the observed entity of an observation.</rdfs:comment>
         <rdfs:range rdf:resource="#Entity"/>
         <rdfs:domain rdf:resource="#Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#protocolFor -->
+
+    <owl:ObjectProperty rdf:about="#protocolFor">
+        <rdfs:comment
+            >The protocolFor property gives the measurement that uses a protocol.</rdfs:comment>
+        <rdfs:range rdf:resource="#Measurement"/>
+        <rdfs:domain rdf:resource="#Protocol"/>
+        <owl:inverseOf rdf:resource="#usesProtocol"/>
     </owl:ObjectProperty>
     
 
@@ -169,6 +194,18 @@
             >The usesStandard property gives the standard (e.g., unit) used in a measurement.</rdfs:comment>
         <rdfs:domain rdf:resource="#Measurement"/>
         <rdfs:range rdf:resource="#Standard"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#valueFor -->
+
+    <owl:ObjectProperty rdf:about="#valueFor">
+        <rdfs:comment
+            >The valueFor property gives the measurement a value is used in.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Entity"/>
+        <rdfs:range rdf:resource="#Measurement"/>
+        <owl:inverseOf rdf:resource="#hasValue"/>
     </owl:ObjectProperty>
     
 
@@ -244,20 +281,14 @@
         <rdfs:label>Measurement</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasValue"/>
+                <owl:someValuesFrom rdf:resource="#Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="#ofCharacteristic"/>
                 <owl:someValuesFrom rdf:resource="#Characteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#usesStandard"/>
-                <owl:someValuesFrom rdf:resource="#Standard"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#usesProtocol"/>
-                <owl:someValuesFrom rdf:resource="#Protocol"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -268,8 +299,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasValue"/>
-                <owl:someValuesFrom rdf:resource="#Entity"/>
+                <owl:onProperty rdf:resource="#usesProtocol"/>
+                <owl:someValuesFrom rdf:resource="#Protocol"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#usesStandard"/>
+                <owl:someValuesFrom rdf:resource="#Standard"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#Observation"/>
