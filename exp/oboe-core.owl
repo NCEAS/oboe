@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 
+
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
@@ -323,20 +324,14 @@
         <rdfs:label>Measurement</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#usesStandard"/>
-                <owl:someValuesFrom rdf:resource="#Standard"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasValue"/>
                 <owl:someValuesFrom rdf:resource="#Entity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#usesProtocol"/>
-                <owl:someValuesFrom rdf:resource="#Protocol"/>
+                <owl:onProperty rdf:resource="#usesStandard"/>
+                <owl:someValuesFrom rdf:resource="#Standard"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -349,6 +344,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#measurementFor"/>
                 <owl:someValuesFrom rdf:resource="#Observation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#usesProtocol"/>
+                <owl:someValuesFrom rdf:resource="#Protocol"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#Observation"/>

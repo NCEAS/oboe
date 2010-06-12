@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboe-core "http://ecoinformatics.org/oboe/oboe-core.1.1beta#" >
+    <!ENTITY oboe-context "http://ecoinformatics.org/oboe/oboe-context.1.1beta#" >
+]>
+
+
+<rdf:RDF xmlns="http://ecoinformatics.org/oboe/oboe-context.1.1beta#"
+     xml:base="http://ecoinformatics.org/oboe/oboe-context.1.1beta"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe-core.1.1beta#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:oboe-context="http://ecoinformatics.org/oboe/oboe-context.1.1beta#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <rdfs:label>oboe-context</rdfs:label>
+        <rdfs:comment
+            >This ontology provides additional support for specifying context relationships.</rdfs:comment>
+        <owl:versionInfo>Version 1.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe-core.1.1beta"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-context.1.1beta#contextObservationFor -->
+
+    <owl:ObjectProperty rdf:about="#contextObservationFor">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment
+            >The contextObservationFor property relates an contextualizing observation to the corresponding context measurement.</rdfs:comment>
+        <rdfs:range rdf:resource="#Context"/>
+        <rdfs:domain rdf:resource="&oboe-core;Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-context.1.1beta#hasContextObservation -->
+
+    <owl:ObjectProperty rdf:about="#hasContextObservation">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment
+            >The hasContextObservation gives the contextualizing observation for the context.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Context"/>
+        <rdfs:range rdf:resource="&oboe-core;Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-context.1.1beta#hasObservationContext -->
+
+    <owl:ObjectProperty rdf:about="#hasObservationContext">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment
+            >The hasObservationContext is a special type of hasMeasurement property that links an observation to a context measurement.</rdfs:comment>
+        <rdfs:range rdf:resource="#Context"/>
+        <rdfs:domain rdf:resource="&oboe-core;Observation"/>
+        <rdfs:subPropertyOf rdf:resource="&oboe-core;hasMeasurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-context.1.1beta#observationContextFor -->
+
+    <owl:ObjectProperty rdf:about="#observationContextFor">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment
+            >The observationContextFor property gives the contextualized observation for a context measurement.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Context"/>
+        <owl:inverseOf rdf:resource="#hasObservationContext"/>
+        <rdfs:range rdf:resource="&oboe-core;Observation"/>
+        <rdfs:subPropertyOf rdf:resource="&oboe-core;measurementFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#contextFor -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;contextFor">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="#contextObservationFor"/>
+            <rdf:Description rdf:about="#observationContextFor"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasContext -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;hasContext">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="#hasObservationContext"/>
+            <rdf:Description rdf:about="#hasContextObservation"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasMeasurement -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;hasMeasurement"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#measurementFor -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;measurementFor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-context.1.1beta#Context -->
+
+    <owl:Class rdf:about="#Context">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Measurement"/>
+        <rdfs:comment
+            >A context measurement is a special measurement for capturing the details of a contextual relationship.  These details include a characteristic that asserts the relationship between the two observed entities as well as a protocol (e.g., defining the procedure for observing the relationship), etc. The value of the context measurement is the contextualizing entity, and the observation for the context measurement is the contextualized observation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Measurement -->
+
+    <owl:Class rdf:about="&oboe-core;Measurement"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Observation -->
+
+    <owl:Class rdf:about="&oboe-core;Observation"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
