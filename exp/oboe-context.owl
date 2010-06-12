@@ -3,6 +3,8 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
@@ -17,6 +19,8 @@
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe-core.1.1beta#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:oboe-context="http://ecoinformatics.org/oboe/oboe-context.1.1beta#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -121,9 +125,21 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasValue -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;hasValue"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#measurementFor -->
 
     <owl:ObjectProperty rdf:about="&oboe-core;measurementFor"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#ofEntity -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;ofEntity"/>
     
 
 
@@ -142,6 +158,12 @@
 
     <owl:Class rdf:about="#Context">
         <rdfs:subClassOf rdf:resource="&oboe-core;Measurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasContextObservation"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;Observation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment
             >A context measurement is a special measurement for capturing the details of a contextual relationship.  These details include a characteristic that asserts the relationship between the two observed entities as well as a protocol (e.g., defining the procedure for observing the relationship), etc. The value of the context measurement is the contextualizing entity, and the observation for the context measurement is the contextualized observation.</rdfs:comment>
     </owl:Class>
@@ -157,6 +179,133 @@
     <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Observation -->
 
     <owl:Class rdf:about="&oboe-core;Observation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <swrl:Variable rdf:about="#e"/>
+    <swrl:Variable rdf:about="#o1"/>
+    <swrl:Variable rdf:about="#o2"/>
+    <swrl:Variable rdf:about="#c"/>
+    <swrl:Variable rdf:about="#o"/>
+    <swrl:Imp>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:argument1 rdf:resource="#c"/>
+                                <swrl:argument2 rdf:resource="#e"/>
+                                <swrl:propertyPredicate rdf:resource="&oboe-core;hasValue"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                    </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="#c"/>
+                        <swrl:propertyPredicate rdf:resource="#hasContextObservation"/>
+                        <swrl:argument2 rdf:resource="#o"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument2 rdf:resource="#e"/>
+                        <swrl:argument1 rdf:resource="#o"/>
+                        <swrl:propertyPredicate rdf:resource="&oboe-core;ofEntity"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="#o1"/>
+                        <swrl:argument2 rdf:resource="#o2"/>
+                        <swrl:propertyPredicate rdf:resource="&oboe-core;hasContext"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:argument2 rdf:resource="#c"/>
+                                <swrl:propertyPredicate rdf:resource="#hasObservationContext"/>
+                                <swrl:argument1 rdf:resource="#o1"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                    </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="#c"/>
+                        <swrl:propertyPredicate rdf:resource="#hasContextObservation"/>
+                        <swrl:argument2 rdf:resource="#o2"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="#c"/>
+                        <swrl:argument2 rdf:resource="#e"/>
+                        <swrl:propertyPredicate rdf:resource="&oboe-core;hasValue"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="#c"/>
+                        <swrl:propertyPredicate rdf:resource="#hasContextObservation"/>
+                        <swrl:argument2 rdf:resource="#o"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:argument2 rdf:resource="#e"/>
+                                <swrl:argument1 rdf:resource="#o"/>
+                                <swrl:propertyPredicate rdf:resource="&oboe-core;ofEntity"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                    </swrl:AtomList>
+                </rdf:rest>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
 </rdf:RDF>
 
 
