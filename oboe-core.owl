@@ -7,14 +7,14 @@
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY oboe-core "http://ecoinformatics.org/oboe/oboe-core.1.1beta#" >
+    <!ENTITY oboe-core "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="http://ecoinformatics.org/oboe/oboe-core.1.1beta#"
-     xml:base="http://ecoinformatics.org/oboe/oboe-core.1.1beta"
+<rdf:RDF xmlns="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#"
+     xml:base="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-     xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe-core.1.1beta#"
+     xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -42,7 +42,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#contextFor -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#contextFor -->
 
     <owl:ObjectProperty rdf:about="#contextFor">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -55,7 +55,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasContext -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasContext -->
 
     <owl:ObjectProperty rdf:about="#hasContext">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -67,7 +67,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasMeasurement -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasMeasurement -->
 
     <owl:ObjectProperty rdf:about="#hasMeasurement">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
@@ -79,7 +79,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasMember -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasMember -->
 
     <owl:ObjectProperty rdf:about="#hasMember">
         <rdfs:comment
@@ -90,7 +90,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasValue -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasValue -->
 
     <owl:ObjectProperty rdf:about="#hasValue">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -102,7 +102,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#measuredBy -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measuredBy -->
 
     <owl:ObjectProperty rdf:about="#measuredBy">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
@@ -115,7 +115,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#measurementFor -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor -->
 
     <owl:ObjectProperty rdf:about="#measurementFor">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -128,7 +128,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#memberOf -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#memberOf -->
 
     <owl:ObjectProperty rdf:about="#memberOf">
         <rdfs:comment
@@ -140,7 +140,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#observedBy -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#observedBy -->
 
     <owl:ObjectProperty rdf:about="#observedBy">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
@@ -153,7 +153,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#ofCharacteristic -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic -->
 
     <owl:ObjectProperty rdf:about="#ofCharacteristic">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -165,7 +165,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#ofEntity -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity -->
 
     <owl:ObjectProperty rdf:about="#ofEntity">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -177,7 +177,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#protocolFor -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#protocolFor -->
 
     <owl:ObjectProperty rdf:about="#protocolFor">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
@@ -190,7 +190,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#standardFor -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#standardFor -->
 
     <owl:ObjectProperty rdf:about="#standardFor">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
@@ -203,7 +203,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#usesProtocol -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#usesProtocol -->
 
     <owl:ObjectProperty rdf:about="#usesProtocol">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -215,7 +215,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#usesStandard -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#usesStandard -->
 
     <owl:ObjectProperty rdf:about="#usesStandard">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -227,7 +227,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#valueFor -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#valueFor -->
 
     <owl:ObjectProperty rdf:about="#valueFor">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
@@ -251,7 +251,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasPrecision -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasPrecision -->
 
     <owl:DatatypeProperty rdf:about="#hasPrecision">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -263,7 +263,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#usesMethod -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#usesMethod -->
 
     <owl:DatatypeProperty rdf:about="#usesMethod">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -286,7 +286,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Characteristic -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Characteristic -->
 
     <owl:Class rdf:about="#Characteristic">
         <rdfs:label>Characteristic</rdfs:label>
@@ -302,7 +302,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Entity -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity -->
 
     <owl:Class rdf:about="#Entity">
         <rdfs:label>Entity</rdfs:label>
@@ -318,7 +318,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Measurement -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement -->
 
     <owl:Class rdf:about="#Measurement">
         <rdfs:label>Measurement</rdfs:label>
@@ -362,7 +362,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Observation -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation -->
 
     <owl:Class rdf:about="#Observation">
         <rdfs:label>Observation</rdfs:label>
@@ -381,7 +381,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#ObservationCollection -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ObservationCollection -->
 
     <owl:Class rdf:about="#ObservationCollection">
         <rdfs:label
@@ -395,7 +395,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Protocol -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Protocol -->
 
     <owl:Class rdf:about="#Protocol">
         <rdfs:label>Protocol</rdfs:label>
@@ -406,7 +406,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Standard -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Standard -->
 
     <owl:Class rdf:about="#Standard">
         <rdfs:label>Standard</rdfs:label>

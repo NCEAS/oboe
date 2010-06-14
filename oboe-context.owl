@@ -9,19 +9,19 @@
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY oboe-core "http://ecoinformatics.org/oboe/oboe-core.1.1beta#" >
-    <!ENTITY oboe-context "http://ecoinformatics.org/oboe/oboe-context.1.1beta#" >
+    <!ENTITY oboe-core "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#" >
+    <!ENTITY oboe-context "http://ecoinformatics.org/oboe/oboe.1.0/oboe-context.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="http://ecoinformatics.org/oboe/oboe-context.1.1beta#"
-     xml:base="http://ecoinformatics.org/oboe/oboe-context.1.1beta"
+<rdf:RDF xmlns="http://ecoinformatics.org/oboe/oboe.1.0/oboe-context.owl#"
+     xml:base="http://ecoinformatics.org/oboe/oboe.1.0/oboe-context.owl"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-     xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe-core.1.1beta#"
+     xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:oboe-context="http://ecoinformatics.org/oboe/oboe-context.1.1beta#"
+     xmlns:oboe-context="http://ecoinformatics.org/oboe/oboe.1.0/oboe-context.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#">
@@ -30,7 +30,7 @@
         <rdfs:comment
             >This ontology provides additional support for specifying context relationships.</rdfs:comment>
         <owl:versionInfo>Version 1.0</owl:versionInfo>
-        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe-core.1.1beta"/>
+        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
     </owl:Ontology>
     
 
@@ -46,7 +46,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-context.1.1beta#contextObservationFor -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-context.owl#contextObservationFor -->
 
     <owl:ObjectProperty rdf:about="#contextObservationFor">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
@@ -58,7 +58,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-context.1.1beta#hasContextObservation -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-context.owl#hasContextObservation -->
 
     <owl:ObjectProperty rdf:about="#hasContextObservation">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -70,7 +70,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-context.1.1beta#hasObservationContext -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-context.owl#hasObservationContext -->
 
     <owl:ObjectProperty rdf:about="#hasObservationContext">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
@@ -83,7 +83,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-context.1.1beta#observationContextFor -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-context.owl#observationContextFor -->
 
     <owl:ObjectProperty rdf:about="#observationContextFor">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -97,7 +97,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#contextFor -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#contextFor -->
 
     <owl:ObjectProperty rdf:about="&oboe-core;contextFor">
         <owl:propertyChainAxiom rdf:parseType="Collection">
@@ -108,7 +108,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasContext -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasContext -->
 
     <owl:ObjectProperty rdf:about="&oboe-core;hasContext">
         <owl:propertyChainAxiom rdf:parseType="Collection">
@@ -119,25 +119,25 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasMeasurement -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasMeasurement -->
 
     <owl:ObjectProperty rdf:about="&oboe-core;hasMeasurement"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#hasValue -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasValue -->
 
     <owl:ObjectProperty rdf:about="&oboe-core;hasValue"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#measurementFor -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor -->
 
     <owl:ObjectProperty rdf:about="&oboe-core;measurementFor"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#ofEntity -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity -->
 
     <owl:ObjectProperty rdf:about="&oboe-core;ofEntity"/>
     
@@ -154,7 +154,7 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-context.1.1beta#Context -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-context.owl#Context -->
 
     <owl:Class rdf:about="#Context">
         <rdfs:subClassOf rdf:resource="&oboe-core;Measurement"/>
@@ -170,13 +170,13 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Measurement -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement -->
 
     <owl:Class rdf:about="&oboe-core;Measurement"/>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe-core.1.1beta#Observation -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation -->
 
     <owl:Class rdf:about="&oboe-core;Observation"/>
     

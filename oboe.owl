@@ -7,22 +7,27 @@
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY oboe "http://ecoinformatics.org/oboe/oboe.1.0beta#" >
+    <!ENTITY oboe "http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#" >
+    <!ENTITY oboe-core "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="http://ecoinformatics.org/oboe/oboe.1.0beta#"
-     xml:base="http://ecoinformatics.org/oboe/oboe.1.0beta"
+<rdf:RDF xmlns="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#"
+     xml:base="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:oboe="http://ecoinformatics.org/oboe/oboe.1.0beta#"
+     xmlns:oboe="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#">
     <owl:Ontology rdf:about="">
-        <rdfs:label>OBOE</rdfs:label>
-        <owl:versionInfo rdf:datatype="&xsd;string"
-            >&#39;$Id: Observation.owl,v 1.29 2008/01/30 04:36:12 bowers Exp $&#39;</owl:versionInfo>
+        <rdfs:label>oboe</rdfs:label>
+        <rdfs:comment
+            >The OBOE ontology provides standard extensions to the core OBOE constructs for representing units and characteristics.</rdfs:comment>
+        <owl:versionInfo
+            >Version 1.1 Beta</owl:versionInfo>
+        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
     </owl:Ontology>
     
 
@@ -38,315 +43,87 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#characteristicOf -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasValue -->
 
-    <owl:ObjectProperty rdf:about="#characteristicOf">
+    <owl:ObjectProperty rdf:about="&oboe-core;hasValue"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;ofCharacteristic"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#standardFor -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;standardFor"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasNextQualifier -->
+
+    <owl:ObjectProperty rdf:about="#hasNextQualifier">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment
-            >The characteristicOf property relates a characteristic to the entity it is a characteristic of. A characteristic is of exactly one entity.</rdfs:comment>
-        <rdfs:domain rdf:resource="#Characteristic"/>
-        <rdfs:range rdf:resource="#Entity"/>
-        <owl:inverseOf rdf:resource="#hasCharacteristic"/>
+            >The hasNextQualifier property allows qualifier characteristics to be ordered. For example, for an MinimumDailyAverage qualifier, hasNextQualifier refers to a DailyAverage qualifier, and a DailyAverage qualifier refers to an Average qualifier. This allows an MinimumDailyAverage qualifier to be distinguished from an AverageDailyMinimum qualifier.</rdfs:comment>
+        <rdfs:range rdf:resource="#Qualifier"/>
+        <rdfs:domain rdf:resource="#Qualifier"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#characteristicValueOf -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasQualifier -->
 
-    <owl:ObjectProperty rdf:about="#characteristicValueOf">
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:comment
-            >The characteristicValue property gives the characteristic that a characteristic value is of. A characteristic value can be the value of many characteristics.</rdfs:comment>
-        <rdfs:range rdf:resource="#Characteristic"/>
-        <rdfs:domain rdf:resource="#CharacteristicValue"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#forCharacteristic -->
-
-    <owl:ObjectProperty rdf:about="#forCharacteristic">
-        <rdfs:comment
-            >The forCharacteristic property relates measurement standards to the characteristics they are standards for.</rdfs:comment>
-        <rdfs:range rdf:resource="#Characteristic"/>
-        <rdfs:domain rdf:resource="#MeasurementStandard"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasBaseDimension -->
-
-    <owl:ObjectProperty rdf:about="#hasBaseDimension">
+    <owl:ObjectProperty rdf:about="#hasQualifier">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment
-            >The hasBaseDimension property gives the base dimension of a simple derived dimension.</rdfs:comment>
-        <rdfs:range rdf:resource="#BaseDimension"/>
-        <rdfs:domain rdf:resource="#SimpleDerivedDimension"/>
+            >The hasQualifier property assigns an optional characteristic qualifier to a physical characteristic. Examples of qualifiers are Average, Minimum, Maximum, Daily, etc.</rdfs:comment>
+        <rdfs:domain rdf:resource="#PhysicalCharacteristic"/>
+        <rdfs:range rdf:resource="#Qualifier"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasBaseUnit -->
-
-    <owl:ObjectProperty rdf:about="#hasBaseUnit">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment
-            >The hasBaseUnit property gives the base unit of a simple derived unit.</rdfs:comment>
-        <rdfs:range rdf:resource="#BaseUnit"/>
-        <rdfs:domain rdf:resource="#SimpleDerivedUnit"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasCharacteristic -->
-
-    <owl:ObjectProperty rdf:about="#hasCharacteristic">
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:comment
-            >The hasCharacteristic property relates an entity to one of its characteristics.</rdfs:comment>
-        <rdfs:range rdf:resource="#Characteristic"/>
-        <rdfs:domain rdf:resource="#Entity"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasCharacteristicValue -->
-
-    <owl:ObjectProperty rdf:about="#hasCharacteristicValue">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment
-            >The hasCharacteristicValue property gives the value of an entity&#39;s characteristic. Characteristics have exactly one value.</rdfs:comment>
-        <rdfs:domain rdf:resource="#Characteristic"/>
-        <rdfs:range rdf:resource="#CharacteristicValue"/>
-        <owl:inverseOf rdf:resource="#characteristicValueOf"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasContext -->
-
-    <owl:ObjectProperty rdf:about="#hasContext">
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >The hasContext property states that one observation serves as the context for another observation.  Context defines a semantic relationship between two entities that is a fundamental aspect of the observations, but not necessarily of the entities themselves.  For example, most measurements are accomplished in a spatio-temporal framework that might be valuable context. The assertions made by contextual observations are assumed of the contextualized observations. Context is a transitive relationship.</rdfs:comment>
-        <rdfs:domain rdf:resource="#Observation"/>
-        <rdfs:range rdf:resource="#Observation"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasContextObservation -->
-
-    <owl:ObjectProperty rdf:about="#hasContextObservation">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >The hasContextObservation property connects a context object to an observation, where the entity of the observation is serving as context for some other observed entity.</rdfs:comment>
-        <rdfs:domain rdf:resource="#Context"/>
-        <rdfs:range rdf:resource="#Observation"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasContextRelationship -->
-
-    <owl:ObjectProperty rdf:about="#hasContextRelationship">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >The hasContextRelationship property relates a context object to its associated relationship object.</rdfs:comment>
-        <rdfs:domain rdf:resource="#Context"/>
-        <rdfs:range rdf:resource="#Relationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasDimension -->
-
-    <owl:ObjectProperty rdf:about="#hasDimension">
-        <rdfs:comment
-            >The hasDimension property relates a complex derived dimension to one of its component dimensions.</rdfs:comment>
-        <rdfs:domain rdf:resource="#ComplexDerivedDimension"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#BaseDimension"/>
-                    <rdf:Description rdf:about="#SimpleDerivedDimension"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasEntityRelationship -->
-
-    <owl:ObjectProperty rdf:about="#hasEntityRelationship">
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >The hasEntityRelationship property connects an entity to a relationship object, where the entity plays the role of the source of the relationship.</rdfs:comment>
-        <rdfs:domain rdf:resource="#Entity"/>
-        <rdfs:range rdf:resource="#Relationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasHigherRank -->
-
-    <owl:ObjectProperty rdf:about="#hasHigherRank">
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:comment
-            >The hasHigherRank property represents an ordering (precedence) relationship between two characteristic values. The higher rank property induces a strict (irreflexive, asymmetric) partial ordering over a given set of characteristic values.</rdfs:comment>
-        <rdfs:domain rdf:resource="#OrderedValue"/>
-        <rdfs:range rdf:resource="#OrderedValue"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasMeasurement -->
-
-    <owl:ObjectProperty rdf:about="#hasMeasurement">
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >The hasMeasurement property gives the measurements of the observed entity.</rdfs:comment>
-        <rdfs:range rdf:resource="#Measurement"/>
-        <rdfs:domain rdf:resource="#Observation"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasObservationContext -->
-
-    <owl:ObjectProperty rdf:about="#hasObservationContext">
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >The hasObservation property connects an observation to a context object, where the entity of the observation is being contextualized.</rdfs:comment>
-        <rdfs:range rdf:resource="#Context"/>
-        <rdfs:domain rdf:resource="#Observation"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasRelationshipEntity -->
-
-    <owl:ObjectProperty rdf:about="#hasRelationshipEntity">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >The hasRelationshipEntity property connects a relationship object to an entity,  where the entity plays the role of the target of the relationship.</rdfs:comment>
-        <rdfs:range rdf:resource="#Entity"/>
-        <rdfs:domain rdf:resource="#Relationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasSourceUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasSourceUnit -->
 
     <owl:ObjectProperty rdf:about="#hasSourceUnit">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment
-            >The hasSourceUnit property gives the source base unit of a unit conoboe. The source unit is the unit being mapped from.</rdfs:comment>
         <rdfs:range rdf:resource="#BaseUnit"/>
         <rdfs:domain rdf:resource="#UnitConversion"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasStandardValue -->
-
-    <owl:ObjectProperty rdf:about="#hasStandardValue">
-        <rdfs:comment
-            >The hasStandardValue property gives the standard values of a measurement standard.</rdfs:comment>
-        <rdfs:domain rdf:resource="#MeasurementStandard"/>
-        <rdfs:range rdf:resource="#StandardValue"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasTargetUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasTargetUnit -->
 
     <owl:ObjectProperty rdf:about="#hasTargetUnit">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment
-            >The hasTargetUnit property gives the target base unit of a unit conoboe. The target unit is the unit being mapped to.</rdfs:comment>
         <rdfs:range rdf:resource="#BaseUnit"/>
         <rdfs:domain rdf:resource="#UnitConversion"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasUnit -->
 
     <owl:ObjectProperty rdf:about="#hasUnit">
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >The hasUnit property relates a complex derived unit with one of its component units.</rdfs:comment>
-        <rdfs:domain rdf:resource="#ComplexDerivedUnit"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#CompositeUnit"/>
+                    <rdf:Description rdf:about="#DerivedUnit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#BaseUnit"/>
-                    <rdf:Description rdf:about="#SimpleDerivedUnit"/>
+                    <rdf:Description rdf:about="#DerivedUnit"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#measurementFor -->
-
-    <owl:ObjectProperty rdf:about="#measurementFor">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment
-            >The measurementFor property relates a measurement to its corresponding observation.</rdfs:comment>
-        <rdfs:domain rdf:resource="#Measurement"/>
-        <rdfs:range rdf:resource="#Observation"/>
-        <owl:inverseOf rdf:resource="#hasMeasurement"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#ofCharacteristic -->
-
-    <owl:ObjectProperty rdf:about="#ofCharacteristic">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment
-            >The ofCharacteristic property gives the entity characteristic measured by the measurement.</rdfs:comment>
-        <rdfs:range rdf:resource="#Characteristic"/>
-        <rdfs:domain rdf:resource="#Measurement"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#ofEntity -->
-
-    <owl:ObjectProperty rdf:about="#ofEntity">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >The ofEntity property gives the observed entity of an observation.</rdfs:comment>
-        <rdfs:range rdf:resource="#Entity"/>
-        <rdfs:domain rdf:resource="#Observation"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#usesProtocol -->
-
-    <owl:ObjectProperty rdf:about="#usesProtocol">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment
-            >The usesProtocol property gives the protocol used in a measurement.</rdfs:comment>
-        <rdfs:domain rdf:resource="#Measurement"/>
-        <rdfs:range rdf:resource="#Protocol"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#usesStandard -->
-
-    <owl:ObjectProperty rdf:about="#usesStandard">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >The usesStandard property gives the standard (e.g., unit) used in a measurement.</rdfs:comment>
-        <rdfs:domain rdf:resource="#Measurement"/>
-        <rdfs:range rdf:resource="#MeasurementStandard"/>
     </owl:ObjectProperty>
     
 
@@ -362,83 +139,42 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasCode -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasCode -->
 
     <owl:DatatypeProperty rdf:about="#hasCode">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment
-            >This property gives the code for a standard value.</rdfs:comment>
-        <rdfs:domain rdf:resource="#StandardValue"/>
-        <rdfs:range rdf:resource="&xsd;anySimpleType"/>
+        <rdfs:domain rdf:resource="#PrimitiveValue"/>
+        <rdfs:range rdf:resource="&xsd;anyType"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasMultiplier -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasMultiplier -->
 
     <owl:DatatypeProperty rdf:about="#hasMultiplier">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment
-            >This property gives the multiplier value of a unit conoboe. For example, to convert from celsius to fahrenheit we multiply by the multiplier 9/5 and add 32.</rdfs:comment>
         <rdfs:domain rdf:resource="#UnitConversion"/>
         <rdfs:range rdf:resource="&xsd;decimal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasOffset -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasOffset -->
 
     <owl:DatatypeProperty rdf:about="#hasOffset">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment
-            >This property gives the offset value of a unit conoboe. For example, to convert from celsius to fahrenheit we multiply by 9/5 and add the offset 32.</rdfs:comment>
         <rdfs:domain rdf:resource="#UnitConversion"/>
         <rdfs:range rdf:resource="&xsd;decimal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasPower -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasPower -->
 
     <owl:DatatypeProperty rdf:about="#hasPower">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment
-            >This propert gives the integer value that (base and simple) dimensions and units are raised to.</rdfs:comment>
+        <rdfs:domain rdf:resource="#DerivedUnit"/>
         <rdfs:range rdf:resource="&xsd;int"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#BaseDimension"/>
-                    <rdf:Description rdf:about="#BaseUnit"/>
-                    <rdf:Description rdf:about="#SimpleDerivedDimension"/>
-                    <rdf:Description rdf:about="#SimpleDerivedUnit"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasPrecision -->
-
-    <owl:DatatypeProperty rdf:about="#hasPrecision">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >This property gives the precision of a measurement value.</rdfs:comment>
-        <rdfs:domain rdf:resource="#Measurement"/>
-        <rdfs:range rdf:resource="&xsd;decimal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#hasValue -->
-
-    <owl:DatatypeProperty rdf:about="#hasValue">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >This property gives the value of the measurement.</rdfs:comment>
-        <rdfs:domain rdf:resource="#Measurement"/>
-        <rdfs:range rdf:resource="&xsd;anySimpleType"/>
     </owl:DatatypeProperty>
     
 
@@ -454,136 +190,67 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#BaseDimension -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Characteristic -->
 
-    <owl:Class rdf:about="#BaseDimension">
-        <rdfs:label>Base Dimension</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Dimension"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment
-            >A base dimension represents a base physical quantity, e.g., the SI base dimensions are length, mass, time, electric current, thermodynamic temperature, amount of substance, and luminous intensity.</rdfs:comment>
+    <owl:Class rdf:about="&oboe-core;Characteristic">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Name"/>
+                    <rdf:Description rdf:about="#PhysicalCharacteristic"/>
+                    <rdf:Description rdf:about="#Qualifier"/>
+                    <rdf:Description rdf:about="#Type"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#BaseUnit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity -->
+
+    <owl:Class rdf:about="&oboe-core;Entity"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement -->
+
+    <owl:Class rdf:about="&oboe-core;Measurement"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Standard -->
+
+    <owl:Class rdf:about="&oboe-core;Standard"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#BaseUnit -->
 
     <owl:Class rdf:about="#BaseUnit">
-        <rdfs:label>Base Unit</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Unit"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="#BaseDimension"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#ComplexDerivedUnit"/>
-        <owl:disjointWith rdf:resource="#SimpleDerivedUnit"/>
         <rdfs:comment
-            >A base unit represents an atomic unit from which other more complex units can be built.</rdfs:comment>
+            >A BaseUnit represents an atomic unit from which other more complex units can be built.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#Characteristic -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Boolean -->
 
-    <owl:Class rdf:about="#Characteristic">
-        <rdfs:label>Characteristic</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasCharacteristicValue"/>
-                <owl:someValuesFrom rdf:resource="#CharacteristicValue"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#characteristicOf"/>
-                <owl:someValuesFrom rdf:resource="#Entity"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="#CharacteristicValue"/>
-        <owl:disjointWith rdf:resource="#Context"/>
-        <owl:disjointWith rdf:resource="#Entity"/>
-        <owl:disjointWith rdf:resource="#Measurement"/>
-        <owl:disjointWith rdf:resource="#MeasurementStandard"/>
-        <owl:disjointWith rdf:resource="#Observation"/>
-        <owl:disjointWith rdf:resource="#Protocol"/>
-        <owl:disjointWith rdf:resource="#Relationship"/>
-        <owl:disjointWith rdf:resource="#UnitConversion"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A characteristic represents a property of an entity that can be measured (e.g., height, length, or color).  We adopt the distinction between things and properties of M. Bunge (1979). Namely, objects (entities) possess properties (characteristics), there are no objects without properties, and properties are attached to objects. When a characteristic is observed, it is measured, and a characteristic is the necessary focus of a measurement (i.e., a characteristic is a property of an entity being attributed a value by a measurement). Each characteristic is associated to exactly one entity.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#CharacteristicValue -->
-
-    <owl:Class rdf:about="#CharacteristicValue">
-        <rdfs:label
-            >Characteristic Value</rdfs:label>
-        <owl:disjointWith rdf:resource="#Context"/>
-        <owl:disjointWith rdf:resource="#Entity"/>
-        <owl:disjointWith rdf:resource="#Measurement"/>
-        <owl:disjointWith rdf:resource="#MeasurementStandard"/>
-        <owl:disjointWith rdf:resource="#Observation"/>
-        <owl:disjointWith rdf:resource="#Protocol"/>
-        <owl:disjointWith rdf:resource="#Relationship"/>
-        <owl:disjointWith rdf:resource="#UnitConversion"/>
+    <owl:Class rdf:about="#Boolean">
+        <rdfs:subClassOf rdf:resource="#PrimitiveValue"/>
+        <owl:disjointWith rdf:resource="#Decimal"/>
+        <owl:disjointWith rdf:resource="#String"/>
         <rdfs:comment
-            >A characteristic value represents a possible value for an entity characteristic.</rdfs:comment>
+            >Represents a Boolean value, either &#39;true&#39; or &#39;false&#39;.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#ComplexDerivedDimension -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#CompositeUnit -->
 
-    <owl:Class rdf:about="#ComplexDerivedDimension">
-        <rdfs:label
-            >Complex Derived Dimension</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Dimension"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasDimension"/>
-                <owl:onClass>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#BaseDimension"/>
-                            <rdf:Description rdf:about="#SimpleDerivedDimension"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:onClass>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment
-            >A complex derived dimension is a derived physical quantity that consists of two or more base or simple physical quantities (dimensions).  Each component dimension is &quot;multiplied&quot; together to form the derived dimension. For example, a complex derived dimension representing acceleration  (length*time^-2) consists of the base dimension length and the simple derived dimension per time squared (time^-2).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#ComplexDerivedUnit -->
-
-    <owl:Class rdf:about="#ComplexDerivedUnit">
-        <rdfs:label
-            >Complex Derived Unit</rdfs:label>
+    <owl:Class rdf:about="#CompositeUnit">
         <rdfs:subClassOf rdf:resource="#Unit"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="#ComplexDerivedDimension"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasUnit"/>
@@ -591,406 +258,36 @@
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="#BaseUnit"/>
-                            <rdf:Description rdf:about="#SimpleDerivedUnit"/>
+                            <rdf:Description rdf:about="#DerivedUnit"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:onClass>
                 <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#SimpleDerivedUnit"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A complex derived unit is a unit that consists of two or more base or simple derived units.  Each component unit is &quot;multiplied&quot; together to form the derived unit. For example, a complex derived unit representing &#39;meter per second squared&#39; (m*s^-2) consists of the base unit &#39;meter&#39; (m) and the simple derived unit &#39;per second squared&#39; (s^-2).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#Context -->
-
-    <owl:Class rdf:about="#Context">
-        <rdfs:label>Context</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasContextObservation"/>
-                <owl:someValuesFrom rdf:resource="#Observation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasContextRelationship"/>
-                <owl:someValuesFrom rdf:resource="#Relationship"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#Entity"/>
-        <owl:disjointWith rdf:resource="#Measurement"/>
-        <owl:disjointWith rdf:resource="#MeasurementStandard"/>
-        <owl:disjointWith rdf:resource="#Observation"/>
-        <owl:disjointWith rdf:resource="#Protocol"/>
-        <owl:disjointWith rdf:resource="#Relationship"/>
-        <owl:disjointWith rdf:resource="#UnitConversion"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A context represents an asserted relationship between two observed entities at the time of observation. The relationship is directional in that one of the observed entities serves the role as context for the other.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#DateTime -->
-
-    <owl:Class rdf:about="#DateTime">
-        <rdfs:label
-            >Date-Time Measurement Standard</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#IntervalRatio"/>
-        <owl:disjointWith rdf:resource="#NumericIndex"/>
-        <owl:disjointWith rdf:resource="#Unit"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A date-time represents date and time values (e.g., 14:00, 2006-07-23).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#Dimension -->
-
-    <owl:Class rdf:about="#Dimension">
-        <rdfs:label>Dimension</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#BaseDimension"/>
-                    <rdf:Description rdf:about="#ComplexDerivedDimension"/>
-                    <rdf:Description rdf:about="#SimpleDerivedDimension"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="#EntityClassification"/>
-        <owl:disjointWith rdf:resource="#EntityName"/>
-        <owl:disjointWith rdf:resource="#EntityType"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A dimension characteristic represents a physical quantity (both intensive and extensive) of an entity (e.g., length, weight, area, etc.)</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#Entity -->
-
-    <owl:Class rdf:about="#Entity">
-        <rdfs:label>Entity</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="#Characteristic"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="#Measurement"/>
-        <owl:disjointWith rdf:resource="#MeasurementStandard"/>
-        <owl:disjointWith rdf:resource="#Observation"/>
-        <owl:disjointWith rdf:resource="#Relationship"/>
-        <owl:disjointWith rdf:resource="#UnitConversion"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >An entity denotes a concrete or conceptual object that has been observed (e.g., a tree, a community, an ecological process).  We adopt the distinction between objects and properties of M. Bunge (1979). Namely, objects (entities) possess properties (characteristics), there are no objects without properties, and properties are attached to objects.  Entities constitute the foci of observations, i.e., every observation is of some entity.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#EntityClassification -->
-
-    <owl:Class rdf:about="#EntityClassification">
-        <rdfs:label
-            >Entity Classification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Characteristic"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A classification characteristic is a directly measurable or recorded property (e.g., height, color, weight) of an entity.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#EntityClassificationQualifier -->
-
-    <owl:Class rdf:about="#EntityClassificationQualifier">
-        <rdfs:label
-            >Entity Classification Qualifier</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Characteristic"/>
-        <owl:disjointWith rdf:resource="#EntityName"/>
-        <owl:disjointWith rdf:resource="#EntityType"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >An Entity Classification Qualifier denotes a generic derived (e.g., computed) property of an entity.  These characteristics must be combined with classification characteristics (through intersection) to be used for measurement. For example, the qualifier Minimum can be combined with a (dimension) characteristic Length to create a measurable Minimum Length characteristic.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#EntityName -->
-
-    <owl:Class rdf:about="#EntityName">
-        <rdfs:label>Entity Name</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#EntityClassification"/>
-        <owl:disjointWith rdf:resource="#EntityType"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A name characteristic provides the name used for identifying (either globally or within a context) an entity.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#EntityType -->
-
-    <owl:Class rdf:about="#EntityType">
-        <rdfs:label>Entity Type</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#EntityClassification"/>
-        <rdfs:isDefinedBy
-            >A type characteristic provides the type (or class) of an entity as a value.</rdfs:isDefinedBy>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#IntervalRatio -->
-
-    <owl:Class rdf:about="#IntervalRatio">
-        <rdfs:label
-            >Interval-Ratio Measurement Standard</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Ordinal"/>
         <rdfs:comment
-            >An interval-ratio standard is an ordinal standard that further supports interval and ratio measurements. In an interval standard, equal differences between measurement values represent equivalent intervals in which differences between arbitrary pairs of measurements can be meaningfully compared. In a ratio standard, values additionally have meaningful ratios between arbitrary pairs.</rdfs:comment>
+            >A CompositeUnit is a product at least two base or simple units. For example, &#39;meter per second square&#39; denotes a derived unit defined over &#39;meter&#39; (a base unit) and &#39;per second square&#39; (a simple unit).</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#Measurement -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Decimal -->
 
-    <owl:Class rdf:about="#Measurement">
-        <rdfs:label>Measurement</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#ofCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="#Characteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPrecision"/>
-                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#usesProtocol"/>
-                <owl:someValuesFrom rdf:resource="#Protocol"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#usesStandard"/>
-                <owl:someValuesFrom rdf:resource="#MeasurementStandard"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasValue"/>
-                <owl:someValuesFrom rdf:resource="&xsd;anySimpleType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#measurementFor"/>
-                <owl:someValuesFrom rdf:resource="#Observation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#MeasurementStandard"/>
-        <owl:disjointWith rdf:resource="#Observation"/>
-        <owl:disjointWith rdf:resource="#Protocol"/>
-        <owl:disjointWith rdf:resource="#Relationship"/>
-        <owl:disjointWith rdf:resource="#UnitConversion"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A measurement is an assertion that a characteristic of an entity was measured and/or recorded.  A measurement is also composed of a value, a measurement standard, and a precision (associated with the measured value).  Measurements also encapsulate characteristics that were recorded, but not necessarily measured in a physical sense.  For example, the name of a location and a taxon can be captured through measurements.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#MeasurementStandard -->
-
-    <owl:Class rdf:about="#MeasurementStandard">
-        <rdfs:label
-            >Measurement Standard</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasStandardValue"/>
-                <owl:someValuesFrom rdf:resource="#StandardValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#Observation"/>
-        <owl:disjointWith rdf:resource="#Protocol"/>
-        <owl:disjointWith rdf:resource="#Relationship"/>
-        <owl:disjointWith rdf:resource="#UnitConversion"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A measurement standard defines a reference for comparing (or naming) entities. A measurement standard can be defined intentionally (e.g., as in the case of units) or extensionally (by listing the values of the standard, e.g., for color this might be red, blue, yellow, etc).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#Nominal -->
-
-    <owl:Class rdf:about="#Nominal">
-        <rdfs:label
-            >Nominal Measurement Standard</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#MeasurementStandard"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A nominal standard is a measurement standard in which names are assigned to entities as labels.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#NumericIndex -->
-
-    <owl:Class rdf:about="#NumericIndex">
-        <rdfs:label
-            >Numeric-Index Measurement Standard</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#IntervalRatio"/>
-        <owl:disjointWith rdf:resource="#Unit"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A numeric index is typically defined by a mathematical equation, e.g., Shannon diversity, pH, and Richter scale are each numeric indices. Numeric indices typically go with characteristic qualifiers, e.g., the ratio of average height from two populations.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#Observation -->
-
-    <owl:Class rdf:about="#Observation">
-        <rdfs:label>Observation</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#ofEntity"/>
-                <owl:someValuesFrom rdf:resource="#Entity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#Protocol"/>
-        <owl:disjointWith rdf:resource="#Relationship"/>
-        <owl:disjointWith rdf:resource="#UnitConversion"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >An observation is an assertion that an entity was observed.  An observation may consist of measurements that refer to one or more measured characteristics of the entity.  Observations are made within a context. The context of an observation is given by other observations, e.g., an observation of a particular location may serve as context for an observation of an organism.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#OrderedValue -->
-
-    <owl:Class rdf:about="#OrderedValue">
-        <rdfs:label
-            >Ordered Characteristic Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#CharacteristicValue"/>
+    <owl:Class rdf:about="#Decimal">
+        <rdfs:subClassOf rdf:resource="#PrimitiveValue"/>
+        <owl:disjointWith rdf:resource="#String"/>
         <rdfs:comment
-            >An ordered value is a characteristic value that is related to other characteristic values through a precedence (order) relation. Order is specified using the &#39;hasHigherRank&#39; property.</rdfs:comment>
+            >Represents any real number value (see the XSD decimal type).</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#Ordinal -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#DerivedUnit -->
 
-    <owl:Class rdf:about="#Ordinal">
-        <rdfs:label
-            >Ordinal Measurement Standard</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Nominal"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasStandardValue"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#OrderedValue"/>
-                            <rdf:Description rdf:about="#StandardValue"/>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment
-            >An ordinal standard is a nominal standard in which values represent a rank order (1st, 2nd, 3rd, etc.) of the entities measured.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#Protocol -->
-
-    <owl:Class rdf:about="#Protocol">
-        <owl:disjointWith rdf:resource="#Relationship"/>
-        <owl:disjointWith rdf:resource="#UnitConversion"/>
-        <rdfs:comment
-            >A Protocol represents a procedure that is used for generating or processing data.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#Relationship -->
-
-    <owl:Class rdf:about="#Relationship">
-        <rdfs:label>Relationship</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasRelationshipEntity"/>
-                <owl:someValuesFrom rdf:resource="#Entity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#UnitConversion"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A relationship object represents a directed relationship between a source and target entity.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#SimpleDerivedDimension -->
-
-    <owl:Class rdf:about="#SimpleDerivedDimension">
-        <rdfs:label
-            >Simple Derived Dimension</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Dimension"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasPower"/>
-                        <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
-                    </owl:Restriction>
-                </owl:complementOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasBaseDimension"/>
-                <owl:someValuesFrom rdf:resource="#BaseDimension"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPower"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasPower"/>
-                        <owl:hasValue rdf:datatype="&xsd;int">0</owl:hasValue>
-                    </owl:Restriction>
-                </owl:complementOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:comment
-            >A simple derived dimension represents a base physical quantity raised to a power (other than 0 or 1). For example, area is a simple derived dimension representing the base dimension length raised to the power 2.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#SimpleDerivedUnit -->
-
-    <owl:Class rdf:about="#SimpleDerivedUnit">
-        <rdfs:label
-            >Simple Derived Unit</rdfs:label>
+    <owl:Class rdf:about="#DerivedUnit">
         <rdfs:subClassOf rdf:resource="#Unit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="#SimpleDerivedDimension"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasPower"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
@@ -1000,91 +297,170 @@
                 <owl:complementOf>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasPower"/>
-                        <owl:hasValue rdf:datatype="&xsd;int">0</owl:hasValue>
+                        <owl:hasValue rdf:datatype="&xsd;integer">1</owl:hasValue>
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasBaseUnit"/>
-                <owl:someValuesFrom rdf:resource="#BaseUnit"/>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasPower"/>
-                        <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
+                        <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A simple derived unit is a unit that raises a base unit to an integer power (other than 0 or 1).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#StandardValue -->
-
-    <owl:Class rdf:about="#StandardValue">
-        <rdfs:label
-            >Standard Characteristic Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#CharacteristicValue"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasCode"/>
-                <owl:someValuesFrom rdf:resource="&xsd;anySimpleType"/>
+                <owl:onProperty rdf:resource="#hasUnit"/>
+                <owl:onClass rdf:resource="#BaseUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#BaseUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
-            >A standard value is a specially designated characteristic value that is typically associated with a particular measurement standard.  All standard values have value codes that are used to denote the corresponding value within a measurement.</rdfs:comment>
+            >A DerivedUnit raises a base unit to an integer power other than 0 or 1. For example, the unit &#39;meter square&#39; is a unit derived from the &#39;meter&#39; base unit raised to the power 2.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#Unit -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Name -->
+
+    <owl:Class rdf:about="#Name">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Characteristic"/>
+        <owl:disjointWith rdf:resource="#PhysicalCharacteristic"/>
+        <owl:disjointWith rdf:resource="#Qualifier"/>
+        <owl:disjointWith rdf:resource="#Type"/>
+        <rdfs:comment
+            >A Name characteristic provides the name (or label) used for identifying (either globally or within a context) an entity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#PhysicalCharacteristic -->
+
+    <owl:Class rdf:about="#PhysicalCharacteristic">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Characteristic"/>
+        <owl:disjointWith rdf:resource="#Qualifier"/>
+        <owl:disjointWith rdf:resource="#Type"/>
+        <rdfs:comment
+            >A Physical Characteristic of an Entity is one that is measurable within the physical world, and subsumes primary and derived physical dimensions (e.g., length, mass, area, density). The measured value assigned to a Physical characteristic may be a quantity (a numerical value) or a quality (a label).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#PrimitiveValue -->
+
+    <owl:Class rdf:about="#PrimitiveValue">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCode"/>
+                <owl:someValuesFrom rdf:resource="&xsd;anyType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A PrimitiveValue is an entity that represents a literal value (e.g., a number, a string, a a Boolean, etc.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Qualifier -->
+
+    <owl:Class rdf:about="#Qualifier">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Characteristic"/>
+        <owl:disjointWith rdf:resource="#Type"/>
+        <rdfs:comment
+            >A Qualified Characteristic is a generic derived (e.g., computed) property of an entity that must be combined with concrete characteristics to be used in a measurement. For example, the qualifier Minimum can be combined with a (dimension) characteristic Length to create a Minimum Length qualified characteristic.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#String -->
+
+    <owl:Class rdf:about="#String">
+        <rdfs:subClassOf rdf:resource="#PrimitiveValue"/>
+        <rdfs:comment
+            >Represents any character string value.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Type -->
+
+    <owl:Class rdf:about="#Type">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Characteristic"/>
+        <rdfs:comment
+            >A Type characteristic provides the type (or class) of an entity as a measured (or observed) value. A typical example is a biological taxonomy designation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Unit -->
 
     <owl:Class rdf:about="#Unit">
-        <rdfs:label>Unit</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#BaseUnit"/>
-                    <rdf:Description rdf:about="#ComplexDerivedUnit"/>
-                    <rdf:Description rdf:about="#SimpleDerivedUnit"/>
+                    <rdf:Description rdf:about="#CompositeUnit"/>
+                    <rdf:Description rdf:about="#DerivedUnit"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="#IntervalRatio"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Standard"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="#Dimension"/>
+                <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe-core;Measurement"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="#PhysicalCharacteristic"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe-core;Measurement"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;hasValue"/>
+                                <owl:allValuesFrom rdf:resource="#Decimal"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
             >The base class for physical measurement units.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0beta#UnitConversion -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#UnitConversion -->
 
     <owl:Class rdf:about="#UnitConversion">
-        <rdfs:label>Unit Conversion</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasTargetUnit"/>
                 <owl:someValuesFrom rdf:resource="#BaseUnit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasMultiplier"/>
-                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1099,30 +475,18 @@
                 <owl:someValuesFrom rdf:resource="#BaseUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A unit conversion defines a mapping from a source unit to a target unit.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasMultiplier"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A UnitConversion defines a mapping from a source base unit to a target base unit via a multiplier and an offset.</rdfs:comment>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdfs:subPropertyOf rdf:resource="#hasContext"/>
-        <owl:propertyChain rdf:parseType="Collection">
-            <rdf:Description rdf:about="#hasObservationContext"/>
-            <rdf:Description rdf:about="#hasContextObservation"/>
-        </owl:propertyChain>
-    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.1101) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
 
