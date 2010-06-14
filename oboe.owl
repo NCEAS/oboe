@@ -26,7 +26,7 @@
         <rdfs:comment
             >The OBOE ontology provides standard extensions to the core OBOE constructs for representing units and characteristics.</rdfs:comment>
         <owl:versionInfo
-            >Version 1.1 Beta</owl:versionInfo>
+            >Version 1.0 pre-release</owl:versionInfo>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
     </owl:Ontology>
     

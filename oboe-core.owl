@@ -24,7 +24,7 @@
         <owl:versionInfo rdf:datatype="&xsd;string"
             >&#39;$Id: Observation.owl,v 1.29 2008/01/30 04:36:12 bowers Exp $&#39;</owl:versionInfo>
         <owl:versionInfo
-            >Version 1.1 Beta</owl:versionInfo>
+            >Version 1.0 pre-release</owl:versionInfo>
         <rdfs:comment
             >This ontology provides the core OBOE modeling constructs.</rdfs:comment>
     </owl:Ontology>
