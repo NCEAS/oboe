@@ -29,7 +29,8 @@
         <rdfs:label>oboe-context</rdfs:label>
         <rdfs:comment
             >This ontology provides additional support for specifying context relationships.</rdfs:comment>
-        <owl:versionInfo>Version 1.0</owl:versionInfo>
+        <owl:versionInfo
+            >Version 1.0 pre-release</owl:versionInfo>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
     </owl:Ontology>
     
@@ -99,23 +100,13 @@
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#contextFor -->
 
-    <owl:ObjectProperty rdf:about="&oboe-core;contextFor">
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="#contextObservationFor"/>
-            <rdf:Description rdf:about="#observationContextFor"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&oboe-core;contextFor"/>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasContext -->
 
-    <owl:ObjectProperty rdf:about="&oboe-core;hasContext">
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="#hasObservationContext"/>
-            <rdf:Description rdf:about="#hasContextObservation"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&oboe-core;hasContext"/>
     
 
 
@@ -185,16 +176,41 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdfs:subPropertyOf rdf:resource="&oboe-core;contextFor"/>
+        <owl:propertyChain rdf:parseType="Collection">
+            <rdf:Description rdf:about="#contextObservationFor"/>
+            <rdf:Description rdf:about="#observationContextFor"/>
+        </owl:propertyChain>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:subPropertyOf rdf:resource="&oboe-core;hasContext"/>
+        <owl:propertyChain rdf:parseType="Collection">
+            <rdf:Description rdf:about="#hasObservationContext"/>
+            <rdf:Description rdf:about="#hasContextObservation"/>
+        </owl:propertyChain>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Rules
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
     <swrl:Variable rdf:about="#e"/>
-    <swrl:Variable rdf:about="#o1"/>
-    <swrl:Variable rdf:about="#o2"/>
     <swrl:Variable rdf:about="#c"/>
     <swrl:Variable rdf:about="#o"/>
+    <swrl:Variable rdf:about="#o1"/>
+    <swrl:Variable rdf:about="#o2"/>
     <swrl:Imp>
         <swrl:body>
             <swrl:AtomList>
@@ -238,43 +254,6 @@
                 <rdf:rest rdf:resource="&rdf;nil"/>
                 <rdf:first>
                     <swrl:IndividualPropertyAtom>
-                        <swrl:argument1 rdf:resource="#o1"/>
-                        <swrl:argument2 rdf:resource="#o2"/>
-                        <swrl:propertyPredicate rdf:resource="&oboe-core;hasContext"/>
-                    </swrl:IndividualPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:head>
-        <swrl:body>
-            <swrl:AtomList>
-                <rdf:rest>
-                    <swrl:AtomList>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <swrl:IndividualPropertyAtom>
-                                <swrl:argument2 rdf:resource="#c"/>
-                                <swrl:propertyPredicate rdf:resource="#hasObservationContext"/>
-                                <swrl:argument1 rdf:resource="#o1"/>
-                            </swrl:IndividualPropertyAtom>
-                        </rdf:first>
-                    </swrl:AtomList>
-                </rdf:rest>
-                <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                        <swrl:argument1 rdf:resource="#c"/>
-                        <swrl:propertyPredicate rdf:resource="#hasContextObservation"/>
-                        <swrl:argument2 rdf:resource="#o2"/>
-                    </swrl:IndividualPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:body>
-    </swrl:Imp>
-    <swrl:Imp>
-        <swrl:head>
-            <swrl:AtomList>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <swrl:IndividualPropertyAtom>
                         <swrl:argument1 rdf:resource="#c"/>
                         <swrl:argument2 rdf:resource="#e"/>
                         <swrl:propertyPredicate rdf:resource="&oboe-core;hasValue"/>
@@ -306,9 +285,46 @@
             </swrl:AtomList>
         </swrl:body>
     </swrl:Imp>
+    <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="#o1"/>
+                        <swrl:argument2 rdf:resource="#o2"/>
+                        <swrl:propertyPredicate rdf:resource="&oboe-core;hasContext"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:argument2 rdf:resource="#c"/>
+                                <swrl:propertyPredicate rdf:resource="#hasObservationContext"/>
+                                <swrl:argument1 rdf:resource="#o1"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                    </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="#c"/>
+                        <swrl:propertyPredicate rdf:resource="#hasContextObservation"/>
+                        <swrl:argument2 rdf:resource="#o2"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.1101) http://owlapi.sourceforge.net -->
 
