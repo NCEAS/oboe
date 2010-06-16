@@ -90,8 +90,8 @@
     <owl:ObjectProperty rdf:about="#hasSourceUnit">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment
-            >The hasSourceUnit property gives the source base unit being converted from within a unit conversion.</rdfs:comment>
-        <rdfs:range rdf:resource="#BaseUnit"/>
+            >The hasSourceUnit property gives the source unit being converted from within a unit conversion.</rdfs:comment>
+        <rdfs:range rdf:resource="#Unit"/>
         <rdfs:domain rdf:resource="#UnitConversion"/>
     </owl:ObjectProperty>
     
@@ -102,8 +102,8 @@
     <owl:ObjectProperty rdf:about="#hasTargetUnit">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment
-            >The hasTargetUnit property gives the target base unit being converted to within a unit conversion.</rdfs:comment>
-        <rdfs:range rdf:resource="#BaseUnit"/>
+            >The hasTargetUnit property gives the target unit being converted to within a unit conversion.</rdfs:comment>
+        <rdfs:range rdf:resource="#Unit"/>
         <rdfs:domain rdf:resource="#UnitConversion"/>
     </owl:ObjectProperty>
     
@@ -114,14 +114,6 @@
     <owl:ObjectProperty rdf:about="#hasUnit">
         <rdfs:comment
             >The hasUnit property gives the underlying base or derived unit for a derived or composite unit, respectively.</rdfs:comment>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#BaseUnit"/>
-                    <rdf:Description rdf:about="#DerivedUnit"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -130,6 +122,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BaseUnit"/>
+                    <rdf:Description rdf:about="#DerivedUnit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -244,7 +244,7 @@
     <owl:Class rdf:about="#BaseUnit">
         <rdfs:subClassOf rdf:resource="#Unit"/>
         <rdfs:comment
-            >A BaseUnit represents an atomic unit from which other more complex units can be built.</rdfs:comment>
+            >A BaseUnit simply represents a unit that is not naturally decomposed into other units.</rdfs:comment>
     </owl:Class>
     
 
@@ -280,7 +280,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
-            >A CompositeUnit is a product at least two base or simple units. For example, &#39;meter per second square&#39; denotes a derived unit defined over &#39;meter&#39; (a base unit) and &#39;per second square&#39; (a simple unit).</rdfs:comment>
+            >A CompositeUnit is a product at least two base or derived units. For example, &#39;meter per second square&#39; denotes a composite unit defined over &#39;meter&#39; (a base unit) and &#39;per second square&#39; (a derived unit).</rdfs:comment>
     </owl:Class>
     
 
@@ -300,16 +300,6 @@
 
     <owl:Class rdf:about="#DerivedUnit">
         <rdfs:subClassOf rdf:resource="#Unit"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasPower"/>
-                        <owl:hasValue rdf:datatype="&xsd;integer">1</owl:hasValue>
-                    </owl:Restriction>
-                </owl:complementOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasPower"/>
@@ -339,8 +329,18 @@
                 </owl:complementOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasPower"/>
+                        <owl:hasValue rdf:datatype="&xsd;integer">1</owl:hasValue>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:comment
-            >A DerivedUnit raises a base unit to an integer power other than 0 or 1. For example, the unit &#39;meter square&#39; is a unit derived from the &#39;meter&#39; base unit raised to the power 2.</rdfs:comment>
+            >A DerivedUnit raises a base unit to an integer power other than 0 or 1. For example, the unit &#39;square meter&#39; is a unit derived from the &#39;meter&#39; base unit raised to the power 2.</rdfs:comment>
     </owl:Class>
     
 
@@ -438,8 +438,8 @@
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="#PhysicalCharacteristic"/>
+                                <owl:onProperty rdf:resource="&oboe-core;hasValue"/>
+                                <owl:allValuesFrom rdf:resource="#Decimal"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -454,8 +454,8 @@
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe-core;hasValue"/>
-                                <owl:allValuesFrom rdf:resource="#Decimal"/>
+                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="#PhysicalCharacteristic"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -473,8 +473,8 @@
     <owl:Class rdf:about="#UnitConversion">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasMultiplier"/>
-                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
+                <owl:onProperty rdf:resource="#hasSourceUnit"/>
+                <owl:someValuesFrom rdf:resource="#BaseUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -485,18 +485,18 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasSourceUnit"/>
+                <owl:onProperty rdf:resource="#hasTargetUnit"/>
                 <owl:someValuesFrom rdf:resource="#BaseUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasTargetUnit"/>
-                <owl:someValuesFrom rdf:resource="#BaseUnit"/>
+                <owl:onProperty rdf:resource="#hasMultiplier"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
-            >A UnitConversion defines a mapping from a source base unit to a target base unit via a multiplier and an offset.</rdfs:comment>
+            >A UnitConversion defines a mapping from a source unit to a target unit via a multiplier and an offset.</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
 
