@@ -1,5 +1,3 @@
-
-
 AmmoniumConcentrationFreshwaterAutomated
 AmmoniumConcentrationSeawaterAutomated
 BeamAttenuationCoefficient
@@ -54,7 +52,6 @@ measurement_type
 NitrateNAS
 NitrateNitriteConcentrationFreshwaterAutomated
 NitrateNitriteConcentrationSeawaterAutomated
-None
 NorthVelocityVectorADCP
 NorthVelocityVectorS4
 ParticulateOrganicCarbon
