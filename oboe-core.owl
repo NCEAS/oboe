@@ -290,6 +290,12 @@
 
     <owl:Class rdf:about="#Characteristic">
         <rdfs:label>Characteristic</rdfs:label>
+        <owl:disjointWith rdf:resource="#Entity"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#Observation"/>
+        <owl:disjointWith rdf:resource="#ObservationCollection"/>
+        <owl:disjointWith rdf:resource="#Protocol"/>
+        <owl:disjointWith rdf:resource="#Standard"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A characteristic represents a property of an entity that can be measured (e.g., height, length, or color).  We adopt the standard distinction (e.g., as in M. Bunge, 1979) between things (entities) and their properties (characteristics). A characteristic of an entity is observed through a measurement, which further asserts a value of the characteristic for the entity. A characteristic type (e.g., &quot;height&quot;) can be associated with many different entities, whereas an individual characteristic (a particular occurrence of the &quot;height&quot; characteristic) is associated to exactly one entity.</rdfs:comment>
     </owl:Class>
@@ -301,6 +307,11 @@
     <owl:Class rdf:about="#Entity">
         <rdfs:label>Entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#Observation"/>
+        <owl:disjointWith rdf:resource="#ObservationCollection"/>
+        <owl:disjointWith rdf:resource="#Protocol"/>
+        <owl:disjointWith rdf:resource="#Standard"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >An entity denotes a concrete or conceptual object that has been observed (e.g., a tree, a community, an ecological process).  We adopt the standard distinction (e.g., as in M. Bunge, 1979) between things (entities) and their properties (characteristics). Entities constitute the foci of observations, i.e., every observation is of exactly one entity.</rdfs:comment>
     </owl:Class>
@@ -311,6 +322,12 @@
 
     <owl:Class rdf:about="#Measurement">
         <rdfs:label>Measurement</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#ofCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="#Characteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#usesStandard"/>
@@ -335,12 +352,10 @@
                 <owl:someValuesFrom rdf:resource="#Observation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#ofCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="#Characteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Observation"/>
+        <owl:disjointWith rdf:resource="#ObservationCollection"/>
+        <owl:disjointWith rdf:resource="#Protocol"/>
+        <owl:disjointWith rdf:resource="#Standard"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A measurement is an assertion that a characteristic of an entity was measured and/or recorded.  A measurement is also composed of a value, a measurement standard, and a precision (associated with the measured value).  Measurements also encapsulate characteristics that were recorded, but not necessarily measured in a physical sense.  For example, the name of a location and a taxon can be captured through measurements.</rdfs:comment>
     </owl:Class>
@@ -357,6 +372,9 @@
                 <owl:someValuesFrom rdf:resource="#Entity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#ObservationCollection"/>
+        <owl:disjointWith rdf:resource="#Protocol"/>
+        <owl:disjointWith rdf:resource="#Standard"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >An observation represents an &quot;observed entity,&quot; that is, an entity that was observed by an observer. An observation often consists of measurements that refer to one or more measured characteristics of the observed entity.  Observations may also be made within a broader context. The context of an observation is given by other observations, implying that an observed entity (and specifically each corresponding measurement) contextualizes another observed entity (and its corresponding measurements). For example, an observation of a location may serve as context for an observation of an organism. In this case, the observed characteristic values of the location (such as humidity) are assumed constant for the observation of the organism.</rdfs:comment>
     </owl:Class>
@@ -369,6 +387,8 @@
         <rdfs:label
             >ObservationCollection</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <owl:disjointWith rdf:resource="#Protocol"/>
+        <owl:disjointWith rdf:resource="#Standard"/>
         <rdfs:comment
             >An observation collection contains a set of observations.</rdfs:comment>
     </owl:Class>
@@ -379,6 +399,7 @@
 
     <owl:Class rdf:about="#Protocol">
         <rdfs:label>Protocol</rdfs:label>
+        <owl:disjointWith rdf:resource="#Standard"/>
         <rdfs:comment
             >A protocol represents a specific procedure that is used for generating or processing data.</rdfs:comment>
     </owl:Class>
@@ -404,29 +425,6 @@
     <!-- http://www.w3.org/2002/07/owl#Thing -->
 
     <owl:Class rdf:about="&owl;Thing"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#Characteristic"/>
-            <rdf:Description rdf:about="#Entity"/>
-            <rdf:Description rdf:about="#Measurement"/>
-            <rdf:Description rdf:about="#Observation"/>
-            <rdf:Description rdf:about="#ObservationCollection"/>
-            <rdf:Description rdf:about="#Protocol"/>
-            <rdf:Description rdf:about="#Standard"/>
-        </owl:members>
-    </rdf:Description>
 </rdf:RDF>
 
 
