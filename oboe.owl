@@ -114,14 +114,6 @@
     <owl:ObjectProperty rdf:about="#hasUnit">
         <rdfs:comment
             >The hasUnit property gives the underlying base or derived unit for a derived or composite unit, respectively.</rdfs:comment>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#BaseUnit"/>
-                    <rdf:Description rdf:about="#DerivedUnit"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -130,6 +122,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BaseUnit"/>
+                    <rdf:Description rdf:about="#DerivedUnit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -343,8 +343,8 @@
         <rdfs:subClassOf rdf:resource="#Unit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#BaseUnit"/>
+                <owl:onProperty rdf:resource="#hasPower"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -359,8 +359,9 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPower"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="#hasUnit"/>
+                <owl:onClass rdf:resource="#BaseUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -376,8 +377,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasUnit"/>
-                <owl:onClass rdf:resource="#BaseUnit"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:allValuesFrom rdf:resource="#BaseUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -391,6 +391,7 @@
     <owl:Class rdf:about="#Name">
         <rdfs:subClassOf rdf:resource="&oboe-core;Characteristic"/>
         <owl:disjointWith rdf:resource="#PhysicalCharacteristic"/>
+        <owl:disjointWith rdf:resource="#Relationship"/>
         <owl:disjointWith rdf:resource="#Type"/>
         <rdfs:comment
             >A Name characteristic provides the name (or label) used for identifying (either globally or within a context) an entity.</rdfs:comment>
@@ -402,6 +403,7 @@
 
     <owl:Class rdf:about="#PhysicalCharacteristic">
         <rdfs:subClassOf rdf:resource="&oboe-core;Characteristic"/>
+        <owl:disjointWith rdf:resource="#Relationship"/>
         <owl:disjointWith rdf:resource="#Type"/>
         <rdfs:comment
             >A Physical Characteristic of an Entity is one that is measurable within the physical world, and subsumes primary and derived physical dimensions (e.g., length, mass, area, density). The measured value assigned to a Physical characteristic may be a quantity (a numerical value) or a quality (a label).</rdfs:comment>
@@ -421,6 +423,17 @@
         </rdfs:subClassOf>
         <rdfs:comment
             >A PrimitiveValue is an entity that represents a literal value (e.g., a number, a string, a a Boolean, etc.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Relationship -->
+
+    <owl:Class rdf:about="#Relationship">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Characteristic"/>
+        <owl:disjointWith rdf:resource="#Type"/>
+        <rdfs:comment
+            >A Relationship represents a directional (binary) association between two entities in which the observed entity is associated to the given entity. Examples include spatial (e.g., within, overlaps, adjacent), temporal (e.g., during, before, after), and composition (e.g., part of, has part) relationships.</rdfs:comment>
     </owl:Class>
     
 
@@ -501,14 +514,8 @@
     <owl:Class rdf:about="#UnitConversion">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasTargetUnit"/>
-                <owl:someValuesFrom rdf:resource="#Unit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasSourceUnit"/>
-                <owl:someValuesFrom rdf:resource="#Unit"/>
+                <owl:onProperty rdf:resource="#hasMultiplier"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -519,8 +526,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasMultiplier"/>
-                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
+                <owl:onProperty rdf:resource="#hasTargetUnit"/>
+                <owl:someValuesFrom rdf:resource="#Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSourceUnit"/>
+                <owl:someValuesFrom rdf:resource="#Unit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
