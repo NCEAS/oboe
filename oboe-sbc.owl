@@ -98,6 +98,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement -->
+
+    <owl:Class rdf:about="&oboe-core;Measurement"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Protocol -->
 
     <owl:Class rdf:about="&oboe-core;Protocol"/>
@@ -158,6 +164,15 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BiogenicSilicaProtocol -->
+
+    <owl:Class rdf:about="#BiogenicSilicaProtocol">
+        <rdfs:subClassOf rdf:resource="#BrzezinskiLabProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BrzezinskiLabProtocols -->
 
     <owl:Class rdf:about="#BrzezinskiLabProtocols">
@@ -166,10 +181,35 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#California -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ChlorophyllPhaeopigmentConcentrationProtocol_FluorometricExtraction -->
 
-    <owl:Class rdf:about="#California">
-        <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
+    <owl:Class rdf:about="#ChlorophyllPhaeopigmentConcentrationProtocol_FluorometricExtraction">
+        <rdfs:subClassOf rdf:resource="#BrzezinskiLabProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ChlorophyllTotalConcentrationFluometricExtraction -->
+
+    <owl:Class rdf:about="#ChlorophyllTotalConcentrationFluometricExtraction">
+        <rdfs:subClassOf rdf:resource="#PigmentConcentrationFluorometric"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Chlorophyll_aConcentrationFluometricExtraction -->
+
+    <owl:Class rdf:about="#Chlorophyll_aConcentrationFluometricExtraction">
+        <rdfs:subClassOf rdf:resource="#PigmentConcentrationFluorometric"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Chlorophyll_aPhaeopigmentsConcentrationFluometricExtraction -->
+
+    <owl:Class rdf:about="#Chlorophyll_aPhaeopigmentsConcentrationFluometricExtraction">
+        <rdfs:subClassOf rdf:resource="#PigmentConcentrationFluorometric"/>
     </owl:Class>
     
 
@@ -245,7 +285,7 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Flow -->
 
     <owl:Class rdf:about="#Flow">
-        <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Measurement"/>
     </owl:Class>
     
 
@@ -311,14 +351,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#IslaVistaReef -->
-
-    <owl:Class rdf:about="#IslaVistaReef">
-        <rdfs:subClassOf rdf:resource="#Reef"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Kelp -->
 
     <owl:Class rdf:about="#Kelp">
@@ -346,15 +378,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="#Lake"/>
         <rdfs:comment
             >A lake water sample is representative of the lake or some part of it.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LittoralOcean -->
-
-    <owl:Class rdf:about="#LittoralOcean">
-        <rdfs:label>Littoral Ocean</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SantaBarbaraCoastalMainland"/>
     </owl:Class>
     
 
@@ -419,30 +442,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#MelackLabProtocols">
         <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MissionCreek -->
-
-    <owl:Class rdf:about="#MissionCreek">
-        <rdfs:subClassOf rdf:resource="#Watershed"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MohawkReef -->
-
-    <owl:Class rdf:about="#MohawkReef">
-        <rdfs:subClassOf rdf:resource="#Reef"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NaplesReef -->
-
-    <owl:Class rdf:about="#NaplesReef">
-        <rdfs:subClassOf rdf:resource="#Reef"/>
     </owl:Class>
     
 
@@ -513,12 +512,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OrganicTissueProtocols -->
-
-    <owl:Class rdf:about="#OrganicTissueProtocols"/>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Organism -->
 
     <owl:Class rdf:about="#Organism">
@@ -577,6 +570,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#Phytoplankton">
         <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PigmentConcentrationFluorometric -->
+
+    <owl:Class rdf:about="#PigmentConcentrationFluorometric">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Measurement"/>
     </owl:Class>
     
 
@@ -688,14 +689,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Reef -->
-
-    <owl:Class rdf:about="#Reef">
-        <rdfs:subClassOf rdf:resource="#LittoralOcean"/>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ReplicatePlot -->
 
     <owl:Class rdf:about="#ReplicatePlot">
@@ -784,16 +777,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#Salmonid">
         <rdfs:subClassOf rdf:resource="#Fish"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SantaBarbaraCoastalMainland -->
-
-    <owl:Class rdf:about="#SantaBarbaraCoastalMainland">
-        <rdfs:subClassOf rdf:resource="#California"/>
-        <rdfs:comment
-            >Santa Barbara Coastal Mainland: from Pt Conception to Santa Clara RIver. Includes sublittoral areas and watersheds discharging to littoral areas.</rdfs:comment>
     </owl:Class>
     
 
@@ -954,8 +937,8 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SuspendedParticulateCarbonNitrogen_CHNElementalAnalyzer -->
 
     <owl:Class rdf:about="#SuspendedParticulateCarbonNitrogen_CHNElementalAnalyzer">
-        <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
         <rdfs:subClassOf rdf:resource="#ProtocolsForElementalAnalysis"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsForOrganicTissue"/>
         <rdfs:comment
             >Particulates suspended  in water are collected on a filter.</rdfs:comment>
     </owl:Class>
@@ -965,8 +948,8 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SuspendedParticulatePhosphorus_AcidDigestion -->
 
     <owl:Class rdf:about="#SuspendedParticulatePhosphorus_AcidDigestion">
-        <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
         <rdfs:subClassOf rdf:resource="#ProtocolsForElementalAnalysis"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsForOrganicTissue"/>
     </owl:Class>
     
 
@@ -1014,8 +997,8 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TissueCarbonNitrogen_CHNElementalAnalyzer -->
 
     <owl:Class rdf:about="#TissueCarbonNitrogen_CHNElementalAnalyzer">
-        <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
         <rdfs:subClassOf rdf:resource="#ProtocolsForElementalAnalysis"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsForOrganicTissue"/>
     </owl:Class>
     
 
@@ -1023,8 +1006,8 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TissuePhosphorus_AcidDigestion -->
 
     <owl:Class rdf:about="#TissuePhosphorus_AcidDigestion">
-        <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
         <rdfs:subClassOf rdf:resource="#ProtocolsForElementalAnalysis"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsForOrganicTissue"/>
     </owl:Class>
     
 
@@ -1033,15 +1016,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#Transect">
         <rdfs:label>Transect</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#USA -->
-
-    <owl:Class rdf:about="#USA">
-        <rdfs:label>USA</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
     </owl:Class>
     
@@ -1088,14 +1062,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
             >In natural bodies of water, is the distance to the bottom (or solid earth surface) from a point in the water column. The reference point may be the surface of the water body or a point within the water column. 
 Depth to bottom may be used to nominally describe a place (such as a sampling location) or the depoyment of an instrument within the water column.
 Depth to bottom can be calculated from measured sample depth  (e.g., tidal height) and a known constant (e.g., total water depth).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Watershed -->
-
-    <owl:Class rdf:about="#Watershed">
-        <rdfs:subClassOf rdf:resource="#SantaBarbaraCoastalMainland"/>
     </owl:Class>
     
 
