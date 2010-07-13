@@ -51,6 +51,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;ofEntity"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#forCharacteristic -->
 
     <owl:ObjectProperty rdf:about="&oboe;forCharacteristic"/>
@@ -112,7 +118,14 @@
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Mass -->
 
-    <owl:Class rdf:about="&oboe-units;Mass"/>
+    <owl:Class rdf:about="&oboe-units;Mass">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
+                <owl:someValuesFrom rdf:resource="#Carbon"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
     
 
 
@@ -197,6 +210,14 @@
 
     <owl:Class rdf:about="#BrzezinskiLabProtocols">
         <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Carbon -->
+
+    <owl:Class rdf:about="#Carbon">
+        <rdfs:subClassOf rdf:resource="#ElementalSubstance"/>
     </owl:Class>
     
 
@@ -326,6 +347,16 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ElementalSubstance -->
+
+    <owl:Class rdf:about="#ElementalSubstance">
+        <rdfs:subClassOf rdf:resource="#Substance"/>
+        <rdfs:comment
+            >Elemental substances are from the periodic table. Ex, carbon, nitrogen</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Fish -->
 
     <owl:Class rdf:about="#Fish">
@@ -367,6 +398,14 @@
         <rdfs:subClassOf rdf:resource="#InterstitialWater"/>
         <rdfs:comment
             >Groundwater seems to be mostly associated with terrestrial systems. So it is subclassed here. The assumtion being that porewater (parent) can be extracted from any sediment (marine, lakebed, streambed, earth, etc).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Hydrogen -->
+
+    <owl:Class rdf:about="#Hydrogen">
+        <rdfs:subClassOf rdf:resource="#ElementalSubstance"/>
     </owl:Class>
     
 
@@ -517,6 +556,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Nitrogen -->
+
+    <owl:Class rdf:about="#Nitrogen">
+        <rdfs:subClassOf rdf:resource="#ElementalSubstance"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ocean -->
 
     <owl:Class rdf:about="#Ocean">
@@ -618,6 +665,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <owl:Class rdf:about="#PhosphateConcentrationProtocol_MSIAutomated">
         <rdfs:subClassOf rdf:resource="#MSI_AnalyticalLabProtocols"/>
         <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Phosphorus -->
+
+    <owl:Class rdf:about="#Phosphorus">
+        <rdfs:subClassOf rdf:resource="#ElementalSubstance"/>
     </owl:Class>
     
 
@@ -815,14 +870,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe;Name"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe;Name"/>
+                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
+                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1006,6 +1061,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <owl:Class rdf:about="#Subplot">
         <rdfs:label>Subplot</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Substance -->
+
+    <owl:Class rdf:about="#Substance">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
     </owl:Class>
     
 
