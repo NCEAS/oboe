@@ -40,7 +40,13 @@
     </owl:Ontology>
     
 
-
+<!-- 
+obrien@ecoinformatics.org 2010-07-12
+This template was created by strippint the "plant-trait" ontology, located in the sonet 
+repository. Two Object Properties were left in, which may be removed in the future. 
+To use, copy this template, and change the namespaces containing "sbc" to one of 
+your choice. Compare this template to the SBC ontology, dated 2010-july.
+-->
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -118,6 +124,12 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="&oboe-sbc;hasUnit"/>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#hasPart -->
 
     <owl:ObjectProperty rdf:about="&oboe-sbc;hasPart">
@@ -125,12 +137,6 @@
         <rdfs:domain rdf:resource="&oboe-core;Entity"/>
         <rdfs:range rdf:resource="&oboe-core;Entity"/>
     </owl:ObjectProperty>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#hasUnit -->
-
-    <owl:ObjectProperty rdf:about="&oboe-sbc;hasUnit"/>
     
 
 
