@@ -140,10 +140,12 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Alga -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Algae -->
 
-    <owl:Class rdf:about="#Alga">
+    <owl:Class rdf:about="#Algae">
         <rdfs:subClassOf rdf:resource="#Organism"/>
+        <rdfs:comment
+            >General term for members of many taxonomic groups often classified as Protista (itself a catch-all term), which are mostly phytosynthetic. The singular form, alga, is less common.</rdfs:comment>
     </owl:Class>
     
 
@@ -354,7 +356,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Kelp -->
 
     <owl:Class rdf:about="#Kelp">
-        <rdfs:subClassOf rdf:resource="#Alga"/>
+        <rdfs:subClassOf rdf:resource="#Algae"/>
         <rdfs:comment
             >Common name for large algae from the taxonomic class Phaeophyceae. Some would limit it to Laminariales, others woul say it is synomous with seaweed.</rdfs:comment>
     </owl:Class>
@@ -532,7 +534,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Phaeophyceae -->
 
     <owl:Class rdf:about="#Phaeophyceae">
-        <rdfs:subClassOf rdf:resource="#Alga"/>
+        <rdfs:subClassOf rdf:resource="#Algae"/>
     </owl:Class>
     
 
@@ -739,14 +741,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe;Name"/>
+                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
+                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe;Name"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -800,7 +802,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Seaweed -->
 
     <owl:Class rdf:about="#Seaweed">
-        <rdfs:subClassOf rdf:resource="#Alga"/>
+        <rdfs:subClassOf rdf:resource="#Algae"/>
         <rdfs:comment
             >General term for macroscopic algae found in the ocean. Usually a collective noun.</rdfs:comment>
     </owl:Class>
