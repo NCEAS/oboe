@@ -17,16 +17,16 @@
 
 <rdf:RDF xmlns="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#"
      xml:base="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl"
-     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-     xmlns:oboe-sbc="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#"
-     xmlns:oboe-units="http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#"
-     xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:oboe="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#"
+     xmlns:oboe-sbc="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#">
+     xmlns:oboe="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#"
+     xmlns:oboe-units="http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#">
     <owl:Ontology rdf:about="">
         <rdfs:label
             >OBOE SBC Domain Extension</rdfs:label>
@@ -37,6 +37,844 @@
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl"/>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#forCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="&oboe;forCharacteristic"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasCharacteristicValue -->
+
+    <owl:ObjectProperty rdf:about="&oboe;hasCharacteristicValue"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasStandardValue -->
+
+    <owl:ObjectProperty rdf:about="&oboe;hasStandardValue"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#measurementFor -->
+
+    <owl:ObjectProperty rdf:about="&oboe;measurementFor"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#of -->
+
+    <owl:ObjectProperty rdf:about="&oboe;of"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity -->
+
+    <owl:Class rdf:about="&oboe-core;Entity"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Name -->
+
+    <owl:Class rdf:about="&oboe;Name"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Nominal -->
+
+    <owl:Class rdf:about="&oboe;Nominal"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Observation -->
+
+    <owl:Class rdf:about="&oboe;Observation"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#StandardValue -->
+
+    <owl:Class rdf:about="&oboe;StandardValue"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Type -->
+
+    <owl:Class rdf:about="&oboe;Type"/>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Alga -->
+
+    <owl:Class rdf:about="#Alga">
+        <rdfs:subClassOf rdf:resource="#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Animal -->
+
+    <owl:Class rdf:about="#Animal">
+        <rdfs:subClassOf rdf:resource="#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BeachHabitat -->
+
+    <owl:Class rdf:about="#BeachHabitat">
+        <rdfs:subClassOf rdf:resource="#EcologicalHabitat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#California -->
+
+    <owl:Class rdf:about="#California">
+        <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#EcologicalHabitat -->
+
+    <owl:Class rdf:about="#EcologicalHabitat">
+        <rdfs:label
+            >Ecological Habitat</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#EcosystemProcess -->
+
+    <owl:Class rdf:about="#EcosystemProcess">
+        <rdfs:label
+            >Ecosystem Process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Fish -->
+
+    <owl:Class rdf:about="#Fish">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Flow -->
+
+    <owl:Class rdf:about="#Flow">
+        <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FreshWater -->
+
+    <owl:Class rdf:about="#FreshWater">
+        <rdfs:subClassOf rdf:resource="#Water"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GiantKelp -->
+
+    <owl:Class rdf:about="#GiantKelp">
+        <rdfs:label>GiantKelp</rdfs:label>
+        <owl:equivalentClass rdf:resource="#MacrocystisPyrifera"/>
+        <rdfs:subClassOf rdf:resource="#Kelp"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GroundWater -->
+
+    <owl:Class rdf:about="#GroundWater">
+        <rdfs:subClassOf rdf:resource="#FreshWater"/>
+        <rdfs:subClassOf rdf:resource="#InterstitialWater"/>
+        <rdfs:comment
+            >Groundwater seems to be mostly associated with terrestrial systems. So it is subclassed here. The assumtion being that porewater (parent) can be extracted from any sediment (marine, lakebed, streambed, earth, etc).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#HydrospherePhysicalFeature -->
+
+    <owl:Class rdf:about="#HydrospherePhysicalFeature">
+        <rdfs:label
+            >Hydrosphere Physical Feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PhysicalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#HydrospherePhysicalProcess -->
+
+    <owl:Class rdf:about="#HydrospherePhysicalProcess">
+        <rdfs:label
+            >Hydrosphere Physical Process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#InterstitialWater -->
+
+    <owl:Class rdf:about="#InterstitialWater">
+        <rdfs:subClassOf rdf:resource="#Water"/>
+        <rdfs:comment
+            >Interstitial water is found in spaces between soil or sediment particles, or between rocks or gravel.
+
+might have problems. Are aquifers interstitial? or any underground water?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#IslaVistaReef -->
+
+    <owl:Class rdf:about="#IslaVistaReef">
+        <rdfs:subClassOf rdf:resource="#Reef"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Kelp -->
+
+    <owl:Class rdf:about="#Kelp">
+        <rdfs:subClassOf rdf:resource="#Alga"/>
+        <rdfs:comment
+            >Common name for large algae from the taxonomic class Phaeophyceae. Some would limit it to Laminariales, others woul say it is synomous with seaweed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Lake -->
+
+    <owl:Class rdf:about="#Lake">
+        <rdfs:subClassOf rdf:resource="#FreshWater"/>
+        <rdfs:subClassOf rdf:resource="#OpenWater"/>
+        <rdfs:comment
+            >exposed water in a basin on a continental sfc of the earth</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LakeWaterSample -->
+
+    <owl:Class rdf:about="#LakeWaterSample">
+        <rdfs:subClassOf rdf:resource="#Lake"/>
+        <rdfs:comment
+            >A lake water sample is representative of the lake or some part of it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LittoralOcean -->
+
+    <owl:Class rdf:about="#LittoralOcean">
+        <rdfs:label>Littoral Ocean</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SantaBarbaraCoastalMainland"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Location -->
+
+    <owl:Class rdf:about="#Location">
+        <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Macrocystis -->
+
+    <owl:Class rdf:about="#Macrocystis">
+        <rdfs:subClassOf rdf:resource="#Kelp"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MacrocystisIntegrifolia -->
+
+    <owl:Class rdf:about="#MacrocystisIntegrifolia">
+        <rdfs:subClassOf rdf:resource="#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MacrocystisPyrifera -->
+
+    <owl:Class rdf:about="#MacrocystisPyrifera">
+        <rdfs:subClassOf rdf:resource="#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MissionCreek -->
+
+    <owl:Class rdf:about="#MissionCreek">
+        <rdfs:subClassOf rdf:resource="#Watershed"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MohawkReef -->
+
+    <owl:Class rdf:about="#MohawkReef">
+        <rdfs:subClassOf rdf:resource="#Reef"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NaplesReef -->
+
+    <owl:Class rdf:about="#NaplesReef">
+        <rdfs:subClassOf rdf:resource="#Reef"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Nereocystis -->
+
+    <owl:Class rdf:about="#Nereocystis">
+        <rdfs:subClassOf rdf:resource="#Kelp"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ocean -->
+
+    <owl:Class rdf:about="#Ocean">
+        <rdfs:label>Ocean</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OpenWater"/>
+        <rdfs:subClassOf rdf:resource="#SalineWater"/>
+        <rdfs:comment
+            >Water found in basins between continents, and assumed to contain accumulated salts from continental runnoff.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OceanCurrent -->
+
+    <owl:Class rdf:about="#OceanCurrent">
+        <rdfs:label>Ocean Current</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#HydrospherePhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OceanWateDiscreteSample -->
+
+    <owl:Class rdf:about="#OceanWateDiscreteSample">
+        <rdfs:subClassOf rdf:resource="#Ocean"/>
+        <rdfs:comment
+            >a discrete water sample which is representative of the entity, usually collected with a remotely triggered closing bottle or pump.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OceanWaterSensorSample -->
+
+    <owl:Class rdf:about="#OceanWaterSensorSample">
+        <rdfs:subClassOf rdf:resource="#Ocean"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OpenWater -->
+
+    <owl:Class rdf:about="#OpenWater">
+        <rdfs:subClassOf rdf:resource="#Water"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Organism -->
+
+    <owl:Class rdf:about="#Organism">
+        <rdfs:label>Organism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OrganismTissue -->
+
+    <owl:Class rdf:about="#OrganismTissue">
+        <rdfs:subClassOf rdf:resource="#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Phaeophyceae -->
+
+    <owl:Class rdf:about="#Phaeophyceae">
+        <rdfs:subClassOf rdf:resource="#Alga"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PhysicalFeature -->
+
+    <owl:Class rdf:about="#PhysicalFeature">
+        <rdfs:label
+            >Physical Feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PhysicalProcess -->
+
+    <owl:Class rdf:about="#PhysicalProcess">
+        <rdfs:label
+            >Physical Process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Phytoplankton -->
+
+    <owl:Class rdf:about="#Phytoplankton">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Plant -->
+
+    <owl:Class rdf:about="#Plant">
+        <rdfs:label>Plant</rdfs:label>
+        <rdfs:label>Plantae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Plot -->
+
+    <owl:Class rdf:about="#Plot">
+        <rdfs:label>Plot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Porewater -->
+
+    <owl:Class rdf:about="#Porewater">
+        <rdfs:subClassOf rdf:resource="#InterstitialWater"/>
+        <rdfs:subClassOf rdf:resource="#SalineWater"/>
+        <rdfs:comment
+            >might be a synonym of interstitial, that is, any water in sediments or unconsolidated layers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Precipitation -->
+
+    <owl:Class rdf:about="#Precipitation">
+        <rdfs:subClassOf rdf:resource="#Water"/>
+        <rdfs:comment
+            >Should this be rainwater? precipitation is a process?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PrimaryProduction -->
+
+    <owl:Class rdf:about="#PrimaryProduction">
+        <rdfs:label
+            >Primary Production</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#EcosystemProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Process -->
+
+    <owl:Class rdf:about="#Process">
+        <rdfs:label>Process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Reef -->
+
+    <owl:Class rdf:about="#Reef">
+        <rdfs:subClassOf rdf:resource="#LittoralOcean"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ReplicatePlot -->
+
+    <owl:Class rdf:about="#ReplicatePlot">
+        <rdfs:label>Replicate Plot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Plot"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ReplicateTransect -->
+
+    <owl:Class rdf:about="#ReplicateTransect">
+        <rdfs:label
+            >Replicate Transect</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Transect"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Respiration -->
+
+    <owl:Class rdf:about="#Respiration">
+        <rdfs:label>Respiration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#EcosystemProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBCSiteName -->
+
+    <owl:Class rdf:about="#SBCSiteName">
+        <rdfs:subClassOf rdf:resource="&oboe;Name"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasCharacteristicValue"/>
+                <owl:someValuesFrom rdf:resource="#SBCSiteNameValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBCSiteNameCatalog -->
+
+    <owl:Class rdf:about="#SBCSiteNameCatalog">
+        <rdfs:label
+            >SBC Site Name Catalog</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe;Name"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
+                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBCSiteNameValue -->
+
+    <owl:Class rdf:about="#SBCSiteNameValue">
+        <rdfs:label
+            >SBC Site Name Value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SalineWater -->
+
+    <owl:Class rdf:about="#SalineWater">
+        <rdfs:subClassOf rdf:resource="#Water"/>
+        <rdfs:comment
+            >Saline water is water on which one might want to measure salinity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Salmonid -->
+
+    <owl:Class rdf:about="#Salmonid">
+        <rdfs:subClassOf rdf:resource="#Fish"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SantaBarbaraCoastalMainland -->
+
+    <owl:Class rdf:about="#SantaBarbaraCoastalMainland">
+        <rdfs:subClassOf rdf:resource="#California"/>
+        <rdfs:comment
+            >Santa Barbara Coastal Mainland: from Pt Conception to Santa Clara RIver. Includes sublittoral areas and watersheds discharging to littoral areas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Seaweed -->
+
+    <owl:Class rdf:about="#Seaweed">
+        <rdfs:subClassOf rdf:resource="#Alga"/>
+        <rdfs:comment
+            >General term for macroscopic algae found in the ocean. Usually a collective noun.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SockeyeSalmon -->
+
+    <owl:Class rdf:about="#SockeyeSalmon">
+        <rdfs:subClassOf rdf:resource="#Salmonid"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SolidEarthPhysicalFeature -->
+
+    <owl:Class rdf:about="#SolidEarthPhysicalFeature">
+        <rdfs:label
+            >Solid Earth Physical Feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PhysicalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SolidEarthPhysicalProcess -->
+
+    <owl:Class rdf:about="#SolidEarthPhysicalProcess">
+        <rdfs:label
+            >Solid Earth Physical Process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpatialLocation -->
+
+    <owl:Class rdf:about="#SpatialLocation">
+        <rdfs:label
+            >Spatial Location</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Stream -->
+
+    <owl:Class rdf:about="#Stream">
+        <rdfs:label>Stream</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#FreshWater"/>
+        <rdfs:subClassOf rdf:resource="#OpenWater"/>
+        <rdfs:comment
+            >water flowing over a continent or land usually in catchments or watersheds. Includes waterways, rivers, creeks; intermittent or continuous.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StreamDischarge -->
+
+    <owl:Class rdf:about="#StreamDischarge">
+        <rdfs:subClassOf rdf:resource="#Flow"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;measurementFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe;Observation"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe;of"/>
+                                <owl:allValuesFrom rdf:resource="#Stream"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StreamFlow -->
+
+    <owl:Class rdf:about="#StreamFlow">
+        <rdfs:label>Stream Flow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#HydrospherePhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StreamHabitat -->
+
+    <owl:Class rdf:about="#StreamHabitat">
+        <rdfs:subClassOf rdf:resource="#EcologicalHabitat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StreamWaterDiscreteSample -->
+
+    <owl:Class rdf:about="#StreamWaterDiscreteSample">
+        <rdfs:subClassOf rdf:resource="#Stream"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StreamWaterSensorSample -->
+
+    <owl:Class rdf:about="#StreamWaterSensorSample">
+        <rdfs:subClassOf rdf:resource="#Stream"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Subplot -->
+
+    <owl:Class rdf:about="#Subplot">
+        <rdfs:label>Subplot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TaggedFish -->
+
+    <owl:Class rdf:about="#TaggedFish">
+        <rdfs:subClassOf rdf:resource="&oboe;Name"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TaggedKelpFrond -->
+
+    <owl:Class rdf:about="#TaggedKelpFrond">
+        <rdfs:subClassOf rdf:resource="&oboe;Name"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TaxonType -->
+
+    <owl:Class rdf:about="#TaxonType">
+        <rdfs:subClassOf rdf:resource="&oboe;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TemperateReef -->
+
+    <owl:Class rdf:about="#TemperateReef">
+        <rdfs:subClassOf rdf:resource="#EcologicalHabitat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TemporalPoint -->
+
+    <owl:Class rdf:about="#TemporalPoint">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Transect -->
+
+    <owl:Class rdf:about="#Transect">
+        <rdfs:label>Transect</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#USA -->
+
+    <owl:Class rdf:about="#USA">
+        <rdfs:label>USA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Water -->
+
+    <owl:Class rdf:about="#Water">
+        <rdfs:label>Water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WaterDepthToBottom -->
+
+    <owl:Class rdf:about="#WaterDepthToBottom">
+        <rdfs:subClassOf rdf:resource="#Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;measurementFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe;Observation"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe;of"/>
+                                <owl:allValuesFrom rdf:resource="#SpatialLocation"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >In natural bodies of water, is the distance to the bottom (or solid earth surface) from a point in the water column. The reference point may be the surface of the water body or a point within the water column. 
+Depth to bottom may be used to nominally describe a place (such as a sampling location) or the depoyment of an instrument within the water column.
+Depth to bottom can be calculated from measured sample depth  (e.g., tidal height) and a known constant (e.g., total water depth).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Watershed -->
+
+    <owl:Class rdf:about="#Watershed">
+        <rdfs:subClassOf rdf:resource="#SantaBarbaraCoastalMainland"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Waypoint -->
+
+    <owl:Class rdf:about="#Waypoint">
+        <rdfs:label>Waypoint</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
+        <rdfs:comment
+            >waypoint is usually defined by a latitude-longitude pair. It often defines the nominal location of a station or sampling place.</rdfs:comment>
+    </owl:Class>
 </rdf:RDF>
 
 
