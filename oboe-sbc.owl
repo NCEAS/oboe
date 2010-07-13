@@ -110,6 +110,24 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Mass -->
+
+    <owl:Class rdf:about="&oboe-units;Mass"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#MassPerMass -->
+
+    <owl:Class rdf:about="&oboe-units;MassPerMass"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Proportion -->
+
+    <owl:Class rdf:about="&oboe-units;Proportion"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Name -->
 
     <owl:Class rdf:about="&oboe;Name"/>
@@ -183,6 +201,22 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CarbonNitrogenRatioByAmount -->
+
+    <owl:Class rdf:about="#CarbonNitrogenRatioByAmount">
+        <rdfs:subClassOf rdf:resource="&oboe-units;Proportion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CarbonNitrogenRatioByMass -->
+
+    <owl:Class rdf:about="#CarbonNitrogenRatioByMass">
+        <rdfs:subClassOf rdf:resource="&oboe-units;Proportion"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ChlorophyllPhaeopigmentConcentrationProtocol_FluorometricExtraction -->
 
     <owl:Class rdf:about="#ChlorophyllPhaeopigmentConcentrationProtocol_FluorometricExtraction">
@@ -244,6 +278,22 @@
         <rdfs:subClassOf rdf:resource="#ProtocolsForElementalAnalysis"/>
         <rdfs:comment
             >Dissolved organic Phosphorus reported as amount of substance (moles) of Phosphorus atoms. The term &#39;organic&#39; refers to the fact that the dissolved Phosphorus was in compounds with carbon atoms and probably also to other (unreported) elements (e.g, oxygen, hydrogen).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DryMass -->
+
+    <owl:Class rdf:about="#DryMass">
+        <rdfs:subClassOf rdf:resource="&oboe-units;Mass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DryMassPerWetMass -->
+
+    <owl:Class rdf:about="#DryMassPerWetMass">
+        <rdfs:subClassOf rdf:resource="&oboe-units;MassPerMass"/>
     </owl:Class>
     
 
@@ -527,6 +577,30 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#OrganismTissue">
         <rdfs:subClassOf rdf:resource="#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PercentCarbon -->
+
+    <owl:Class rdf:about="#PercentCarbon">
+        <rdfs:subClassOf rdf:resource="&oboe-units;MassPerMass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PercentHydrogen -->
+
+    <owl:Class rdf:about="#PercentHydrogen">
+        <rdfs:subClassOf rdf:resource="&oboe-units;MassPerMass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PercentNitrogen -->
+
+    <owl:Class rdf:about="#PercentNitrogen">
+        <rdfs:subClassOf rdf:resource="&oboe-units;MassPerMass"/>
     </owl:Class>
     
 
@@ -1075,6 +1149,14 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
         <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
         <rdfs:comment
             >waypoint is usually defined by a latitude-longitude pair. It often defines the nominal location of a station or sampling place.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WetMass -->
+
+    <owl:Class rdf:about="#WetMass">
+        <rdfs:subClassOf rdf:resource="&oboe-units;Mass"/>
     </owl:Class>
 </rdf:RDF>
 
