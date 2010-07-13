@@ -98,6 +98,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Protocol -->
+
+    <owl:Class rdf:about="&oboe-core;Protocol"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Name -->
 
     <owl:Class rdf:about="&oboe;Name"/>
@@ -152,10 +158,58 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BrzezinskiLabProtocols -->
+
+    <owl:Class rdf:about="#BrzezinskiLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#California -->
 
     <owl:Class rdf:about="#California">
         <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DissolvedOrganicCarbonConcentrationProtocol -->
+
+    <owl:Class rdf:about="#DissolvedOrganicCarbonConcentrationProtocol">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsForElementalAnalysis"/>
+        <rdfs:comment
+            >Dissolved organic carbon reported as amount of substance (moles) of Carbon atoms. The term &#39;organic&#39; refers to the fact that the dissolved Carbor was in compounds with other carbon atoms and probably also to other (unreported) elements (e.g, oxygen, hydrogen).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DissolvedOrganicNitrogenConcentrationProtocol -->
+
+    <owl:Class rdf:about="#DissolvedOrganicNitrogenConcentrationProtocol">
+        <rdfs:subClassOf rdf:resource="#ProtocolsForElementalAnalysis"/>
+        <rdfs:comment
+            >Dissolved organic nitrogen reported as amount of substance (moles) of nitrogen atoms. The term &#39;organic&#39; refers to the fact that the dissolved nitrogen was in compounds with carbon atoms and probably also to other (unreported) elements (e.g, oxygen, hydrogen).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DissolvedOrganicPhosphorusConcentrationProtocol -->
+
+    <owl:Class rdf:about="#DissolvedOrganicPhosphorusConcentrationProtocol">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsForElementalAnalysis"/>
+        <rdfs:comment
+            >Dissolved organic Phosphorus reported as amount of substance (moles) of Phosphorus atoms. The term &#39;organic&#39; refers to the fact that the dissolved Phosphorus was in compounds with carbon atoms and probably also to other (unreported) elements (e.g, oxygen, hydrogen).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DuganLabProtocols -->
+
+    <owl:Class rdf:about="#DuganLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
     </owl:Class>
     
 
@@ -313,6 +367,22 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MSI_AnalyticalLabProtocols -->
+
+    <owl:Class rdf:about="#MSI_AnalyticalLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MacIntyreLabProtocols -->
+
+    <owl:Class rdf:about="#MacIntyreLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Macrocystis -->
 
     <owl:Class rdf:about="#Macrocystis">
@@ -333,6 +403,22 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#MacrocystisPyrifera">
         <rdfs:subClassOf rdf:resource="#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MelackLabAmmoniumConcentrationProtocolFreshwaterAutomated -->
+
+    <owl:Class rdf:about="#MelackLabAmmoniumConcentrationProtocolFreshwaterAutomated">
+        <rdfs:subClassOf rdf:resource="#MelackLabProtocols"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MelackLabProtocols -->
+
+    <owl:Class rdf:about="#MelackLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
     </owl:Class>
     
 
@@ -365,6 +451,17 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#Nereocystis">
         <rdfs:subClassOf rdf:resource="#Kelp"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#NitrateNitriteConcentrationProtocol_MSIAutomated -->
+
+    <owl:Class rdf:about="#NitrateNitriteConcentrationProtocol_MSIAutomated">
+        <rdfs:subClassOf rdf:resource="#MSI_AnalyticalLabProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
+        <rdfs:comment
+            >The protocol for measuring Nitrate + nitrite concentration using cadmium reduction and colorimetry</rdfs:comment>
     </owl:Class>
     
 
@@ -416,6 +513,12 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OrganicTissueProtocols -->
+
+    <owl:Class rdf:about="#OrganicTissueProtocols"/>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Organism -->
 
     <owl:Class rdf:about="#Organism">
@@ -437,6 +540,15 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#Phaeophyceae">
         <rdfs:subClassOf rdf:resource="#Alga"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PhosphateConcentrationProtocol_MSIAutomated -->
+
+    <owl:Class rdf:about="#PhosphateConcentrationProtocol_MSIAutomated">
+        <rdfs:subClassOf rdf:resource="#MSI_AnalyticalLabProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
     </owl:Class>
     
 
@@ -524,6 +636,54 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <owl:Class rdf:about="#Process">
         <rdfs:label>Process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsByConstituent -->
+
+    <owl:Class rdf:about="#ProtocolsByConstituent">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsByInstrumentation -->
+
+    <owl:Class rdf:about="#ProtocolsByInstrumentation">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsByLaboratory -->
+
+    <owl:Class rdf:about="#ProtocolsByLaboratory">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsForElementalAnalysis -->
+
+    <owl:Class rdf:about="#ProtocolsForElementalAnalysis">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsForOrganicTissue -->
+
+    <owl:Class rdf:about="#ProtocolsForOrganicTissue">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ReedLabProtocols -->
+
+    <owl:Class rdf:about="#ReedLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
     </owl:Class>
     
 
@@ -638,12 +798,39 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SchimmelLabProtocols -->
+
+    <owl:Class rdf:about="#SchimmelLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SeabirdCTDElectronicsProtocols -->
+
+    <owl:Class rdf:about="#SeabirdCTDElectronicsProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByInstrumentation"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Seaweed -->
 
     <owl:Class rdf:about="#Seaweed">
         <rdfs:subClassOf rdf:resource="#Alga"/>
         <rdfs:comment
             >General term for macroscopic algae found in the ocean. Usually a collective noun.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SilicicAcidConcentrationProtocol_MSIAutomated -->
+
+    <owl:Class rdf:about="#SilicicAcidConcentrationProtocol_MSIAutomated">
+        <rdfs:subClassOf rdf:resource="#MSI_AnalyticalLabProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
+        <rdfs:comment
+            >Colorimetric method</rdfs:comment>
     </owl:Class>
     
 
@@ -764,6 +951,26 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SuspendedParticulateCarbonNitrogen_CHNElementalAnalyzer -->
+
+    <owl:Class rdf:about="#SuspendedParticulateCarbonNitrogen_CHNElementalAnalyzer">
+        <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsForElementalAnalysis"/>
+        <rdfs:comment
+            >Particulates suspended  in water are collected on a filter.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SuspendedParticulatePhosphorus_AcidDigestion -->
+
+    <owl:Class rdf:about="#SuspendedParticulatePhosphorus_AcidDigestion">
+        <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsForElementalAnalysis"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TaggedFish -->
 
     <owl:Class rdf:about="#TaggedFish">
@@ -804,6 +1011,24 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TissueCarbonNitrogen_CHNElementalAnalyzer -->
+
+    <owl:Class rdf:about="#TissueCarbonNitrogen_CHNElementalAnalyzer">
+        <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsForElementalAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TissuePhosphorus_AcidDigestion -->
+
+    <owl:Class rdf:about="#TissuePhosphorus_AcidDigestion">
+        <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsForElementalAnalysis"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Transect -->
 
     <owl:Class rdf:about="#Transect">
@@ -818,6 +1043,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <owl:Class rdf:about="#USA">
         <rdfs:label>USA</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SpatialLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WashburnLabProtocols -->
+
+    <owl:Class rdf:about="#WashburnLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
     </owl:Class>
     
 
