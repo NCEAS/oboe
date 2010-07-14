@@ -51,6 +51,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;measurementFor"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic -->
 
     <owl:ObjectProperty rdf:about="&oboe-core;ofCharacteristic"/>
@@ -66,6 +72,12 @@
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#standardFor -->
 
     <owl:ObjectProperty rdf:about="&oboe-core;standardFor"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#usesProtocol -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;usesProtocol"/>
     
 
 
@@ -527,6 +539,36 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpPercentNitrogen -->
+
+    <owl:Class rdf:about="#KelpPercentNitrogen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
+                        <owl:someValuesFrom rdf:resource="#Nitrogen"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
+                        <owl:allValuesFrom rdf:resource="#PercentNitrogen"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;usesProtocol"/>
+                        <owl:allValuesFrom rdf:resource="#ReedLabProtocols"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;usesStandard"/>
+                        <owl:allValuesFrom rdf:resource="#PercentGramPerGram"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Measurement"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Lake -->
 
     <owl:Class rdf:about="#Lake">
@@ -759,6 +801,90 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                                                     <owl:Restriction>
                                                         <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
                                                         <owl:allValuesFrom rdf:resource="#Sample"/>
+                                                    </owl:Restriction>
+                                                </owl:allValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:allValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&oboe;hasUnit"/>
+                                        <owl:allValuesFrom rdf:resource="&oboe-units;Gram"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&oboe;hasPower"/>
+                                        <owl:hasValue rdf:datatype="&xsd;integer">-1</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&oboe-core;Measurement"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
+                                        <owl:allValuesFrom rdf:resource="&oboe-units;MassPerMass"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&oboe-units;Percent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PercentGramPerGram -->
+
+    <owl:Class rdf:about="#PercentGramPerGram">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe;hasUnit"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&oboe-units;Gram"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
+                                        <owl:allValuesFrom>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
+                                                <owl:allValuesFrom>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
+                                                        <owl:allValuesFrom rdf:resource="#Substance"/>
+                                                    </owl:Restriction>
+                                                </owl:allValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:allValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe;hasUnit"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&oboe;DerivedUnit"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
+                                        <owl:allValuesFrom>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
+                                                <owl:allValuesFrom>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
+                                                        <owl:allValuesFrom rdf:resource="&oboe-core;Entity"/>
                                                     </owl:Restriction>
                                                 </owl:allValuesFrom>
                                             </owl:Restriction>
