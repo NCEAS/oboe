@@ -17,16 +17,16 @@
 
 <rdf:RDF xmlns="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#"
      xml:base="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl"
-     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-     xmlns:oboe-sbc="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#"
-     xmlns:oboe-units="http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#"
-     xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:oboe="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#"
+     xmlns:oboe-sbc="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#">
+     xmlns:oboe="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#"
+     xmlns:oboe-units="http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#">
     <owl:Ontology rdf:about="">
         <rdfs:label
             >OBOE SBC Domain Extension</rdfs:label>
@@ -235,6 +235,14 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Aquifer -->
+
+    <owl:Class rdf:about="#Aquifer">
+        <rdfs:subClassOf rdf:resource="#InterstitialWaterBody"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BeachHabitat -->
 
     <owl:Class rdf:about="#BeachHabitat">
@@ -413,6 +421,16 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Estuary -->
+
+    <owl:Class rdf:about="#Estuary">
+        <rdfs:subClassOf rdf:resource="#OpenWaterBody"/>
+        <rdfs:comment
+            >An Estuary is the part of a stream that meets an ocean, and fresh water and saline water mix.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Fish -->
 
     <owl:Class rdf:about="#Fish">
@@ -433,6 +451,8 @@
 
     <owl:Class rdf:about="#FreshWater">
         <rdfs:subClassOf rdf:resource="#Water"/>
+        <rdfs:comment
+            >Fresh water is water where the dissolved substances do not typically include significnat quantities of the elements Sodium, Chlorine and Magnesium (check on Mg, or others). Other dissolved solids may be present in significant in significant quantities.</rdfs:comment>
     </owl:Class>
     
 
@@ -450,10 +470,9 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GroundWater -->
 
     <owl:Class rdf:about="#GroundWater">
-        <rdfs:subClassOf rdf:resource="#FreshWater"/>
-        <rdfs:subClassOf rdf:resource="#InterstitialWater"/>
+        <rdfs:subClassOf rdf:resource="#Porewater"/>
         <rdfs:comment
-            >Groundwater seems to be mostly associated with terrestrial systems. So it is subclassed here. The assumtion being that porewater (parent) can be extracted from any sediment (marine, lakebed, streambed, earth, etc).</rdfs:comment>
+            >Groundwater seems to be mostly associated with terrestrial systems (check). So it is subclassed here. The assumtion being that porewater (parent) can be extracted from any sediment (marine, lakebed, streambed, earth, etc).</rdfs:comment>
     </owl:Class>
     
 
@@ -486,10 +505,10 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#InterstitialWater -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#InterstitialWaterBody -->
 
-    <owl:Class rdf:about="#InterstitialWater">
-        <rdfs:subClassOf rdf:resource="#Water"/>
+    <owl:Class rdf:about="#InterstitialWaterBody">
+        <rdfs:subClassOf rdf:resource="#WaterBody"/>
         <rdfs:comment
             >Interstitial water is found in spaces between soil or sediment particles, or between rocks or gravel.
 
@@ -511,8 +530,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Lake -->
 
     <owl:Class rdf:about="#Lake">
-        <rdfs:subClassOf rdf:resource="#FreshWater"/>
-        <rdfs:subClassOf rdf:resource="#OpenWater"/>
+        <rdfs:subClassOf rdf:resource="#OpenWaterBody"/>
         <rdfs:comment
             >exposed water in a basin on a continental sfc of the earth</rdfs:comment>
     </owl:Class>
@@ -624,8 +642,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#Ocean">
         <rdfs:label>Ocean</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#OpenWater"/>
-        <rdfs:subClassOf rdf:resource="#SalineWater"/>
+        <rdfs:subClassOf rdf:resource="#OpenWaterBody"/>
         <rdfs:comment
             >Water found in basins between continents, and assumed to contain accumulated salts from continental runnoff.</rdfs:comment>
     </owl:Class>
@@ -641,10 +658,12 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OceanWateDiscreteSample -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OceanWaterDiscreteSample -->
 
-    <owl:Class rdf:about="#OceanWateDiscreteSample">
+    <owl:Class rdf:about="#OceanWaterDiscreteSample">
         <rdfs:subClassOf rdf:resource="#Ocean"/>
+        <rdfs:subClassOf rdf:resource="#SalineWater"/>
+        <rdfs:subClassOf rdf:resource="#Sample"/>
         <rdfs:comment
             >a discrete water sample which is representative of the entity, usually collected with a remotely triggered closing bottle or pump.</rdfs:comment>
     </owl:Class>
@@ -655,14 +674,16 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#OceanWaterSensorSample">
         <rdfs:subClassOf rdf:resource="#Ocean"/>
+        <rdfs:subClassOf rdf:resource="#SalineWater"/>
+        <rdfs:subClassOf rdf:resource="#Sample"/>
     </owl:Class>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OpenWater -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OpenWaterBody -->
 
-    <owl:Class rdf:about="#OpenWater">
-        <rdfs:subClassOf rdf:resource="#Water"/>
+    <owl:Class rdf:about="#OpenWaterBody">
+        <rdfs:subClassOf rdf:resource="#WaterBody"/>
     </owl:Class>
     
 
@@ -895,20 +916,19 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Porewater -->
 
     <owl:Class rdf:about="#Porewater">
-        <rdfs:subClassOf rdf:resource="#InterstitialWater"/>
-        <rdfs:subClassOf rdf:resource="#SalineWater"/>
+        <rdfs:subClassOf rdf:resource="#Water"/>
         <rdfs:comment
             >might be a synonym of interstitial, that is, any water in sediments or unconsolidated layers.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Precipitation -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PrecipitationWater -->
 
-    <owl:Class rdf:about="#Precipitation">
-        <rdfs:subClassOf rdf:resource="#Water"/>
+    <owl:Class rdf:about="#PrecipitationWater">
+        <rdfs:subClassOf rdf:resource="#FreshWater"/>
         <rdfs:comment
-            >Should this be rainwater? precipitation is a process?</rdfs:comment>
+            >PrecipicationWater falls from the atmosphere to earth, as rain or snow. Also see the process called Precipitation.</rdfs:comment>
     </owl:Class>
     
 
@@ -1030,14 +1050,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe;Name"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe;Name"/>
+                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
+                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1159,8 +1179,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#Stream">
         <rdfs:label>Stream</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#FreshWater"/>
-        <rdfs:subClassOf rdf:resource="#OpenWater"/>
+        <rdfs:subClassOf rdf:resource="#OpenWaterBody"/>
         <rdfs:comment
             >water flowing over a continent or land usually in catchments or watersheds. Includes waterways, rivers, creeks; intermittent or continuous.</rdfs:comment>
     </owl:Class>
@@ -1211,6 +1230,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StreamWaterDiscreteSample -->
 
     <owl:Class rdf:about="#StreamWaterDiscreteSample">
+        <rdfs:subClassOf rdf:resource="#FreshWater"/>
         <rdfs:subClassOf rdf:resource="#Sample"/>
         <rdfs:subClassOf rdf:resource="#Stream"/>
     </owl:Class>
@@ -1220,6 +1240,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StreamWaterSensorSample -->
 
     <owl:Class rdf:about="#StreamWaterSensorSample">
+        <rdfs:subClassOf rdf:resource="#FreshWater"/>
         <rdfs:subClassOf rdf:resource="#Sample"/>
         <rdfs:subClassOf rdf:resource="#Stream"/>
     </owl:Class>
@@ -1342,6 +1363,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#Water">
         <rdfs:label>Water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WaterBody -->
+
+    <owl:Class rdf:about="#WaterBody">
         <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
     </owl:Class>
     
