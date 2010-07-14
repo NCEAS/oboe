@@ -217,18 +217,45 @@
     <swrl:Variable rdf:about="#o1"/>
     <swrl:Variable rdf:about="#o2"/>
     <swrl:Imp>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:argument1 rdf:resource="#c"/>
+                                <swrl:argument2 rdf:resource="#e"/>
+                                <swrl:propertyPredicate rdf:resource="&oboe-core;hasValue"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                    </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="#c"/>
+                        <swrl:propertyPredicate rdf:resource="#hasContextObservation"/>
+                        <swrl:argument2 rdf:resource="#o"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
         <swrl:head>
             <swrl:AtomList>
                 <rdf:rest rdf:resource="&rdf;nil"/>
                 <rdf:first>
                     <swrl:IndividualPropertyAtom>
-                        <swrl:argument1 rdf:resource="#o1"/>
-                        <swrl:argument2 rdf:resource="#o2"/>
-                        <swrl:propertyPredicate rdf:resource="&oboe-core;hasContext"/>
+                        <swrl:argument2 rdf:resource="#e"/>
+                        <swrl:argument1 rdf:resource="#o"/>
+                        <swrl:propertyPredicate rdf:resource="&oboe-core;ofEntity"/>
                     </swrl:IndividualPropertyAtom>
                 </rdf:first>
             </swrl:AtomList>
         </swrl:head>
+    </swrl:Imp>
+    <swrl:Imp>
+        <rdfs:comment
+            >I believe this can be removed</rdfs:comment>
         <swrl:body>
             <swrl:AtomList>
                 <rdf:rest>
@@ -252,6 +279,18 @@
                 </rdf:first>
             </swrl:AtomList>
         </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="#o1"/>
+                        <swrl:argument2 rdf:resource="#o2"/>
+                        <swrl:propertyPredicate rdf:resource="&oboe-core;hasContext"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
     </swrl:Imp>
     <swrl:Imp>
         <swrl:head>
@@ -289,43 +328,6 @@
                 </rdf:first>
             </swrl:AtomList>
         </swrl:body>
-    </swrl:Imp>
-    <swrl:Imp>
-        <swrl:body>
-            <swrl:AtomList>
-                <rdf:rest>
-                    <swrl:AtomList>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <swrl:IndividualPropertyAtom>
-                                <swrl:argument1 rdf:resource="#c"/>
-                                <swrl:argument2 rdf:resource="#e"/>
-                                <swrl:propertyPredicate rdf:resource="&oboe-core;hasValue"/>
-                            </swrl:IndividualPropertyAtom>
-                        </rdf:first>
-                    </swrl:AtomList>
-                </rdf:rest>
-                <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                        <swrl:argument1 rdf:resource="#c"/>
-                        <swrl:propertyPredicate rdf:resource="#hasContextObservation"/>
-                        <swrl:argument2 rdf:resource="#o"/>
-                    </swrl:IndividualPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:body>
-        <swrl:head>
-            <swrl:AtomList>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                        <swrl:argument2 rdf:resource="#e"/>
-                        <swrl:argument1 rdf:resource="#o"/>
-                        <swrl:propertyPredicate rdf:resource="&oboe-core;ofEntity"/>
-                    </swrl:IndividualPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:head>
     </swrl:Imp>
 </rdf:RDF>
 
