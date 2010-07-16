@@ -163,6 +163,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#AmountOfSubstanceConcentration -->
+
+    <owl:Class rdf:about="&oboe-units;AmountOfSubstanceConcentration"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Gram -->
 
     <owl:Class rdf:about="&oboe-units;Gram"/>
@@ -172,6 +178,12 @@
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Mass -->
 
     <owl:Class rdf:about="&oboe-units;Mass"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#MassDensity -->
+
+    <owl:Class rdf:about="&oboe-units;MassDensity"/>
     
 
 
@@ -229,12 +241,39 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Unit -->
+
+    <owl:Class rdf:about="&oboe;Unit"/>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Algae -->
 
     <owl:Class rdf:about="#Algae">
         <rdfs:subClassOf rdf:resource="#Organism"/>
         <rdfs:comment
             >General term for members of many taxonomic groups often classified as Protista (itself a catch-all term), which are mostly phytosynthetic. The singular form, alga, is less common.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ammonium -->
+
+    <owl:Class rdf:about="#Ammonium">
+        <rdfs:subClassOf rdf:resource="#CompoundSubstance"/>
+        <rdfs:comment
+            >Ammonium is the ion derived from ammonia. The molecule is composed of one Nitrogen atom and four Hydrogen atoms. When dissolved in natural waters, it is an ion with a  charge of +1. The formula is NH(subscript 4)(superscript +), NH4+
+
+In Biology, Ammonium is a waste product of metabolism, an important component of Nitrogen cycling, and is often a source of Nitrogen for autotrophs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AmmoniumConcentrationProtocol_MSIAutomated -->
+
+    <owl:Class rdf:about="#AmmoniumConcentrationProtocol_MSIAutomated">
+        <rdfs:subClassOf rdf:resource="#MSI_AnalyticalLabProtocols"/>
+        <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
     </owl:Class>
     
 
@@ -304,6 +343,14 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CarlsonLabProtocols -->
+
+    <owl:Class rdf:about="#CarlsonLabProtocols">
+        <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ChlorophyllPhaeopigmentConcentrationProtocol_FluorometricExtraction -->
 
     <owl:Class rdf:about="#ChlorophyllPhaeopigmentConcentrationProtocol_FluorometricExtraction">
@@ -342,7 +389,82 @@
     <owl:Class rdf:about="#CompoundSubstance">
         <rdfs:subClassOf rdf:resource="#Substance"/>
         <rdfs:comment
-            >Elemental substances are from the periodic table. Ex, carbon, nitrogen</rdfs:comment>
+            >Compound substances are mixtures fo elemetal substances.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Concentration -->
+
+    <owl:Class rdf:about="#Concentration">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Measurement"/>
+        <rdfs:comment
+            >A concentration is a measurement of how much of a given substance (solute) is mixed with another substance (solvent). Concentrations will have 2 dimensions: 
+SOLUTE [mole-amounts, mass, ionic charge, volume] PER SOLUTION [volume, mass]. Other numerators or denominators may also be possible (tbd)
+
+The denominator (solution) is most commonly a volume. But for natural water bodies (e.g. ocean), mass may be used to remove the effects of temperature and pressure on volume when these are significant.  Accurate conversions between units are not always straightforward, and must take into account temperature and pressure at which the sample was collected. 
+
+When solute mass or ionic charge is used (numerator), unit conversions need access to other information e.g, the periodic table of elements, or valence states.
+
+Concentrations also include  the mixtures of suspended particulates or their components in a volume (e.g. of water). These are non-homogeneous solutions. The protocol should make clear how mixtures are defined.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ConcentrationOfAmmonium -->
+
+    <owl:Class rdf:about="#ConcentrationOfAmmonium">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Concentration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
+                                <owl:allValuesFrom rdf:resource="#Ammonium"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&oboe-units;AmountOfSubstanceConcentration"/>
+                                    <rdf:Description rdf:about="&oboe-units;MassDensity"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;usesStandard"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&oboe;Unit"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                                        <owl:allValuesFrom>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="&oboe-units;AmountOfSubstanceConcentration"/>
+                                                    <rdf:Description rdf:about="&oboe-units;MassDensity"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                        </owl:allValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Concentration"/>
+        <rdfs:comment
+            >The solute is Ammonium ion. the solvent is some liquid. In Biology, the liquid is often water, but may be some other liquid e.g., an intracellular fluid.</rdfs:comment>
     </owl:Class>
     
 
@@ -350,6 +472,7 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DissolvedOrganicCarbonConcentrationProtocol -->
 
     <owl:Class rdf:about="#DissolvedOrganicCarbonConcentrationProtocol">
+        <rdfs:subClassOf rdf:resource="#CarlsonLabProtocols"/>
         <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
         <rdfs:subClassOf rdf:resource="#ProtocolsForElementalAnalysis"/>
         <rdfs:comment
@@ -545,9 +668,15 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&oboe-core;Measurement"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
-                        <owl:someValuesFrom rdf:resource="#Nitrogen"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
+                                <owl:allValuesFrom rdf:resource="#Nitrogen"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
@@ -1176,14 +1305,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe;Name"/>
+                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
+                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
+                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&oboe;Name"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1196,6 +1325,48 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
         <rdfs:label
             >SBC Site Name Value</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBC_ConcentrationOfAmmonium_FreshWater -->
+
+    <owl:Class rdf:about="#SBC_ConcentrationOfAmmonium_FreshWater">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ConcentrationOfAmmonium"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;usesProtocol"/>
+                        <owl:allValuesFrom rdf:resource="#MelackLabAmmoniumConcentrationProtocolFreshwaterAutomated"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#ConcentrationOfAmmonium"/>
+        <rdfs:comment
+            >The solvent is FreshWater. This measurement is used for water from SBC streams.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBC_ConcentrationOfAmmonium_SalineWater -->
+
+    <owl:Class rdf:about="#SBC_ConcentrationOfAmmonium_SalineWater">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ConcentrationOfAmmonium"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;usesProtocol"/>
+                        <owl:allValuesFrom rdf:resource="#AmmoniumConcentrationProtocol_MSIAutomated"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#ConcentrationOfAmmonium"/>
+        <rdfs:comment
+            >The solvent is Saline Water. The measurement is used for water from the ocean and estuaries.</rdfs:comment>
     </owl:Class>
     
 
@@ -1489,6 +1660,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#Water">
         <rdfs:label>Water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#CompoundSubstance"/>
         <rdfs:subClassOf rdf:resource="#HydrospherePhysicalFeature"/>
     </owl:Class>
     
