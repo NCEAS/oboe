@@ -99,9 +99,21 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasSourceUnit -->
+
+    <owl:ObjectProperty rdf:about="&oboe;hasSourceUnit"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasStandardValue -->
 
     <owl:ObjectProperty rdf:about="&oboe;hasStandardValue"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasTargetUnit -->
+
+    <owl:ObjectProperty rdf:about="&oboe;hasTargetUnit"/>
     
 
 
@@ -125,6 +137,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasMultiplier -->
+
+    <owl:DatatypeProperty rdf:about="&oboe;hasMultiplier"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasOffset -->
+
+    <owl:DatatypeProperty rdf:about="&oboe;hasOffset"/>
     
 
 
@@ -193,6 +217,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Mole -->
+
+    <owl:Class rdf:about="&oboe-units;Mole"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Percent -->
 
     <owl:Class rdf:about="&oboe-units;Percent"/>
@@ -247,6 +277,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#UnitConversion -->
+
+    <owl:Class rdf:about="&oboe;UnitConversion"/>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Algae -->
 
     <owl:Class rdf:about="#Algae">
@@ -274,6 +310,72 @@ In Biology, Ammonium is a waste product of metabolism, an important component of
     <owl:Class rdf:about="#AmmoniumConcentrationProtocol_MSIAutomated">
         <rdfs:subClassOf rdf:resource="#MSI_AnalyticalLabProtocols"/>
         <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ammonium_gram_to_mole -->
+
+    <owl:Class rdf:about="#Ammonium_gram_to_mole">
+        <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
+        <rdfs:subClassOf rdf:resource="#SubstanceConversion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;Mole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;Gram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.0554371</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ammonium_mole_to_gram -->
+
+    <owl:Class rdf:about="#Ammonium_mole_to_gram">
+        <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
+        <rdfs:subClassOf rdf:resource="#SubstanceConversion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;Gram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;Mole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">18.03846</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1557,6 +1659,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#Substance">
         <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SubstanceConversion -->
+
+    <owl:Class rdf:about="#SubstanceConversion">
+        <rdfs:subClassOf rdf:resource="#Substance"/>
     </owl:Class>
     
 
