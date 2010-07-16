@@ -314,15 +314,15 @@ In Biology, Ammonium is a waste product of metabolism, an important component of
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ammonium_gram_to_mole -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ammonium_GramToMole -->
 
-    <owl:Class rdf:about="#Ammonium_gram_to_mole">
+    <owl:Class rdf:about="#Ammonium_GramToMole">
         <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
         <rdfs:subClassOf rdf:resource="#SubstanceConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;Mole"/>
+                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;Gram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -333,8 +333,8 @@ In Biology, Ammonium is a waste product of metabolism, an important component of
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;Gram"/>
+                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;Mole"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -347,17 +347,11 @@ In Biology, Ammonium is a waste product of metabolism, an important component of
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ammonium_mole_to_gram -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ammonium_MoleToGram -->
 
-    <owl:Class rdf:about="#Ammonium_mole_to_gram">
+    <owl:Class rdf:about="#Ammonium_MoleToGram">
         <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
         <rdfs:subClassOf rdf:resource="#SubstanceConversion"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;Gram"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
@@ -368,6 +362,12 @@ In Biology, Ammonium is a waste product of metabolism, an important component of
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
                 <owl:hasValue rdf:datatype="&xsd;decimal">18.03846</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;Gram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
