@@ -14,13 +14,13 @@
 
 <rdf:RDF xmlns="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#"
      xml:base="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:oboe="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#">
+     xmlns:oboe="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#">
     <owl:Ontology rdf:about="">
         <rdfs:label>oboe</rdfs:label>
         <rdfs:comment
@@ -61,14 +61,26 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasBaseQualifier -->
+
+    <owl:ObjectProperty rdf:about="#hasBaseQualifier">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment
+            >The hasBaseQualifier together with the hasNextQualfiier property allows qualifier characteristics to be combined and ordered. For example, for an MinimumDailyAverage qualifier, the hasBaseQualifier refers to Minimum and the hasNextQualifier refers to a DailyAverage qualifier, and for a DailyAverage qualifier, the hasBaseQualifier refers to a Daily qualifier and the hasNextQualifier refers to an Average qualifier. </rdfs:comment>
+        <rdfs:range rdf:resource="#BaseCharacteristicQualifier"/>
+        <rdfs:domain rdf:resource="#CompositeCharacteristicQualifier"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasNextQualifier -->
 
     <owl:ObjectProperty rdf:about="#hasNextQualifier">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment
-            >The hasNextQualifier property allows qualifier characteristics to be ordered. For example, for an MinimumDailyAverage qualifier, hasNextQualifier refers to a DailyAverage qualifier, and a DailyAverage qualifier refers to an Average qualifier. This allows an MinimumDailyAverage qualifier to be distinguished from an AverageDailyMinimum qualifier.</rdfs:comment>
-        <rdfs:domain rdf:resource="#CharacteristicQualifier"/>
+            >The hasNexQualifier together with the hasBaseQualfiier property allows qualifier characteristics to be combined and ordered. For example, for an MinimumDailyAverage qualifier, the hasBaseQualifier refers to Minimum and the hasNextQualifier refers to a DailyAverage qualifier, and for a DailyAverage qualifier, the hasBaseQualifier refers to a Daily qualifier and the hasNextQualifier refers to an Average qualifier. </rdfs:comment>
         <rdfs:range rdf:resource="#CharacteristicQualifier"/>
+        <rdfs:domain rdf:resource="#CompositeCharacteristicQualifier"/>
     </owl:ObjectProperty>
     
 
@@ -270,6 +282,16 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#BaseCharacteristicQualifier -->
+
+    <owl:Class rdf:about="#BaseCharacteristicQualifier">
+        <rdfs:subClassOf rdf:resource="#CharacteristicQualifier"/>
+        <rdfs:comment
+            >A Base Qualifier denotes a simple, atomic qualifier such as average, minimum, maximum, etc. </rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#BaseUnit -->
 
     <owl:Class rdf:about="#BaseUnit">
@@ -295,10 +317,42 @@
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#CharacteristicQualifier -->
 
     <owl:Class rdf:about="#CharacteristicQualifier">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BaseCharacteristicQualifier"/>
+                    <rdf:Description rdf:about="#CompositeCharacteristicQualifier"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <owl:disjointWith rdf:resource="#UnitConversion"/>
         <rdfs:comment
-            >A Qualifier is a generic derived (e.g., computed) property of an entity that must be combined with concrete characteristics to be used in a measurement. For example, the qualifier Minimum can be combined with a characteristic Length to create a Minimum Length qualified characteristic.</rdfs:comment>
+            >A Characteristic Qualifier is a generic derived (e.g., computed) property of an entity that must be combined with concrete characteristics to be used in a measurement. A qualifier is either a base (atomic) or composite qualifier. As an example, the base qualifier Minimum can be combined with a characteristic Length to create a Minimum Length qualified characteristic. A composite qualifer is used to combine multiple qualifiers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#CompositeCharacteristicQualifier -->
+
+    <owl:Class rdf:about="#CompositeCharacteristicQualifier">
+        <rdfs:subClassOf rdf:resource="#CharacteristicQualifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNextQualifier"/>
+                <owl:onClass rdf:resource="#CharacteristicQualifier"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasBaseQualifier"/>
+                <owl:onClass rdf:resource="#BaseCharacteristicQualifier"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A Composite Qualifier is used to combine multiple qualifiers. Each composite qualifier has a base qualifier and a reference to another qualifier. Composite qualifiers are ordered (through hasNextQualifier) to distinguish between, e.g., AverageMinimum versus MinimumAverage.  </rdfs:comment>
     </owl:Class>
     
 
@@ -343,13 +397,6 @@
     <owl:Class rdf:about="#DerivedUnit">
         <rdfs:subClassOf rdf:resource="#Unit"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasUnit"/>
-                <owl:onClass rdf:resource="#BaseUnit"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
@@ -371,14 +418,21 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPower"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="#hasUnit"/>
+                <owl:onClass rdf:resource="#BaseUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasUnit"/>
                 <owl:allValuesFrom rdf:resource="#BaseUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPower"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -480,8 +534,8 @@
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="#PhysicalCharacteristic"/>
+                                <owl:onProperty rdf:resource="&oboe-core;hasValue"/>
+                                <owl:allValuesFrom rdf:resource="#Decimal"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -496,8 +550,8 @@
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe-core;hasValue"/>
-                                <owl:allValuesFrom rdf:resource="#Decimal"/>
+                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="#PhysicalCharacteristic"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -515,14 +569,8 @@
     <owl:Class rdf:about="#UnitConversion">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasTargetUnit"/>
+                <owl:onProperty rdf:resource="#hasSourceUnit"/>
                 <owl:someValuesFrom rdf:resource="#Unit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasMultiplier"/>
-                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -533,7 +581,13 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasSourceUnit"/>
+                <owl:onProperty rdf:resource="#hasMultiplier"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTargetUnit"/>
                 <owl:someValuesFrom rdf:resource="#Unit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -569,5 +623,5 @@
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.1101) http://owlapi.sourceforge.net -->
 
