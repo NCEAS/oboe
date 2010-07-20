@@ -306,7 +306,6 @@
 
     <owl:Class rdf:about="#Entity">
         <rdfs:label>Entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <owl:disjointWith rdf:resource="#Measurement"/>
         <owl:disjointWith rdf:resource="#Observation"/>
         <owl:disjointWith rdf:resource="#ObservationCollection"/>
@@ -386,7 +385,6 @@
     <owl:Class rdf:about="#ObservationCollection">
         <rdfs:label
             >ObservationCollection</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <owl:disjointWith rdf:resource="#Protocol"/>
         <owl:disjointWith rdf:resource="#Standard"/>
         <rdfs:comment
@@ -420,11 +418,6 @@
             >A standard defines a reference for comparing or naming entities via a measurement. A standard can be defined intentionally (e.g., as in the case of units) or extensionally (by listing the values of the standard, e.g., for color this might be red, blue, yellow, etc).</rdfs:comment>
     </owl:Class>
     
-
-
-    <!-- http://www.w3.org/2002/07/owl#Thing -->
-
-    <owl:Class rdf:about="&owl;Thing"/>
 </rdf:RDF>
 
 

@@ -325,7 +325,6 @@
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <owl:disjointWith rdf:resource="#UnitConversion"/>
         <rdfs:comment
             >A Characteristic Qualifier is a generic derived (e.g., computed) property of an entity that must be combined with concrete characteristics to be used in a measurement. A qualifier is either a base (atomic) or composite qualifier. As an example, the base qualifier Minimum can be combined with a characteristic Length to create a Minimum Length qualified characteristic. A composite qualifer is used to combine multiple qualifiers.</rdfs:comment>
@@ -595,13 +594,6 @@
             >A UnitConversion defines a mapping from a source unit to a target unit via a multiplier and an offset.</rdfs:comment>
     </owl:Class>
     
-
-
-    <!-- http://www.w3.org/2002/07/owl#Thing -->
-
-    <owl:Class rdf:about="&owl;Thing"/>
-    
-
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////

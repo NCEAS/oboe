@@ -5266,10 +5266,6 @@
     <owl:Class rdf:about="&oboe;UnitConversion"/>
     
 
-
-    <!-- http://www.w3.org/2002/07/owl#Thing -->
-
-    <owl:Class rdf:about="&owl;Thing"/>
 </rdf:RDF>
 
 
