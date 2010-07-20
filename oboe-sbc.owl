@@ -51,84 +51,6 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor -->
-
-    <owl:ObjectProperty rdf:about="&oboe-core;measurementFor"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic -->
-
-    <owl:ObjectProperty rdf:about="&oboe-core;ofCharacteristic"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity -->
-
-    <owl:ObjectProperty rdf:about="&oboe-core;ofEntity"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#standardFor -->
-
-    <owl:ObjectProperty rdf:about="&oboe-core;standardFor"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#usesProtocol -->
-
-    <owl:ObjectProperty rdf:about="&oboe-core;usesProtocol"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#usesStandard -->
-
-    <owl:ObjectProperty rdf:about="&oboe-core;usesStandard"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#forCharacteristic -->
-
-    <owl:ObjectProperty rdf:about="&oboe;forCharacteristic"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasCharacteristicValue -->
-
-    <owl:ObjectProperty rdf:about="&oboe;hasCharacteristicValue"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasSourceUnit -->
-
-    <owl:ObjectProperty rdf:about="&oboe;hasSourceUnit"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasStandardValue -->
-
-    <owl:ObjectProperty rdf:about="&oboe;hasStandardValue"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasTargetUnit -->
-
-    <owl:ObjectProperty rdf:about="&oboe;hasTargetUnit"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasUnit -->
-
-    <owl:ObjectProperty rdf:about="&oboe;hasUnit"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#measurementFor -->
-
-    <owl:ObjectProperty rdf:about="&oboe;measurementFor"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -136,26 +58,6 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasMultiplier -->
-
-    <owl:DatatypeProperty rdf:about="&oboe;hasMultiplier"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasOffset -->
-
-    <owl:DatatypeProperty rdf:about="&oboe;hasOffset"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#hasPower -->
-
-    <owl:DatatypeProperty rdf:about="&oboe;hasPower"/>
-    
 
 
     <!-- 
@@ -167,121 +69,6 @@
      -->
 
     
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity -->
-
-    <owl:Class rdf:about="&oboe-core;Entity"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement -->
-
-    <owl:Class rdf:about="&oboe-core;Measurement"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Protocol -->
-
-    <owl:Class rdf:about="&oboe-core;Protocol"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#AmountOfSubstanceConcentration -->
-
-    <owl:Class rdf:about="&oboe-units;AmountOfSubstanceConcentration"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Gram -->
-
-    <owl:Class rdf:about="&oboe-units;Gram"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Mass -->
-
-    <owl:Class rdf:about="&oboe-units;Mass"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#MassDensity -->
-
-    <owl:Class rdf:about="&oboe-units;MassDensity"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#MassPerMass -->
-
-    <owl:Class rdf:about="&oboe-units;MassPerMass"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Mole -->
-
-    <owl:Class rdf:about="&oboe-units;Mole"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Percent -->
-
-    <owl:Class rdf:about="&oboe-units;Percent"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Proportion -->
-
-    <owl:Class rdf:about="&oboe-units;Proportion"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#DerivedUnit -->
-
-    <owl:Class rdf:about="&oboe;DerivedUnit"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Name -->
-
-    <owl:Class rdf:about="&oboe;Name"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Nominal -->
-
-    <owl:Class rdf:about="&oboe;Nominal"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Observation -->
-
-    <owl:Class rdf:about="&oboe;Observation"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#StandardValue -->
-
-    <owl:Class rdf:about="&oboe;StandardValue"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Type -->
-
-    <owl:Class rdf:about="&oboe;Type"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Unit -->
-
-    <owl:Class rdf:about="&oboe;Unit"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#UnitConversion -->
-
-    <owl:Class rdf:about="&oboe;UnitConversion"/>
-    
-
 
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Algae -->
 
@@ -1389,47 +1176,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="#SBCSiteName">
         <rdfs:subClassOf rdf:resource="&oboe;Name"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasCharacteristicValue"/>
-                <owl:someValuesFrom rdf:resource="#SBCSiteNameValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBCSiteNameCatalog -->
-
-    <owl:Class rdf:about="#SBCSiteNameCatalog">
-        <rdfs:label
-            >SBC Site Name Catalog</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Nominal"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasStandardValue"/>
-                <owl:allValuesFrom rdf:resource="#SBCSiteNameValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;forCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="&oboe;Name"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBCSiteNameValue -->
-
-    <owl:Class rdf:about="#SBCSiteNameValue">
-        <rdfs:label
-            >SBC Site Name Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;StandardValue"/>
-    </owl:Class>
-    
-
 
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SBC_ConcentrationOfAmmonium_FreshWater -->
 
@@ -1595,7 +1342,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe;Observation"/>
+                            <rdf:Description rdf:about="&oboe-core;Observation"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
                                 <owl:allValuesFrom rdf:resource="#Stream"/>
