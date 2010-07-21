@@ -1335,22 +1335,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StreamDischarge -->
 
     <owl:Class rdf:about="#StreamDischarge">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;measurementFor"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe-core;Observation"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
-                                <owl:allValuesFrom rdf:resource="#Stream"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#Flow"/>
     </owl:Class>
     
