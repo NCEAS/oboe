@@ -108,8 +108,8 @@ In Biology, Ammonium is a waste product of metabolism, an important component of
         <rdfs:subClassOf rdf:resource="#SubstanceConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;Gram"/>
+                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;Mole"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -120,14 +120,14 @@ In Biology, Ammonium is a waste product of metabolism, an important component of
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;Mole"/>
+                <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.0554371</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.0554371</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="&oboe-units;Gram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -147,8 +147,8 @@ In Biology, Ammonium is a waste product of metabolism, an important component of
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">18.03846</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -159,8 +159,8 @@ In Biology, Ammonium is a waste product of metabolism, an important component of
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">18.03846</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1335,8 +1335,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StreamDischarge -->
 
     <owl:Class rdf:about="#StreamDischarge">
-        <rdfs:subClassOf rdf:resource="#Flow"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;measurementFor"/>
                 <owl:allValuesFrom>
@@ -1351,7 +1350,8 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                     </owl:Class>
                 </owl:allValuesFrom>
             </owl:Restriction>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Flow"/>
     </owl:Class>
     
 
