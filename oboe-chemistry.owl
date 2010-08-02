@@ -116,20 +116,14 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#AmmoniumGramToMole -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#AmmoniumMoleToGram -->
 
-    <owl:Class rdf:about="#AmmoniumGramToMole">
+    <owl:Class rdf:about="#AmmoniumMoleToGram">
         <rdfs:subClassOf rdf:resource="#SubstanceConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.0554371</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:hasValue rdf:datatype="&xsd;decimal">18.03846</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -172,6 +166,12 @@
                         </owl:allValuesFrom>
                     </owl:Restriction>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
