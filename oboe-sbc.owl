@@ -191,6 +191,29 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Celsius -->
+
+    <owl:Class rdf:about="&oboe-units;Celsius">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe-core;Measurement"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-units;Temperature"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Gram -->
 
     <owl:Class rdf:about="&oboe-units;Gram"/>
@@ -236,6 +259,12 @@
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Speed -->
 
     <owl:Class rdf:about="&oboe-units;Speed"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Temperature -->
+
+    <owl:Class rdf:about="&oboe-units;Temperature"/>
     
 
 
@@ -294,7 +323,7 @@
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ammonium">
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CompoundSubstance"/>
-        <rdfs:comment>Ammonium is the ion derived from ammonia. The molecule is composed of one Nitrogen atom and four Hydrogen atoms. When dissolved in natural waters, it is an ion with a  charge of +1. The formula is NH(subscript 4)(superscript +), NH4+
+        <rdfs:comment>Ammonium is the ion derived from ammonia. The molecule is composed of one Nitrogen atom and four Hydrogen atoms. When dissolved in natural waters, it is an ion with a  charge of +1. The empirical formula is NH(subscript 4)(superscript +), NH4+
 
 In Biology, Ammonium is a waste product of metabolism, an important component of Nitrogen cycling, and is often a source of Nitrogen for autotrophs.</rdfs:comment>
     </owl:Class>
@@ -313,14 +342,7 @@ In Biology, Ammonium is a waste product of metabolism, an important component of
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ammonium_GramToMole -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ammonium_GramToMole">
-        <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SubstanceConversion"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;Gram"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
@@ -329,16 +351,60 @@ In Biology, Ammonium is a waste product of metabolism, an important component of
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="&oboe-units;Mole"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
+                                <owl:allValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
+                                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ammonium"/>
+                                    </owl:Restriction>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
+                        <owl:allValuesFrom rdf:resource="&oboe-units;Mole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
+                                <owl:allValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
+                                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ammonium"/>
+                                    </owl:Restriction>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
+                        <owl:allValuesFrom rdf:resource="&oboe-units;Gram"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>You need a reference for the multiplier. It should be for naturally occuring isotopic composition.
+ </rdfs:comment>
     </owl:Class>
     
 
@@ -346,7 +412,6 @@ In Biology, Ammonium is a waste product of metabolism, an important component of
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ammonium_MoleToGram -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ammonium_MoleToGram">
-        <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SubstanceConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -372,6 +437,7 @@ In Biology, Ammonium is a waste product of metabolism, an important component of
                 <owl:hasValue rdf:datatype="&xsd;decimal">18.03846</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>You need a reference for the multiplier. It should be for naturally occuring isotopic composition.</rdfs:comment>
     </owl:Class>
     
 
@@ -421,6 +487,30 @@ In Biology, Ammonium is a waste product of metabolism, an important component of
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Carbon">
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ElementalSubstance"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Carbon12 -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Carbon12">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Carbon"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Carbon13 -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Carbon13">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Carbon"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Carbon14 -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Carbon14">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Carbon"/>
     </owl:Class>
     
 
@@ -728,9 +818,9 @@ Concentrations also include  the mixtures of suspended particulates or their com
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GramPerLIter -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GramPerLiter -->
 
-    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GramPerLIter">
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GramPerLiter">
         <rdfs:subClassOf rdf:resource="&oboe;CompositeUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -757,6 +847,14 @@ Concentrations also include  the mixtures of suspended particulates or their com
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GroundWater">
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Porewater"/>
         <rdfs:comment>Groundwater seems to be mostly associated with terrestrial systems (check). So it is subclassed here. The assumtion being that porewater (parent) can be extracted from any sediment (marine, lakebed, streambed, earth, etc).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#H2O -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#H2O">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CompoundSubstance"/>
     </owl:Class>
     
 
@@ -1028,6 +1126,37 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Nitrogen">
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ElementalSubstance"/>
+        <rdfs:comment>Nitrogen is a chemical element that has the symbol N, atomic number of 7 and atomic mass 14.00674 u. Elemental nitrogen is a colorless, odorless, tasteless and mostly inert diatomic gas at standard conditions, constituting 78.08% by volume of Earth&#39;s atmosphere.
+
+The element nitrogen was discovered by Scottish physician Daniel Rutherford in 1772. Nitrogen occurs in all living organisms. It is a constituent element of amino acids and thus of proteins, and of nucleic acids (DNA and RNA). It resides in the chemical structure of almost all neurotransmitters, and is a defining component of alkaloids, biological molecules produced by many organisms.
+
+Many important industrial compounds, such as ammonia, nitric acid, organic nitrates (propellants and explosives), and cyanides, contain nitrogen. The extremely strong bond in elemental nitrogen dominates nitrogen chemistry, causing difficulty for both organisms and industry in breaking the bond to convert the N2  into useful compounds, but releasing large amounts of often useful energy, when these compounds burn, explode, or decay back into nitrogen gas  (Wikipedia.org, 2010).
+
+The freebase.com query for &quot;Nitrogen&quot;:
+[{
+  &quot;id&quot;:   null,
+  &quot;key&quot;: {
+    &quot;namespace&quot;: &quot;/en&quot;,
+    &quot;value&quot;:     &quot;nitrogen&quot;
+  },
+  &quot;name&quot;: null
+}]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Nitrogen14 -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Nitrogen14">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Nitrogen"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Nitrogen15 -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Nitrogen15">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Nitrogen"/>
     </owl:Class>
     
 
@@ -1825,7 +1954,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SubstanceConversion -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SubstanceConversion">
-        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Substance"/>
+        <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
     </owl:Class>
     
 
@@ -1927,8 +2056,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Water -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Water">
-        <rdfs:label>Water</rdfs:label>
-        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CompoundSubstance"/>
+        <rdfs:label>Water, naturally occurring. Usually a mixture of H2O and other materials.</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#HydrospherePhysicalFeature"/>
     </owl:Class>
     
