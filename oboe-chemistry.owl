@@ -262,9 +262,9 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#NItrate -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Nitrate -->
 
-    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#NItrate">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Nitrate">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#CompoundSubstance"/>
     </owl:Class>
     
@@ -386,7 +386,7 @@ Many important industrial compounds, such as ammonia, nitric acid, organic nitra
         <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
+                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
                 <owl:allValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
@@ -407,7 +407,7 @@ Many important industrial compounds, such as ammonia, nitric acid, organic nitra
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
+                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
                 <owl:allValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
