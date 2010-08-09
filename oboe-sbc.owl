@@ -111,6 +111,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Ammonium -->
+
+    <owl:Class rdf:about="&oboe-chemistry;Ammonium"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#CompoundSubstance -->
 
     <owl:Class rdf:about="&oboe-chemistry;CompoundSubstance"/>
@@ -173,6 +179,12 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Conductance -->
+
+    <owl:Class rdf:about="&oboe-units;Conductance"/>
     
 
 
@@ -293,6 +305,32 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BrackishWater -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BrackishWater">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Water"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BrackishWaterDiscreteSample -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BrackishWaterDiscreteSample">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BrackishWater"/>
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Estuary"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BrackishWaterSensorSample -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BrackishWaterSensorSample">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BrackishWater"/>
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Estuary"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BrzezinskiLabProtocols -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BrzezinskiLabProtocols">
@@ -377,6 +415,39 @@ Concentrations also include  the mixtures of suspended particulates or their com
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ConcentrationOfAmmonium -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ConcentrationOfAmmonium">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&oboe-core;Measurement"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-units;AmountOfSubstanceConcentration"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-units;MassDensity"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&oboe-core;Observation"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
+                                        <owl:allValuesFrom rdf:resource="&oboe-chemistry;Ammonium"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Concentration"/>
     </owl:Class>
     
@@ -450,6 +521,47 @@ Concentrations also include  the mixtures of suspended particulates or their com
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#EcosystemProcess">
         <rdfs:label>Ecosystem Process</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ElectrolyticConductivity_SeaWater -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ElectrolyticConductivity_SeaWater">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ElectrolyticConductivity_StreamWater -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ElectrolyticConductivity_StreamWater">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&oboe-core;Measurement"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&oboe-core;Observation"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
+                                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FreshWater"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
+                        <owl:allValuesFrom rdf:resource="&oboe-units;Conductance"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Measurement"/>
     </owl:Class>
     
 
@@ -999,6 +1111,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Phytoplankton">
         <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SuspendedSolids"/>
     </owl:Class>
     
 
@@ -1164,7 +1277,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                                     <rdf:Description rdf:about="&oboe-core;Observation"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
-                                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FreshWaterDiscreteSample"/>
+                                        <owl:allValuesFrom rdf:resource="&oboe-chemistry;Ammonium"/>
                                     </owl:Restriction>
                                 </owl:intersectionOf>
                             </owl:Class>
@@ -1201,7 +1314,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                                     <rdf:Description rdf:about="&oboe-core;Observation"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
-                                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SalineWater"/>
+                                        <owl:allValuesFrom rdf:resource="&oboe-chemistry;Ammonium"/>
                                     </owl:Restriction>
                                 </owl:intersectionOf>
                             </owl:Class>
@@ -1431,6 +1544,16 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SuspendedParticulatePhosphorus_AcidDigestion">
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsForElementalAnalysis"/>
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsForOrganicTissue"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SuspendedSolids -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SuspendedSolids">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+        <rdfs:comment>Solid material suspended in natural water. Usually, this is a mixture of inorganic and organic material, living and dead. Suspended solids are not dissolved. They are particles of various sizes and buoyancy. Usually, the material is collected from a volume of water, and the collection protocol should specify the size or type of filter used to separate the suspended material from the water and dissolved material.
+</rdfs:comment>
     </owl:Class>
     
 
