@@ -64,6 +64,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasContext -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;hasContext"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor -->
 
     <owl:ObjectProperty rdf:about="&oboe-core;measurementFor"/>
@@ -209,6 +215,12 @@
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#MassPerMass -->
 
     <owl:Class rdf:about="&oboe-units;MassPerMass"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#MicromolePerLiter -->
+
+    <owl:Class rdf:about="&oboe-units;MicromolePerLiter"/>
     
 
 
@@ -1223,6 +1235,18 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&oboe-core;Measurement"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;hasContext"/>
+                                <owl:someValuesFrom rdf:resource="&oboe-core;Observation"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
+                                <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FreshWaterDiscreteSample"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
                         <owl:allValuesFrom>
@@ -1244,6 +1268,10 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&oboe-core;usesProtocol"/>
                         <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MelackLabAmmoniumConcentrationProtocolFreshwaterAutomated"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;usesStandard"/>
+                        <owl:allValuesFrom rdf:resource="&oboe-units;MicromolePerLiter"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1281,6 +1309,10 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&oboe-core;usesProtocol"/>
                         <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AmmoniumConcentrationProtocol_MSIAutomated"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;usesStandard"/>
+                        <owl:allValuesFrom rdf:resource="&oboe-units;MicromolePerLiter"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
