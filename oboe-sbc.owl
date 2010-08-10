@@ -188,6 +188,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Conductivity -->
+
+    <owl:Class rdf:about="&oboe-units;Conductivity"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Mass -->
 
     <owl:Class rdf:about="&oboe-units;Mass"/>
@@ -528,6 +534,35 @@ Concentrations also include  the mixtures of suspended particulates or their com
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ElectrolyticConductivity_SeaWater -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ElectrolyticConductivity_SeaWater">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&oboe-core;Measurement"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&oboe-core;Observation"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
+                                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SalineWater"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
+                        <owl:allValuesFrom rdf:resource="&oboe-units;Conductivity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;usesProtocol"/>
+                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SeabirdElectronicsCTDProtocols"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&oboe-core;Measurement"/>
     </owl:Class>
     
@@ -556,7 +591,7 @@ Concentrations also include  the mixtures of suspended particulates or their com
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                        <owl:allValuesFrom rdf:resource="&oboe-units;Conductance"/>
+                        <owl:allValuesFrom rdf:resource="&oboe-units;Conductivity"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -647,30 +682,6 @@ Concentrations also include  the mixtures of suspended particulates or their com
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GramPerLiter -->
-
-    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GramPerLiter">
-        <rdfs:subClassOf rdf:resource="&oboe;CompositeUnit"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe-core;Measurement"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="&oboe-units;MassDensity"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GroundWater -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GroundWater">
@@ -753,30 +764,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LiterPerSecond -->
-
-    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LiterPerSecond">
-        <rdfs:subClassOf rdf:resource="&oboe;CompositeUnit"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe-core;Measurement"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="&oboe-units;VolumetricRate"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Location -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Location">
@@ -837,30 +824,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MelackLabProtocols">
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsByLaboratory"/>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MeterPerSecond -->
-
-    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MeterPerSecond">
-        <rdfs:subClassOf rdf:resource="&oboe;CompositeUnit"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe-core;Measurement"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="&oboe-units;Speed"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -929,39 +892,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OceanCurrentVelocity -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OceanCurrentVelocity">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&oboe-core;Measurement"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
-                        <owl:allValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&oboe-core;Observation"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
-                                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Ocean"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                        <owl:allValuesFrom rdf:resource="&oboe-units;Speed"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&oboe-core;usesProtocol"/>
-                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WashburnLabProtocols"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&oboe-core;usesStandard"/>
-                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MeterPerSecond"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Flow"/>
     </owl:Class>
     
@@ -1390,9 +1320,9 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SeabirdCTDElectronicsProtocols -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SeabirdElectronicsCTDProtocols -->
 
-    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SeabirdCTDElectronicsProtocols">
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SeabirdElectronicsCTDProtocols">
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsByInstrumentation"/>
     </owl:Class>
     
@@ -1465,39 +1395,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StreamDischargeRate -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#StreamDischargeRate">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&oboe-core;Measurement"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
-                        <owl:allValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&oboe-core;Observation"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
-                                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Stream"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                        <owl:allValuesFrom rdf:resource="&oboe-units;VolumetricRate"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&oboe-core;usesProtocol"/>
-                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MelackLabProtocols"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&oboe-core;usesStandard"/>
-                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#LiterPerSecond"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Flow"/>
     </owl:Class>
     
