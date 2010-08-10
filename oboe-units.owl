@@ -3487,9 +3487,9 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#MicrosiemenPerMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#MicrosiemensPerMeter -->
 
-    <owl:Class rdf:about="&oboe-units;MicrosiemenPerMeter">
+    <owl:Class rdf:about="&oboe-units;MicrosiemensPerMeter">
         <rdfs:subClassOf rdf:resource="&oboe;CompositeUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -3879,9 +3879,9 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#MillisiemenPerMeter -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#MillisiemensPerMeter -->
 
-    <owl:Class rdf:about="&oboe-units;MillisiemenPerMeter">
+    <owl:Class rdf:about="&oboe-units;MillisiemensPerMeter">
         <rdfs:subClassOf rdf:resource="&oboe;CompositeUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>

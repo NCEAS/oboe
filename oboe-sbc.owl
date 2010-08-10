@@ -212,6 +212,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#MicrosiemensPerMeter -->
+
+    <owl:Class rdf:about="&oboe-units;MicrosiemensPerMeter"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Percent -->
 
     <owl:Class rdf:about="&oboe-units;Percent"/>
@@ -221,6 +227,12 @@
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Proportion -->
 
     <owl:Class rdf:about="&oboe-units;Proportion"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#SiemensPerMeter -->
+
+    <owl:Class rdf:about="&oboe-units;SiemensPerMeter"/>
     
 
 
@@ -546,7 +558,7 @@ Concentrations also include  the mixtures of suspended particulates or their com
                                     <rdf:Description rdf:about="&oboe-core;Observation"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
-                                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SalineWater"/>
+                                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OceanWaterSensorSample"/>
                                     </owl:Restriction>
                                 </owl:intersectionOf>
                             </owl:Class>
@@ -559,6 +571,10 @@ Concentrations also include  the mixtures of suspended particulates or their com
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&oboe-core;usesProtocol"/>
                         <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SeabirdElectronicsCTDProtocols"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;usesStandard"/>
+                        <owl:allValuesFrom rdf:resource="&oboe-units;SiemensPerMeter"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -583,7 +599,7 @@ Concentrations also include  the mixtures of suspended particulates or their com
                                     <rdf:Description rdf:about="&oboe-core;Observation"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
-                                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FreshWater"/>
+                                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#FreshWaterSensorSample"/>
                                     </owl:Restriction>
                                 </owl:intersectionOf>
                             </owl:Class>
@@ -592,6 +608,14 @@ Concentrations also include  the mixtures of suspended particulates or their com
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
                         <owl:allValuesFrom rdf:resource="&oboe-units;Conductivity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;usesProtocol"/>
+                        <owl:allValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#MelackLabProtocols"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;usesStandard"/>
+                        <owl:allValuesFrom rdf:resource="&oboe-units;MicrosiemensPerMeter"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
