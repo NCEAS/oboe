@@ -121,12 +121,6 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Ammonium -->
-
-    <owl:Class rdf:about="&oboe-chemistry;Ammonium"/>
-    
-
-
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity -->
 
     <owl:Class rdf:about="&oboe-core;Entity"/>
@@ -159,24 +153,7 @@
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#Celsius -->
 
-    <owl:Class rdf:about="&oboe-units;Celsius">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe-core;Measurement"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="&oboe-units;Temperature"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+    <owl:Class rdf:about="&oboe-units;Celsius"/>
     
 
 
