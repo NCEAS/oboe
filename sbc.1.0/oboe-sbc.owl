@@ -18,6 +18,11 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/sbc.1.0/oboe-sbc.owl">
+    	<rdfs:label
+            >OBOE SBC Domain Extension 1.0</rdfs:label>
+        <owl:versionInfo>Version 1.0</owl:versionInfo>
+        <rdfs:comment
+            >Extension for Santa Barbara Coastal LTER. OBOE 1.0.</rdfs:comment>
         <owl:imports rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl"/>
     </owl:Ontology>
     
