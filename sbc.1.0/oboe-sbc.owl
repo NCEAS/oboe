@@ -40,9 +40,9 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/sbc-1.0/oboe-sbc.owl#ChildOfKelp -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/sbc.1.0/oboe-sbc.owl#ChildOfKelp -->
 
-    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/sbc-1.0/oboe-sbc.owl#ChildOfKelp">
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/sbc.1.0/oboe-sbc.owl#ChildOfKelp">
         <rdfs:subClassOf rdf:resource="&oboe-sbc;Kelp"/>
     </owl:Class>
 </rdf:RDF>
