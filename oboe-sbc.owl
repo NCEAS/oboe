@@ -2042,6 +2042,20 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WetMass">
         <rdfs:subClassOf rdf:resource="&oboe-units;Mass"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&oboe-chemistry;Nitrogen">
+        <dc:description>Nitrogen is a chemical element that has the symbol N, atomic number of 7 and atomic mass 14.00674 u.</dc:description>
+    </rdf:Description>
 </rdf:RDF>
 
 
