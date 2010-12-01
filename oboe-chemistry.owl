@@ -133,35 +133,8 @@
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#SubstanceConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
-                <owl:allValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
-                        <owl:allValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
-                                <owl:allValuesFrom>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
-                                        <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Ammonium"/>
-                                    </owl:Restriction>
-                                </owl:allValuesFrom>
-                            </owl:Restriction>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">18.03846</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -183,6 +156,33 @@
                         </owl:allValuesFrom>
                     </owl:Restriction>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;measurementFor"/>
+                                <owl:allValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&oboe-core;ofEntity"/>
+                                        <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Ammonium"/>
+                                    </owl:Restriction>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">18.03846</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -221,9 +221,9 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Chlorophyll_all -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Chlorophyll_total -->
 
-    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Chlorophyll_all">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Chlorophyll_total">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Pigments"/>
     </owl:Class>
     
@@ -323,9 +323,9 @@ Many important industrial compounds, such as ammonia, nitric acid, organic nitra
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Phaeophytin -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Phaeopigments -->
 
-    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Phaeophytin">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Phaeopigments">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Pigments"/>
     </owl:Class>
     
@@ -386,7 +386,7 @@ Many important industrial compounds, such as ammonia, nitric acid, organic nitra
         <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
+                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
                 <owl:allValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
@@ -407,7 +407,7 @@ Many important industrial compounds, such as ammonia, nitric acid, organic nitra
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
+                <owl:onProperty rdf:resource="&oboe;hasSourceUnit"/>
                 <owl:allValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
