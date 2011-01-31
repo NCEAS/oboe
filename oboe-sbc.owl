@@ -317,6 +317,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#PhysicalCharacteristic -->
+
+    <owl:Class rdf:about="&oboe;PhysicalCharacteristic"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Type -->
 
     <owl:Class rdf:about="&oboe;Type"/>
@@ -845,6 +851,16 @@ Concentrations also include  the mixtures of suspended particulates or their com
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Flow">
         <rdfs:subClassOf rdf:resource="&oboe-core;Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Fluorescence -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Fluorescence">
+        <rdfs:subClassOf rdf:resource="&oboe;PhysicalCharacteristic"/>
+        <rdfs:comment>luminescence that is caused by the absorption of radiation at one wavelength followed by nearly immediate reradiation usually at a different wavelength and that ceases almost at once when the incident radiation stops; also : the radiation emitted (from Merriam-Webster)
+</rdfs:comment>
     </owl:Class>
     
 
@@ -2456,6 +2472,15 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SalineWater">
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Water"/>
         <rdfs:comment>Saline water is water on which one might want to measure salinity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Salinity -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Salinity">
+        <rdfs:subClassOf rdf:resource="&oboe;PhysicalCharacteristic"/>
+        <rdfs:comment>At the simplest level, salinity is the total amount of dissolved material in grams in one kilogram of sea water. Thus salinity is a dimensionless quantity (Texas A&amp;M Univ, Dept of Oceanography online textbook http://oceanworld.tamu.edu). Accuracy and practicality are heavily considered in it measurement, and must be clearly defined. </rdfs:comment>
     </owl:Class>
     
 
