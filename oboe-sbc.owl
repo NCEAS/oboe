@@ -337,6 +337,12 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Relationship -->
+
+    <owl:Class rdf:about="&oboe;Relationship"/>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Type -->
 
     <owl:Class rdf:about="&oboe;Type"/>
@@ -348,6 +354,22 @@
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#AcousticDopplerCurrentProfileProtocol">
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsByInstrumentation"/>
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WashburnLabProtocols"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Adjacent -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Adjacent">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpatialRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#After -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#After">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TemporalRelationship"/>
     </owl:Class>
     
 
@@ -398,6 +420,14 @@
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#BeachHabitat">
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#EcologicalHabitat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Before -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Before">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TemporalRelationship"/>
     </owl:Class>
     
 
@@ -464,6 +494,14 @@
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Chlorophyll_a">
         <rdfs:subClassOf rdf:resource="&oboe-chemistry;Pigments"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CompositionRelationship -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CompositionRelationship">
+        <rdfs:subClassOf rdf:resource="&oboe;Relationship"/>
     </owl:Class>
     
 
@@ -798,6 +836,14 @@ Concentrations also include  the mixtures of suspended particulates or their com
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#DuganLabProtocols">
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#ProtocolsByLaboratory"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#During -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#During">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TemporalRelationship"/>
     </owl:Class>
     
 
@@ -1368,6 +1414,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OrganismTissue">
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Sample"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Overlaps -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Overlaps">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpatialRelationship"/>
     </owl:Class>
     
 
@@ -2652,6 +2706,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpatialRelationship -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpatialRelationship">
+        <rdfs:subClassOf rdf:resource="&oboe;Relationship"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Stream -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Stream">
@@ -2798,6 +2860,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TemporalRelationship -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TemporalRelationship">
+        <rdfs:subClassOf rdf:resource="&oboe;Relationship"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TissueCarbonNitrogen_CHNElementalAnalyzer -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#TissueCarbonNitrogen_CHNElementalAnalyzer">
@@ -2893,6 +2963,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#WetMass">
         <rdfs:subClassOf rdf:resource="&oboe-units;Mass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Within -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Within">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpatialRelationship"/>
     </owl:Class>
     
 
