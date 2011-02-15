@@ -107,20 +107,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#hasPart -->
-
-    <owl:ObjectProperty rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#hasPart"/>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#partOf -->
-
-    <owl:ObjectProperty rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#partOf">
-        <owl:inverseOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#hasPart"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -961,6 +947,14 @@ Concentrations also include  the mixtures of suspended particulates or their com
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#HasPart -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#HasPart">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CompositionRelationship"/>
+    </owl:Class>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#HydrospherePhysicalFeature -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#HydrospherePhysicalFeature">
@@ -1048,12 +1042,6 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#KelpPart">
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#OrganismPart"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#partOf"/>
-                <owl:someValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#GiantKelp"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>A kelp body is technically called the thallus, or sometimes &quot;plant&quot;. It has these parts: stem-like structures (stipes), leaf-like structures (blades). The blades contain gas-filled bladders or pneumatocysts, which float upward. It is fastened to the substrate with a holdfast that might resemble roots. </rdfs:comment>
     </owl:Class>
     
@@ -1422,6 +1410,14 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Overlaps">
         <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#SpatialRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PartOf -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#PartOf">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#CompositionRelationship"/>
     </owl:Class>
     
 
