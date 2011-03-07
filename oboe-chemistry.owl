@@ -25,7 +25,6 @@
         <rdfs:label>Chemistry</rdfs:label>
         <owl:versionInfo>Version 1.0</owl:versionInfo>
         <rdfs:comment>Extension ontology for commonly used chemistry types in earth and environmental sciences.</rdfs:comment>
-        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl"/>
     </owl:Ontology>
     
 
