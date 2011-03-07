@@ -382,7 +382,7 @@ Many important industrial compounds, such as ammonia, nitric acid, organic nitra
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#SubstanceConversion -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#SubstanceConversion">
-        <rdfs:subClassOf rdf:resource="&oboe;UnitConversion"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe;hasTargetUnit"/>
@@ -441,9 +441,9 @@ Many important industrial compounds, such as ammonia, nitric acid, organic nitra
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#UnitConversion -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#UnitConversion -->
 
-    <owl:Class rdf:about="&oboe;UnitConversion"/>
+    <owl:Class rdf:about="&oboe-core;UnitConversion"/>
 </rdf:RDF>
 
 
