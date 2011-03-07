@@ -6,14 +6,14 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY oboe-sbc "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#" >
+    <!ENTITY oboe-sbc "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/sbc-1.0/oboe-sbc.owl#"
      xml:base="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/sbc-1.0/oboe-sbc.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:oboe-sbc="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#"
+     xmlns:oboe-sbc="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -23,7 +23,7 @@
         <owl:versionInfo>Version 1.0</owl:versionInfo>
         <rdfs:comment
             >Extension for Santa Barbara Coastal LTER. OBOE 1.0.</rdfs:comment>
-        <owl:imports rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl"/>
+        <owl:imports rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl"/>
     </owl:Ontology>
     
 
@@ -39,7 +39,7 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#Kelp -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Kelp -->
 
     <owl:Class rdf:about="&oboe-sbc;Kelp"/>
     

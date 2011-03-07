@@ -11,14 +11,14 @@
     <!ENTITY oboe "http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#" >
     <!ENTITY oboe-core "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#" >
     <!ENTITY oboe-units "http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#" >
-    <!ENTITY oboe-sbc "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#" >
+    <!ENTITY oboe-sbc "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#"
-     xml:base="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl"
+<rdf:RDF xmlns="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#"
+     xml:base="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-     xmlns:oboe-sbc="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe-sbc.owl#"
+     xmlns:oboe-sbc="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#"
      xmlns:oboe-units="http://ecoinformatics.org/oboe/oboe.1.0/oboe-units.owl#"
      xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
