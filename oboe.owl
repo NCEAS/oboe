@@ -175,12 +175,6 @@
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -221,6 +215,12 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -231,8 +231,8 @@
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Acre"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -249,8 +249,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Acre"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -275,14 +275,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Acre"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Acre"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -395,12 +395,6 @@
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
                 <owl:hasValue rdf:datatype="&xsd;decimal">0.0000000001</owl:hasValue>
             </owl:Restriction>
@@ -409,6 +403,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Meter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -427,6 +427,18 @@
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Dekameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -439,18 +451,6 @@
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Dekameter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -525,26 +525,26 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Kilopascal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">100</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Bar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Kilopascal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -557,6 +557,12 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
 
     <owl:Class rdf:about="#Becquerel">
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Second"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
@@ -577,12 +583,6 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Second"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -651,8 +651,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Bushel"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -669,8 +669,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Bushel"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -751,8 +751,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Celsius"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Kelvin"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -763,14 +763,14 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Kelvin"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">1</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Celsius"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -807,8 +807,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Centigram"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.00001</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -819,8 +819,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.00001</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Centigram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -864,12 +864,6 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Centimeter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -882,6 +876,12 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Centimeter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -924,12 +924,6 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -950,6 +944,12 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                 <owl:allValuesFrom rdf:resource="#Centimeter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -960,14 +960,14 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Centimeter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Centimeter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1022,8 +1022,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Second"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1034,8 +1034,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Second"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1132,20 +1132,20 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;double">0.0</owl:hasValue>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
                 <owl:allValuesFrom rdf:resource="#Decibar"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;double">0.1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1188,6 +1188,12 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.0001</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Kilogram"/>
             </owl:Restriction>
@@ -1196,12 +1202,6 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
                 <owl:allValuesFrom rdf:resource="#Decigram"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.0001</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1238,8 +1238,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Decimeter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1250,14 +1250,14 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Decimeter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1300,6 +1300,12 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Second"/>
             </owl:Restriction>
@@ -1308,12 +1314,6 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1326,14 +1326,14 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Radian"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Degree"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Degree"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Radian"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1406,6 +1406,12 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Kilogram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
                 <owl:allValuesFrom rdf:resource="#Dekagram"/>
             </owl:Restriction>
@@ -1414,12 +1420,6 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Kilogram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1462,8 +1462,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Dekameter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1480,8 +1480,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Dekameter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1524,6 +1524,12 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
                 <owl:allValuesFrom rdf:resource="#Dekasecond"/>
             </owl:Restriction>
@@ -1532,12 +1538,6 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Second"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1590,14 +1590,14 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.556</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Kelvin"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Kelvin"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#FahrenheitDegree"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1608,8 +1608,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#FahrenheitDegree"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.556</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1652,8 +1652,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1664,8 +1664,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1738,14 +1738,14 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#FootGoldCoast"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#FootGoldCoast"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1758,14 +1758,14 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Foot"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Foot"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1800,14 +1800,14 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.3048</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.3048</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1898,14 +1898,14 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">3.78541178</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Liter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">3.78541178</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1916,8 +1916,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Liter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1954,26 +1954,26 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
                 <owl:allValuesFrom rdf:resource="#Grad"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Radian"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.015707</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.015707</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Radian"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2088,14 +2088,14 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Gram"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Kilogram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Kilogram"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Gram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2174,14 +2174,14 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.1</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Kilogram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2192,8 +2192,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Kilogram"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2230,6 +2230,12 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">100</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
@@ -2244,12 +2250,6 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">100</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2313,8 +2313,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Hectosecond"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2325,14 +2325,14 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">100</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Hectosecond"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">100</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2343,12 +2343,6 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
 
     <owl:Class rdf:about="#Hertz">
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Second"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
@@ -2369,6 +2363,12 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Second"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2405,14 +2405,8 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">3600</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Second"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2423,8 +2417,14 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Second"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">3600</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2469,14 +2469,14 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Inch"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Inch"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2505,12 +2505,6 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.0254</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
@@ -2519,6 +2513,12 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
                 <owl:allValuesFrom rdf:resource="#Inch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.0254</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2709,12 +2709,6 @@ Alll of these quantities characterize the total amount of radiation present, at 
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">-1</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -2727,6 +2721,12 @@ Alll of these quantities characterize the total amount of radiation present, at 
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">-1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2752,12 +2752,6 @@ Alll of these quantities characterize the total amount of radiation present, at 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -2770,6 +2764,12 @@ Alll of these quantities characterize the total amount of radiation present, at 
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2822,14 +2822,14 @@ Alll of these quantities characterize the total amount of radiation present, at 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Kilometer"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Kilometer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2848,8 +2848,8 @@ Alll of these quantities characterize the total amount of radiation present, at 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1000</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2860,8 +2860,8 @@ Alll of these quantities characterize the total amount of radiation present, at 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">1000</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2928,12 +2928,6 @@ Alll of these quantities characterize the total amount of radiation present, at 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">1000</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
                 <owl:allValuesFrom rdf:resource="#Kilosecond"/>
             </owl:Restriction>
@@ -2942,6 +2936,12 @@ Alll of these quantities characterize the total amount of radiation present, at 
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1000</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3012,8 +3012,14 @@ Alll of these quantities characterize the total amount of radiation present, at 
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#LinkClarke"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.201166</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3024,14 +3030,8 @@ Alll of these quantities characterize the total amount of radiation present, at 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#LinkClarke"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.201166</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3044,14 +3044,14 @@ Alll of these quantities characterize the total amount of radiation present, at 
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Decimeter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Decimeter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3104,14 +3104,8 @@ Alll of these quantities characterize the total amount of radiation present, at 
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#MeterCubed"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Liter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.001</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3122,8 +3116,14 @@ Alll of these quantities characterize the total amount of radiation present, at 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.001</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#MeterCubed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Liter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3274,14 +3274,14 @@ Alll of these quantities characterize the total amount of radiation present, at 
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Kilogram"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1000</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Kilogram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3292,8 +3292,8 @@ Alll of these quantities characterize the total amount of radiation present, at 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">1000</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3366,14 +3366,14 @@ Alll of these quantities characterize the total amount of radiation present, at 
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">1000000</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Megameter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3384,8 +3384,8 @@ Alll of these quantities characterize the total amount of radiation present, at 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Megameter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1000000</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3478,14 +3478,14 @@ Alll of these quantities characterize the total amount of radiation present, at 
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3538,14 +3538,14 @@ Alll of these quantities characterize the total amount of radiation present, at 
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3711,14 +3711,14 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">1000000000</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Microgram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Microgram"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1000000000</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3735,6 +3735,12 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
 
     <owl:Class rdf:about="#Microliter">
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Millimeter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
@@ -3755,12 +3761,6 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Millimeter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3797,6 +3797,12 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Micrometer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
             </owl:Restriction>
@@ -3817,12 +3823,6 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Micrometer"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3833,14 +3833,14 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Micrometer"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">1000000</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Micrometer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3851,8 +3851,8 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1000000</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3937,26 +3937,26 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
                 <owl:allValuesFrom rdf:resource="#Micron"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1000000</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">1000000</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3993,12 +3993,6 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">1000000</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Second"/>
             </owl:Restriction>
@@ -4007,6 +4001,12 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1000000</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4109,14 +4109,8 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">1609.344</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Mile"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4127,8 +4121,14 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Mile"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">1609.344</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -4167,14 +4167,14 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Millibar"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.0010</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;double">0.0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Millibar"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4185,8 +4185,8 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;double">0.0010</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -4319,12 +4319,6 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Kilogram"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">1000000</owl:hasValue>
             </owl:Restriction>
@@ -4333,6 +4327,12 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Kilogram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4349,12 +4349,6 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
 
     <owl:Class rdf:about="#Millihertz">
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Millisecond"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
@@ -4377,6 +4371,12 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                 <owl:hasValue rdf:datatype="&xsd;integer">-1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Millisecond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4385,6 +4385,18 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
 
     <owl:Class rdf:about="#Milliliter">
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Centimeter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
@@ -4399,18 +4411,6 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Centimeter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -4509,12 +4509,6 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.001</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
@@ -4523,6 +4517,12 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Meter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.001</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4625,14 +4625,14 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.001</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.001</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -4699,6 +4699,12 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Minute"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
@@ -4707,12 +4713,6 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Second"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Minute"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -4856,14 +4856,14 @@ Often favored because measurements of mass are more precise than measurements of
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Kilogram"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1000000000000</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">1000000000000</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4874,8 +4874,8 @@ Often favored because measurements of mass are more precise than measurements of
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Kilogram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -4912,26 +4912,26 @@ Often favored because measurements of mass are more precise than measurements of
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">1000000000</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
                 <owl:allValuesFrom rdf:resource="#Nanometer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5004,14 +5004,14 @@ Often favored because measurements of mass are more precise than measurements of
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Second"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Nanosecond"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Nanosecond"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Second"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5048,12 +5048,6 @@ Often favored because measurements of mass are more precise than measurements of
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">1852</owl:hasValue>
             </owl:Restriction>
@@ -5062,6 +5056,12 @@ Often favored because measurements of mass are more precise than measurements of
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Meter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5137,6 +5137,12 @@ Often favored because measurements of mass are more precise than measurements of
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#NominalDay"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Second"/>
             </owl:Restriction>
@@ -5145,12 +5151,6 @@ Often favored because measurements of mass are more precise than measurements of
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#NominalDay"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5193,8 +5193,8 @@ Often favored because measurements of mass are more precise than measurements of
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Second"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#NominalHour"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5205,8 +5205,8 @@ Often favored because measurements of mass are more precise than measurements of
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#NominalHour"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Second"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5249,6 +5249,12 @@ Often favored because measurements of mass are more precise than measurements of
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">31643326</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
                 <owl:allValuesFrom rdf:resource="#NominalLeapYear"/>
             </owl:Restriction>
@@ -5257,12 +5263,6 @@ Often favored because measurements of mass are more precise than measurements of
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Second"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">31643326</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5305,14 +5305,14 @@ Often favored because measurements of mass are more precise than measurements of
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Second"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Second"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5355,26 +5355,26 @@ Often favored because measurements of mass are more precise than measurements of
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Second"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">604800</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
                 <owl:allValuesFrom rdf:resource="#NominalWeek"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Second"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">604800</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5411,8 +5411,14 @@ Often favored because measurements of mass are more precise than measurements of
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Second"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">31556926</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5423,14 +5429,8 @@ Often favored because measurements of mass are more precise than measurements of
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Second"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">31556926</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5542,12 +5542,6 @@ Often favored because measurements of mass are more precise than measurements of
         <rdfs:subClassOf rdf:resource="&oboe-core;CompositeUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -5560,6 +5554,12 @@ Often favored because measurements of mass are more precise than measurements of
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -5584,6 +5584,22 @@ This could be probably also be called a PhotonArealDensityRate.</rdfs:comment>
 
     <owl:Class rdf:about="#Pint">
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&oboe-core;Measurement"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="#Volume"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
@@ -5612,22 +5628,6 @@ This could be probably also be called a PhotonArealDensityRate.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&oboe-core;Measurement"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="#Volume"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
             </owl:Restriction>
@@ -5642,26 +5642,26 @@ This could be probably also be called a PhotonArealDensityRate.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
                 <owl:allValuesFrom rdf:resource="#Pint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.473176473</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Liter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.473176473</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5706,8 +5706,8 @@ This could be probably also be called a PhotonArealDensityRate.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
+                <owl:allValuesFrom rdf:resource="#Pound"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5718,14 +5718,14 @@ This could be probably also be called a PhotonArealDensityRate.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
-                <owl:allValuesFrom rdf:resource="#Pound"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.4536</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.4536</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5796,12 +5796,6 @@ This could be probably also be called a PhotonArealDensityRate.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -5816,6 +5810,12 @@ This could be probably also be called a PhotonArealDensityRate.</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -5826,14 +5826,14 @@ This could be probably also be called a PhotonArealDensityRate.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0.946352946</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0.946352946</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5906,12 +5906,6 @@ This could be probably also be called a PhotonArealDensityRate.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Meter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;standardFor"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -5924,6 +5918,12 @@ This could be probably also be called a PhotonArealDensityRate.</rdfs:comment>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -6124,18 +6124,6 @@ Alll of these quantities characterize the total amount of radiation present, at 
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:allValuesFrom rdf:resource="#Kilogram"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">907.2</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
                 <owl:allValuesFrom rdf:resource="#Ton"/>
             </owl:Restriction>
@@ -6144,6 +6132,18 @@ Alll of these quantities characterize the total amount of radiation present, at 
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
                 <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:allValuesFrom rdf:resource="#Kilogram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">907.2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -6180,8 +6180,8 @@ Alll of these quantities characterize the total amount of radiation present, at 
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">1000</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6192,8 +6192,8 @@ Alll of these quantities characterize the total amount of radiation present, at 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1000</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6430,14 +6430,14 @@ Alll of these quantities characterize the total amount of radiation present, at 
         <rdfs:subClassOf rdf:resource="&oboe-core;DerivedUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:allValuesFrom rdf:resource="#Yard"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:allValuesFrom rdf:resource="#Yard"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6466,6 +6466,12 @@ Alll of these quantities characterize the total amount of radiation present, at 
         <rdfs:subClassOf rdf:resource="&oboe-core;UnitConversion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
                 <owl:allValuesFrom rdf:resource="#Meter"/>
             </owl:Restriction>
@@ -6474,12 +6480,6 @@ Alll of these quantities characterize the total amount of radiation present, at 
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasMultiplier"/>
                 <owl:hasValue rdf:datatype="&xsd;decimal">0.914398</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasOffset"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
