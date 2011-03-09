@@ -9,15 +9,15 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboe "http://ecoinformatics.org/oboe/oboe.1.0beta#" >
     <!ENTITY oboe-units "http://ecoinformatics.org/oboe/oboe-units.1.0beta#" >
-    <!ENTITY oboe-sbc "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#" >
+    <!ENTITY oboe-sbc "http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#"
-     xml:base="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl"
+<rdf:RDF xmlns="http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#"
+     xml:base="http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-     xmlns:oboe-sbc="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#"
+     xmlns:oboe-sbc="http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -121,7 +121,7 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#OWLObjectProperty_00000039668021805285 -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#OWLObjectProperty_00000039668021805285 -->
 
     <owl:ObjectProperty rdf:about="#OWLObjectProperty_00000039668021805285">
         <rdfs:label></rdfs:label>
@@ -334,7 +334,7 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#AbsoluteSalinity -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#AbsoluteSalinity -->
 
     <owl:Class rdf:about="#AbsoluteSalinity">
         <rdfs:subClassOf rdf:resource="&oboe;NumericIndex"/>
@@ -355,7 +355,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#AbsorptionCoefficient -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#AbsorptionCoefficient -->
 
     <owl:Class rdf:about="#AbsorptionCoefficient">
         <rdfs:subClassOf rdf:resource="#InherentOpticalPropertiesWater"/>
@@ -369,7 +369,7 @@ c = a + b</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#AirPressure -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#AirPressure -->
 
     <owl:Class rdf:about="#AirPressure">
         <rdfs:subClassOf rdf:resource="#PressureType"/>
@@ -377,7 +377,7 @@ c = a + b</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#AirTemperature -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#AirTemperature -->
 
     <owl:Class rdf:about="#AirTemperature">
         <rdfs:subClassOf rdf:resource="#TemperatureType"/>
@@ -385,7 +385,7 @@ c = a + b</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Alga -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Alga -->
 
     <owl:Class rdf:about="#Alga">
         <rdfs:label>Alga</rdfs:label>
@@ -396,7 +396,7 @@ c = a + b</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#AmmoniumConcentration -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#AmmoniumConcentration -->
 
     <owl:Class rdf:about="#AmmoniumConcentration">
         <rdfs:subClassOf rdf:resource="#DissolvedMaterialInWaterConcentration"/>
@@ -404,7 +404,7 @@ c = a + b</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#AmmoniumConcentrationFreshwaterAutomated -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#AmmoniumConcentrationFreshwaterAutomated -->
 
     <owl:Class rdf:about="#AmmoniumConcentrationFreshwaterAutomated">
         <owl:equivalentClass>
@@ -423,7 +423,7 @@ c = a + b</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#AmmoniumConcentrationProtocol_BenchtopSolarzano1969 -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#AmmoniumConcentrationProtocol_BenchtopSolarzano1969 -->
 
     <owl:Class rdf:about="#AmmoniumConcentrationProtocol_BenchtopSolarzano1969">
         <rdfs:subClassOf rdf:resource="#ProtocolsByConstituent"/>
@@ -433,7 +433,7 @@ c = a + b</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#AmmoniumConcentrationProtocol_SeawaterAutomated -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#AmmoniumConcentrationProtocol_SeawaterAutomated -->
 
     <owl:Class rdf:about="#AmmoniumConcentrationProtocol_SeawaterAutomated">
         <rdfs:subClassOf rdf:resource="#MSI_AnalyticalLabProtocols"/>
@@ -444,7 +444,7 @@ c = a + b</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#AmmoniumConcentrationSeawaterAutomated -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#AmmoniumConcentrationSeawaterAutomated -->
 
     <owl:Class rdf:about="#AmmoniumConcentrationSeawaterAutomated">
         <rdfs:subClassOf rdf:resource="#AmmoniumConcentration"/>
@@ -495,7 +495,7 @@ The sample may have been preserved prior to analysis. Automated methods typicall
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#AmmoniumConcentrationSolorzano -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#AmmoniumConcentrationSolorzano -->
 
     <owl:Class rdf:about="#AmmoniumConcentrationSolorzano">
         <rdfs:subClassOf rdf:resource="#AmmoniumConcentration"/>
@@ -521,7 +521,7 @@ The sample may have been preserved prior to analysis. Automated methods typicall
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#AmmoniumProtocolFlowInjectionNutrientAnalyzer -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#AmmoniumProtocolFlowInjectionNutrientAnalyzer -->
 
     <owl:Class rdf:about="#AmmoniumProtocolFlowInjectionNutrientAnalyzer">
         <rdfs:subClassOf rdf:resource="#ProtocolsByInstrumentation"/>
@@ -529,7 +529,7 @@ The sample may have been preserved prior to analysis. Automated methods typicall
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Animal -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Animal -->
 
     <owl:Class rdf:about="#Animal">
         <rdfs:label>Animal</rdfs:label>
@@ -539,7 +539,7 @@ The sample may have been preserved prior to analysis. Automated methods typicall
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ApparentOpticalPropertiesWater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ApparentOpticalPropertiesWater -->
 
     <owl:Class rdf:about="#ApparentOpticalPropertiesWater">
         <rdfs:subClassOf rdf:resource="#OpticalTypes"/>
@@ -563,7 +563,7 @@ The sample may have been preserved prior to analysis. Automated methods typicall
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ArroyoBurroCreek -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ArroyoBurroCreek -->
 
     <owl:Class rdf:about="#ArroyoBurroCreek">
         <rdfs:subClassOf rdf:resource="#Watershed"/>
@@ -571,7 +571,7 @@ The sample may have been preserved prior to analysis. Automated methods typicall
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ArroyoBurroReef -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ArroyoBurroReef -->
 
     <owl:Class rdf:about="#ArroyoBurroReef">
         <rdfs:subClassOf rdf:resource="#Reef"/>
@@ -579,7 +579,7 @@ The sample may have been preserved prior to analysis. Automated methods typicall
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ArroyoQuemadoReef -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ArroyoQuemadoReef -->
 
     <owl:Class rdf:about="#ArroyoQuemadoReef">
         <rdfs:label
@@ -589,7 +589,7 @@ The sample may have been preserved prior to analysis. Automated methods typicall
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#AtascaderoCreek -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#AtascaderoCreek -->
 
     <owl:Class rdf:about="#AtascaderoCreek">
         <rdfs:subClassOf rdf:resource="#Watershed"/>
@@ -597,7 +597,7 @@ The sample may have been preserved prior to analysis. Automated methods typicall
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#BeachHabitat -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#BeachHabitat -->
 
     <owl:Class rdf:about="#BeachHabitat">
         <rdfs:subClassOf rdf:resource="#EcologicalHabitat"/>
@@ -605,7 +605,7 @@ The sample may have been preserved prior to analysis. Automated methods typicall
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#BeamAttenuationCoefficient -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#BeamAttenuationCoefficient -->
 
     <owl:Class rdf:about="#BeamAttenuationCoefficient">
         <rdfs:subClassOf rdf:resource="#InherentOpticalPropertiesWater"/>
@@ -620,7 +620,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#BeamTransmission -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#BeamTransmission -->
 
     <owl:Class rdf:about="#BeamTransmission">
         <rdfs:subClassOf rdf:resource="#OpticalTypes"/>
@@ -630,7 +630,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#BiogenicSilicaConcentrationSeawater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#BiogenicSilicaConcentrationSeawater -->
 
     <owl:Class rdf:about="#BiogenicSilicaConcentrationSeawater">
         <rdfs:subClassOf rdf:resource="#ParticulateMaterialInWaterConcentration"/>
@@ -654,7 +654,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#BiogenicSilicaProtocol -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#BiogenicSilicaProtocol -->
 
     <owl:Class rdf:about="#BiogenicSilicaProtocol">
         <rdfs:subClassOf rdf:resource="#BrzezinskiLabProtocols"/>
@@ -663,7 +663,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#BiologicalProcess -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#BiologicalProcess -->
 
     <owl:Class rdf:about="#BiologicalProcess">
         <rdfs:label
@@ -673,7 +673,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Biomass -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Biomass -->
 
     <owl:Class rdf:about="#Biomass">
         <rdfs:label>Biomass</rdfs:label>
@@ -682,7 +682,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#BrzezinskiLabProtocols -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#BrzezinskiLabProtocols -->
 
     <owl:Class rdf:about="#BrzezinskiLabProtocols">
         <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
@@ -690,7 +690,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#California -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#California -->
 
     <owl:Class rdf:about="#California">
         <rdfs:subClassOf rdf:resource="#USA"/>
@@ -698,7 +698,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#CarbonNitrogenRatio_Mass -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#CarbonNitrogenRatio_Mass -->
 
     <owl:Class rdf:about="#CarbonNitrogenRatio_Mass">
         <rdfs:subClassOf rdf:resource="#RatioType"/>
@@ -729,7 +729,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#CarbonNitrogenRatio_Mole -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#CarbonNitrogenRatio_Mole -->
 
     <owl:Class rdf:about="#CarbonNitrogenRatio_Mole">
         <rdfs:subClassOf rdf:resource="#RatioType"/>
@@ -760,7 +760,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#CarpinteriaReef -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#CarpinteriaReef -->
 
     <owl:Class rdf:about="#CarpinteriaReef">
         <rdfs:subClassOf rdf:resource="#Reef"/>
@@ -768,7 +768,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#CentralSubplot -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#CentralSubplot -->
 
     <owl:Class rdf:about="#CentralSubplot">
         <rdfs:label>Central Subplot</rdfs:label>
@@ -777,7 +777,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ChannelIslands -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ChannelIslands -->
 
     <owl:Class rdf:about="#ChannelIslands">
         <rdfs:subClassOf rdf:resource="#California"/>
@@ -785,7 +785,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ChlorophyllPhaeopigmentConcentrationProtocol_FluorometricExtraction -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ChlorophyllPhaeopigmentConcentrationProtocol_FluorometricExtraction -->
 
     <owl:Class rdf:about="#ChlorophyllPhaeopigmentConcentrationProtocol_FluorometricExtraction">
         <rdfs:subClassOf rdf:resource="#BrzezinskiLabProtocols"/>
@@ -794,7 +794,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ChlorophyllTotalConcentrationFluometricExtraction -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ChlorophyllTotalConcentrationFluometricExtraction -->
 
     <owl:Class rdf:about="#ChlorophyllTotalConcentrationFluometricExtraction">
         <rdfs:subClassOf rdf:resource="#PigmentConcentrationFluorometric"/>
@@ -802,7 +802,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Chlorophyll_aConcentrationFluometricExtraction -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Chlorophyll_aConcentrationFluometricExtraction -->
 
     <owl:Class rdf:about="#Chlorophyll_aConcentrationFluometricExtraction">
         <rdfs:subClassOf rdf:resource="#PigmentConcentrationFluorometric"/>
@@ -810,7 +810,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Chlorophyll_aPhaeopigmentsConcentrationFluometricExtraction -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Chlorophyll_aPhaeopigmentsConcentrationFluometricExtraction -->
 
     <owl:Class rdf:about="#Chlorophyll_aPhaeopigmentsConcentrationFluometricExtraction">
         <rdfs:subClassOf rdf:resource="#PigmentConcentrationFluorometric"/>
@@ -818,7 +818,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#CollectionOf -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#CollectionOf -->
 
     <owl:Class rdf:about="#CollectionOf">
         <rdfs:subClassOf rdf:resource="&oboe;Relationship"/>
@@ -826,7 +826,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#CommunityOf -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#CommunityOf -->
 
     <owl:Class rdf:about="#CommunityOf">
         <rdfs:label>community of</rdfs:label>
@@ -835,7 +835,7 @@ calculated from beam transmission accordiing to:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Concentration -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Concentration -->
 
     <owl:Class rdf:about="#Concentration">
         <rdfs:subClassOf rdf:resource="&oboe;Measurement"/>
@@ -852,7 +852,7 @@ Concentrations also include  the mixtures of suspended particulates or their com
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Conductivity -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Conductivity -->
 
     <owl:Class rdf:about="#Conductivity">
         <rdfs:label>Conductivity</rdfs:label>
@@ -941,7 +941,7 @@ Concentrations also include  the mixtures of suspended particulates or their com
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ConductivityMeasurement -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ConductivityMeasurement -->
 
     <owl:Class rdf:about="#ConductivityMeasurement">
         <rdfs:label>Conductivity</rdfs:label>
@@ -953,7 +953,7 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ConductivityProtocol_SeabirdCTD -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ConductivityProtocol_SeabirdCTD -->
 
     <owl:Class rdf:about="#ConductivityProtocol_SeabirdCTD">
         <rdfs:subClassOf rdf:resource="#PhysicalOceanographyProtocols"/>
@@ -962,13 +962,13 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Current -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Current -->
 
     <owl:Class rdf:about="#Current"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DateTime -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DateTime -->
 
     <owl:Class rdf:about="#DateTime">
         <rdfs:subClassOf rdf:resource="#SBCMeasurement"/>
@@ -992,7 +992,7 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DateTimeDD -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DateTimeDD -->
 
     <owl:Class rdf:about="#DateTimeDD">
         <rdfs:label>Date-Time Day</rdfs:label>
@@ -1001,7 +1001,7 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DateTimeIsoDate -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DateTimeIsoDate -->
 
     <owl:Class rdf:about="#DateTimeIsoDate">
         <rdfs:label
@@ -1011,7 +1011,7 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DateTimeMM -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DateTimeMM -->
 
     <owl:Class rdf:about="#DateTimeMM">
         <rdfs:label>Date-Time Month</rdfs:label>
@@ -1020,7 +1020,7 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DateTimeYYYY -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DateTimeYYYY -->
 
     <owl:Class rdf:about="#DateTimeYYYY">
         <rdfs:label>Date-Time Year</rdfs:label>
@@ -1029,7 +1029,7 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DecimalDay -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DecimalDay -->
 
     <owl:Class rdf:about="#DecimalDay">
         <rdfs:subClassOf rdf:resource="#DateTime"/>
@@ -1037,7 +1037,7 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DecimalYear -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DecimalYear -->
 
     <owl:Class rdf:about="#DecimalYear">
         <rdfs:subClassOf rdf:resource="#DateTime"/>
@@ -1045,7 +1045,7 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DensityAnomalyProtocol_SeabirdCTD -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DensityAnomalyProtocol_SeabirdCTD -->
 
     <owl:Class rdf:about="#DensityAnomalyProtocol_SeabirdCTD">
         <rdfs:subClassOf rdf:resource="#PhysicalOceanographyProtocols"/>
@@ -1054,7 +1054,7 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DensityAnomalyStandard -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DensityAnomalyStandard -->
 
     <owl:Class rdf:about="#DensityAnomalyStandard">
         <rdfs:label>DensityAnomaly</rdfs:label>
@@ -1063,7 +1063,7 @@ FYI, units in seawater are milliSiemensPerCentimeter</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DensityAnomalyWater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DensityAnomalyWater -->
 
     <owl:Class rdf:about="#DensityAnomalyWater">
         <rdfs:subClassOf rdf:resource="#PhysicalOceanographic"/>
@@ -1075,7 +1075,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Depth -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Depth -->
 
     <owl:Class rdf:about="#Depth">
         <rdfs:label>Depth</rdfs:label>
@@ -1086,7 +1086,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DissolvedMaterialInWaterConcentration -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DissolvedMaterialInWaterConcentration -->
 
     <owl:Class rdf:about="#DissolvedMaterialInWaterConcentration">
         <owl:equivalentClass>
@@ -1146,7 +1146,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DissolvedOrganicCarbonConcentrationProtocol -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DissolvedOrganicCarbonConcentrationProtocol -->
 
     <owl:Class rdf:about="#DissolvedOrganicCarbonConcentrationProtocol">
         <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
@@ -1157,7 +1157,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DissolvedOrganicNitrogenConcentrationProtocol -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DissolvedOrganicNitrogenConcentrationProtocol -->
 
     <owl:Class rdf:about="#DissolvedOrganicNitrogenConcentrationProtocol">
         <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
@@ -1167,7 +1167,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DissolvedOrganicPhosphorusConcentrationProtocol -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DissolvedOrganicPhosphorusConcentrationProtocol -->
 
     <owl:Class rdf:about="#DissolvedOrganicPhosphorusConcentrationProtocol">
         <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
@@ -1178,7 +1178,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DryWeight -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DryWeight -->
 
     <owl:Class rdf:about="#DryWeight">
         <rdfs:label>Dry Weight</rdfs:label>
@@ -1187,7 +1187,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DryWetRatio -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DryWetRatio -->
 
     <owl:Class rdf:about="#DryWetRatio">
         <rdfs:subClassOf rdf:resource="#RatioType"/>
@@ -1211,7 +1211,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#DuganLabProtocols -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#DuganLabProtocols -->
 
     <owl:Class rdf:about="#DuganLabProtocols">
         <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
@@ -1219,7 +1219,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#EastVelocityVector -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#EastVelocityVector -->
 
     <owl:Class rdf:about="#EastVelocityVector">
         <rdfs:subClassOf rdf:resource="#VelocityType"/>
@@ -1243,7 +1243,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#EcologicalHabitat -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#EcologicalHabitat -->
 
     <owl:Class rdf:about="#EcologicalHabitat">
         <rdfs:label
@@ -1253,7 +1253,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#EcosystemProcess -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#EcosystemProcess -->
 
     <owl:Class rdf:about="#EcosystemProcess">
         <rdfs:label
@@ -1263,7 +1263,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ElementalAnalysisProtocols -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ElementalAnalysisProtocols -->
 
     <owl:Class rdf:about="#ElementalAnalysisProtocols">
         <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
@@ -1271,7 +1271,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ElementalContent -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ElementalContent -->
 
     <owl:Class rdf:about="#ElementalContent">
         <rdfs:subClassOf rdf:resource="#SBCMeasurement"/>
@@ -1285,7 +1285,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#FIsh -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#FIsh -->
 
     <owl:Class rdf:about="#FIsh">
         <rdfs:subClassOf rdf:resource="#Animal"/>
@@ -1293,7 +1293,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Flow -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Flow -->
 
     <owl:Class rdf:about="#Flow">
         <rdfs:subClassOf rdf:resource="#SBCMeasurement"/>
@@ -1307,7 +1307,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Fluorescence -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Fluorescence -->
 
     <owl:Class rdf:about="#Fluorescence">
         <rdfs:subClassOf rdf:resource="#OpticalTypes"/>
@@ -1315,7 +1315,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#FoliarStandingCrop_Carbon -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#FoliarStandingCrop_Carbon -->
 
     <owl:Class rdf:about="#FoliarStandingCrop_Carbon">
         <rdfs:subClassOf rdf:resource="#MassType"/>
@@ -1339,7 +1339,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#FoliarStandingCrop_DryWeight -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#FoliarStandingCrop_DryWeight -->
 
     <owl:Class rdf:about="#FoliarStandingCrop_DryWeight">
         <rdfs:subClassOf rdf:resource="#MassType"/>
@@ -1363,7 +1363,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#FoliarStandingCrop_Nitrogen -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#FoliarStandingCrop_Nitrogen -->
 
     <owl:Class rdf:about="#FoliarStandingCrop_Nitrogen">
         <rdfs:subClassOf rdf:resource="#MassType"/>
@@ -1387,7 +1387,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#FoliarStandingCrop_WetWeight -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#FoliarStandingCrop_WetWeight -->
 
     <owl:Class rdf:about="#FoliarStandingCrop_WetWeight">
         <rdfs:subClassOf rdf:resource="#MassType"/>
@@ -1411,7 +1411,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#FreshWater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#FreshWater -->
 
     <owl:Class rdf:about="#FreshWater">
         <rdfs:subClassOf rdf:resource="#Water"/>
@@ -1419,7 +1419,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#GiantKelp -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#GiantKelp -->
 
     <owl:Class rdf:about="#GiantKelp">
         <rdfs:label>GiantKelp</rdfs:label>
@@ -1429,7 +1429,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#GramsPerSquareMeter -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#GramsPerSquareMeter -->
 
     <owl:Class rdf:about="#GramsPerSquareMeter">
         <rdfs:label
@@ -1473,7 +1473,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#GroundWater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#GroundWater -->
 
     <owl:Class rdf:about="#GroundWater">
         <rdfs:subClassOf rdf:resource="#FreshWater"/>
@@ -1484,7 +1484,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#GrowthRate -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#GrowthRate -->
 
     <owl:Class rdf:about="#GrowthRate">
         <rdfs:subClassOf rdf:resource="#RateType"/>
@@ -1492,7 +1492,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#HasPart -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#HasPart -->
 
     <owl:Class rdf:about="#HasPart">
         <rdfs:label>has part</rdfs:label>
@@ -1501,7 +1501,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Height -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Height -->
 
     <owl:Class rdf:about="#Height">
         <rdfs:subClassOf rdf:resource="&oboe-units;Length"/>
@@ -1509,7 +1509,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#HydrospherePhysicalFeature -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#HydrospherePhysicalFeature -->
 
     <owl:Class rdf:about="#HydrospherePhysicalFeature">
         <rdfs:label
@@ -1519,7 +1519,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#HydrospherePhysicalProcess -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#HydrospherePhysicalProcess -->
 
     <owl:Class rdf:about="#HydrospherePhysicalProcess">
         <rdfs:label
@@ -1529,7 +1529,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#InherentOpticalPropertiesWater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#InherentOpticalPropertiesWater -->
 
     <owl:Class rdf:about="#InherentOpticalPropertiesWater">
         <rdfs:subClassOf rdf:resource="#OpticalTypes"/>
@@ -1553,7 +1553,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#InstrumentVoltage -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#InstrumentVoltage -->
 
     <owl:Class rdf:about="#InstrumentVoltage">
         <rdfs:subClassOf rdf:resource="#PhysicalOceanographic"/>
@@ -1561,7 +1561,7 @@ sigmatheta = density[kg/m3] - 1000kg/m3. (International Equation of State, Joint
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#InterstitialWater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#InterstitialWater -->
 
     <owl:Class rdf:about="#InterstitialWater">
         <rdfs:subClassOf rdf:resource="#Water"/>
@@ -1573,7 +1573,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Irradiance -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Irradiance -->
 
     <owl:Class rdf:about="#Irradiance">
         <rdfs:subClassOf rdf:resource="#OpticalTypes"/>
@@ -1581,7 +1581,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#IslaVistaReef -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#IslaVistaReef -->
 
     <owl:Class rdf:about="#IslaVistaReef">
         <rdfs:subClassOf rdf:resource="#Reef"/>
@@ -1589,7 +1589,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Kelp -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Kelp -->
 
     <owl:Class rdf:about="#Kelp">
         <rdfs:subClassOf rdf:resource="#Alga"/>
@@ -1599,7 +1599,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#KelpGrowthRateProtocol -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#KelpGrowthRateProtocol -->
 
     <owl:Class rdf:about="#KelpGrowthRateProtocol">
         <rdfs:subClassOf rdf:resource="#ReedLabProtocols"/>
@@ -1607,7 +1607,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#KelpGrowthRate_Carbon -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#KelpGrowthRate_Carbon -->
 
     <owl:Class rdf:about="#KelpGrowthRate_Carbon">
         <rdfs:subClassOf rdf:resource="#GrowthRate"/>
@@ -1631,7 +1631,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#KelpGrowthRate_DryWeight -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#KelpGrowthRate_DryWeight -->
 
     <owl:Class rdf:about="#KelpGrowthRate_DryWeight">
         <rdfs:subClassOf rdf:resource="#GrowthRate"/>
@@ -1655,7 +1655,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#KelpGrowthRate_Nitrogen -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#KelpGrowthRate_Nitrogen -->
 
     <owl:Class rdf:about="#KelpGrowthRate_Nitrogen">
         <rdfs:subClassOf rdf:resource="#GrowthRate"/>
@@ -1679,7 +1679,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#KelpGrowthRate_WetWeight -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#KelpGrowthRate_WetWeight -->
 
     <owl:Class rdf:about="#KelpGrowthRate_WetWeight">
         <rdfs:subClassOf rdf:resource="#GrowthRate"/>
@@ -1703,7 +1703,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#KelpNetPrimaryProductionPprotocol -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#KelpNetPrimaryProductionPprotocol -->
 
     <owl:Class rdf:about="#KelpNetPrimaryProductionPprotocol">
         <rdfs:subClassOf rdf:resource="#ReedLabProtocols"/>
@@ -1711,7 +1711,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#KelpNetPrimaryProductionRate_DryWeight -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#KelpNetPrimaryProductionRate_DryWeight -->
 
     <owl:Class rdf:about="#KelpNetPrimaryProductionRate_DryWeight">
         <rdfs:subClassOf rdf:resource="#PrimaryProductionRate"/>
@@ -1735,7 +1735,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#KelpNetPrimaryProductionRate_WetWeight -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#KelpNetPrimaryProductionRate_WetWeight -->
 
     <owl:Class rdf:about="#KelpNetPrimaryProductionRate_WetWeight">
         <rdfs:subClassOf rdf:resource="#PrimaryProductionRate"/>
@@ -1759,7 +1759,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#KelpNetPrimaryProductivityRateCarbon -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#KelpNetPrimaryProductivityRateCarbon -->
 
     <owl:Class rdf:about="#KelpNetPrimaryProductivityRateCarbon">
         <rdfs:subClassOf rdf:resource="#PrimaryProductionRate"/>
@@ -1785,7 +1785,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#KelpPrimaryNetProductivityRateNitrogen -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#KelpPrimaryNetProductivityRateNitrogen -->
 
     <owl:Class rdf:about="#KelpPrimaryNetProductivityRateNitrogen">
         <rdfs:subClassOf rdf:resource="#PrimaryProductionRate"/>
@@ -1809,7 +1809,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#KelpStandingCropProtocol -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#KelpStandingCropProtocol -->
 
     <owl:Class rdf:about="#KelpStandingCropProtocol">
         <rdfs:subClassOf rdf:resource="#ReedLabProtocols"/>
@@ -1817,7 +1817,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#KelpTissueDryWeightProtocol -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#KelpTissueDryWeightProtocol -->
 
     <owl:Class rdf:about="#KelpTissueDryWeightProtocol">
         <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
@@ -1825,7 +1825,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#KelpTissueWetWeightProtocol -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#KelpTissueWetWeightProtocol -->
 
     <owl:Class rdf:about="#KelpTissueWetWeightProtocol">
         <rdfs:subClassOf rdf:resource="#OrganicTissueProtocols"/>
@@ -1833,7 +1833,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#LIthogenicSilicaProtocol -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#LIthogenicSilicaProtocol -->
 
     <owl:Class rdf:about="#LIthogenicSilicaProtocol">
         <rdfs:subClassOf rdf:resource="#BrzezinskiLabProtocols"/>
@@ -1842,7 +1842,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Lake -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Lake -->
 
     <owl:Class rdf:about="#Lake">
         <rdfs:subClassOf rdf:resource="#FreshWater"/>
@@ -1853,7 +1853,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#LakeWaterSample -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#LakeWaterSample -->
 
     <owl:Class rdf:about="#LakeWaterSample">
         <rdfs:subClassOf rdf:resource="#Lake"/>
@@ -1863,13 +1863,13 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Length -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Length -->
 
     <owl:Class rdf:about="#Length"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#LithogenicSilicaConcentrationSeawater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#LithogenicSilicaConcentrationSeawater -->
 
     <owl:Class rdf:about="#LithogenicSilicaConcentrationSeawater">
         <rdfs:subClassOf rdf:resource="#ParticulateMaterialInWaterConcentration"/>
@@ -1877,7 +1877,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#LittoralOcean -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#LittoralOcean -->
 
     <owl:Class rdf:about="#LittoralOcean">
         <rdfs:label>Littoral Ocean</rdfs:label>
@@ -1886,7 +1886,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Location -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Location -->
 
     <owl:Class rdf:about="#Location">
         <rdfs:subClassOf rdf:resource="#SBCMeasurement"/>
@@ -1894,7 +1894,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#MSI_AnalyticalLabProtocols -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#MSI_AnalyticalLabProtocols -->
 
     <owl:Class rdf:about="#MSI_AnalyticalLabProtocols">
         <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
@@ -1902,7 +1902,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#MacIntyreLabProtocols -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#MacIntyreLabProtocols -->
 
     <owl:Class rdf:about="#MacIntyreLabProtocols">
         <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
@@ -1910,7 +1910,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Macrocystis -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Macrocystis -->
 
     <owl:Class rdf:about="#Macrocystis">
         <rdfs:subClassOf rdf:resource="#Kelp"/>
@@ -1918,7 +1918,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#MacrocystisIntegrifolia -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#MacrocystisIntegrifolia -->
 
     <owl:Class rdf:about="#MacrocystisIntegrifolia">
         <rdfs:subClassOf rdf:resource="#Organism"/>
@@ -1926,7 +1926,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#MacrocystisPyrifera -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#MacrocystisPyrifera -->
 
     <owl:Class rdf:about="#MacrocystisPyrifera">
         <rdfs:subClassOf rdf:resource="#Organism"/>
@@ -1934,13 +1934,13 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Mass -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Mass -->
 
     <owl:Class rdf:about="#Mass"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#MassRatio -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#MassRatio -->
 
     <owl:Class rdf:about="#MassRatio">
         <rdfs:label>MassRatio</rdfs:label>
@@ -1950,7 +1950,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#MassType -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#MassType -->
 
     <owl:Class rdf:about="#MassType">
         <rdfs:subClassOf rdf:resource="#SBCMeasurement"/>
@@ -1964,7 +1964,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#MeasuredSampleDepth -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#MeasuredSampleDepth -->
 
     <owl:Class rdf:about="#MeasuredSampleDepth">
         <rdfs:subClassOf rdf:resource="#Z_DepthOfSample"/>
@@ -1974,7 +1974,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#MelackLabAmmoniumConcentrationProtocolFreshwaterAutomated -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#MelackLabAmmoniumConcentrationProtocolFreshwaterAutomated -->
 
     <owl:Class rdf:about="#MelackLabAmmoniumConcentrationProtocolFreshwaterAutomated">
         <rdfs:subClassOf rdf:resource="#MelackLabProtocols"/>
@@ -1982,7 +1982,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#MelackLabProtocols -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#MelackLabProtocols -->
 
     <owl:Class rdf:about="#MelackLabProtocols">
         <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
@@ -1990,7 +1990,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#MeterPerSecond -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#MeterPerSecond -->
 
     <owl:Class rdf:about="#MeterPerSecond">
         <rdfs:label>MeterPerSecond</rdfs:label>
@@ -1999,7 +1999,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#MicromolePerLiter -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#MicromolePerLiter -->
 
     <owl:Class rdf:about="#MicromolePerLiter">
         <rdfs:label
@@ -2009,7 +2009,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#MissionCreek -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#MissionCreek -->
 
     <owl:Class rdf:about="#MissionCreek">
         <rdfs:subClassOf rdf:resource="#Watershed"/>
@@ -2017,7 +2017,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#MohawkReef -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#MohawkReef -->
 
     <owl:Class rdf:about="#MohawkReef">
         <rdfs:subClassOf rdf:resource="#Reef"/>
@@ -2025,7 +2025,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#NaplesReef -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#NaplesReef -->
 
     <owl:Class rdf:about="#NaplesReef">
         <rdfs:subClassOf rdf:resource="#Reef"/>
@@ -2033,7 +2033,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Nereocystis -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Nereocystis -->
 
     <owl:Class rdf:about="#Nereocystis">
         <rdfs:subClassOf rdf:resource="#Kelp"/>
@@ -2041,7 +2041,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#NitrateConcentrationFreshwaterAutomated -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#NitrateConcentrationFreshwaterAutomated -->
 
     <owl:Class rdf:about="#NitrateConcentrationFreshwaterAutomated">
         <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
@@ -2071,7 +2071,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#NitrateConcentrationSeawaterAutomated -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#NitrateConcentrationSeawaterAutomated -->
 
     <owl:Class rdf:about="#NitrateConcentrationSeawaterAutomated">
         <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
@@ -2101,7 +2101,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#NitrateNitriteConcentration -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#NitrateNitriteConcentration -->
 
     <owl:Class rdf:about="#NitrateNitriteConcentration">
         <rdfs:label
@@ -2113,7 +2113,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#NitrateNitriteConcentrationFreshwaterAutomated -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#NitrateNitriteConcentrationFreshwaterAutomated -->
 
     <owl:Class rdf:about="#NitrateNitriteConcentrationFreshwaterAutomated">
         <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
@@ -2143,7 +2143,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#NitrateNitriteConcentrationNAS -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#NitrateNitriteConcentrationNAS -->
 
     <owl:Class rdf:about="#NitrateNitriteConcentrationNAS">
         <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
@@ -2167,7 +2167,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#NitrateNitriteConcentrationProtocol_MSIAutomated -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#NitrateNitriteConcentrationProtocol_MSIAutomated -->
 
     <owl:Class rdf:about="#NitrateNitriteConcentrationProtocol_MSIAutomated">
         <rdfs:subClassOf rdf:resource="#MSI_AnalyticalLabProtocols"/>
@@ -2178,7 +2178,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#NitrateNitriteConcentrationSeawaterAutomated -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#NitrateNitriteConcentrationSeawaterAutomated -->
 
     <owl:Class rdf:about="#NitrateNitriteConcentrationSeawaterAutomated">
         <rdfs:subClassOf rdf:resource="#NitrateNitriteConcentration"/>
@@ -2208,7 +2208,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#NominalSampleDepth -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#NominalSampleDepth -->
 
     <owl:Class rdf:about="#NominalSampleDepth">
         <rdfs:subClassOf rdf:resource="#Z_DepthOfSample"/>
@@ -2218,7 +2218,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#NorthVelocityVector -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#NorthVelocityVector -->
 
     <owl:Class rdf:about="#NorthVelocityVector">
         <rdfs:subClassOf rdf:resource="#VelocityType"/>
@@ -2242,7 +2242,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Ocean -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Ocean -->
 
     <owl:Class rdf:about="#Ocean">
         <rdfs:label>Ocean</rdfs:label>
@@ -2254,7 +2254,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#OceanCurrent -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#OceanCurrent -->
 
     <owl:Class rdf:about="#OceanCurrent">
         <rdfs:label>Ocean Current</rdfs:label>
@@ -2263,7 +2263,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#OceanWaterSample -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#OceanWaterSample -->
 
     <owl:Class rdf:about="#OceanWaterSample">
         <rdfs:subClassOf rdf:resource="#Ocean"/>
@@ -2273,7 +2273,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#OpenWater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#OpenWater -->
 
     <owl:Class rdf:about="#OpenWater">
         <rdfs:subClassOf rdf:resource="#Water"/>
@@ -2281,7 +2281,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#OpticalTypes -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#OpticalTypes -->
 
     <owl:Class rdf:about="#OpticalTypes">
         <rdfs:subClassOf rdf:resource="#SBCMeasurement"/>
@@ -2295,7 +2295,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#OrganicTissueProtocols -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#OrganicTissueProtocols -->
 
     <owl:Class rdf:about="#OrganicTissueProtocols">
         <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
@@ -2303,7 +2303,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Organism -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Organism -->
 
     <owl:Class rdf:about="#Organism">
         <rdfs:label>Organism</rdfs:label>
@@ -2312,7 +2312,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#OrganismTissue -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#OrganismTissue -->
 
     <owl:Class rdf:about="#OrganismTissue">
         <rdfs:subClassOf rdf:resource="#Organism"/>
@@ -2320,7 +2320,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PartOf -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PartOf -->
 
     <owl:Class rdf:about="#PartOf">
         <rdfs:label>part of</rdfs:label>
@@ -2329,7 +2329,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ParticulateMaterialInWaterConcentration -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ParticulateMaterialInWaterConcentration -->
 
     <owl:Class rdf:about="#ParticulateMaterialInWaterConcentration">
         <rdfs:subClassOf rdf:resource="#Concentration"/>
@@ -2355,7 +2355,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ParticulateMaterialMixture -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ParticulateMaterialMixture -->
 
     <owl:Class rdf:about="#ParticulateMaterialMixture">
         <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
@@ -2363,7 +2363,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ParticulateOrganicCarbonConcentration -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ParticulateOrganicCarbonConcentration -->
 
     <owl:Class rdf:about="#ParticulateOrganicCarbonConcentration">
         <rdfs:subClassOf rdf:resource="#ParticulateMaterialInWaterConcentration"/>
@@ -2387,7 +2387,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ParticulateOrganicMaterialMixture -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ParticulateOrganicMaterialMixture -->
 
     <owl:Class rdf:about="#ParticulateOrganicMaterialMixture">
         <rdfs:subClassOf rdf:resource="#ParticulateMaterialMixture"/>
@@ -2395,7 +2395,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ParticulateOrganicNitrogenConcentration -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ParticulateOrganicNitrogenConcentration -->
 
     <owl:Class rdf:about="#ParticulateOrganicNitrogenConcentration">
         <rdfs:subClassOf rdf:resource="#ParticulateMaterialInWaterConcentration"/>
@@ -2419,7 +2419,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Percent -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Percent -->
 
     <owl:Class rdf:about="#Percent">
         <rdfs:label>Percent</rdfs:label>
@@ -2428,7 +2428,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Phaeophyceae -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Phaeophyceae -->
 
     <owl:Class rdf:about="#Phaeophyceae">
         <rdfs:subClassOf rdf:resource="#Alga"/>
@@ -2436,7 +2436,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PhaeopigmentConcentrationFluorometricExtraction -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PhaeopigmentConcentrationFluorometricExtraction -->
 
     <owl:Class rdf:about="#PhaeopigmentConcentrationFluorometricExtraction">
         <rdfs:subClassOf rdf:resource="#PigmentConcentrationFluorometric"/>
@@ -2444,7 +2444,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PhosphateConcentration -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PhosphateConcentration -->
 
     <owl:Class rdf:about="#PhosphateConcentration">
         <rdfs:label
@@ -2455,7 +2455,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PhosphateConcentrationFreshwaterAutomated -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PhosphateConcentrationFreshwaterAutomated -->
 
     <owl:Class rdf:about="#PhosphateConcentrationFreshwaterAutomated">
         <rdfs:subClassOf rdf:resource="#PhosphateConcentration"/>
@@ -2485,7 +2485,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PhosphateConcentrationProtocol_MSIAutomated -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PhosphateConcentrationProtocol_MSIAutomated -->
 
     <owl:Class rdf:about="#PhosphateConcentrationProtocol_MSIAutomated">
         <rdfs:subClassOf rdf:resource="#MSI_AnalyticalLabProtocols"/>
@@ -2494,7 +2494,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PhosphateConcentrationSeawaterAutomated -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PhosphateConcentrationSeawaterAutomated -->
 
     <owl:Class rdf:about="#PhosphateConcentrationSeawaterAutomated">
         <rdfs:subClassOf rdf:resource="#PhosphateConcentration"/>
@@ -2524,7 +2524,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PhotosyntheticallyAvailableRadiation -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PhotosyntheticallyAvailableRadiation -->
 
     <owl:Class rdf:about="#PhotosyntheticallyAvailableRadiation">
         <rdfs:subClassOf rdf:resource="#OpticalTypes"/>
@@ -2532,7 +2532,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PhysicalFeature -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PhysicalFeature -->
 
     <owl:Class rdf:about="#PhysicalFeature">
         <rdfs:label
@@ -2542,7 +2542,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PhysicalOceanographic -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PhysicalOceanographic -->
 
     <owl:Class rdf:about="#PhysicalOceanographic">
         <rdfs:subClassOf rdf:resource="#SBCMeasurement"/>
@@ -2572,7 +2572,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PhysicalOceanographyProtocols -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PhysicalOceanographyProtocols -->
 
     <owl:Class rdf:about="#PhysicalOceanographyProtocols">
         <rdfs:subClassOf rdf:resource="#ProtocolsByScientificDomain"/>
@@ -2580,7 +2580,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PhysicalProcess -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PhysicalProcess -->
 
     <owl:Class rdf:about="#PhysicalProcess">
         <rdfs:label
@@ -2590,7 +2590,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PhysicalQuantity -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PhysicalQuantity -->
 
     <owl:Class rdf:about="#PhysicalQuantity">
         <rdfs:subClassOf rdf:resource="#SBCMeasurement"/>
@@ -2600,7 +2600,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Phytoplankton -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Phytoplankton -->
 
     <owl:Class rdf:about="#Phytoplankton">
         <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
@@ -2608,7 +2608,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PhytoplanktonArealNetPrimaryProductionRate_Carbon -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PhytoplanktonArealNetPrimaryProductionRate_Carbon -->
 
     <owl:Class rdf:about="#PhytoplanktonArealNetPrimaryProductionRate_Carbon">
         <rdfs:subClassOf rdf:resource="#PrimaryProductionRate"/>
@@ -2648,7 +2648,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PhytoplanktonSpecificProductionRate_Carbon -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PhytoplanktonSpecificProductionRate_Carbon -->
 
     <owl:Class rdf:about="#PhytoplanktonSpecificProductionRate_Carbon">
         <rdfs:subClassOf rdf:resource="#PrimaryProductionRate"/>
@@ -2688,7 +2688,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PhytoplanktonVolumetricNetPrimaryProductionRate_Carbon -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PhytoplanktonVolumetricNetPrimaryProductionRate_Carbon -->
 
     <owl:Class rdf:about="#PhytoplanktonVolumetricNetPrimaryProductionRate_Carbon">
         <rdfs:subClassOf rdf:resource="#PrimaryProductionRate"/>
@@ -2728,7 +2728,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PigmentConcentration -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PigmentConcentration -->
 
     <owl:Class rdf:about="#PigmentConcentration">
         <rdfs:subClassOf rdf:resource="#ParticulateMaterialInWaterConcentration"/>
@@ -2752,7 +2752,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PigmentConcentrationFluorometric -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PigmentConcentrationFluorometric -->
 
     <owl:Class rdf:about="#PigmentConcentrationFluorometric">
         <rdfs:subClassOf rdf:resource="#PigmentConcentration"/>
@@ -2766,7 +2766,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Plant -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Plant -->
 
     <owl:Class rdf:about="#Plant">
         <rdfs:label>Plant</rdfs:label>
@@ -2776,7 +2776,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Plot -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Plot -->
 
     <owl:Class rdf:about="#Plot">
         <rdfs:label>Plot</rdfs:label>
@@ -2785,7 +2785,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PopulationOf -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PopulationOf -->
 
     <owl:Class rdf:about="#PopulationOf">
         <rdfs:label>population of</rdfs:label>
@@ -2794,7 +2794,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Porewater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Porewater -->
 
     <owl:Class rdf:about="#Porewater">
         <rdfs:subClassOf rdf:resource="#InterstitialWater"/>
@@ -2805,7 +2805,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PotentialTemperatureWater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PotentialTemperatureWater -->
 
     <owl:Class rdf:about="#PotentialTemperatureWater">
         <rdfs:subClassOf rdf:resource="#PhysicalOceanographic"/>
@@ -2814,7 +2814,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PracticalSalinity -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PracticalSalinity -->
 
     <owl:Class rdf:about="#PracticalSalinity">
         <rdfs:label>Salinity</rdfs:label>
@@ -2824,7 +2824,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PracticalSalinityProtocol_SeabirdCTD -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PracticalSalinityProtocol_SeabirdCTD -->
 
     <owl:Class rdf:about="#PracticalSalinityProtocol_SeabirdCTD">
         <rdfs:subClassOf rdf:resource="#PhysicalOceanographyProtocols"/>
@@ -2833,7 +2833,7 @@ might have problems. Are aquifers interstitial? or any underground water?</rdfs:
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PracticalSalinityRatio -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PracticalSalinityRatio -->
 
     <owl:Class rdf:about="#PracticalSalinityRatio">
         <rdfs:label
@@ -2857,7 +2857,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Precipitation -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Precipitation -->
 
     <owl:Class rdf:about="#Precipitation">
         <rdfs:subClassOf rdf:resource="#Water"/>
@@ -2867,7 +2867,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PressureType -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PressureType -->
 
     <owl:Class rdf:about="#PressureType">
         <rdfs:subClassOf rdf:resource="#SBCMeasurement"/>
@@ -2881,7 +2881,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PrimaryProduction -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PrimaryProduction -->
 
     <owl:Class rdf:about="#PrimaryProduction">
         <rdfs:label
@@ -2891,7 +2891,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#PrimaryProductionRate -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#PrimaryProductionRate -->
 
     <owl:Class rdf:about="#PrimaryProductionRate">
         <rdfs:subClassOf rdf:resource="#ProductionRate"/>
@@ -2948,7 +2948,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Process -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Process -->
 
     <owl:Class rdf:about="#Process">
         <rdfs:label>Process</rdfs:label>
@@ -2957,7 +2957,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ProductionRate -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ProductionRate -->
 
     <owl:Class rdf:about="#ProductionRate">
         <rdfs:subClassOf rdf:resource="#RateType"/>
@@ -2965,7 +2965,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ProtocolsByConstituent -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ProtocolsByConstituent -->
 
     <owl:Class rdf:about="#ProtocolsByConstituent">
         <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
@@ -2973,7 +2973,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ProtocolsByInstrumentation -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ProtocolsByInstrumentation -->
 
     <owl:Class rdf:about="#ProtocolsByInstrumentation">
         <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
@@ -2981,7 +2981,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ProtocolsByLaboratory -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ProtocolsByLaboratory -->
 
     <owl:Class rdf:about="#ProtocolsByLaboratory">
         <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
@@ -2989,7 +2989,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ProtocolsByScientificDomain -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ProtocolsByScientificDomain -->
 
     <owl:Class rdf:about="#ProtocolsByScientificDomain">
         <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
@@ -2997,7 +2997,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Radiance -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Radiance -->
 
     <owl:Class rdf:about="#Radiance">
         <rdfs:subClassOf rdf:resource="#OpticalTypes"/>
@@ -3005,7 +3005,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#RateType -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#RateType -->
 
     <owl:Class rdf:about="#RateType">
         <rdfs:subClassOf rdf:resource="#SBCMeasurement"/>
@@ -3019,7 +3019,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#RatioType -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#RatioType -->
 
     <owl:Class rdf:about="#RatioType">
         <rdfs:subClassOf rdf:resource="#SBCMeasurement"/>
@@ -3027,7 +3027,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ReedLabProtocols -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ReedLabProtocols -->
 
     <owl:Class rdf:about="#ReedLabProtocols">
         <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
@@ -3035,7 +3035,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Reef -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Reef -->
 
     <owl:Class rdf:about="#Reef">
         <rdfs:subClassOf rdf:resource="#LittoralOcean"/>
@@ -3043,7 +3043,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ReplicatePlot -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ReplicatePlot -->
 
     <owl:Class rdf:about="#ReplicatePlot">
         <rdfs:label>Replicate Plot</rdfs:label>
@@ -3052,7 +3052,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ReplicateTransect -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ReplicateTransect -->
 
     <owl:Class rdf:about="#ReplicateTransect">
         <rdfs:label
@@ -3062,7 +3062,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Respiration -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Respiration -->
 
     <owl:Class rdf:about="#Respiration">
         <rdfs:label>Respiration</rdfs:label>
@@ -3071,7 +3071,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SBCAmmoniumFreshwater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SBCAmmoniumFreshwater -->
 
     <owl:Class rdf:about="#SBCAmmoniumFreshwater">
         <owl:equivalentClass>
@@ -3098,7 +3098,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SBCConcentrationMeasurement -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SBCConcentrationMeasurement -->
 
     <owl:Class rdf:about="#SBCConcentrationMeasurement">
         <rdfs:subClassOf rdf:resource="#SBCMeasurement"/>
@@ -3106,7 +3106,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SBCMeasurement -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SBCMeasurement -->
 
     <owl:Class rdf:about="#SBCMeasurement">
         <rdfs:subClassOf rdf:resource="&oboe;Measurement"/>
@@ -3114,7 +3114,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SBCSiteName -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SBCSiteName -->
 
     <owl:Class rdf:about="#SBCSiteName">
         <rdfs:subClassOf rdf:resource="&oboe;EntityName"/>
@@ -3128,7 +3128,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SBCSiteNameCatalog -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SBCSiteNameCatalog -->
 
     <owl:Class rdf:about="#SBCSiteNameCatalog">
         <rdfs:label
@@ -3150,7 +3150,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SBCSiteNameValue -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SBCSiteNameValue -->
 
     <owl:Class rdf:about="#SBCSiteNameValue">
         <rdfs:label
@@ -3160,7 +3160,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SalineWater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SalineWater -->
 
     <owl:Class rdf:about="#SalineWater">
         <rdfs:subClassOf rdf:resource="#Water"/>
@@ -3170,7 +3170,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Salmonid -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Salmonid -->
 
     <owl:Class rdf:about="#Salmonid">
         <rdfs:subClassOf rdf:resource="#FIsh"/>
@@ -3178,7 +3178,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SampleWeight -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SampleWeight -->
 
     <owl:Class rdf:about="#SampleWeight">
         <rdfs:subClassOf rdf:resource="#MassType"/>
@@ -3210,7 +3210,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SantaBarbaraCoastalMainland -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SantaBarbaraCoastalMainland -->
 
     <owl:Class rdf:about="#SantaBarbaraCoastalMainland">
         <rdfs:subClassOf rdf:resource="#California"/>
@@ -3220,7 +3220,7 @@ Credit: Matthias Tomczak, Introduction to Physical Oceanography, Flinders Univer
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#ScatteringCoefficient -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#ScatteringCoefficient -->
 
     <owl:Class rdf:about="#ScatteringCoefficient">
         <rdfs:subClassOf rdf:resource="#InherentOpticalPropertiesWater"/>
@@ -3235,7 +3235,7 @@ The scattering coefficient is often divided into a forward scattering coefficien
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SchimmelLabProtocols -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SchimmelLabProtocols -->
 
     <owl:Class rdf:about="#SchimmelLabProtocols">
         <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
@@ -3243,7 +3243,7 @@ The scattering coefficient is often divided into a forward scattering coefficien
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SeabirdCTDElectronicsProtocols -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SeabirdCTDElectronicsProtocols -->
 
     <owl:Class rdf:about="#SeabirdCTDElectronicsProtocols">
         <rdfs:subClassOf rdf:resource="#ProtocolsByInstrumentation"/>
@@ -3251,7 +3251,7 @@ The scattering coefficient is often divided into a forward scattering coefficien
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Seaweed -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Seaweed -->
 
     <owl:Class rdf:about="#Seaweed">
         <rdfs:subClassOf rdf:resource="#Alga"/>
@@ -3261,7 +3261,7 @@ The scattering coefficient is often divided into a forward scattering coefficien
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SilicicAcidConcentration -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SilicicAcidConcentration -->
 
     <owl:Class rdf:about="#SilicicAcidConcentration">
         <rdfs:subClassOf rdf:resource="#DissolvedMaterialInWaterConcentration"/>
@@ -3272,7 +3272,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SilicicAcidConcentrationProtocol_MSIAutomated -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SilicicAcidConcentrationProtocol_MSIAutomated -->
 
     <owl:Class rdf:about="#SilicicAcidConcentrationProtocol_MSIAutomated">
         <rdfs:subClassOf rdf:resource="#MSI_AnalyticalLabProtocols"/>
@@ -3283,7 +3283,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SilicicAcidConcentrationSeawaterAutomated -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SilicicAcidConcentrationSeawaterAutomated -->
 
     <owl:Class rdf:about="#SilicicAcidConcentrationSeawaterAutomated">
         <rdfs:subClassOf rdf:resource="#SilicicAcidConcentration"/>
@@ -3313,7 +3313,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SilicicAcidConcentration_REFERENCE_HERE_ -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SilicicAcidConcentration_REFERENCE_HERE_ -->
 
     <owl:Class rdf:about="#SilicicAcidConcentration_REFERENCE_HERE_">
         <rdfs:subClassOf rdf:resource="#SilicicAcidConcentration"/>
@@ -3321,7 +3321,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SockeyeSalmon -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SockeyeSalmon -->
 
     <owl:Class rdf:about="#SockeyeSalmon">
         <rdfs:subClassOf rdf:resource="#Salmonid"/>
@@ -3329,7 +3329,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SolidEarthPhysicalFeature -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SolidEarthPhysicalFeature -->
 
     <owl:Class rdf:about="#SolidEarthPhysicalFeature">
         <rdfs:label
@@ -3339,7 +3339,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SolidEarthPhysicalProcess -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SolidEarthPhysicalProcess -->
 
     <owl:Class rdf:about="#SolidEarthPhysicalProcess">
         <rdfs:label
@@ -3349,7 +3349,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SpatialLocation -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SpatialLocation -->
 
     <owl:Class rdf:about="#SpatialLocation">
         <rdfs:label
@@ -3359,7 +3359,7 @@ Sometimes knows colloquially as silicate</rdfs:comment>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#StableIsotopeContent -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#StableIsotopeContent -->
 
     <owl:Class rdf:about="#StableIsotopeContent">
         <rdfs:subClassOf rdf:resource="#ElementalContent"/>
@@ -3370,7 +3370,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#StableIsotopeContentMixtureSuspendedInWater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#StableIsotopeContentMixtureSuspendedInWater -->
 
     <owl:Class rdf:about="#StableIsotopeContentMixtureSuspendedInWater">
         <rdfs:subClassOf rdf:resource="#StableIsotopeContent"/>
@@ -3394,7 +3394,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#StableIsotopeContentTissueSample -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#StableIsotopeContentTissueSample -->
 
     <owl:Class rdf:about="#StableIsotopeContentTissueSample">
         <rdfs:subClassOf rdf:resource="#StableIsotopeContent"/>
@@ -3418,7 +3418,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Stream -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Stream -->
 
     <owl:Class rdf:about="#Stream">
         <rdfs:label>Stream</rdfs:label>
@@ -3430,7 +3430,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#StreamDischarge -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#StreamDischarge -->
 
     <owl:Class rdf:about="#StreamDischarge">
         <rdfs:subClassOf rdf:resource="#Flow"/>
@@ -3454,7 +3454,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#StreamDischargeProtocol_SBC -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#StreamDischargeProtocol_SBC -->
 
     <owl:Class rdf:about="#StreamDischargeProtocol_SBC">
         <rdfs:subClassOf rdf:resource="#ProtocolsByScientificDomain"/>
@@ -3464,7 +3464,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#StreamFlow -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#StreamFlow -->
 
     <owl:Class rdf:about="#StreamFlow">
         <rdfs:label>Stream Flow</rdfs:label>
@@ -3473,7 +3473,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#StreamHabitat -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#StreamHabitat -->
 
     <owl:Class rdf:about="#StreamHabitat">
         <rdfs:subClassOf rdf:resource="#EcologicalHabitat"/>
@@ -3481,7 +3481,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#StreamRatingCurveProtocol_SBC -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#StreamRatingCurveProtocol_SBC -->
 
     <owl:Class rdf:about="#StreamRatingCurveProtocol_SBC">
         <rdfs:subClassOf rdf:resource="#StreamDischargeProtocol_SBC"/>
@@ -3491,7 +3491,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#StreamWaterSample -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#StreamWaterSample -->
 
     <owl:Class rdf:about="#StreamWaterSample">
         <rdfs:subClassOf rdf:resource="#Stream"/>
@@ -3499,7 +3499,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Subplot -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Subplot -->
 
     <owl:Class rdf:about="#Subplot">
         <rdfs:label>Subplot</rdfs:label>
@@ -3508,7 +3508,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SuspendedParticulateCarbonNitrogen_CHNElementalAnalyzer -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SuspendedParticulateCarbonNitrogen_CHNElementalAnalyzer -->
 
     <owl:Class rdf:about="#SuspendedParticulateCarbonNitrogen_CHNElementalAnalyzer">
         <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
@@ -3519,7 +3519,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#SuspendedParticulatePhosphorus_AcidDigestion -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#SuspendedParticulatePhosphorus_AcidDigestion -->
 
     <owl:Class rdf:about="#SuspendedParticulatePhosphorus_AcidDigestion">
         <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
@@ -3528,7 +3528,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TIssueNitrogenContent -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TIssueNitrogenContent -->
 
     <owl:Class rdf:about="#TIssueNitrogenContent">
         <rdfs:label
@@ -3538,7 +3538,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TaggedFish -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TaggedFish -->
 
     <owl:Class rdf:about="#TaggedFish">
         <rdfs:subClassOf rdf:resource="&oboe;EntityName"/>
@@ -3546,7 +3546,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TaggedKelpFrond -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TaggedKelpFrond -->
 
     <owl:Class rdf:about="#TaggedKelpFrond">
         <rdfs:subClassOf rdf:resource="&oboe;EntityName"/>
@@ -3554,7 +3554,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TaxonType -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TaxonType -->
 
     <owl:Class rdf:about="#TaxonType">
         <rdfs:subClassOf rdf:resource="&oboe;EntityType"/>
@@ -3562,7 +3562,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TemperateReef -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TemperateReef -->
 
     <owl:Class rdf:about="#TemperateReef">
         <rdfs:subClassOf rdf:resource="#EcologicalHabitat"/>
@@ -3570,7 +3570,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TemperatureType -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TemperatureType -->
 
     <owl:Class rdf:about="#TemperatureType">
         <rdfs:subClassOf rdf:resource="#SBCMeasurement"/>
@@ -3578,7 +3578,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TemporalPoint -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TemporalPoint -->
 
     <owl:Class rdf:about="#TemporalPoint">
         <rdfs:subClassOf rdf:resource="&oboe;Entity"/>
@@ -3586,13 +3586,13 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Time -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Time -->
 
     <owl:Class rdf:about="#Time"/>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TimeReciprocal -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TimeReciprocal -->
 
     <owl:Class rdf:about="#TimeReciprocal">
         <rdfs:subClassOf rdf:resource="&oboe;SimpleDerivedDimension"/>
@@ -3600,7 +3600,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TissueCarbonContent -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TissueCarbonContent -->
 
     <owl:Class rdf:about="#TissueCarbonContent">
         <rdfs:label
@@ -3610,7 +3610,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TissueCarbonNitrogen_CHNElementalAnalyzer -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TissueCarbonNitrogen_CHNElementalAnalyzer -->
 
     <owl:Class rdf:about="#TissueCarbonNitrogen_CHNElementalAnalyzer">
         <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
@@ -3619,7 +3619,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TissueContent -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TissueContent -->
 
     <owl:Class rdf:about="#TissueContent">
         <rdfs:subClassOf rdf:resource="#ElementalContent"/>
@@ -3643,7 +3643,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TissueHydrogenContent -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TissueHydrogenContent -->
 
     <owl:Class rdf:about="#TissueHydrogenContent">
         <rdfs:subClassOf rdf:resource="#TissueContent"/>
@@ -3651,7 +3651,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TissuePhosphorus_AcidDigestion -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TissuePhosphorus_AcidDigestion -->
 
     <owl:Class rdf:about="#TissuePhosphorus_AcidDigestion">
         <rdfs:subClassOf rdf:resource="#ElementalAnalysisProtocols"/>
@@ -3660,7 +3660,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TotalDissolvedNitrogenConcentration -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TotalDissolvedNitrogenConcentration -->
 
     <owl:Class rdf:about="#TotalDissolvedNitrogenConcentration">
         <rdfs:subClassOf rdf:resource="#DissolvedMaterialInWaterConcentration"/>
@@ -3668,7 +3668,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TotalDissolvedNitrogenConcentrationFreshwater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TotalDissolvedNitrogenConcentrationFreshwater -->
 
     <owl:Class rdf:about="#TotalDissolvedNitrogenConcentrationFreshwater">
         <rdfs:subClassOf rdf:resource="#TotalDissolvedNitrogenConcentration"/>
@@ -3692,7 +3692,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TotalDissolvedNitrogenConcentrationSeawater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TotalDissolvedNitrogenConcentrationSeawater -->
 
     <owl:Class rdf:about="#TotalDissolvedNitrogenConcentrationSeawater">
         <rdfs:subClassOf rdf:resource="#TotalDissolvedNitrogenConcentration"/>
@@ -3716,7 +3716,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TotalDissolvedPhosphorusConcentration -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TotalDissolvedPhosphorusConcentration -->
 
     <owl:Class rdf:about="#TotalDissolvedPhosphorusConcentration">
         <rdfs:subClassOf rdf:resource="#DissolvedMaterialInWaterConcentration"/>
@@ -3724,7 +3724,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TotalDissolvedPhosphorusConcentrationFreshwater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TotalDissolvedPhosphorusConcentrationFreshwater -->
 
     <owl:Class rdf:about="#TotalDissolvedPhosphorusConcentrationFreshwater">
         <rdfs:subClassOf rdf:resource="#TotalDissolvedPhosphorusConcentration"/>
@@ -3748,7 +3748,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TotalDissolvedPhosphorusConcentrationSeawater -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TotalDissolvedPhosphorusConcentrationSeawater -->
 
     <owl:Class rdf:about="#TotalDissolvedPhosphorusConcentrationSeawater">
         <rdfs:subClassOf rdf:resource="#TotalDissolvedPhosphorusConcentration"/>
@@ -3772,7 +3772,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#TotalSuspendedSolids -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#TotalSuspendedSolids -->
 
     <owl:Class rdf:about="#TotalSuspendedSolids">
         <rdfs:subClassOf rdf:resource="#ParticulateMaterialInWaterConcentration"/>
@@ -3780,7 +3780,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Transect -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Transect -->
 
     <owl:Class rdf:about="#Transect">
         <rdfs:label>Transect</rdfs:label>
@@ -3789,7 +3789,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Turbidity -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Turbidity -->
 
     <owl:Class rdf:about="#Turbidity">
         <rdfs:subClassOf rdf:resource="#OpticalTypes"/>
@@ -3797,7 +3797,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#USA -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#USA -->
 
     <owl:Class rdf:about="#USA">
         <rdfs:label>USA</rdfs:label>
@@ -3806,7 +3806,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#VelocityType -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#VelocityType -->
 
     <owl:Class rdf:about="#VelocityType">
         <rdfs:subClassOf rdf:resource="#SBCMeasurement"/>
@@ -3814,7 +3814,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#VelocityVectorProtocol_S4_MANUFACTURER-TBD -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#VelocityVectorProtocol_S4_MANUFACTURER-TBD -->
 
     <owl:Class rdf:about="#VelocityVectorProtocol_S4_MANUFACTURER-TBD">
         <rdfs:subClassOf rdf:resource="#PhysicalOceanographyProtocols"/>
@@ -3822,7 +3822,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#VelocityVectorsProtocol_AcousticDopplerCurrentProfiler_RDI -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#VelocityVectorsProtocol_AcousticDopplerCurrentProfiler_RDI -->
 
     <owl:Class rdf:about="#VelocityVectorsProtocol_AcousticDopplerCurrentProfiler_RDI">
         <rdfs:subClassOf rdf:resource="#PhysicalOceanographyProtocols"/>
@@ -3832,7 +3832,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#VerticalAttentuationCoefficient -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#VerticalAttentuationCoefficient -->
 
     <owl:Class rdf:about="#VerticalAttentuationCoefficient">
         <rdfs:subClassOf rdf:resource="#ApparentOpticalPropertiesWater"/>
@@ -3840,7 +3840,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#VolumeScatteringFunction -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#VolumeScatteringFunction -->
 
     <owl:Class rdf:about="#VolumeScatteringFunction">
         <rdfs:subClassOf rdf:resource="#OpticalTypes"/>
@@ -3848,7 +3848,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#WashburnLabProtocols -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#WashburnLabProtocols -->
 
     <owl:Class rdf:about="#WashburnLabProtocols">
         <rdfs:subClassOf rdf:resource="#ProtocolsByLaboratory"/>
@@ -3856,7 +3856,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Water -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Water -->
 
     <owl:Class rdf:about="#Water">
         <rdfs:label>Water</rdfs:label>
@@ -3865,7 +3865,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#WaterCurrentProtocols -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#WaterCurrentProtocols -->
 
     <owl:Class rdf:about="#WaterCurrentProtocols">
         <rdfs:subClassOf rdf:resource="#ProtocolsByScientificDomain"/>
@@ -3873,7 +3873,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#WaterDepthProtocol -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#WaterDepthProtocol -->
 
     <owl:Class rdf:about="#WaterDepthProtocol">
         <rdfs:subClassOf rdf:resource="&oboe;Protocol"/>
@@ -3881,7 +3881,7 @@ Usually expressed as a ratio and/or difference from a norm (delta)</rdfs:comment
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#WaterDepthToBottom -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#WaterDepthToBottom -->
 
     <owl:Class rdf:about="#WaterDepthToBottom">
         <rdfs:subClassOf rdf:resource="#Location"/>
@@ -3909,7 +3909,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#WaterPressure -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#WaterPressure -->
 
     <owl:Class rdf:about="#WaterPressure">
         <rdfs:subClassOf rdf:resource="#PhysicalOceanographic"/>
@@ -3936,7 +3936,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#WaterTemperature -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#WaterTemperature -->
 
     <owl:Class rdf:about="#WaterTemperature">
         <rdfs:subClassOf rdf:resource="#PhysicalOceanographic"/>
@@ -3945,7 +3945,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#WaterTemperature_SeabirdCTD -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#WaterTemperature_SeabirdCTD -->
 
     <owl:Class rdf:about="#WaterTemperature_SeabirdCTD">
         <rdfs:subClassOf rdf:resource="#PhysicalOceanographyProtocols"/>
@@ -3954,7 +3954,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#WaterVelocity -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#WaterVelocity -->
 
     <owl:Class rdf:about="#WaterVelocity">
         <rdfs:subClassOf rdf:resource="#PhysicalOceanographic"/>
@@ -3964,7 +3964,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Watershed -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Watershed -->
 
     <owl:Class rdf:about="#Watershed">
         <rdfs:subClassOf rdf:resource="#SantaBarbaraCoastalMainland"/>
@@ -3972,7 +3972,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Waypoint -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Waypoint -->
 
     <owl:Class rdf:about="#Waypoint">
         <rdfs:label>Waypoint</rdfs:label>
@@ -3983,7 +3983,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#WetWeight -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#WetWeight -->
 
     <owl:Class rdf:about="#WetWeight">
         <rdfs:subClassOf rdf:resource="#Biomass"/>
@@ -3991,7 +3991,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Width -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Width -->
 
     <owl:Class rdf:about="#Width">
         <rdfs:label>Width</rdfs:label>
@@ -4000,7 +4000,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Within -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Within -->
 
     <owl:Class rdf:about="#Within">
         <rdfs:label>within</rdfs:label>
@@ -4009,7 +4009,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#X_Longitude -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#X_Longitude -->
 
     <owl:Class rdf:about="#X_Longitude">
         <rdfs:subClassOf rdf:resource="#Location"/>
@@ -4019,7 +4019,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Y_Latitude -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Y_Latitude -->
 
     <owl:Class rdf:about="#Y_Latitude">
         <rdfs:subClassOf rdf:resource="#Location"/>
@@ -4029,7 +4029,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#Z_DepthOfSample -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#Z_DepthOfSample -->
 
     <owl:Class rdf:about="#Z_DepthOfSample">
         <rdfs:subClassOf rdf:resource="#Location"/>
@@ -4039,7 +4039,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#pH -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#pH -->
 
     <owl:Class rdf:about="#pH">
         <rdfs:label>pH</rdfs:label>
@@ -4059,7 +4059,7 @@ Depth to bottom can be calculated from measured sample depth  (e.g., tidal heigh
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe-ext/sbc/oboe-sbc.owl#myAmmoniumFW -->
+    <!-- http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl#myAmmoniumFW -->
 
     <owl:Thing rdf:about="#myAmmoniumFW">
         <rdf:type>
