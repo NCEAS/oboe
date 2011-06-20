@@ -21,6 +21,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl">
         <rdfs:label>oboe</rdfs:label>
+        <cc:license rdf:datatype="&xsd;anyURI">http://creativecommons.org/licenses/by/3.0/</cc:license>
         <rdfs:comment>This ontology contains general terms that are common across OBOE extensions including units of measure and their physical characteristics. The unit descriptions (comments) were adapted from various sources, including NIST.</rdfs:comment>
         <rdfs:comment>Copyright (c) 2006-2011 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
         <owl:versionInfo>Version 1.0</owl:versionInfo>
