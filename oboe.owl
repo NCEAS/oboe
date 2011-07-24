@@ -136,49 +136,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#BaseUnit -->
-
-    <owl:Class rdf:about="&oboe-core;BaseUnit"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#CompositeUnit -->
-
-    <owl:Class rdf:about="&oboe-core;CompositeUnit"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#DerivedUnit -->
-
-    <owl:Class rdf:about="&oboe-core;DerivedUnit"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement -->
-
-    <owl:Class rdf:about="&oboe-core;Measurement"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#PhysicalCharacteristic -->
-
-    <owl:Class rdf:about="&oboe-core;PhysicalCharacteristic"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Standard -->
-
-    <owl:Class rdf:about="&oboe-core;Standard"/>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#UnitConversion -->
-
-    <owl:Class rdf:about="&oboe-core;UnitConversion"/>
-    
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#Acre -->
@@ -7464,12 +7421,7 @@ Alll of these quantities characterize the total amount of radiation present, at 
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
 
-
-    <!-- http://www.w3.org/2002/07/owl#Thing -->
-
-    <owl:Class rdf:about="&owl;Thing"/>
 </rdf:RDF>
 
 
