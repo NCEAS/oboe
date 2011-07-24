@@ -173,6 +173,17 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#CavitatedCompoundOrgan -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#CavitatedCompoundOrgan">
+        <rdfs:label xml:lang="en">Cavitated Compound Organ</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#CompoundOrgan"/>
+        <dc:description xml:lang="en">Compound organ that contains one or more macroscopic anatomical spaces.</dc:description>
+        <dc:description rdf:resource="http://purl.org/obo/owl/CARO#CARO_0000072"/>
+    </owl:Class>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#Cell -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#Cell">
@@ -267,6 +278,17 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#Otolith -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#Otolith">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#PortionOfOrganismSubstance"/>
+        <rdfs:comment xml:lang="en">Otolith</rdfs:comment>
+        <dc:description xml:lang="en">Portion of organism substance composed of calcium carbonate located in the otolith organ.</dc:description>
+        <oboe-core:sameConceptAsClass rdf:resource="http://purl.org/obo/owl/TAO#TAO_0001621"/>
+    </owl:Class>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#PortionOfCellSubstance -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#PortionOfCellSubstance">
@@ -294,6 +316,17 @@
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#AnatomicalStructure"/>
         <dc:description xml:lang="en">Anatomical structure, that consists of similar cells and intercellular matrix, aggregated according to genetically determined spatial relationships.</dc:description>
         <oboe-core:sameConceptAsClass rdf:resource="http://purl.org/obo/owl/CARO#CARO_0000043"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#Stomach -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#Stomach">
+        <rdfs:label xml:lang="en">Stomach</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#CavitatedCompoundOrgan"/>
+        <oboe-core:sameConceptAsClass xml:lang="en">An organ that is part of the digestive or alimentary system used to digest food.</oboe-core:sameConceptAsClass>
+        <oboe-core:sameConceptAsClass rdf:resource="http://purl.org/obo/owl/TAO#TAO_0002121"/>
     </owl:Class>
     
 
