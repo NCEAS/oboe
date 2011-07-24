@@ -24,10 +24,10 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:cc="http://creativecommons.org/ns#">
     <owl:Ontology rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl">
-        <rdfs:label>oboe-anatomy</rdfs:label>
+        <rdfs:label>OBOE Anatomy</rdfs:label>
         <owl:versionInfo>Version 1.0</owl:versionInfo>
         <rdfs:comment>Copyright (c) 2006-2011 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This ontology contains terms relating to general anatomical concepts that are common across OBOE extensions.  The model is derived from the Common Anatomical Reference Ontology (CARO).  The lead author of CARO is Melissa Haendel, obo-anatomy@lists.sourceforge.net</rdfs:comment>
+        <rdfs:comment xml:lang="en">This ontology contains terms related to general anatomical concepts that are common across OBOE extensions.  The model is derived from the Common Anatomical Reference Ontology (CARO).  The lead author of CARO is Melissa Haendel, obo-anatomy@lists.sourceforge.net</rdfs:comment>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
     </owl:Ontology>
     
