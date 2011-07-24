@@ -2,212 +2,256 @@
 
 
 <!DOCTYPE rdf:RDF [
-  <!ENTITY cc "http://creativecommons.org/ns#" >
-  <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-  <!ENTITY dc "http://purl.org/dc/elements/1.1#" >
-  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-  <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
-  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-  <!ENTITY oboe-core "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#" >
+    <!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboe-core "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#"
-   xml:base="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl"
-   xmlns:dc="http://purl.org/dc/elements/1.1#"
-   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-   xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-   xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#"
-   xmlns:owl="http://www.w3.org/2002/07/owl#"
-   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#">
-  <owl:Ontology rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl">
-    <rdfs:label>OBOE Taxa</rdfs:label>
-    <owl:versionInfo>Version 1.0</owl:versionInfo>
-    <rdfs:comment>Copyright (c) 2006-2011 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
-    <rdfs:comment>This ontology contains taxonomic terms that are common across OBOE extensions.  It is not comprehensive, but rather the beginnings of a general taxonomic ontology.</rdfs:comment>
-    <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
-  </owl:Ontology>
-  
+     xml:base="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:cc="http://creativecommons.org/ns#">
+    <owl:Ontology rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl">
+        <rdfs:label>OBOE Taxa</rdfs:label>
+        <rdfs:comment>This ontology contains taxonomic terms that are common across OBOE extensions.  It is not comprehensive, but rather the beginnings of a general taxonomic ontology.</rdfs:comment>
+        <rdfs:comment>Copyright (c) 2006-2011 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
+        <owl:versionInfo>Version 1.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
+    </owl:Ontology>
+    
 
 
-  <!-- 
-  ///////////////////////////////////////////////////////////////////////////////////////
-  //
-  // Annotation properties
-  //
-  ///////////////////////////////////////////////////////////////////////////////////////
-   -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-  
-
-
-  <!-- 
-  ///////////////////////////////////////////////////////////////////////////////////////
-  //
-  // Datatypes
-  //
-  ///////////////////////////////////////////////////////////////////////////////////////
-   -->
-
-  
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    
 
 
-  <!-- 
-  ///////////////////////////////////////////////////////////////////////////////////////
-  //
-  // Object Properties
-  //
-  ///////////////////////////////////////////////////////////////////////////////////////
-   -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
 
 
-  
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
 
 
-  <!-- 
-  ///////////////////////////////////////////////////////////////////////////////////////
-  //
-  // Data properties
-  //
-  ///////////////////////////////////////////////////////////////////////////////////////
-   -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Animal -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Animal">
+        <rdfs:label xml:lang="en">Animal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism"/>
+        <dc:description xml:lang="en">Organisms of the kingdom Animalia.</dc:description>
+        <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=202423</rdfs:seeAlso>
+    </owl:Class>
+    
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#BonyFish -->
 
-  <!-- 
-  ///////////////////////////////////////////////////////////////////////////////////////
-  //
-  // Classes
-  //
-  ///////////////////////////////////////////////////////////////////////////////////////
-   -->
-
-
-
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Animal -->
-
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Animal">
-    <rdfs:label xml:lang="en">Animal</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism"/>
-    <dc:description xml:lang="en">Organisms of the kingdom Animalia.</dc:description>
-    <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=202423</rdfs:seeAlso>
-  </owl:Class>
-  
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#BonyFish">
+        <rdfs:label xml:lang="en">Bony Fish</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Vertebrate"/>
+        <dc:description xml:lang="en">Fish of the superclass Osteichthyes.</dc:description>
+        <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=161030</rdfs:seeAlso>
+    </owl:Class>
+    
 
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#BonyFish -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Chordate -->
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#BonyFish">
-    <rdfs:label xml:lang="en">Bony Fish</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Vertebrate"/>
-    <dc:description xml:lang="en">Fish of the superclass Osteichthyes.</dc:description>
-    <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=161030</rdfs:seeAlso>
-  </owl:Class>
-  
-
-
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Chordate -->
-
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Chordate">
-    <rdfs:label xml:lang="en">Chordate</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Animal"/>
-    <dc:description xml:lang="en">Animals of the phylum Chordata.</dc:description>
-    <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=158852</rdfs:seeAlso>
-  </owl:Class>
-  
-  
-  
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Chromist -->
-
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Chromist">
-    <rdfs:label xml:lang="en">Chromist</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism"/>
-    <dc:description xml:lang="en">Organisms of the kingdom Chromista.</dc:description>
-    <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=630578</rdfs:seeAlso>
-  </owl:Class>
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Chordate">
+        <rdfs:label xml:lang="en">Chordate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Animal"/>
+        <dc:description xml:lang="en">Animals of the phylum Chordata.</dc:description>
+        <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=158852</rdfs:seeAlso>
+    </owl:Class>
+    
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Chromist -->
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Fungus -->
-
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Fungus">
-    <rdfs:label xml:lang="en">Fungus</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism"/>
-    <dc:description xml:lang="en">Organisms of the kingdom Fungi.</dc:description>
-    <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=555705</rdfs:seeAlso>
-  </owl:Class>
-
-
-
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Moneran -->
-
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Moneran">
-    <rdfs:label xml:lang="en">Moneran</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism"/>
-    <dc:description xml:lang="en">Organisms of the kingdom Monera.</dc:description>
-    <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=202420</rdfs:seeAlso>
-  </owl:Class>
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Chromist">
+        <rdfs:label xml:lang="en">Chromist</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism"/>
+        <dc:description xml:lang="en">Organisms of the kingdom Chromista.</dc:description>
+        <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=630578</rdfs:seeAlso>
+    </owl:Class>
+    
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Class -->
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism -->
-
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism">
-    <rdfs:label xml:lang="en">Organism</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
-    <dc:description xml:lang="en">Biological entities of the kingdoms Animalia, Archaea, Chromista, Fungi, Monera, Plantae, and Protozoa.</dc:description>
-    <rdfs:seeAlso xml:lang="en">http://itis.gbif.net</rdfs:seeAlso>
-    <rdfs:seeAlso xml:lang="en">http://www.catalogueoflife.org/browse/tree</rdfs:seeAlso>
-  </owl:Class>
-  
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Class">
+        <rdfs:label xml:lang="en">Class</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Phylum"/>
+    </owl:Class>
+    
 
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Protozoan -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Family -->
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Protozoan">
-    <rdfs:label xml:lang="en">Protozoan</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism"/>
-    <dc:description xml:lang="en">Organisms of the kingdom Protozoa.</dc:description>
-    <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=630577</rdfs:seeAlso>
-  </owl:Class>
-
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Family">
+        <rdfs:label xml:lang="en">Family</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Order"/>
+    </owl:Class>
+    
 
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Plant -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Fungus -->
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Plant">
-    <rdfs:label xml:lang="en">Plant</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism"/>
-    <dc:description xml:lang="en">Organisms of the kingdom Plantae.</dc:description>
-    <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=202422</rdfs:seeAlso>
-  </owl:Class>
-
-
-
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#RayFinnedFish -->
-
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#RayFinnedFish">
-    <rdfs:label xml:lang="en">Ray Finned Fish</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#BonyFish"/>
-    <dc:description xml:lang="en">Fish of the class Actinopterygii.</dc:description>
-    <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=161061</rdfs:seeAlso>
-  </owl:Class>
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Fungus">
+        <rdfs:label xml:lang="en">Fungus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism"/>
+        <dc:description xml:lang="en">Organisms of the kingdom Fungi.</dc:description>
+        <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=555705</rdfs:seeAlso>
+    </owl:Class>
+    
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Genus -->
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Vertebrate -->
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Genus">
+        <rdfs:label xml:lang="en">Genus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Family"/>
+    </owl:Class>
+    
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Vertebrate">
-    <rdfs:label xml:lang="en">Vertebrate</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Chordate"/>
-    <dc:description xml:lang="en">Animals of the subphylum Vertebrata.</dc:description>
-    <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=331030</rdfs:seeAlso>
-  </owl:Class>
-  
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Kingdom -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Kingdom">
+        <rdfs:label xml:lang="en">Kingdom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Moneran -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Moneran">
+        <rdfs:label xml:lang="en">Moneran</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism"/>
+        <dc:description xml:lang="en">Organisms of the kingdom Monera.</dc:description>
+        <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=202420</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Order -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Order">
+        <rdfs:label xml:lang="en">Order</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Class"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism">
+        <rdfs:label xml:lang="en">Organism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+        <dc:description xml:lang="en">Biological entities of the kingdoms Animalia, Archaea, Chromista, Fungi, Monera, Plantae, and Protozoa.</dc:description>
+        <rdfs:seeAlso xml:lang="en">http://itis.gbif.net</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">http://www.catalogueoflife.org/browse/tree</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Phylum -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Phylum">
+        <rdfs:label xml:lang="en">Phylum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Kingdom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Plant -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Plant">
+        <rdfs:label xml:lang="en">Plant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism"/>
+        <dc:description xml:lang="en">Organisms of the kingdom Plantae.</dc:description>
+        <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=202422</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Protozoan -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Protozoan">
+        <rdfs:label xml:lang="en">Protozoan</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Organism"/>
+        <dc:description xml:lang="en">Organisms of the kingdom Protozoa.</dc:description>
+        <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=630577</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#RayFinnedFish -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#RayFinnedFish">
+        <rdfs:label xml:lang="en">Ray Finned Fish</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#BonyFish"/>
+        <dc:description xml:lang="en">Fish of the class Actinopterygii.</dc:description>
+        <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=161061</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Species -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Species">
+        <rdfs:label xml:lang="en">Species</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Vertebrate -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Vertebrate">
+        <rdfs:label xml:lang="en">Vertebrate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Chordate"/>
+        <dc:description xml:lang="en">Animals of the subphylum Vertebrata.</dc:description>
+        <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=331030</rdfs:seeAlso>
+    </owl:Class>
 </rdf:RDF>
+
+
 
 <!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
 
