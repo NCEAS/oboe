@@ -187,6 +187,17 @@
 
 
 
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#RayFinnedFish -->
+
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#RayFinnedFish">
+    <rdfs:label xml:lang="en">Ray Finned Fish</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#BonyFish"/>
+    <dc:description xml:lang="en">Fish of the class Actinopterygii.</dc:description>
+    <rdfs:seeAlso xml:lang="en">http://itis.gbif.net/pls/itisca/taxa_xml.record?p_tsn=161061</rdfs:seeAlso>
+  </owl:Class>
+
+
+
   <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Vertebrate -->
 
   <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Vertebrate">
