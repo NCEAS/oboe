@@ -10,6 +10,7 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboe-core "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#" >
+    <!ENTITY oboe-characteristics "http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#" >
 ]>
 
 
@@ -19,6 +20,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#"
+     xmlns:oboe-characteristics="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -121,7 +123,7 @@
                                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -147,7 +149,7 @@
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Area"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Area"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -234,7 +236,7 @@
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Current"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Current"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -259,7 +261,7 @@
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -316,7 +318,7 @@
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Area"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Area"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -351,7 +353,7 @@
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Pressure"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Pressure"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -419,7 +421,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#RadionucleotideActivity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;RadionucleotideActivity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -455,7 +457,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Volume"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Volume"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -477,7 +479,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -537,7 +539,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Luminosity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Luminosity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -561,7 +563,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Temperature"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -618,7 +620,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Mass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -674,7 +676,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -711,7 +713,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Volume"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Volume"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -735,7 +737,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Speed"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Speed"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -791,7 +793,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Area"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Area"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -853,7 +855,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -909,7 +911,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -933,7 +935,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Pressure"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Pressure"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -990,7 +992,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Mass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1046,7 +1048,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1102,7 +1104,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1190,7 +1192,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Angle"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Angle"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1214,7 +1216,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Mass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1270,7 +1272,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1326,7 +1328,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1381,7 +1383,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Temperature"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1437,7 +1439,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1493,7 +1495,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1517,7 +1519,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1585,7 +1587,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Area"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Area"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1640,7 +1642,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Volume"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Volume"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1668,7 +1670,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -1728,7 +1730,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Angle"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Angle"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1784,7 +1786,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Mass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1808,7 +1810,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#MassPerMass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;MassPerMass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1896,7 +1898,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#MassDensity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;MassDensity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1920,7 +1922,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#MassDensity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;MassDensity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2008,7 +2010,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Area"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Area"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2044,7 +2046,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Mass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2100,7 +2102,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2157,7 +2159,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Pressure"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Pressure"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2202,7 +2204,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2264,7 +2266,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Frequency"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Frequency"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2294,7 +2296,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2349,7 +2351,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2373,7 +2375,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Volume"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Volume"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2440,7 +2442,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Temperature"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2464,7 +2466,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Mass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2508,7 +2510,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#MassDensity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;MassDensity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2564,7 +2566,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#MassDensity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;MassDensity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2606,7 +2608,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#ArealMassDensity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;ArealMassDensity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2682,7 +2684,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#ArealMassDensityRate"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;ArealMassDensityRate"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2732,7 +2734,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Frequency"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Frequency"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2775,7 +2777,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Volume"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Volume"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2805,7 +2807,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2841,7 +2843,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Area"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Area"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2897,7 +2899,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Pressure"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Pressure"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2921,7 +2923,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3003,7 +3005,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Speed"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Speed"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3033,7 +3035,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3089,7 +3091,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Volume"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Volume"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3125,7 +3127,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#VolumetricRate"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;VolumetricRate"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3213,7 +3215,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Luminosity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Luminosity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3236,7 +3238,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Mass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3298,7 +3300,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Frequency"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Frequency"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3328,7 +3330,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3384,7 +3386,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3440,7 +3442,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3464,7 +3466,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Volume"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Volume"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3532,7 +3534,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Speed"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Speed"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3562,7 +3564,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Area"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Area"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3592,7 +3594,7 @@ Common derivatives are millibar (meteorology) and decibar (oceanography)</rdfs:c
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#PhotonFluxDensity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;PhotonFluxDensity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3626,7 +3628,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Mass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3676,7 +3678,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#MassPerMass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;MassPerMass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3712,7 +3714,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#MassDensity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;MassDensity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3788,7 +3790,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#MassDensity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;MassDensity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3856,7 +3858,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Volume"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Volume"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3886,7 +3888,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3910,7 +3912,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Area"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Area"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3978,7 +3980,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Molality"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Molality"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4003,7 +4005,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#AmountOfSubstanceConcentration"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;AmountOfSubstanceConcentration"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4027,7 +4029,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#AmountOfSubstanceConcentration"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;AmountOfSubstanceConcentration"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4051,7 +4053,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4107,7 +4109,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4163,7 +4165,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Conductivity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Conductivity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4187,7 +4189,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4223,7 +4225,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Area"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Area"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4279,7 +4281,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Pressure"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Pressure"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4336,7 +4338,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Mass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4360,7 +4362,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#MassDensity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;MassDensity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4448,7 +4450,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#MassDensity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;MassDensity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4524,7 +4526,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#VolumetricMassDensityRate"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;VolumetricMassDensityRate"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4580,7 +4582,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#ArealMassDensityRate"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;ArealMassDensityRate"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4668,7 +4670,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Frequency"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Frequency"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4692,7 +4694,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Volume"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Volume"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4754,7 +4756,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Proportion"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Proportion"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4785,7 +4787,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4815,7 +4817,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Area"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Area"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4877,7 +4879,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#AmountOfSubstanceConcentration"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;AmountOfSubstanceConcentration"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4901,7 +4903,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#AmountOfSubstanceConcentration"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;AmountOfSubstanceConcentration"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4925,7 +4927,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4981,7 +4983,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Conductivity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Conductivity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5005,7 +5007,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5060,7 +5062,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Amount"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Amount"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5084,7 +5086,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#AmountOfSubstanceConcentration"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;AmountOfSubstanceConcentration"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5140,7 +5142,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#AmountOfSubstanceConcentration"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;AmountOfSubstanceConcentration"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5196,7 +5198,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Mass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5220,7 +5222,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#MassDensity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;MassDensity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5308,7 +5310,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5364,7 +5366,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#AmountOfSubstanceConcentration"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;AmountOfSubstanceConcentration"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5388,7 +5390,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5444,7 +5446,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5546,7 +5548,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Force"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Force"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5578,7 +5580,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5634,7 +5636,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5690,7 +5692,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5746,7 +5748,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5802,7 +5804,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5858,7 +5860,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5914,7 +5916,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Count"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Count"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5964,7 +5966,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#ArealDensity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;ArealDensity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -5994,7 +5996,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Proportion"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Proportion"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6018,7 +6020,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Pressure"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Pressure"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6096,7 +6098,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Proportion"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Proportion"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6120,7 +6122,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Volume"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Volume"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6142,7 +6144,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -6207,7 +6209,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Mass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6268,7 +6270,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Volume"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Volume"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6290,7 +6292,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -6350,7 +6352,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Angle"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Angle"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6373,7 +6375,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#WaveNumber"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;WaveNumber"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6408,7 +6410,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Time"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Time"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6432,7 +6434,7 @@ It is named in honor of Albert Einstein, who in a 1905 paper explained the photo
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Conductance"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Conductance"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6467,7 +6469,7 @@ a siemens is Ampere/volt</rdfs:comment>
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Conductivity"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Conductivity"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6517,7 +6519,7 @@ a siemens is Ampere/volt</rdfs:comment>
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Mass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6573,7 +6575,7 @@ a siemens is Ampere/volt</rdfs:comment>
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Mass"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6628,7 +6630,7 @@ a siemens is Ampere/volt</rdfs:comment>
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Force"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Force"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6652,7 +6654,7 @@ a siemens is Ampere/volt</rdfs:comment>
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Irradiance"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Irradiance"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6676,7 +6678,7 @@ a siemens is Ampere/volt</rdfs:comment>
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Radiance"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Radiance"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6699,7 +6701,7 @@ a siemens is Ampere/volt</rdfs:comment>
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6723,7 +6725,7 @@ a siemens is Ampere/volt</rdfs:comment>
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Length"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -6779,7 +6781,7 @@ a siemens is Ampere/volt</rdfs:comment>
                             <rdf:Description rdf:about="&oboe-core;Measurement"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Area"/>
+                                <owl:allValuesFrom rdf:resource="&oboe-characteristics;Area"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
