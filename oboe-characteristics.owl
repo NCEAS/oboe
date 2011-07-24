@@ -383,6 +383,15 @@
         <rdfs:subClassOf rdf:resource="&oboe-core;PhysicalCharacteristic"/>
     </owl:Class>
     
+ 
+ 
+     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Molality -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Molality">
+        <rdfs:subClassOf rdf:resource="&oboe-core;PhysicalCharacteristic"/>
+        <rdfs:comment>Molality amount of substance of solute B in a solution divided by the mass of the solvent: Often favored because measurements of mass are more precise than measurements of volume.</rdfs:comment>
+    </owl:Class>
+ 
     
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#PhotonFluxDensity -->
