@@ -579,15 +579,15 @@
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#CharacteristicQualifier"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasBaseQualifier"/>
-                <owl:onClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#BaseCharacteristicQualifier"/>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasNextQualifier"/>
+                <owl:onClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#CharacteristicQualifier"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasNextQualifier"/>
-                <owl:onClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#CharacteristicQualifier"/>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasBaseQualifier"/>
+                <owl:onClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#BaseCharacteristicQualifier"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -627,14 +627,14 @@
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Relationship"/>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasContextObservation"/>
+                <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasContextObservation"/>
-                <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Relationship"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">A context measurement is a special measurement for capturing the details of a contextual relationship among two observations.  These details include a characteristic that asserts the relationship between the two entities being observed. Optionally, a protocol (e.g., defining the procedure for observing the relationship) and a standard can also be given (however, these will typically not be specified as part of context). The value of the context measurement is the contextualizing entity, and the observation for the context measurement is the contextualized observation.</rdfs:comment>
@@ -658,6 +658,12 @@
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#DerivedUnit">
         <rdfs:label xml:lang="en">Derived Unit</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Unit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasPower"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
@@ -692,12 +698,6 @@
                 </owl:complementOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasPower"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>A DerivedUnit raises a base unit to an integer power other than 0 or 1. For example, the unit &#39;square meter&#39; is a unit derived from the &#39;meter&#39; base unit raised to the power 2.</rdfs:comment>
     </owl:Class>
     
@@ -723,12 +723,6 @@
         <rdfs:label xml:lang="en">Measurement</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasValue"/>
-                <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor"/>
                 <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
             </owl:Restriction>
@@ -743,6 +737,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#usesProtocol"/>
                 <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Protocol"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasValue"/>
+                <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -902,8 +902,8 @@
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasValue"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Decimal"/>
+                                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#PhysicalCharacteristic"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -918,8 +918,8 @@
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic"/>
-                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#PhysicalCharacteristic"/>
+                                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasValue"/>
+                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Decimal"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -937,13 +937,13 @@
         <rdfs:label xml:lang="en">Unit Conversion</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasTargetUnit"/>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasSourceUnit"/>
                 <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Unit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasSourceUnit"/>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasTargetUnit"/>
                 <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Unit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -979,6 +979,10 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <swrl:Variable rdf:about="urn:swrl#c"/>
+    <swrl:Variable rdf:about="urn:swrl#o"/>
+    <swrl:Variable rdf:about="urn:swrl#m"/>
+    <swrl:Variable rdf:about="urn:swrl#e"/>
     <swrl:Variable rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#c"/>
     <swrl:Variable rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#o"/>
     <swrl:Variable rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#e"/>
@@ -988,9 +992,9 @@
                 <rdf:rest rdf:resource="&rdf;nil"/>
                 <rdf:first>
                     <swrl:IndividualPropertyAtom>
-                        <swrl:argument1 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#c"/>
-                        <swrl:argument2 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#e"/>
-                        <swrl:propertyPredicate rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasValue"/>
+                        <swrl:propertyPredicate rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#e"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#o"/>
                     </swrl:IndividualPropertyAtom>
                 </rdf:first>
             </swrl:AtomList>
@@ -999,22 +1003,43 @@
             <swrl:AtomList>
                 <rdf:rest>
                     <swrl:AtomList>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
                         <rdf:first>
                             <swrl:IndividualPropertyAtom>
-                                <swrl:argument2 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#e"/>
-                                <swrl:argument1 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#o"/>
-                                <swrl:propertyPredicate rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
+                                <swrl:propertyPredicate rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasMeasurement"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#m"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#o"/>
                             </swrl:IndividualPropertyAtom>
                         </rdf:first>
+                        <rdf:rest>
+                            <swrl:AtomList>
+                                <rdf:rest>
+                                    <swrl:AtomList>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                        <rdf:first>
+                                            <swrl:IndividualPropertyAtom>
+                                                <swrl:propertyPredicate rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#c"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                                            </swrl:IndividualPropertyAtom>
+                                        </rdf:first>
+                                    </swrl:AtomList>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <swrl:IndividualPropertyAtom>
+                                        <swrl:propertyPredicate rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasValue"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#e"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                                    </swrl:IndividualPropertyAtom>
+                                </rdf:first>
+                            </swrl:AtomList>
+                        </rdf:rest>
                     </swrl:AtomList>
                 </rdf:rest>
                 <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                        <swrl:argument1 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#c"/>
-                        <swrl:propertyPredicate rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasContextObservation"/>
-                        <swrl:argument2 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#o"/>
-                    </swrl:IndividualPropertyAtom>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Type"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#c"/>
+                    </swrl:ClassAtom>
                 </rdf:first>
             </swrl:AtomList>
         </swrl:body>
@@ -1056,9 +1081,46 @@
             </swrl:AtomList>
         </swrl:body>
     </swrl:Imp>
+    <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#c"/>
+                        <swrl:argument2 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#e"/>
+                        <swrl:propertyPredicate rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasValue"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:argument2 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#e"/>
+                                <swrl:argument1 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#o"/>
+                                <swrl:propertyPredicate rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                    </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#c"/>
+                        <swrl:propertyPredicate rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasContextObservation"/>
+                        <swrl:argument2 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#o"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.2.1789) http://owlapi.sourceforge.net -->
 
