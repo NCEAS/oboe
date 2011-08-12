@@ -67,12 +67,28 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Population -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Population">
+        <rdfs:label xml:lang="en">Population</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+        <dc:description xml:lang="en">A set of organisms of the same species within a defined area.</dc:description>
+    </owl:Class>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#PopulationSample -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#PopulationSample">
         <rdfs:label xml:lang="en">Population Sample</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Sample"/>
-        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Population"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Population"/>
+                    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Sample"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <dc:description xml:lang="en">A subset of individuals in a biological population.</dc:description>
     </owl:Class>
     
@@ -85,16 +101,6 @@
         <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
         <rdfs:comment xml:lang="en">A sample may be material or conceptual in nature,  e.g. tissue sample, rock sample, water sample, statistical population sample, etc.</rdfs:comment>
         <dc:description xml:lang="en">A subset of an entity.</dc:description>
-    </owl:Class>
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Population -->
-
-    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Population">
-        <rdfs:label xml:lang="en">Population</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
-        <dc:description xml:lang="en">A set of organisms of the same species within a defined area.</dc:description>
     </owl:Class>
 </rdf:RDF>
 
