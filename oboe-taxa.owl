@@ -75,6 +75,25 @@
         <rdfs:seeAlso xml:lang="en">http://code.google.com/p/darwin-sw/wiki/ClassTaxon</rdfs:seeAlso>
         <oboe-core:similarConceptAsClass rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Species -->
+
+    <owl:NamedIndividual rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Species">
+        <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#TaxonConcept"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
