@@ -16,6 +16,7 @@
     <!ENTITY oboe-temporal "http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#" >
     <!ENTITY oboe-chemistry "http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#" >
     <!ENTITY oboe-taxa "http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#" >
+    <!ENTITY oboe-ecology "http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#" >
     <!ENTITY oboe-anatomy "http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#" >
 ]>
 
@@ -32,6 +33,7 @@
      xmlns:oboe-temporal="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#"
      xmlns:oboe-chemistry="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#"
      xmlns:oboe-taxa="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#"
+     xmlns:oboe-ecology="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#"
      xmlns:oboe-anatomy="http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -48,6 +50,7 @@
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl"/>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl"/>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl"/>
+        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl"/>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl"/>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-anatomy.owl"/>
     </owl:Ontology>
