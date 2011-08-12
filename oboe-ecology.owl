@@ -25,8 +25,8 @@
      xmlns:cc="http://creativecommons.org/ns#">
     <owl:Ontology rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl">
         <rdfs:label>OBOE Ecology</rdfs:label>
-        <rdfs:comment>This ontology contains ecological terms that are common across OBOE extensions.  It is not comprehensive, but rather the beginnings of a general ecological ontology.</rdfs:comment>
         <rdfs:comment>Copyright (c) 2006-2011 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
+        <rdfs:comment>This ontology contains ecological terms that are common across OBOE extensions.  It is not comprehensive, but rather the beginnings of a general ecological ontology.</rdfs:comment>
         <owl:versionInfo>Version 1.0</owl:versionInfo>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
     </owl:Ontology>
@@ -67,25 +67,35 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Population -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#PopulationSample -->
 
-    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#TaxonConcept">
-        <rdfs:label xml:lang="en">Population</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#PopulationSample">
+        <rdfs:label xml:lang="en">Population Sample</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Sample"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Population"/>
+        <dc:description xml:lang="en">A subset of individuals in a biological population.</dc:description>
     </owl:Class>
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Sample -->
 
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Sample">
+        <rdfs:label xml:lang="en">Sample</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+        <rdfs:comment xml:lang="en">A sample may be material or conceptual in nature,  e.g. tissue sample, rock sample, water sample, statistical population sample, etc.</rdfs:comment>
+        <dc:description xml:lang="en">A subset of an entity.</dc:description>
+    </owl:Class>
     
 
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Population -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Population">
+        <rdfs:label xml:lang="en">Population</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+        <dc:description xml:lang="en">A set of organisms of the same species within a defined area.</dc:description>
+    </owl:Class>
 </rdf:RDF>
 
 
