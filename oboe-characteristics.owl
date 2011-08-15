@@ -66,6 +66,16 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#AlgaeLifeStage -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#AlgaeLifeStage">
+        <rdfs:label xml:lang="en">Algae Life Stage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#LifeStage"/>
+        <rdfs:comment xml:lang="en">The developmental stage of a given algae.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Amount -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Amount">
@@ -228,6 +238,16 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#FishLifeStage -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#FishLifeStage">
+        <rdfs:label xml:lang="en">Fish Life Stage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#LifeStage"/>
+        <rdfs:comment xml:lang="en">The developmental stage of a given fish.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Force -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Force">
@@ -328,6 +348,16 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#MammalLifeStage -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#MammalLifeStage">
+        <rdfs:label xml:lang="en">Mammal Life Stage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#LifeStage"/>
+        <rdfs:comment xml:lang="en">The developmental stage of a given mammal.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass">
@@ -390,6 +420,16 @@
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#PhotonFluxDensity">
         <rdfs:subClassOf rdf:resource="&oboe-core;PhysicalCharacteristic"/>
         <rdfs:comment>The number of photons striking an area per unit time.  This could be probably also be called a PhotonArealDensityRate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#PlantLifeStage -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#PlantLifeStage">
+        <rdfs:label xml:lang="en">Plant Life Stage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#LifeStage"/>
+        <rdfs:comment xml:lang="en">The developmental stage of a given plant.</rdfs:comment>
     </owl:Class>
     
 
