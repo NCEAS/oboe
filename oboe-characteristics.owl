@@ -25,9 +25,9 @@
      xmlns:cc="http://creativecommons.org/ns#">
     <owl:Ontology rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl">
         <rdfs:label>OBOE Characteristics</rdfs:label>
-        <owl:versionInfo>Version 1.0</owl:versionInfo>
-        <rdfs:comment>Copyright (c) 2006-2011 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
         <rdfs:comment>This ontology contains general terms for characteristics that are measured either quantitatively or qualitatively, including physical characteristics, behavioral characteristics, and administrative characteristics.</rdfs:comment>
+        <rdfs:comment>Copyright (c) 2006-2011 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
+        <owl:versionInfo>Version 1.0</owl:versionInfo>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
     </owl:Ontology>
     
@@ -58,33 +58,12 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Amount -->
@@ -134,6 +113,7 @@
     </owl:Class>
     
 
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Area -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Area">
@@ -165,6 +145,7 @@
     </owl:Class>
     
 
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Capacitance -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Capacitance">
@@ -179,6 +160,7 @@
         <rdfs:subClassOf rdf:resource="&oboe-core;PhysicalCharacteristic"/>
     </owl:Class>
     
+
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Charge -->
 
@@ -228,7 +210,6 @@
         <rdfs:subClassOf rdf:resource="&oboe-core;PhysicalCharacteristic"/>
     </owl:Class>
     
-
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#DoseEquivalent -->
@@ -292,6 +273,16 @@
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length">
         <rdfs:subClassOf rdf:resource="&oboe-core;PhysicalCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#LifeStage -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#LifeStage">
+        <rdfs:label xml:lang="en">Life Stage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe-core;PhysicalCharacteristic"/>
+        <rdfs:comment xml:lang="en">The developmental stage of life of a given organism.</rdfs:comment>
     </owl:Class>
     
 
@@ -383,16 +374,16 @@
         <rdfs:subClassOf rdf:resource="&oboe-core;PhysicalCharacteristic"/>
     </owl:Class>
     
- 
- 
-     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Molality -->
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Molality -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Molality">
         <rdfs:subClassOf rdf:resource="&oboe-core;PhysicalCharacteristic"/>
         <rdfs:comment>Molality amount of substance of solute B in a solution divided by the mass of the solvent: Often favored because measurements of mass are more precise than measurements of volume.</rdfs:comment>
     </owl:Class>
- 
     
+
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#PhotonFluxDensity -->
 
@@ -579,16 +570,16 @@
         <rdfs:subClassOf rdf:resource="&oboe-core;PhysicalCharacteristic"/>
     </owl:Class>
     
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#WaveNumber -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#WaveNumber">
         <rdfs:subClassOf rdf:resource="&oboe-core;PhysicalCharacteristic"/>
     </owl:Class>
-
-
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
 
