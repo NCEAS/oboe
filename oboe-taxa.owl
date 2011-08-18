@@ -67,33 +67,36 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Fish -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Fish">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+        <dc:description xml:lang="en">Aquatic vertebrates that have gills throughout life and limbs, if any, in the shape of fins. This includes vertebrates of the Actinopterygii class (bony fishes), the Chondrichthyes class (sharks, rays), Acanthodii (spiny sharks) and certain taxa in the Sacopterygii class limited to the lobe-finned fishes, including the Osteolepiformes superorder, Onychodontida order, Dipnoi subclass, and the Coelacanthiformes order.</dc:description>
+        <rdfs:comment xml:lang="en">The definition of &#39;Fish&#39; comes from &#39;Fishes of the World, 4th Edition&#39; by Joseph S. Nelson, ISBN 0471250317.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Taxon -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Taxon">
+        <rdfs:label xml:lang="en">Taxon</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#TaxonConcept"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+        <dc:description xml:lang="en">A taxon is a unit of biodiversity (Hyam and Kennedy,2006) e.g. species, genus, family, etc</dc:description>
+        <rdfs:seeAlso rdf:resource="http://code.google.com/p/darwin-sw/wiki/ClassTaxon"/>
+    </owl:Class>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#TaxonConcept -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#TaxonConcept">
         <rdfs:label xml:lang="en">Taxon Concept</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
-        <rdfs:seeAlso xml:lang="en">http://code.google.com/p/darwin-sw/wiki/ClassTaxon</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:resource="http://code.google.com/p/darwin-sw/wiki/ClassTaxon"/>
         <oboe-core:similarConceptAsClass rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept"/>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Species -->
-
-    <owl:NamedIndividual rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Species">
-        <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#TaxonConcept"/>
-    </owl:NamedIndividual>
 </rdf:RDF>
 
 
