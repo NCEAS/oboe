@@ -10,12 +10,14 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboe-core "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#" >
+    <!ENTITY oboe-biology "http://ecoinformatics.org/oboe/oboe.1.0/oboe-biology.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#"
      xml:base="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1#"
+     xmlns:oboe-biology="http://ecoinformatics.org/oboe/oboe.1.0/oboe-biology.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#"
@@ -28,6 +30,7 @@
         <rdfs:comment>This ontology contains taxonomic terms that are common across OBOE extensions.  It is not comprehensive, but rather the beginnings of a general taxonomic ontology.</rdfs:comment>
         <rdfs:comment>Copyright (c) 2006-2011 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
         <owl:versionInfo>Version 1.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-biology.owl"/>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
     </owl:Ontology>
     
@@ -70,7 +73,7 @@
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Fish -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-taxa.owl#Fish">
-        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
+        <rdfs:subClassOf rdf:resource="&oboe-biology;Organism"/>
         <dc:description xml:lang="en">Aquatic vertebrates that have gills throughout life and limbs, if any, in the shape of fins. This includes vertebrates of the Actinopterygii class (bony fishes), the Chondrichthyes class (sharks, rays), Acanthodii (spiny sharks) and certain taxa in the Sacopterygii class limited to the lobe-finned fishes, including the Osteolepiformes superorder, Onychodontida order, Dipnoi subclass, and the Coelacanthiformes order.</dc:description>
         <rdfs:comment xml:lang="en">The definition of &#39;Fish&#39; comes from &#39;Fishes of the World, 4th Edition&#39; by Joseph S. Nelson, ISBN 0471250317.</rdfs:comment>
     </owl:Class>
