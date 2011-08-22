@@ -186,6 +186,8 @@
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-biology.owl#Smolt -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-biology.owl#Smolt">
+        <rdfs:label xml:lang="en">Smolt</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-biology.owl#SmoltStageFish"/>
         <rdfs:subClassOf rdf:resource="&oboe-taxa;Fish"/>
     </owl:Class>
     
@@ -213,7 +215,6 @@
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-biology.owl#SubadultStageFish">
         <rdfs:label xml:lang="en">Subadult Stage Fish</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-biology.owl#Subadult"/>
         <rdfs:subClassOf rdf:resource="&oboe-taxa;Fish"/>
         <dc:description xml:lang="en">A fish categorized in a developmental stage as subadults.</dc:description>
     </owl:Class>
