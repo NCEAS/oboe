@@ -237,7 +237,10 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
         <IRI>#Algae</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Any of a several groups and taxa of non-flowering, usually photosynthetic, often aquatic, eukaryotic organisms ranging from unicellular to large multicellular forms. They lack true roots, stems and leaves characteristic of terrestrial plants. Most definitions do not include prokaryots (e.g., cyanobacteria) [various sources].</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A general term for members of several groups  of non-flowering, usually photosynthetic, often aquatic, eukaryotic organisms ranging from unicellular to large multicellular forms. They lack true roots, stems and leaves characteristic of terrestrial plants. Most definitions do not include prokaryots (e.g., cyanobacteria) .
+
+Taxonomically, these belong to several taxonomic groups often classified as Protista (itself a catch-all term), which are mostly phytosynthetic. The singular form, alga, is less common
+[various sources].</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
