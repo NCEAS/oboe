@@ -132,14 +132,7 @@ An ecological unit composed of a group of organisms or a population of different
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#PopulationSample">
         <rdfs:label xml:lang="en">Population Sample</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Population"/>
-                    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Sample"/>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#Sample"/>
         <dc:description xml:lang="en">A subset of individuals in a biological population.</dc:description>
     </owl:Class>
     
