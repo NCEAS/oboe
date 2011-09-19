@@ -83,101 +83,101 @@
    -->
 
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TemporalEntity -->
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TemporalEntity -->
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TemporalEntity">
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TemporalEntity">
     <rdfs:label xml:lang="en">Temporal Entity</rdfs:label>
     <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
   </owl:Class>
   
 
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeCalendar -->
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeCalendar -->
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeCalendar">
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeCalendar">
     <rdfs:label xml:lang="en">Time Calendar</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeReferenceSystem"/>
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeReferenceSystem"/>
   </owl:Class>
   
 
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeClock -->
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeClock -->
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeClock">
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeClock">
     <rdfs:label xml:lang="en">Time Clock</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeReferenceSystem"/>
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeReferenceSystem"/>
   </owl:Class>
   
 
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeCoordinateReferenceSystem -->
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeCoordinateReferenceSystem -->
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeCoordinateReferenceSystem">
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeCoordinateReferenceSystem">
     <rdfs:label xml:lang="en">Time Coordinate Reference System</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeReferenceSystem"/>
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeReferenceSystem"/>
   </owl:Class>
   
 
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeDatum -->
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeDatum -->
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeDatum">
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeDatum">
     <rdfs:label xml:lang="en">Time Datum</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TemporalEntity"/>
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TemporalEntity"/>
   </owl:Class>
   
 
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeGeometricPrimitive -->
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeGeometricPrimitive -->
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeGeometricPrimitive">
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeGeometricPrimitive">
     <rdfs:label xml:lang="en">Time Geometric Primitive</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimePrimitive"/>
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimePrimitive"/>
   </owl:Class>
   
 
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeInstant -->
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeInstant -->
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeInstant">
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeInstant">
     <rdfs:label xml:lang="en">Time Instant</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeGeometricPrimitive"/>
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeGeometricPrimitive"/>
   </owl:Class>
   
 
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeOrdinalReferenceSystem -->
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeOrdinalReferenceSystem -->
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeOrdinalReferenceSystem">
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeOrdinalReferenceSystem">
     <rdfs:label xml:lang="en">Time Ordinal Reference System</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeReferenceSystem"/>
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeReferenceSystem"/>
   </owl:Class>
   
 
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimePeriod -->
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimePeriod -->
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimePeriod">
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimePeriod">
     <rdfs:label xml:lang="en">Time Period</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeGeometricPrimitive"/>
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeGeometricPrimitive"/>
   </owl:Class>
   
 
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimePrimitive -->
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimePrimitive -->
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimePrimitive">
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimePrimitive">
     <rdfs:label xml:lang="en">Time Primitive</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TemporalEntity"/>
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TemporalEntity"/>
   </owl:Class>
   
 
 
-  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeReferenceSystem -->
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeReferenceSystem -->
 
-  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TimeReferenceSystem">
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TimeReferenceSystem">
     <rdfs:label xml:lang="en">Time Reference System</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl#TemporalEntity"/>
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TemporalEntity"/>
   </owl:Class>
   
  
