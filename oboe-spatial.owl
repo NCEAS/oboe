@@ -70,7 +70,7 @@
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Plot">
         <rdfs:label>Plot</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Polygon"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Polygon"/>
     </owl:Class>
     
 
@@ -97,7 +97,7 @@
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Transect">
         <rdfs:label>Transect</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;LineString"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#LineString"/>
     </owl:Class>
     
 
@@ -106,7 +106,7 @@
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Waypoint">
         <rdfs:label>Waypoint</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Point"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Point"/>
         <rdfs:comment>waypoint is usually defined by a latitude-longitude pair. It often defines the nominal location of a station or sampling place.</rdfs:comment>
     </owl:Class>
     
@@ -114,452 +114,452 @@
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#AffineCoordinateSystem -->
 
-    <owl:Class rdf:about="&oboe;AffineCoordinateSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#AffineCoordinateSystem">
         <rdfs:label xml:lang="en">Affine Coordinate System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCoordinateSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#CartesianCoordinateSystem -->
 
-    <owl:Class rdf:about="&oboe;CartesianCoordinateSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#CartesianCoordinateSystem">
         <rdfs:label xml:lang="en">Cartesian Coordinate System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCoordinateSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#CompositeCurve -->
 
-    <owl:Class rdf:about="&oboe;CompositeCurve">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#CompositeCurve">
         <rdfs:label xml:lang="en">Composite Curve</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCurve"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCurve"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#CompositeSolid -->
 
-    <owl:Class rdf:about="&oboe;CompositeSolid">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#CompositeSolid">
         <rdfs:label xml:lang="en">Composite Solid</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialSolid"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialSolid"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#CompositeSurface -->
 
-    <owl:Class rdf:about="&oboe;CompositeSurface">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#CompositeSurface">
         <rdfs:label xml:lang="en">Composite Surface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialSurface"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialSurface"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#CompoundCoordinateReferenceSystem -->
 
-    <owl:Class rdf:about="&oboe;CompoundCoordinateReferenceSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#CompoundCoordinateReferenceSystem">
         <rdfs:label xml:lang="en">Compound Coordinate Reference System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCoordinateReferenceSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateReferenceSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Curve -->
 
-    <owl:Class rdf:about="&oboe;Curve">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Curve">
         <rdfs:label xml:lang="en">Curve</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCurve"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCurve"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#CylindricalCoordinateSystem -->
 
-    <owl:Class rdf:about="&oboe;CylindricalCoordinateSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#CylindricalCoordinateSystem">
         <rdfs:label xml:lang="en">Cylindrical Coordinate System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCoordinateSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#DynamicFeature -->
 
-    <owl:Class rdf:about="&oboe;DynamicFeature">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#DynamicFeature">
         <rdfs:label xml:lang="en">Dynamic Feature</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialFeature"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialFeature"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#DynamicFeatureCollection -->
 
-    <owl:Class rdf:about="&oboe;DynamicFeatureCollection">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#DynamicFeatureCollection">
         <rdfs:label xml:lang="en">Dynamic Feature Collection</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;DynamicFeature"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#DynamicFeature"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#EllipsoidalCoordinateSystem -->
 
-    <owl:Class rdf:about="&oboe;EllipsoidalCoordinateSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#EllipsoidalCoordinateSystem">
         <rdfs:label xml:lang="en">Ellipsoidal Coordinate System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCoordinateSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#EngineeringCoordinateReferenceSystem -->
 
-    <owl:Class rdf:about="&oboe;EngineeringCoordinateReferenceSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#EngineeringCoordinateReferenceSystem">
         <rdfs:label xml:lang="en">Engineering Coordinate Reference System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SingleCoordinateReferenceSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SingleCoordinateReferenceSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#EngineeringDatum -->
 
-    <owl:Class rdf:about="&oboe;EngineeringDatum">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#EngineeringDatum">
         <rdfs:label xml:lang="en">Engineering Datum</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialDatum"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDatum"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#GeocentricCoordinateReferenceSystem -->
 
-    <owl:Class rdf:about="&oboe;GeocentricCoordinateReferenceSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#GeocentricCoordinateReferenceSystem">
         <rdfs:label xml:lang="en">Geocentric Coordinate Reference System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SingleCoordinateReferenceSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SingleCoordinateReferenceSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#GeodeticCoordinateReferenceSystem -->
 
-    <owl:Class rdf:about="&oboe;GeodeticCoordinateReferenceSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#GeodeticCoordinateReferenceSystem">
         <rdfs:label xml:lang="en">Geodetic Coordinate Reference System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SingleCoordinateReferenceSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SingleCoordinateReferenceSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#GeodeticDatum -->
 
-    <owl:Class rdf:about="&oboe;GeodeticDatum">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#GeodeticDatum">
         <rdfs:label xml:lang="en">Geodetic Datum</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialDatum"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDatum"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#GeographicCoordinateReferenceSystem -->
 
-    <owl:Class rdf:about="&oboe;GeographicCoordinateReferenceSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#GeographicCoordinateReferenceSystem">
         <rdfs:label xml:lang="en">Geographic Coordinate Reference System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SingleCoordinateReferenceSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SingleCoordinateReferenceSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Grid -->
 
-    <owl:Class rdf:about="&oboe;Grid">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Grid">
         <rdfs:label xml:lang="en">Grid</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialImplicitGeometry"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialImplicitGeometry"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#GridCoverage -->
 
-    <owl:Class rdf:about="&oboe;GridCoverage">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#GridCoverage">
         <rdfs:label xml:lang="en">Grid Coverage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialDiscreetCoverage"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDiscreetCoverage"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#ImageCoordinateReferenceSystem -->
 
-    <owl:Class rdf:about="&oboe;ImageCoordinateReferenceSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#ImageCoordinateReferenceSystem">
         <rdfs:label xml:lang="en">Image Coordinate Reference System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SingleCoordinateReferenceSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SingleCoordinateReferenceSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#ImageDatum -->
 
-    <owl:Class rdf:about="&oboe;ImageDatum">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#ImageDatum">
         <rdfs:label xml:lang="en">Image Datum</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialDatum"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDatum"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#LineString -->
 
-    <owl:Class rdf:about="&oboe;LineString">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#LineString">
         <rdfs:label xml:lang="en">Line String</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCurve"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCurve"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#LinearCoordinateSystem -->
 
-    <owl:Class rdf:about="&oboe;LinearCoordinateSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#LinearCoordinateSystem">
         <rdfs:label xml:lang="en">Linear Coordinate System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCoordinateSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiCurveCoverage -->
 
-    <owl:Class rdf:about="&oboe;MultiCurveCoverage">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiCurveCoverage">
         <rdfs:label xml:lang="en">Multi Curve Coverage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialDiscreetCoverage"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDiscreetCoverage"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiPoint -->
 
-    <owl:Class rdf:about="&oboe;MultiPoint">
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialGeometricAggregate"/>
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiPoint">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometricAggregate"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiPointCoverage -->
 
-    <owl:Class rdf:about="&oboe;MultiPointCoverage">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiPointCoverage">
         <rdfs:label xml:lang="en">Multi Point Coverage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialDiscreetCoverage"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDiscreetCoverage"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiPointCurve -->
 
-    <owl:Class rdf:about="&oboe;MultiPointCurve">
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialGeometricAggregate"/>
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiPointCurve">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometricAggregate"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiPointGeometry -->
 
-    <owl:Class rdf:about="&oboe;MultiPointGeometry">
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialGeometricAggregate"/>
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiPointGeometry">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometricAggregate"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiSolid -->
 
-    <owl:Class rdf:about="&oboe;MultiSolid">
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialGeometricAggregate"/>
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiSolid">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometricAggregate"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiSolidCoverage -->
 
-    <owl:Class rdf:about="&oboe;MultiSolidCoverage">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiSolidCoverage">
         <rdfs:label xml:lang="en">Multi Solid Coverage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialDiscreetCoverage"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDiscreetCoverage"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiSurface -->
 
-    <owl:Class rdf:about="&oboe;MultiSurface">
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialGeometricAggregate"/>
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiSurface">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometricAggregate"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiSurfaceCoverage -->
 
-    <owl:Class rdf:about="&oboe;MultiSurfaceCoverage">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#MultiSurfaceCoverage">
         <rdfs:label xml:lang="en">Multi Surface Coverage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialDiscreetCoverage"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDiscreetCoverage"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#ObliqueCartesianCoordinateSystem -->
 
-    <owl:Class rdf:about="&oboe;ObliqueCartesianCoordinateSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#ObliqueCartesianCoordinateSystem">
         <rdfs:label xml:lang="en">Oblique Cartesian Coordinate System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCoordinateSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#OrientableCurve -->
 
-    <owl:Class rdf:about="&oboe;OrientableCurve">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#OrientableCurve">
         <rdfs:label xml:lang="en">Orientable Curve</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCurve"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCurve"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#OrientableSurface -->
 
-    <owl:Class rdf:about="&oboe;OrientableSurface">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#OrientableSurface">
         <rdfs:label xml:lang="en">Orientable Surface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialSurface"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialSurface"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Point -->
 
-    <owl:Class rdf:about="&oboe;Point">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Point">
         <rdfs:label xml:lang="en">Point</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialGeometricPrimitive"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometricPrimitive"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#PolarCoordinateSystem -->
 
-    <owl:Class rdf:about="&oboe;PolarCoordinateSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#PolarCoordinateSystem">
         <rdfs:label xml:lang="en">Polar Coordinate System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCoordinateSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Polygon -->
 
-    <owl:Class rdf:about="&oboe;Polygon">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Polygon">
         <rdfs:label xml:lang="en">Polygon</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialSurface"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialSurface"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#PolyhedralSurface -->
 
-    <owl:Class rdf:about="&oboe;PolyhedralSurface">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#PolyhedralSurface">
         <rdfs:label xml:lang="en">Polyhedral Surface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Surface"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Surface"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#RectifiedGrid -->
 
-    <owl:Class rdf:about="&oboe;RectifiedGrid">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#RectifiedGrid">
         <rdfs:label xml:lang="en">Rectified Grid</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;Grid"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Grid"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#RectifiedGridCoverage -->
 
-    <owl:Class rdf:about="&oboe;RectifiedGridCoverage">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#RectifiedGridCoverage">
         <rdfs:label xml:lang="en">Rectified Grid Coverage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialDiscreetCoverage"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDiscreetCoverage"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SingleCoordinateReferenceSystem -->
 
-    <owl:Class rdf:about="&oboe;SingleCoordinateReferenceSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SingleCoordinateReferenceSystem">
         <rdfs:label xml:lang="en">Single Coordinate Reference System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCoordinateReferenceSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateReferenceSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Solid -->
 
-    <owl:Class rdf:about="&oboe;Solid">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Solid">
         <rdfs:label xml:lang="en">Solid</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialSolid"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialSolid"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialContinuousCoverage -->
 
-    <owl:Class rdf:about="&oboe;SpatialContinuousCoverage">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialContinuousCoverage">
         <rdfs:label xml:lang="en">Spatial Continuous Coverage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCoverage"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoverage"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateReferenceSystem -->
 
-    <owl:Class rdf:about="&oboe;SpatialCoordinateReferenceSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateReferenceSystem">
         <rdfs:label xml:lang="en">Spatial Coordinate Reference System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialEntity"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialEntity"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateSystem -->
 
-    <owl:Class rdf:about="&oboe;SpatialCoordinateSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateSystem">
         <rdfs:label xml:lang="en">Spatial Coordinate System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialEntity"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialEntity"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoverage -->
 
-    <owl:Class rdf:about="&oboe;SpatialCoverage">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoverage">
         <rdfs:label xml:lang="en">Spatial Coverage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialFeature"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialFeature"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCurve -->
 
-    <owl:Class rdf:about="&oboe;SpatialCurve">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCurve">
         <rdfs:label xml:lang="en">Spatial Curve</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialGeometricPrimitive"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometricPrimitive"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDatum -->
 
-    <owl:Class rdf:about="&oboe;SpatialDatum">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDatum">
         <rdfs:label xml:lang="en">Spatial Datum</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialEntity"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialEntity"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDiscreetCoverage -->
 
-    <owl:Class rdf:about="&oboe;SpatialDiscreetCoverage">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDiscreetCoverage">
         <rdfs:label xml:lang="en">Spatial Discreet Coverage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCoverage"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoverage"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialEntity -->
 
-    <owl:Class rdf:about="&oboe;SpatialEntity">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialEntity">
         <rdfs:label xml:lang="en">Spatial Entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
         <rdfs:comment xml:lang="en">In the Geography Markup Language 3.2.1 Schema, which models spatial concepts, the AbstractTopology type and its subclasses have been omitted as a subclass of this SpatialEntity class because OBOE describes topologies as a Characteritic of multiple Entities using the Relationship characteristic.</rdfs:comment>
@@ -569,9 +569,9 @@
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialFeature -->
 
-    <owl:Class rdf:about="&oboe;SpatialFeature">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialFeature">
         <rdfs:label xml:lang="en">Spatial Feature</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialEntity"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialEntity"/>
         <rdfs:comment xml:lang="en">GML 3.2.1 defines a subclass of AbstractFeature called Observation with a subclass of DirectedObservation.  This my conflict with the OBOE concept of Observation.  For this reason, these two subclasses are not currently included under SpatialFeature, and this issue needs to be reconciled.</rdfs:comment>
     </owl:Class>
     
@@ -579,117 +579,117 @@
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometricAggregate -->
 
-    <owl:Class rdf:about="&oboe;SpatialGeometricAggregate">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometricAggregate">
         <rdfs:label xml:lang="en">Spatial Geometric Aggregate</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialGeometry"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometry"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometricComplex -->
 
-    <owl:Class rdf:about="&oboe;SpatialGeometricComplex">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometricComplex">
         <rdfs:label xml:lang="en">Spatial Geometric Complex</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialGeometry"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometry"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometricPrimitive -->
 
-    <owl:Class rdf:about="&oboe;SpatialGeometricPrimitive">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometricPrimitive">
         <rdfs:label xml:lang="en">Spatial Geometric Primitive</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialGeometry"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometry"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometry -->
 
-    <owl:Class rdf:about="&oboe;SpatialGeometry">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometry">
         <rdfs:label xml:lang="en">Spatial Geometry</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialEntity"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialEntity"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialImplicitGeometry -->
 
-    <owl:Class rdf:about="&oboe;SpatialImplicitGeometry">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialImplicitGeometry">
         <rdfs:label xml:lang="en">Spatial Implicit Geometry</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialGeometry"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometry"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialSolid -->
 
-    <owl:Class rdf:about="&oboe;SpatialSolid">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialSolid">
         <rdfs:label xml:lang="en">Spatial Solid</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialSurface"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialSurface"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialSurface -->
 
-    <owl:Class rdf:about="&oboe;SpatialSurface">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialSurface">
         <rdfs:label xml:lang="en">Spatial Surface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialGeometricPrimitive"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialGeometricPrimitive"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SphericalCoordinateSystem -->
 
-    <owl:Class rdf:about="&oboe;SphericalCoordinateSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SphericalCoordinateSystem">
         <rdfs:label xml:lang="en">Spherical Coordinate System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCoordinateSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Surface -->
 
-    <owl:Class rdf:about="&oboe;Surface">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Surface">
         <rdfs:label xml:lang="en">Surface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialSurface"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialSurface"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#UserDefinedCoordinateSystem -->
 
-    <owl:Class rdf:about="&oboe;UserDefinedCoordinateSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#UserDefinedCoordinateSystem">
         <rdfs:label xml:lang="en">User Defined Coordinate System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCoordinateSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#VerticalCoordinateReferenceSystem -->
 
-    <owl:Class rdf:about="&oboe;VerticalCoordinateReferenceSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#VerticalCoordinateReferenceSystem">
         <rdfs:label xml:lang="en">Vertical Coordinate Reference System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SingleCoordinateReferenceSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SingleCoordinateReferenceSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#VerticalCoordinateSystem -->
 
-    <owl:Class rdf:about="&oboe;VerticalCoordinateSystem">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#VerticalCoordinateSystem">
         <rdfs:label xml:lang="en">Vertical Coordinate System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialCoordinateSystem"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialCoordinateSystem"/>
     </owl:Class>
     
 
 
     <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#VerticalDatum -->
 
-    <owl:Class rdf:about="&oboe;VerticalDatum">
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#VerticalDatum">
         <rdfs:label xml:lang="en">Vertical Datum</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe;SpatialDatum"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDatum"/>
     </owl:Class>
 </rdf:RDF>
 
