@@ -180,7 +180,41 @@
     <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TemporalEntity"/>
   </owl:Class>
   
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TemporalRelationship -->
+
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TemporalRelationship">
+      <rdfs:label xml:lang="en">Temporal Relationship</rdfs:label>
+      <rdfs:subClassOf rdf:resource="&oboe-core;Relationship"/>
+  </owl:Class>
+  
+
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#After -->
+
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#After">
+      <rdfs:label xml:lang="en">After</rdfs:label>
+      <rdfs:comment xml:lang="en">A temporal relationship where an Entity is observed after another Entity.</rdfs:comment>
+      <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TemporalRelationship"/>
+  </owl:Class>
+  
  
+ 
+   <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#Before -->
+
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#Before">
+      <rdfs:label xml:lang="en">Before</rdfs:label>
+      <rdfs:comment xml:lang="en">A temporal relationship where an Entity is observed prior to another Entity.</rdfs:comment>
+      <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TemporalRelationship"/>
+  </owl:Class>
+    
+
+  <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#During -->
+
+  <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#During">
+      <rdfs:label xml:lang="en">During</rdfs:label>
+      <rdfs:comment xml:lang="en">A temporal relationship where an Entity is observed concurrently with another Entity.</rdfs:comment>
+      <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-temporal.owl#TemporalRelationship"/>
+  </owl:Class>
+
 </rdf:RDF>
 
 
