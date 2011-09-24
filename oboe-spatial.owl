@@ -691,6 +691,39 @@
         <rdfs:label xml:lang="en">Vertical Datum</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialDatum"/>
     </owl:Class>
+    
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Within -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Within">
+        <rdfs:label xml:lang="en">Within</rdfs:label>
+        <rdfs:comment xml:lang="en">A spatial relationship where an Entity in an Ebservation is within another Entity.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialRelationship"/>
+    </owl:Class>
+    
+        <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Adjacent -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Adjacent">
+        <rdfs:label xml:lang="en">Adjacent</rdfs:label>
+        <rdfs:comment xml:lang="en">A spatial relationship where an Entity in an Ebservation is adjacent to another Entity.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialRelationship"/>
+    </owl:Class>
+    
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Overlaps -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#Overlaps">
+        <rdfs:label xml:lang="en">Overlaps</rdfs:label>
+        <rdfs:comment xml:lang="en">A spatial relationship where an Entity in an Observation overlaps another Entity.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialRelationship"/>
+    </owl:Class>
+    
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialRelationship -->
+
+    <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-spatial.owl#SpatialRelationship">
+        <rdfs:label xml:lang="en">Spatial Relationship</rdfs:label>
+        <rdfs:comment xml:lang="en">A relationship between Entities within Observations that has a spatial component (within, adjacent, etc.)</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Relationship"/>
+    </owl:Class>
+    
 </rdf:RDF>
 
 
