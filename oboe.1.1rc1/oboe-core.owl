@@ -19,15 +19,14 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:oboe-core="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:oboe-core="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#"
      xmlns:cc="http://creativecommons.org/ns#">
     <owl:Ontology rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl">
         <rdfs:label>oboe-core</rdfs:label>
-        <owl:versionInfo rdf:datatype="&xsd;string">&apos;$Id: Observation.owl,v 1.29 2008/01/30 04:36:12 bowers Exp $&apos;</owl:versionInfo>
         <cc:license rdf:datatype="&xsd;anyURI">http://creativecommons.org/licenses/by/3.0/</cc:license>
         <owl:versionInfo>Version 1.1 release candidate 1</owl:versionInfo>
         <rdfs:comment>Copyright (c) 2006-2011 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
@@ -88,6 +87,16 @@
     
 
 
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#entityRelated -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;entityRelated">
+        <rdfs:comment>The entityRelated property asserts that the entity of one observation has an observed relationship to the entity in another observation.</rdfs:comment>
+        <rdfs:range rdf:resource="&oboe-core;Observation"/>
+        <rdfs:domain rdf:resource="&oboe-core;Observation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#hasBaseQualifier -->
 
     <owl:ObjectProperty rdf:about="&oboe-core;hasBaseQualifier">
@@ -103,7 +112,7 @@
 
     <owl:ObjectProperty rdf:about="&oboe-core;hasCharacteristic">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:comment xml:lang="TODO"></rdfs:comment>
+        <rdfs:comment>The hasCharacteristic property gives the characteristics of an entity.</rdfs:comment>
         <rdfs:range rdf:resource="&oboe-core;Characteristic"/>
         <rdfs:domain rdf:resource="&oboe-core;Entity"/>
     </owl:ObjectProperty>
@@ -114,20 +123,9 @@
 
     <owl:ObjectProperty rdf:about="&oboe-core;hasContext">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string">The hasContext property states that one observation serves as the context for another observation.  In the case of hasContext, the domain is the observation being contextualized, and the range is the context. Context defines a semantic relationship between two entities that is a fundamental aspect of the observations, but not necessarily of the entities themselves.  For example, most measurements are accomplished in a spatio-temporal framework that might be valuable context. The assertions made by contextual observations are assumed of the contextualized observations. Context is a transitive relationship.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">The hasContext property asserts that one observation serves as the context for another observation.  In a hasContext property the domain is the observation being contextualized and the range is the context. Context defines a semantic relationship between two entities that is a fundamental aspect of the observations, but not necessarily of the entities themselves.  For example, most measurements are accomplished in a spatio-temporal framework that might be valuable context. The assertions made by contextual observations are assumed of the contextualized observations. Context is a transitive relationship.</rdfs:comment>
         <rdfs:range rdf:resource="&oboe-core;Observation"/>
         <rdfs:domain rdf:resource="&oboe-core;Observation"/>
-        <rdfs:subPropertyOf rdf:resource="&oboe-core;relatedTo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#hasFromEntity -->
-
-    <owl:ObjectProperty rdf:about="&oboe-core;hasFromEntity">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:range rdf:resource="&oboe-core;Entity"/>
-        <rdfs:domain rdf:resource="&oboe-core;Relationship"/>
     </owl:ObjectProperty>
     
 
@@ -168,8 +166,8 @@
 
     <owl:ObjectProperty rdf:about="&oboe-core;hasObservedRelation">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment>The hasObservedRelation property gives the observed relation of an observation. The observation entity is the source (head) entity of the corresponding relationship that was observed.</rdfs:comment>
         <rdfs:domain rdf:resource="&oboe-core;Observation"/>
-        <rdfs:range rdf:resource="&oboe-core;ObservedRelation"/>
     </owl:ObjectProperty>
     
 
@@ -203,15 +201,6 @@
         <rdfs:comment>The hasTargetUnit property gives the target unit being converted to within a unit conversion.</rdfs:comment>
         <rdfs:range rdf:resource="&oboe-core;Unit"/>
         <rdfs:domain rdf:resource="&oboe-core;UnitConversion"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#hasToEntity -->
-
-    <owl:ObjectProperty rdf:about="&oboe-core;hasToEntity">
-        <rdfs:range rdf:resource="&oboe-core;Entity"/>
-        <rdfs:domain rdf:resource="&oboe-core;Relationship"/>
     </owl:ObjectProperty>
     
 
@@ -251,16 +240,6 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#observedRelationTo -->
-
-    <owl:ObjectProperty rdf:about="&oboe-core;observedRelationTo">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:range rdf:resource="&oboe-core;Observation"/>
-        <rdfs:domain rdf:resource="&oboe-core;ObservedRelation"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#ofCharacteristic -->
 
     <owl:ObjectProperty rdf:about="&oboe-core;ofCharacteristic">
@@ -279,29 +258,6 @@
         <rdfs:comment rdf:datatype="&xsd;string">The ofEntity property gives the observed entity of an observation.</rdfs:comment>
         <rdfs:range rdf:resource="&oboe-core;Entity"/>
         <rdfs:domain rdf:resource="&oboe-core;Observation"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#ofRelationship -->
-
-    <owl:ObjectProperty rdf:about="&oboe-core;ofRelationship">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="&oboe-core;ObservedRelation"/>
-        <rdfs:range rdf:resource="&oboe-core;Relationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#relatedTo -->
-
-    <owl:ObjectProperty rdf:about="&oboe-core;relatedTo">
-        <rdfs:range rdf:resource="&oboe-core;Observation"/>
-        <rdfs:domain rdf:resource="&oboe-core;Observation"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&oboe-core;hasObservedRelation"/>
-            <rdf:Description rdf:about="&oboe-core;observedRelationTo"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -356,7 +312,7 @@
 
     <owl:DatatypeProperty rdf:about="&oboe-core;hasDataType">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment xml:lang="TODO"></rdfs:comment>
+        <rdfs:comment xml:lang="todo"></rdfs:comment>
         <rdfs:range rdf:resource="&xsd;anyType"/>
         <rdfs:domain rdf:resource="&oboe-core;MeasuredValue"/>
     </owl:DatatypeProperty>
@@ -559,10 +515,16 @@
                 <owl:complementOf>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                        <owl:hasValue rdf:datatype="&xsd;integer">1</owl:hasValue>
+                        <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -583,23 +545,17 @@
                 <owl:complementOf>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                        <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                        <owl:hasValue rdf:datatype="&xsd;integer">1</owl:hasValue>
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A derived unit raises a base unit to an integer power other than 0 or 1. For example, the unit &apos;square meter&apos; is a unit derived from the &apos;meter&apos; base unit raised to the power 2.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core2.owl#Entity -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#Entity -->
 
     <owl:Class rdf:about="&oboe-core;Entity">
         <rdfs:label xml:lang="en">Entity</rdfs:label>
@@ -613,7 +569,7 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core2.owl#MeasuredValue -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#MeasuredValue -->
 
     <owl:Class rdf:about="&oboe-core;MeasuredValue">
         <rdfs:label xml:lang="en">Measurement Value</rdfs:label>
@@ -628,14 +584,20 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core2.owl#Measurement -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#Measurement -->
 
     <owl:Class rdf:about="&oboe-core;Measurement">
         <rdfs:label xml:lang="en">Measurement</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="&oboe-core;Characteristic"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasValue"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;MeasuredValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;usesStandard"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;Standard"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -650,20 +612,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;ofCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;Characteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;usesProtocol"/>
                 <owl:someValuesFrom rdf:resource="&oboe-core;Protocol"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;usesStandard"/>
-                <owl:someValuesFrom rdf:resource="&oboe-core;Standard"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasValue"/>
-                <owl:someValuesFrom rdf:resource="&oboe-core;MeasuredValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&oboe-core;Observation"/>
@@ -675,7 +631,7 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core2.owl#Name -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#Name -->
 
     <owl:Class rdf:about="&oboe-core;Name">
         <rdfs:label xml:lang="en">Name</rdfs:label>
@@ -687,7 +643,7 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core2.owl#Observation -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#Observation -->
 
     <owl:Class rdf:about="&oboe-core;Observation">
         <rdfs:label xml:lang="en">Observation</rdfs:label>
@@ -705,7 +661,7 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core2.owl#ObservationCollection -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#ObservationCollection -->
 
     <owl:Class rdf:about="&oboe-core;ObservationCollection">
         <rdfs:label xml:lang="en">Observation Collection</rdfs:label>
@@ -716,38 +672,7 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core2.owl#ObservedRelation -->
-
-    <owl:Class rdf:about="&oboe-core;ObservedRelation">
-        <rdfs:label>Observed Relation</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="&oboe-core;hasObservedRelation"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="&oboe-core;Observation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;ofRelationship"/>
-                <owl:someValuesFrom rdf:resource="&oboe-core;Relationship"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;observedRelationTo"/>
-                <owl:someValuesFrom rdf:resource="&oboe-core;Observation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>Within an observation, and observed relation is an assertion that a relationship existed between two entities.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core2.owl#PhysicalCharacteristic -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#PhysicalCharacteristic -->
 
     <owl:Class rdf:about="&oboe-core;PhysicalCharacteristic">
         <rdfs:label xml:lang="en">Physical Characteristic</rdfs:label>
@@ -758,7 +683,7 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core2.owl#Protocol -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#Protocol -->
 
     <owl:Class rdf:about="&oboe-core;Protocol">
         <rdfs:label xml:lang="en">Protocol</rdfs:label>
@@ -778,28 +703,7 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core2.owl#Relationship -->
-
-    <owl:Class rdf:about="&oboe-core;Relationship">
-        <rdfs:label>Relationship</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasToEntity"/>
-                <owl:someValuesFrom rdf:resource="&oboe-core;Entity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasFromEntity"/>
-                <owl:someValuesFrom rdf:resource="&oboe-core;Entity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>A relationship represents a directed binary association between two entities. Examples include spatial (e.g., within, overlaps, adjacent), temporal (e.g., during, before, after), and composition (e.g., part of, has part) relationships.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core2.owl#Standard -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#Standard -->
 
     <owl:Class rdf:about="&oboe-core;Standard">
         <rdfs:label xml:lang="en">Standard</rdfs:label>
@@ -818,7 +722,7 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core2.owl#Type -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#Type -->
 
     <owl:Class rdf:about="&oboe-core;Type">
         <rdfs:label xml:lang="en">Type</rdfs:label>
@@ -828,7 +732,7 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core2.owl#Unit -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#Unit -->
 
     <owl:Class rdf:about="&oboe-core;Unit">
         <rdfs:label xml:lang="en">Unit</rdfs:label>
@@ -847,7 +751,7 @@
     
 
 
-    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core2.owl#UnitConversion -->
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#UnitConversion -->
 
     <owl:Class rdf:about="&oboe-core;UnitConversion">
         <rdfs:label xml:lang="en">Unit Conversion</rdfs:label>
@@ -895,24 +799,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="urn:swrl#o1">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#p">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#o2">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#e1">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#e2">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#r">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#o">
         <rdf:type rdf:resource="&swrl;Variable"/>
     </rdf:Description>
@@ -924,102 +810,6 @@
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#e">
         <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&oboe-core;ofEntity"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#e2"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#o2"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&oboe-core;ofEntity"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#e1"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#o1"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&oboe-core;hasFromEntity"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#e1"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="&oboe-core;observedRelationTo"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#o2"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                <rdf:rest rdf:resource="&rdf;nil"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="&oboe-core;ofRelationship"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#r"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="&oboe-core;hasToEntity"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#e2"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                            </rdf:Description>
-                        </rdf:rest>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&oboe-core;hasObservedRelation"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#o1"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#p"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
@@ -1080,46 +870,6 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                <rdf:rest rdf:resource="&rdf;nil"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="&oboe-core;ofCharacteristic"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#c"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                            </rdf:Description>
-                        </rdf:rest>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&oboe-core;hasMeasurement"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#m"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#o"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&oboe-core;hasCharacteristic"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#c"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#e"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
         <swrl:head>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
@@ -1134,100 +884,44 @@
                 </rdf:first>
             </rdf:Description>
         </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&oboe-core;hasFromEntity"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#e1"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&oboe-core;hasToEntity"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#e2"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:head>
         <swrl:body>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&oboe-core;hasObservedRelation"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#o1"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#p"/>
-                    </rdf:Description>
-                </rdf:first>
                 <rdf:rest>
                     <rdf:Description>
                         <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&oboe-core;hasMeasurement"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#m"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#o"/>
+                            </rdf:Description>
+                        </rdf:first>
                         <rdf:rest>
                             <rdf:Description>
                                 <rdf:type rdf:resource="&swrl;AtomList"/>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="&oboe-core;ofEntity"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#e2"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#o2"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                                <rdf:rest rdf:resource="&rdf;nil"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="&oboe-core;ofRelationship"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#r"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
                                 <rdf:first>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="&oboe-core;ofEntity"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#e1"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#o1"/>
+                                        <swrl:propertyPredicate rdf:resource="&oboe-core;ofCharacteristic"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#c"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
                                     </rdf:Description>
                                 </rdf:first>
                             </rdf:Description>
                         </rdf:rest>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&oboe-core;observedRelationTo"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#o2"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                            </rdf:Description>
-                        </rdf:first>
                     </rdf:Description>
                 </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&oboe-core;hasCharacteristic"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#c"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#e"/>
+                    </rdf:Description>
+                </rdf:first>
             </rdf:Description>
         </swrl:body>
     </rdf:Description>
