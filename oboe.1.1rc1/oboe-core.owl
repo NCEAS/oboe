@@ -299,6 +299,18 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasMultiplier -->
+
+    <owl:DatatypeProperty rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasMultiplier"/>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasOffset -->
+
+    <owl:DatatypeProperty rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasOffset"/>
+    
+
+
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#hasCode -->
 
     <owl:DatatypeProperty rdf:about="&oboe-core;hasCode">
@@ -369,7 +381,7 @@
 
     <owl:DatatypeProperty rdf:about="&oboe-core;hasPrefixMultiplier">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
         <rdfs:domain rdf:resource="&oboe-core;PrefixedUnit"/>
     </owl:DatatypeProperty>
     
@@ -525,12 +537,6 @@
         <rdfs:label xml:lang="en">Derived Unit</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe-core;Unit"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
@@ -563,6 +569,12 @@
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasPower"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&oboe-core;PrefixedUnit"/>
         <rdfs:comment>A derived unit raises a base or prefixed unit to an integer power other than 0 or 1. For example, the unit &apos;square meter&apos; is a unit derived from the &apos;meter&apos; base unit raised to the power 2. As another example, a &apos;square centimeter&apos; is a unit derived from the &apos;centimeter&apos; prefixed unit raised to the power 2.</rdfs:comment>
@@ -605,12 +617,14 @@
         <rdfs:label xml:lang="en">Measurement</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="&oboe-core;hasMeasurement"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="&oboe-core;Observation"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasValue"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;MeasuredValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;usesProtocol"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;Protocol"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -621,14 +635,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasValue"/>
-                <owl:someValuesFrom rdf:resource="&oboe-core;MeasuredValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;usesProtocol"/>
-                <owl:someValuesFrom rdf:resource="&oboe-core;Protocol"/>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="&oboe-core;hasMeasurement"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="&oboe-core;Observation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -702,15 +714,15 @@
         <rdfs:subClassOf rdf:resource="&oboe-core;Unit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
-                <owl:onClass rdf:resource="&oboe-core;BaseUnit"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onProperty rdf:resource="&oboe-core;hasPrefixMultiplier"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasPrefixMultiplier"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&oboe-core;hasUnit"/>
+                <owl:onClass rdf:resource="&oboe-core;BaseUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -794,14 +806,26 @@
         <rdfs:label xml:lang="en">Unit Conversion</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
-                <owl:someValuesFrom rdf:resource="&oboe-core;BaseUnit"/>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasMultiplier"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&oboe-core;hasSourceUnit"/>
                 <owl:someValuesFrom rdf:resource="&oboe-core;BaseUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;hasTargetUnit"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;BaseUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasOffset"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A unit conversion is a mapping from a source unit to a target unit via a multiplier and an offset value.</rdfs:comment>
@@ -831,63 +855,6 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&oboe-core;ofCharacteristic"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#c"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#m"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;AtomList"/>
-                                <rdf:rest rdf:resource="&rdf;nil"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="&oboe-core;ofEntity"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#e"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#o"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&oboe-core;hasMeasurement"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#m"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#o"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&oboe-core;characteristicFor"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#c"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#e"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
         <swrl:head>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
@@ -905,6 +872,14 @@
         <swrl:body>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&oboe-core;characteristicFor"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#c"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#e"/>
+                    </rdf:Description>
+                </rdf:first>
                 <rdf:rest>
                     <rdf:Description>
                         <rdf:type rdf:resource="&swrl;AtomList"/>
@@ -932,6 +907,15 @@
                         </rdf:rest>
                     </rdf:Description>
                 </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
@@ -940,6 +924,46 @@
                         <swrl:argument2 rdf:resource="urn:swrl#e"/>
                     </rdf:Description>
                 </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&oboe-core;hasMeasurement"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#m"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&oboe-core;ofEntity"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#e"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#o"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&oboe-core;ofCharacteristic"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#c"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
             </rdf:Description>
         </swrl:body>
     </rdf:Description>
