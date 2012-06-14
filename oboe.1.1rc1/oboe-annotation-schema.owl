@@ -36,6 +36,7 @@
 
     <owl:AnnotationProperty rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#sameObsEntityAs"/>
     <owl:AnnotationProperty rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#hasObsContext"/>
+    <owl:AnnotationProperty rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#hasMeasType"/>
     
 
 
