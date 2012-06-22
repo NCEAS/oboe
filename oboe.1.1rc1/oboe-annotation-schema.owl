@@ -8,6 +8,7 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboe-annotation "https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation.owl#" >
 ]>
 
 
@@ -18,7 +19,8 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:oboe-annotation="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation.owl#">
     <owl:Ontology rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl">
         <rdfs:comment>This is a test ontology for exploring the use of lightweight annotations for datasets based on OBOE. This ontology introduces two classes (Dataset and Row) and two object properties (hasRow and attribute). A Dataset defines a dataset object that consists of a set of Row objects. Each row object is comprised of atrributes which link a Row object to a Measurement object. </rdfs:comment>
         <owl:imports rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl"/>
@@ -35,8 +37,8 @@
      -->
 
     <owl:AnnotationProperty rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#sameObsEntityAs"/>
-    <owl:AnnotationProperty rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#hasObsContext"/>
     <owl:AnnotationProperty rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#hasMeasType"/>
+    <owl:AnnotationProperty rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#hasObsContext"/>
     
 
 
@@ -66,7 +68,14 @@
 
     <owl:ObjectProperty rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#attribute">
         <rdfs:domain rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#Row"/>
-        <rdfs:range rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#Measurement"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#Measurement"/>
+                    <rdf:Description rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-core.owl#Observation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -76,6 +85,15 @@
     <owl:ObjectProperty rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#hasRow">
         <rdfs:domain rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#DataTable"/>
         <rdfs:range rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#Row"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#hasRowHeader -->
+
+    <owl:ObjectProperty rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#hasRowHeader">
+        <rdfs:domain rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#DataTable"/>
+        <rdfs:range rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#RowHeader"/>
     </owl:ObjectProperty>
     
 
@@ -94,6 +112,19 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#DataTable -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#DataTable">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#hasRow"/>
+                <owl:someValuesFrom rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#Row"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#hasRowHeader"/>
+                <owl:onClass rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#RowHeader"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>A DataTable object represents a tabular data set that consists of a set of rows. Each row in a data table consists of a set of attributes that give the measured values of the row. the measurements.  </rdfs:comment>
     </owl:Class>
     
@@ -102,6 +133,14 @@
     <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#Row -->
 
     <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#Row"/>
+    
+
+
+    <!-- https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#RowHeader -->
+
+    <owl:Class rdf:about="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#RowHeader">
+        <rdfs:subClassOf rdf:resource="https://code.ecoinformatics.org/code/semtools/trunk/dev/oboe/oboe.1.1rc1/oboe-annotation-schema.owl#Row"/>
+    </owl:Class>
 </rdf:RDF>
 
 
