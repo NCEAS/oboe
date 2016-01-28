@@ -243,6 +243,50 @@
     
 
 
+    <!-- &oboe-core;measuresCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;measuresCharacteristic">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>The measuresCharacteristic property gives the Characteristic that would be measured by a MeasurementType.</rdfs:comment>
+        <rdfs:range rdf:resource="&oboe-core;Characteristic"/>
+        <rdfs:domain rdf:resource="&oboe-core;MeasurementType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &oboe-core;measuresEntity -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;measuresEntity">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>The measuresEntity property gives the Entity that would be measured by a MeasurementType.</rdfs:comment>
+        <rdfs:range rdf:resource="&oboe-core;Entity"/>
+        <rdfs:domain rdf:resource="&oboe-core;MeasurementType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &oboe-core;measuresUsingProtocol -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;measuresUsingProtocol">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>The measuresUsingProtocol property gives the Protocol that would be used by a MeasurementType.</rdfs:comment>
+        <rdfs:range rdf:resource="&oboe-core;Protocol"/>
+        <rdfs:domain rdf:resource="&oboe-core;MeasurementType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &oboe-core;measuresUsingStandard -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;measuresUsingStandard">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>The measuresUsingStandard property gives the Standard that would be used by a MeasurementType.</rdfs:comment>
+        <rdfs:range rdf:resource="&oboe-core;Standard"/>
+        <rdfs:domain rdf:resource="&oboe-core;MeasurementType"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- &oboe-core;measurementFor -->
 
     <owl:ObjectProperty rdf:about="&oboe-core;measurementFor">
@@ -594,6 +638,17 @@
     
 
 
+    <!-- &oboe-core;IdentifyingCharacteristic -->
+
+    <owl:Class rdf:about="&oboe-core;IdentifyingCharacteristic">
+        <rdfs:label xml:lang="en">Identifying Characteristic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Characteristic"/>
+        <owl:disjointWith rdf:resource="&oboe-core;MeasuredCharacteristic"/>
+        <rdfs:comment>An identifying characteristic is used to identify or name an entity either globally or within a context, such as a name of a lake or a tag number assigned to a tree. Unlike a MeasuredCharacteristic, an IdentifyingCharacteristic is assigned and not measured.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- &oboe-core;Index -->
 
     <owl:Class rdf:about="&oboe-core;Index">
@@ -662,15 +717,47 @@
     
 
 
-    <!-- &oboe-core;IdentifyingCharacteristic -->
+    <!-- &oboe-core;MeasurementType -->
 
-    <owl:Class rdf:about="&oboe-core;IdentifyingCharacteristic">
-        <rdfs:label xml:lang="en">Identifying Characteristic</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe-core;Characteristic"/>
-        <owl:disjointWith rdf:resource="&oboe-core;MeasuredCharacteristic"/>
-        <rdfs:comment>An identifying characteristic is used to identify or name an entity either globally or within a context, such as a name of a lake or a tag number assigned to a tree. Unlike a MeasuredCharacteristic, an IdentifyingCharacteristic is assigned and not measured.</rdfs:comment>
+    <owl:Class rdf:about="&oboe-core;MeasurementType">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;measuresCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;Characteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;Protocol"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;measuresUsingStandard"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;Standard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&oboe-core;Characteristic"/>
+        <owl:disjointWith rdf:resource="&oboe-core;CharacteristicQualifier"/>
+        <owl:disjointWith rdf:resource="&oboe-core;Entity"/>
+        <owl:disjointWith rdf:resource="&oboe-core;MeasuredValue"/>
+        <owl:disjointWith rdf:resource="&oboe-core;Measurement"/>
+        <owl:disjointWith rdf:resource="&oboe-core;Observation"/>
+        <owl:disjointWith rdf:resource="&oboe-core;ObservationCollection"/>
+        <owl:disjointWith rdf:resource="&oboe-core;Protocol"/>
+        <owl:disjointWith rdf:resource="&oboe-core;Standard"/>
+        <owl:disjointWith rdf:resource="&oboe-core;UnitConversion"/>
+        <rdfs:comment xml:lang="en">A MeasurementType describes the type of a Measurement in which the Measurement would follow the associated Protocol to record the value of the associated Characteristic of the associated Entity using the associated Standard.  Any of these associated properties may be omitted, in which case the MeasurementType is only constrained by the provided associations. A MeasurementType is a hypothetical construct, in that it is not associated with a particular instance of a Measurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Measurement Type</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- &oboe-core;Observation -->
