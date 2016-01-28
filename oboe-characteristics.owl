@@ -246,6 +246,15 @@
     
 
 
+    <!-- &oboe-characteristics;Identifier -->
+
+    <owl:Class rdf:about="&oboe-characteristics;Identifier">
+        <rdfs:subClassOf rdf:resource="&oboe-core;IdentifyingCharacteristic"/>
+        <rdfs:comment>provides an identifying sequence of characters to refer to an entity within a context. An Identifier can be unique within a local context or a global context.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- &oboe-characteristics;Illuminance -->
 
     <owl:Class rdf:about="&oboe-characteristics;Illuminance">
@@ -387,6 +396,15 @@
     
 
 
+    <!-- &oboe-characteristics;Name -->
+
+    <owl:Class rdf:about="&oboe-characteristics;Name">
+        <rdfs:subClassOf rdf:resource="&oboe-core;IdentifyingCharacteristic"/>
+        <rdfs:comment>provides an character phrase to refer to an entity. A Name is typically used to reference an entity. For example, the Name for a particular instance of a lake might be 'Lake Tahoe'.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- &oboe-characteristics;PhotonFluxDensity -->
 
     <owl:Class rdf:about="&oboe-characteristics;PhotonFluxDensity">
@@ -498,6 +516,15 @@
 
     <owl:Class rdf:about="&oboe-characteristics;Speed">
         <rdfs:subClassOf rdf:resource="&oboe-core;MeasuredCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- &oboe-characteristics;TagNumber -->
+
+    <owl:Class rdf:about="&oboe-characteristics;TagNumber">
+        <rdfs:subClassOf rdf:resource="&oboe-core;Identifer"/>
+        <rdfs:comment>provides an alphanumeric string of characters to refer to an entity. A TagNumber is typically used to uniquely identify an entity such as a sample or an individual specimen such as a tree or a rock sample.</rdfs:comment>
     </owl:Class>
     
 
