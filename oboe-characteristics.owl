@@ -523,7 +523,7 @@
     <!-- &oboe-characteristics;TagNumber -->
 
     <owl:Class rdf:about="&oboe-characteristics;TagNumber">
-        <rdfs:subClassOf rdf:resource="&oboe-characteristics;Identifer"/>
+        <rdfs:subClassOf rdf:resource="&oboe-characteristics;Identifier"/>
         <rdfs:comment>provides an alphanumeric string of characters to refer to an entity. A TagNumber is typically used to uniquely identify an entity such as a sample or an individual specimen such as a tree or a rock sample.</rdfs:comment>
     </owl:Class>
     
