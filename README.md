@@ -35,8 +35,8 @@ The original publication describing the OBOE concept is:
 ## Releases
 Multiple versions of OBOE have been released, and work continues to refine the model.  Current and past revisions are available for download, as follows:
 
-- ![OBOE](https://img.shields.io/badge/oboe-1.1-blue.svg?style=plastic) Download [oboe-1.1](https://github.com/NCEAS/oboe/releases/tag/OBOE_1_1) (Namespace: __http://ecoinformatics.org/oboe/oboe.1.1/oboe.owl__)
+- ![OBOE](https://img.shields.io/badge/oboe-1.1-blue.svg?style=plastic) Download [oboe-1.1](https://github.com/NCEAS/oboe/blob/OBOE_1_1_BRANCH/) (Namespace: __http://ecoinformatics.org/oboe/oboe.1.1/oboe.owl__)
 - ![OBOE](https://img.shields.io/badge/oboe-1.0-blue.svg?style=plastic) Download [oboe-1.0](https://github.com/NCEAS/oboe/releases/tag/OBOE_1_0) (Namespace: __http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl__)
-- ![OBOE](https://img.shields.io/badge/oboe-0.9-blue.svg?style=plastic) Download [oboe-0.9](https://github.com/NCEAS/oboe/releases/tag/OBOE_0_9) (Namespace: __http://ecoinformatics.org/oboe/oboe.0.9/oboe.owl__)
+- ![OBOE](https://img.shields.io/badge/oboe-0.9-blue.svg?style=plastic) Download [oboe-0.9](https://github.com/NCEAS/oboe/releases/tag/OBOE_0_9) (Namespace: __http://ecoinformatics.org/oboe/oboe.0.9__)
 
 [![nceas_footer](https://www.nceas.ucsb.edu/files/newLogo_0.png)](http://www.nceas.ucsb.edu/ecoinfo)
