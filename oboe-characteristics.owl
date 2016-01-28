@@ -400,7 +400,7 @@
 
     <owl:Class rdf:about="&oboe-characteristics;Name">
         <rdfs:subClassOf rdf:resource="&oboe-core;IdentifyingCharacteristic"/>
-        <rdfs:comment>provides an character phrase to refer to an entity. A Name is typically used to reference an entity. For example, the Name for a particular instance of a lake might be 'Lake Tahoe'.</rdfs:comment>
+        <rdfs:comment>provides a character phrase to refer to an entity. A Name is typically used to reference an entity. For example, the Name for a particular instance of a lake might be 'Lake Tahoe'.</rdfs:comment>
     </owl:Class>
     
 
