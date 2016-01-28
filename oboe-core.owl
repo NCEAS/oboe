@@ -11,12 +11,12 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboe-base "http://ecoinformatics.org/oboe/oboe.1.1/" >
-    <!ENTITY oboe-core "&oboe-base;/oboe-core.owl#" >
+    <!ENTITY oboe-core "&oboe-base;oboe-core.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="&oboe-core;"
-     xml:base="&oboe-base;/oboe-core.owl"
+     xml:base="&oboe-base;oboe-core.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
@@ -26,7 +26,7 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:cc="http://creativecommons.org/ns#">
-     <owl:Ontology rdf:about="&oboe-core;">
+     <owl:Ontology rdf:about="&oboe-base;oboe-core.owl">
         <rdfs:label>oboe-core</rdfs:label>
         <cc:license rdf:datatype="&xsd;anyURI">http://creativecommons.org/licenses/by/3.0/</cc:license>
         <rdfs:comment>Copyright (c) 2006-2012 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
