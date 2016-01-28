@@ -68,16 +68,6 @@
     
 
 
-    <!-- &oboe-characteristics;AlgaeLifeStage -->
-
-    <owl:Class rdf:about="&oboe-characteristics;AlgaeLifeStage">
-        <rdfs:label xml:lang="en">Algae Life Stage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe-characteristics;LifeStage"/>
-        <rdfs:comment xml:lang="en">The developmental stage of a given algae.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- &oboe-characteristics;Amount -->
 
     <owl:Class rdf:about="&oboe-characteristics;Amount">
@@ -240,16 +230,6 @@
     
 
 
-    <!-- &oboe-characteristics;FishLifeStage -->
-
-    <owl:Class rdf:about="&oboe-characteristics;FishLifeStage">
-        <rdfs:label xml:lang="en">Fish Life Stage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe-characteristics;LifeStage"/>
-        <rdfs:comment xml:lang="en">The developmental stage of a given fish.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- &oboe-characteristics;Force -->
 
     <owl:Class rdf:about="&oboe-characteristics;Force">
@@ -350,16 +330,6 @@
     
 
 
-    <!-- &oboe-characteristics;MammalLifeStage -->
-
-    <owl:Class rdf:about="&oboe-characteristics;MammalLifeStage">
-        <rdfs:label xml:lang="en">Mammal Life Stage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe-characteristics;LifeStage"/>
-        <rdfs:comment xml:lang="en">The developmental stage of a given mammal.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- &oboe-characteristics;Mass -->
 
     <owl:Class rdf:about="&oboe-characteristics;Mass">
@@ -422,16 +392,6 @@
     <owl:Class rdf:about="&oboe-characteristics;PhotonFluxDensity">
         <rdfs:subClassOf rdf:resource="&oboe-core;MeasuredCharacteristic"/>
         <rdfs:comment>The number of photons striking an area per unit time.  This could be probably also be called a PhotonArealDensityRate.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- &oboe-characteristics;PlantLifeStage -->
-
-    <owl:Class rdf:about="&oboe-characteristics;PlantLifeStage">
-        <rdfs:label xml:lang="en">Plant Life Stage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe-characteristics;LifeStage"/>
-        <rdfs:comment xml:lang="en">The developmental stage of a given plant.</rdfs:comment>
     </owl:Class>
     
 
