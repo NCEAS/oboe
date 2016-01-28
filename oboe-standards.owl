@@ -10,14 +10,14 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboe-base "http://ecoinformatics.org/oboe/oboe.1.1/" >
-    <!ENTITY oboe-core "&oboe-base;/oboe-core.owl#" >
-    <!ENTITY oboe-characteristics "&oboe-base;/oboe-characteristics.owl#" >
-    <!ENTITY oboe-standards "&oboe-base;/oboe-standards.owl#" >
+    <!ENTITY oboe-core "&oboe-base;oboe-core.owl#" >
+    <!ENTITY oboe-characteristics "&oboe-base;oboe-characteristics.owl#" >
+    <!ENTITY oboe-standards "&oboe-base;oboe-standards.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="&oboe-standards;"
-     xml:base="&oboe-base;/oboe-standards.owl"
+     xml:base="&oboe-base;oboe-standards.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
@@ -27,13 +27,13 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:cc="http://creativecommons.org/ns#">
-    <owl:Ontology rdf:about="&oboe-base;/oboe-standards.owl">
+    <owl:Ontology rdf:about="&oboe-base;oboe-standards.owl">
         <rdfs:label>oboe-standards</rdfs:label>
-        <rdfs:comment>Copyright (c) 2006-2011 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
+        <rdfs:comment>Copyright (c) 2006-2016 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
         <owl:versionInfo>Version 1.1</owl:versionInfo>
         <rdfs:comment>This ontology contains terms for measurement standards that are common across OBOE extensions  including units of measure and indices. The unit descriptions (comments) were adapted from various sources, including NIST.</rdfs:comment>
-        <owl:imports rdf:resource="&oboe-base;/oboe-characteristics.owl"/>
-        <owl:imports rdf:resource="&oboe-base;/oboe-core.owl"/>
+        <owl:imports rdf:resource="&oboe-base;oboe-characteristics.owl"/>
+        <owl:imports rdf:resource="&oboe-base;oboe-core.owl"/>
     </owl:Ontology>
     
 

@@ -11,12 +11,12 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboe-base "http://ecoinformatics.org/oboe/oboe.1.1/" >
-    <!ENTITY oboe-core "&oboe-base;/oboe-core.owl#" >
+    <!ENTITY oboe-core "&oboe-base;oboe-core.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="&oboe-core;"
-     xml:base="&oboe-base;/oboe-core.owl"
+     xml:base="&oboe-base;oboe-core.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
@@ -26,10 +26,10 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:cc="http://creativecommons.org/ns#">
-     <owl:Ontology rdf:about="&oboe-core;">
+     <owl:Ontology rdf:about="&oboe-base;oboe-core.owl">
         <rdfs:label>oboe-core</rdfs:label>
         <cc:license rdf:datatype="&xsd;anyURI">http://creativecommons.org/licenses/by/3.0/</cc:license>
-        <rdfs:comment>Copyright (c) 2006-2012 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
+        <rdfs:comment>Copyright (c) 2006-2016 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
         <owl:versionInfo>Version 1.1</owl:versionInfo>
         <rdfs:comment>This ontology provides the core OBOE modeling constructs.</rdfs:comment>
     </owl:Ontology>
@@ -177,9 +177,9 @@
 
     <owl:ObjectProperty rdf:about="&oboe-core;hasQualifier">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment>The hasQualifier property assigns an optional characteristic qualifier to a physical characteristic. Examples of qualifiers are Average, Minimum, Maximum, Daily, etc.</rdfs:comment>
+        <rdfs:comment>The hasQualifier property assigns an optional characteristic qualifier to a characteristic. Examples of qualifiers are Average, Minimum, Maximum, Daily, etc.</rdfs:comment>
         <rdfs:range rdf:resource="&oboe-core;CharacteristicQualifier"/>
-        <rdfs:domain rdf:resource="&oboe-core;PhysicalCharacteristic"/>
+        <rdfs:domain rdf:resource="&oboe-core;MeasuredCharacteristic"/>
     </owl:ObjectProperty>
     
 
@@ -239,6 +239,50 @@
         <rdfs:comment>The hasValue property gives the value of the measurement.</rdfs:comment>
         <rdfs:range rdf:resource="&oboe-core;MeasuredValue"/>
         <rdfs:domain rdf:resource="&oboe-core;Measurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &oboe-core;measuresCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;measuresCharacteristic">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>The measuresCharacteristic property gives the Characteristic that would be measured by a MeasurementType.</rdfs:comment>
+        <rdfs:range rdf:resource="&oboe-core;Characteristic"/>
+        <rdfs:domain rdf:resource="&oboe-core;MeasurementType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &oboe-core;measuresEntity -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;measuresEntity">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>The measuresEntity property gives the Entity that would be measured by a MeasurementType.</rdfs:comment>
+        <rdfs:range rdf:resource="&oboe-core;Entity"/>
+        <rdfs:domain rdf:resource="&oboe-core;MeasurementType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &oboe-core;measuresUsingProtocol -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;measuresUsingProtocol">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>The measuresUsingProtocol property gives the Protocol that would be used by a MeasurementType.</rdfs:comment>
+        <rdfs:range rdf:resource="&oboe-core;Protocol"/>
+        <rdfs:domain rdf:resource="&oboe-core;MeasurementType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &oboe-core;measuresUsingStandard -->
+
+    <owl:ObjectProperty rdf:about="&oboe-core;measuresUsingStandard">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>The measuresUsingStandard property gives the Standard that would be used by a MeasurementType.</rdfs:comment>
+        <rdfs:range rdf:resource="&oboe-core;Standard"/>
+        <rdfs:domain rdf:resource="&oboe-core;MeasurementType"/>
     </owl:ObjectProperty>
     
 
@@ -594,6 +638,17 @@
     
 
 
+    <!-- &oboe-core;IdentifyingCharacteristic -->
+
+    <owl:Class rdf:about="&oboe-core;IdentifyingCharacteristic">
+        <rdfs:label xml:lang="en">Identifying Characteristic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Characteristic"/>
+        <owl:disjointWith rdf:resource="&oboe-core;MeasuredCharacteristic"/>
+        <rdfs:comment>An identifying characteristic is used to identify or name an entity either globally or within a context, such as a name of a lake or a tag number assigned to a tree. Unlike a MeasuredCharacteristic, an IdentifyingCharacteristic is assigned and not measured.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- &oboe-core;Index -->
 
     <owl:Class rdf:about="&oboe-core;Index">
@@ -662,15 +717,47 @@
     
 
 
-    <!-- &oboe-core;Name -->
+    <!-- &oboe-core;MeasurementType -->
 
-    <owl:Class rdf:about="&oboe-core;Name">
-        <rdfs:label xml:lang="en">Name</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe-core;Characteristic"/>
-        <owl:disjointWith rdf:resource="&oboe-core;PhysicalCharacteristic"/>
-        <rdfs:comment>A name characteristic provides the name (or label) used for identifying (either globally or within a context) an entity.</rdfs:comment>
+    <owl:Class rdf:about="&oboe-core;MeasurementType">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;measuresCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;Characteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;Protocol"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;measuresUsingStandard"/>
+                <owl:someValuesFrom rdf:resource="&oboe-core;Standard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&oboe-core;Characteristic"/>
+        <owl:disjointWith rdf:resource="&oboe-core;CharacteristicQualifier"/>
+        <owl:disjointWith rdf:resource="&oboe-core;Entity"/>
+        <owl:disjointWith rdf:resource="&oboe-core;MeasuredValue"/>
+        <owl:disjointWith rdf:resource="&oboe-core;Measurement"/>
+        <owl:disjointWith rdf:resource="&oboe-core;Observation"/>
+        <owl:disjointWith rdf:resource="&oboe-core;ObservationCollection"/>
+        <owl:disjointWith rdf:resource="&oboe-core;Protocol"/>
+        <owl:disjointWith rdf:resource="&oboe-core;Standard"/>
+        <owl:disjointWith rdf:resource="&oboe-core;UnitConversion"/>
+        <rdfs:comment xml:lang="en">A MeasurementType describes the type of a Measurement in which the Measurement would follow the associated Protocol to record the value of the associated Characteristic of the associated Entity using the associated Standard.  Any of these associated properties may be omitted, in which case the MeasurementType is only constrained by the provided associations. A MeasurementType is a hypothetical construct, in that it is not associated with a particular instance of a Measurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Measurement Type</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- &oboe-core;Observation -->
@@ -702,12 +789,13 @@
     
 
 
-    <!-- &oboe-core;PhysicalCharacteristic -->
+    <!-- &oboe-core;MeasuredCharacteristic -->
 
-    <owl:Class rdf:about="&oboe-core;PhysicalCharacteristic">
-        <rdfs:label xml:lang="en">Physical Characteristic</rdfs:label>
+    <owl:Class rdf:about="&oboe-core;MeasuredCharacteristic">
+        <rdfs:label xml:lang="en">Measured Characteristic</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe-core;Characteristic"/>
-        <rdfs:comment>A physical characteristic of an entity is one that is measurable within the physical world. A physical characteristic subsumes primary and derived physical dimensions (e.g., length, mass, area, density). The measured value assigned to a physical characteristic may be a quantity (a numerical value) or a quality (a label).</rdfs:comment>
+        <owl:disjointWith rdf:resource="&oboe-core;IdentifyingCharacteristic"/>
+        <rdfs:comment>A measured characteristic of an entity is one that is measurable within the physical world. A measured characteristic includes primary and derived physical dimensions (e.g., length, mass, area, density). The measured value assigned to a measured characteristic may be a quantity (a numerical value) or a quality (a category), including both nominal and ordinal categories.</rdfs:comment>
     </owl:Class>
     
 
