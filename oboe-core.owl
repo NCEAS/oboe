@@ -177,9 +177,9 @@
 
     <owl:ObjectProperty rdf:about="&oboe-core;hasQualifier">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment>The hasQualifier property assigns an optional characteristic qualifier to a physical characteristic. Examples of qualifiers are Average, Minimum, Maximum, Daily, etc.</rdfs:comment>
+        <rdfs:comment>The hasQualifier property assigns an optional characteristic qualifier to a characteristic. Examples of qualifiers are Average, Minimum, Maximum, Daily, etc.</rdfs:comment>
         <rdfs:range rdf:resource="&oboe-core;CharacteristicQualifier"/>
-        <rdfs:domain rdf:resource="&oboe-core;PhysicalCharacteristic"/>
+        <rdfs:domain rdf:resource="&oboe-core;MeasuredCharacteristic"/>
     </owl:ObjectProperty>
     
 
@@ -662,13 +662,13 @@
     
 
 
-    <!-- &oboe-core;Name -->
+    <!-- &oboe-core;IdentifyingCharacteristic -->
 
-    <owl:Class rdf:about="&oboe-core;Name">
-        <rdfs:label xml:lang="en">Name</rdfs:label>
+    <owl:Class rdf:about="&oboe-core;IdentifyingCharacteristic">
+        <rdfs:label xml:lang="en">Identifying Characteristic</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe-core;Characteristic"/>
-        <owl:disjointWith rdf:resource="&oboe-core;PhysicalCharacteristic"/>
-        <rdfs:comment>A name characteristic provides the name (or label) used for identifying (either globally or within a context) an entity.</rdfs:comment>
+        <owl:disjointWith rdf:resource="&oboe-core;MeasuredCharacteristic"/>
+        <rdfs:comment>An identifying characteristic is used to identify or name an entity either globally or within a context, such as a name of a lake or a tag number assigned to a tree. Unlike a MeasuredCharacteristic, an IdentifyingCharacteristic is assigned and not measured.</rdfs:comment>
     </owl:Class>
     
 
@@ -702,12 +702,13 @@
     
 
 
-    <!-- &oboe-core;PhysicalCharacteristic -->
+    <!-- &oboe-core;MeasuredCharacteristic -->
 
-    <owl:Class rdf:about="&oboe-core;PhysicalCharacteristic">
-        <rdfs:label xml:lang="en">Physical Characteristic</rdfs:label>
+    <owl:Class rdf:about="&oboe-core;MeasuredCharacteristic">
+        <rdfs:label xml:lang="en">Measured Characteristic</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe-core;Characteristic"/>
-        <rdfs:comment>A physical characteristic of an entity is one that is measurable within the physical world. A physical characteristic subsumes primary and derived physical dimensions (e.g., length, mass, area, density). The measured value assigned to a physical characteristic may be a quantity (a numerical value) or a quality (a label).</rdfs:comment>
+        <owl:disjointWith rdf:resource="&oboe-core;IdentifyingCharacteristic"/>
+        <rdfs:comment>A measured characteristic of an entity is one that is measurable within the physical world. A measured characteristic includes primary and derived physical dimensions (e.g., length, mass, area, density). The measured value assigned to a measured characteristic may be a quantity (a numerical value) or a quality (a category), including both nominal and ordinal categories.</rdfs:comment>
     </owl:Class>
     
 
