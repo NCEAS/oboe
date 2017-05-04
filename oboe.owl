@@ -30,7 +30,7 @@
      xmlns:cc="http://creativecommons.org/ns#">
     <owl:Ontology rdf:about="&oboe-base;oboe.owl">
         <rdfs:label>oboe</rdfs:label>
-        <owl:versionInfo>Version 1.1</owl:versionInfo>
+        <owl:versionInfo>Version 1.2</owl:versionInfo>
         <rdfs:comment>Copyright (c) 2006-2016 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
         <rdfs:comment>This ontology contains general terms that are common across OBOE extensions.  It extends the OBOE Core model by importing ontologies specific to measurement characteristics, measurement standards, spatial entities, temporal entities, biological taxa, and anatomical entities.</rdfs:comment>
         <owl:imports rdf:resource="&oboe-base;oboe-core.owl"/>
