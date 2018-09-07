@@ -260,6 +260,16 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType -->
+
+    <owl:ObjectProperty rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
+        <rdfs:comment>The containsMeasurementsOfType property gives the MeasurementType to which measured values in some container belong. The domain is unrestricted to allow the property to be used to annotate any containers holding measured values, but its range is restricted to only subclasses of MeasurementType.  If, for example, an attribute containsMeasurementsOfType "AirTemperatureType", then one can infer that the values in that attribute all represent measures of the associated Characteristic (e.g., Temperature) of the associated Entity (e.g., Air), or whatever constraints are imposed in the definition of the MeasurementType.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic -->
 
     <owl:ObjectProperty rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic">
