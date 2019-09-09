@@ -13,7 +13,7 @@
      xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#">
     <owl:Ontology rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl">
         <cc:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://creativecommons.org/licenses/by/3.0/</cc:license>
-        <rdfs:comment>Copyright (c) 2006-2016 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
+        <rdfs:comment>Copyright (c) 2006-2019 The Regents of the University of California.  All rights reserved. This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.</rdfs:comment>
         <rdfs:comment>This ontology provides the core OBOE modeling constructs.</rdfs:comment>
         <rdfs:label>oboe-core</rdfs:label>
         <owl:versionInfo>Version 1.2</owl:versionInfo>
