@@ -40,5 +40,3 @@ Multiple versions of OBOE have been released, and work continues to refine the m
 - ![OBOE](https://img.shields.io/badge/oboe-0.9-blue.svg?style=plastic) Download [oboe-0.9](https://github.com/NCEAS/oboe/releases/tag/OBOE_0_9) (Namespace: __http://ecoinformatics.org/oboe/oboe.0.9__)
 
 [![nceas_footer](https://www.nceas.ucsb.edu/files/newLogo_0.png)](http://www.nceas.ucsb.edu/ecoinfo)
-
-test
