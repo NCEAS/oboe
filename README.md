@@ -1,6 +1,6 @@
 ## OBOE: The Extensible Observation Ontology
 
-[![OBOE](https://img.shields.io/badge/oboe-1.1-blue.svg?style=plastic)](http://github.com/NCEAS/oboe)
+[![OBOE](https://img.shields.io/badge/oboe-1.2-blue.svg?style=plastic)](http://github.com/NCEAS/oboe)
 
 - **Authors**: Mark Schildhauer, Matthew B. Jones, Shawn Bowers, Joshua Madin, Sergeui Krivov, Deana Pennington, Ferdinando Villa, Benjamin Leinfelder, Christopher Jones, and Margaret O'Brien
 - **License**: [CC-BY](http://creativecommons.org/licenses/by/3.0/)
@@ -24,7 +24,7 @@ OBOE is being used to improve data interpretation, facilitate reuse, and create 
 
 Please cite this software as:
 
-> Mark Schildhauer, Matthew B. Jones, Shawn Bowers, Joshua Madin, Sergeui Krivov, Deana Pennington, Ferdinando Villa, Benjamin Leinfelder, Christopher Jones, and Margaret O'Brien. 2016. OBOE: the Extensible Observation Ontology, version 1.1. KNB Data Repository. [doi:10.5063/F11C1TTM](http://doi.org/10.5063/F11C1TTM)
+> Mark Schildhauer, Matthew B. Jones, Shawn Bowers, Joshua Madin, Sergeui Krivov, Deana Pennington, Ferdinando Villa, Benjamin Leinfelder, Christopher Jones, and Margaret O'Brien. 2016. OBOE: the Extensible Observation Ontology, version 1.2. KNB Data Repository. [doi:10.5063/F1125R0F](https://doi.org/10.5063/F1125R0F)
 
 This software was developed with support of multiple projects at the National Center for Ecological Analysis and Synthesis ([NCEAS](http://www.nceas.ucsb.edu)), including grants from the National Science Foundation: SEEK ([0225676](https://www.nsf.gov/awardsearch/showAward?AWD_ID=0225676)) Semtools ([0743429](https://www.nsf.gov/awardsearch/showAward?AWD_ID=0743429)), SONet ([0753144](https://www.nsf.gov/awardsearch/showAward?AWD_ID=0753144)), and DataONE ([1430508](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1430508)).
 
@@ -35,6 +35,7 @@ The original publication describing the OBOE concept is:
 ## Releases
 Multiple versions of OBOE have been released, and work continues to refine the model.  Current and past revisions are available for download, as follows:
 
+- ![OBOE](https://img.shields.io/badge/oboe-1.2-blue.svg?style=plastic) Download [oboe-1.2](https://github.com/NCEAS/oboe/tree/OBOE_1_2_BRANCH) (Namespace: __http://ecoinformatics.org/oboe/oboe.1.2/oboe.owl__)
 - ![OBOE](https://img.shields.io/badge/oboe-1.1-blue.svg?style=plastic) Download [oboe-1.1](https://github.com/NCEAS/oboe/tree/OBOE_1_1_BRANCH) (Namespace: __http://ecoinformatics.org/oboe/oboe.1.1/oboe.owl__)
 - ![OBOE](https://img.shields.io/badge/oboe-1.0-blue.svg?style=plastic) Download [oboe-1.0](https://github.com/NCEAS/oboe/releases/tag/OBOE_1_0) (Namespace: __http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl__)
 - ![OBOE](https://img.shields.io/badge/oboe-0.9-blue.svg?style=plastic) Download [oboe-0.9](https://github.com/NCEAS/oboe/releases/tag/OBOE_0_9) (Namespace: __http://ecoinformatics.org/oboe/oboe.0.9__)
